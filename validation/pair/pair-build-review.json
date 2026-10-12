@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "scope": "Challenge/Solution implementation, elaboration, typed proof/statement audits, fresh full Lake build and completed actual protected Comparator/independent-kernel verification.",
+  "solution_build": {
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-DautoImplicit=false",
+      "-DwarningAsError=true"
+    ],
+    "log": "/workspace/work/ec567-pair-draft/solution-build.log",
+    "log_bytes": 0
+  },
+  "challenge_build": {
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-DautoImplicit=false"
+    ],
+    "log": "/workspace/work/ec567-pair-draft/challenge-fidelity-build.log",
+    "warning": "Exactly the allowed selected-theorem deliberate proof-hole warning."
+  },
+  "solution_typed_audit": {
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-DautoImplicit=false",
+      "-DwarningAsError=true"
+    ],
+    "source": "/workspace/work/ec567-pair-draft/SolutionTypedAudit.lean",
+    "log": "/workspace/work/ec567-pair-draft/solution-typed-audit.log",
+    "permitted_axioms_observed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "checks": [
+      "Exact 5/6/7 conjunction",
+      "Genuine cardinal rational-point module rank",
+      "Infinitely many rational j-invariants of nonsingular models",
+      "j equality iff actual algebraic-closure isomorphism"
+    ]
+  },
+  "challenge_typed_audit": {
+    "exit_code": 0,
+    "flags": [
+      "-j1",
+      "-DautoImplicit=false",
+      "-DwarningAsError=true"
+    ],
+    "source": "/workspace/work/ec567-pair-draft/ChallengeTypedAudit.lean",
+    "log": "/workspace/work/ec567-pair-draft/challenge-typed-audit-after-repair.log",
+    "checks": [
+      "Same selected theorem type",
+      "Genuine cardinal rank and j-infinitude definitions",
+      "External asymptotic universally applicable to generic arbitrary twelve-form systems"
+    ],
+    "source_revision": "Repaired 208-line Challenge; strict exit 0."
+  },
+  "copied_definition_checks": {
+    "status": "PASS",
+    "count": 23,
+    "receipt": "/workspace/work/ec567-pair-draft/copied-definition-check.json"
+  },
+  "files": {
+    "Challenge.lean": {
+      "sha256": "becb1dfec3cad6cd1475820e54eec8c7cd38d1ba72bedf01a6dcbe3430daeb6d",
+      "bytes": 9114,
+      "lines": 208
+    },
+    "Solution.lean": {
+      "sha256": "d2850f370f81c0aecde045067593bee57db6f03a2a5ded84d2b761e1701cb373",
+      "bytes": 813,
+      "lines": 23
+    },
+    "comparator.json": {
+      "sha256": "348f6d6b4c494a894470c3806131f5a236ee2d170350e54a507bfde41966cd34",
+      "bytes": 257,
+      "lines": 12
+    }
+  },
+  "full_build_after_repair": {
+    "exit_code": 0,
+    "jobs": 9131,
+    "command": "env ELAN_TOOLCHAIN=leanprover/lean4:v4.35.0-rc3 ELAN_HOME=/workspace/work/tooling/elan PATH=/workspace/work/tooling/elan/bin:$PATH LEAN_NUM_THREADS=1 lake build",
+    "log": "/workspace/work/ec567-pair-draft/full-build-after-fidelity-repair.log"
+  },
+  "fidelity_repair": {
+    "scope": "Challenge only; core, Solution and comparator.json unchanged.",
+    "cause": "Original core affine density reused generated proof auxiliaries from the preceding homogeneous integerLocalFactor; Challenge originally generated auxiliaries with different names.",
+    "change": "Include three exact genuine homogeneous density definitions before the affine definitions to preserve generated constant names.",
+    "elaborated_factor_terms_byte_identical": true,
+    "comparison_logs": [
+      "/workspace/work/ec567-pair-draft/solution-local-factor-pp.log",
+      "/workspace/work/ec567-pair-draft/challenge-local-factor-fixed-pp.log"
+    ]
+  },
+  "actual_comparator_status": "PASS: protected Comparator exit 0; full exported definition/type matching and con-ron, NanoDa, Lean default kernels accepted.",
+  "full_elaboration_fidelity": {
+    "status": "PASS",
+    "definitions_and_structures": 23,
+    "each_dump_lines": 601,
+    "each_dump_bytes": 37207,
+    "byte_identical_types_and_bodies": true,
+    "challenge_log": "/workspace/work/ec567-pair-draft/challenge-all-copied-pp.log",
+    "solution_log": "/workspace/work/ec567-pair-draft/solution-all-copied-pp.log",
+    "empty_diff_log": "/workspace/work/ec567-pair-draft/all-copied-pp-diff.log",
+    "dump_sha256": "605251718693207c6388e360e25e969dc8769687ffe1ab37e1638d62fb4a821e",
+    "source_and_selected_objects_mutated": false
+  },
+  "actual_comparison_log": "/workspace/work/palomar-tools/target-check-20261012T034857Z/comparator.log",
+  "actual_protected_verification": {
+    "status": "PASS",
+    "exit_code": 0,
+    "run_directory": "/workspace/work/palomar-tools/target-check-20261012T034857Z",
+    "comparator_log": "/workspace/work/palomar-tools/target-check-20261012T034857Z/comparator.log",
+    "status_file": "/workspace/work/palomar-tools/target-check-20261012T034857Z/LOCAL_VERIFICATION_STATUS.json",
+    "commands_file": "/workspace/work/palomar-tools/target-check-20261012T034857Z/commands.json",
+    "con_ron_verified": true,
+    "con_ron_declarations_accepted": 77670,
+    "nanoda_accepted": true,
+    "lean_default_accepted": true,
+    "final_success_marker": "Your solution is okay!",
+    "log_sha256": "804f799332ce23bb953efd98ae421dd97a89a99cc29d16795b22ea692b97910f",
+    "pair_and_config_sources_frozen": true,
+    "core_and_solution_unchanged_by_challenge_repair": true,
+    "official_full_registry_workflow_run": false,
+    "remote_submission_registration_or_export_upload": false,
+    "bubblewrap_network_disabled": true,
+    "candidate_source_absent_from_judge": true
+  },
+  "reviewer_proof_guide": {
+    "path": "/workspace/work/ec567-proof-guide.md",
+    "sha256": "402898b5169d88be77f250bc306e3ff73c824bc0646af20bcf31fb955dfb3400",
+    "scope": "Global infinitude at exact ranks 5/6/7; specified positive rectangles; no narrow-cone infinitude or supplementary five-point integral-independence claim."
+  }
+}

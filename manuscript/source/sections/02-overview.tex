@@ -1,0 +1,182 @@
+\chapter{Overview of the proof}\label{sec:overview}
+
+In this section, we explain how the proof of \cref{thm:main} works. We describe the steps for a general family of the form \eqref{eq:intro-curves}, in the order in which \cref{part:tools} carries them out, and in \cref{sec:overview-example} we follow them through the rank-six family. Precise statements and complete proofs are given in \cref{sec:descent,sec:families,sec:primes,sec:rank5,sec:rank6,sec:rank7}, and we point to them as we go. Nothing in this section is used later.
+
+The proof has three parts. Fix one of the three families. First, we bound the dimensions $d_E$ and $d_{E'}$ of the images of the two descent maps from below by the classes of explicit rational points, at every pair $(M,N)$ at which the twelve forms take prime values up to fixed factors. Second, we bound them from above by local conditions at finitely many places, provided that $(M,N)$ also lies in a fixed congruence class and a fixed open cone. Most of the work lies in this step. Third, we use the Green--Tao--Ziegler theorem to produce infinitely many such pairs $(M,N)$, and we show that the resulting curves have infinitely many $j$-invariants.
+
+\section{The shape of the families}\label{sec:overview-shape}
+
+Recall the curves $E_{M,N}$ and $E'_{M,N}$ of \eqref{eq:intro-curves}. When $(M,N)$ is fixed, we write $E=E_{M,N}$ and $E'=E'_{M,N}$, and
+\begin{equation*}
+\alpha=AF,\qquad\beta=-BFH,\qquad\alpha'=-2AF,\qquad\beta'=CFJ
+\end{equation*}
+for their coefficients. Since $\alpha^2-4\beta=F(A^2F+4BH)$, the identity $A^2F+4BH=CJ$ says exactly that $\beta'=\alpha^2-4\beta$, that is, that $E'$ is the curve $y^2=x^3-2\alpha x^2+(\alpha^2-4\beta)x$, which is $2$-isogenous to $E$ (\cref{lem:datum-basic}). Note that all four coefficients are constants times products of the forms $L_i$, and so is the discriminant $16B^2CF^3H^2J$ of $E$. Every prime of bad reduction of $E$ therefore divides $2BC$ or one of the twelve values $L_i(M,N)$.
+
+The twelve linear factors are what make the descent computable at infinitely many pairs $(M,N)$. Suppose that $L_i(M,N)=c_ip_i$ for $0\le i\le11$, where the $c_i$ are fixed positive integers and $p_0,\dots,p_{11}$ are distinct primes outside a fixed finite set $S$. Such a pair is a prime specialization (\cref{def:prime-specialization}), and the $p_i$ are its moving primes. At a prime specialization, each $p_i$ divides exactly one of the twelve values, and only to the first power (\cref{lem:prime-spec-basic}). The moving primes grow with $(M,N)$, but their number and the way in which they divide the coefficients of the curves do not change. In the three families, $c_i$ is the largest divisor of $L_i(M,N)$ composed of the primes $2$ and $3$, which is the same for all $(M,N)$ in the congruence class that we choose below. In the rank-five and rank-six families, some cofactors must be larger than one. Indeed, the zero lines of the twelve forms modulo $2$ are all three lines of $\F_2^2$, and modulo $3$ they are all four lines of $\F_3^2$. It follows that for every pair $(M,N)$, at least one of the values $L_i(M,N)$ is even, and at least one is divisible by $3$.
+
+The forms come in three groups of four, according to whether $L_i$ divides $F$, $H$ or $J$. We write $I_F=\{0,1,2,3\}$, $I_H=\{4,5,6,7\}$ and $I_J=\{8,9,10,11\}$ for the corresponding sets of indices. At a prime specialization, a moving prime $p_i$ with $i\in I_F$ divides $\alpha$, $\beta$ and $\beta'$; a moving prime with $i\in I_H$ divides $\beta$ but not $\alpha$ or $\beta'$; and a moving prime with $i\in I_J$ divides $\beta'$ but not $\alpha$ or $\beta$. The eight moving primes that divide $\beta$ have indices in $G_E=I_F\cup I_H$, and the eight that divide $\beta'$ have indices in $G_{E'}=I_F\cup I_J$. As we explain in \cref{sec:overview-local}, the group of a moving prime decides the local condition that it imposes.
+
+\section{Descent and the lower bound}\label{sec:overview-descent}
+
+We use descent by the rational $2$-isogeny $\phi\colon E\to E'$ and its dual $\dual$. Recall from the introduction that the descent map $\delta_E$ sends a point $(x,y)$ with $x\ne0$ to the class $\sq x$ in $\sqgp\Q$, the point $T=(0,0)$ to $\sq\beta$, and the identity to $\sq1$. It is a homomorphism with kernel $\dual(E'(\Q))$, and the map $\delta_{E'}$ on $E'(\Q)$, defined in the same way, has kernel $\phi(E(\Q))$ (\cref{prop:descent}). Writing $d_E$ and $d_{E'}$ for the dimensions over $\F_2$ of the images, we have
+\begin{equation*}
+\rk E_{M,N}(\Q)=d_E+d_{E'}-2
+\end{equation*}
+by \cref{lem:rank-formula}. The proof of \cref{thm:main} reduces to computing $d_E$ and $d_{E'}$ exactly, at every prime specialization in a suitable infinite set. For the rank-six family, for example, we must show that $d_E=d_{E'}=4$.
+
+We obtain the lower bounds from explicit points. Each family has a few points on $E$ and on $E'$ whose coordinates are polynomials in $M$ and $N$ with rational coefficients (\cref{tab:r5-points,tab:r6-points,tab:r7-points}). The $x$-coordinate of each point is a constant times a product of four of the forms $L_i$, and the condition that the point lies on the curve is an identity between binary quartic forms, which a reader can check by comparing five coefficients (for example, \cref{lem:r6-points}). At a prime specialization, the class of such a point is $\sq{g\prod_{j\in\mathcal J}p_j}$, where $g$ is a product of $-1$ and primes of $S$, and $\mathcal J$ is a set of four indices, which we call its moving support. The class $\sq\beta$ of $T$ has the moving support $G_E$. Note that the exponent of $p_j$ in a class is its $p_j$-adic valuation modulo $2$, since the $p_j$ are distinct primes outside $S$. To prove that the classes are independent, it suffices to order them so that each has a moving prime that occurs in none of the later ones (\cref{lem:independence}); then no nontrivial product of them is a square. Counting $T$ and $T'$, we find $k_E$ independent classes in the image of $\delta_E$ and $k_{E'}$ in the image of $\delta_{E'}$, where
+\begin{equation*}
+(k_E,k_{E'})=(3,4),\quad(4,4),\quad(5,4)
+\end{equation*}
+in the rank-five, rank-six and rank-seven families (\cref{lem:r5-lower,lem:r6-classes,lem:r7-independent}). This implies that $d_E\ge k_E$ and $d_{E'}\ge k_{E'}$.
+
+\section{Upper bounds from local conditions}\label{sec:overview-local}
+
+For the upper bound, we must exclude every class that does not come from the points. Every class in $\delta_E(E(\Q))$ is the class of a rational point. By \cref{prop:descent}, its image in $\sqgp{\Q_v}$ therefore lies in the image $\delta_{E,v}(E(\Q_v))$ of the local descent map, for every place $v$. We use only finitely many of these conditions, and in order to make them the same for all $(M,N)$ in an infinite set, we replace the local images at the fixed places by subgroups that contain them (see \cref{rem:selmer} for how this compares with the Selmer group). It is not clear in advance that these weaker conditions suffice. In the three families they do, and they cut out exactly the span of the classes of the points.
+
+To write the conditions as linear equations, we first fix finitely many classes that span the image. By \cref{lem:support}, every class in $\delta_E(E(\Q))$ is represented by a squarefree divisor of $\beta$, with a sign. At a prime specialization, the primes dividing $\beta$ are the eight moving primes $p_j$ with $j\in G_E$ and some primes of $S$. We fix an ordered list $\Gamma_E$ consisting of $-1$ and of distinct primes of $S$, which contains every prime of $S$ that divides $\beta$; the list $\Gamma_{E'}$ is chosen in the same way. Let $\cB_E=(\Gamma_E;\,p_j\ (j\in G_E))$. By \cref{lem:prime-spec-basic}, the classes of the $n_E=|\Gamma_E|+8$ entries of $\cB_E$ are independent and span a subgroup that contains $\delta_E(E(\Q))$. We may then regard every class in $\delta_E(E(\Q))$ as a vector $\mathbf w\in\F_2^{n_E}$ of exponents, and each local condition becomes a linear equation in $\mathbf w$. Indeed, let $U_v$ be a subgroup of $\sqgp{\Q_v}$ that contains the local image, and let $f\colon\sqgp{\Q_v}\to\F_2$ be a linear map that vanishes on $U_v$. Evaluating $f$ at the entries of $\cB_E$ gives a row vector $r$ with $r\cdot\mathbf w=0$ for every class $\mathbf w$ in $\delta_E(E(\Q))$ (\cref{lem:upper-bound}). If $\mathbf M_E$ is a matrix of such rows, we conclude that
+\begin{equation*}
+d_E\le n_E-\rk\mathbf M_E.
+\end{equation*}
+When $\rk\mathbf M_E=n_E-k_E$, this upper bound matches the lower bound of \cref{sec:overview-descent}, and $\delta_E(E(\Q))$ is the span of the classes of the points (\cref{cor:exact-dimension}). The same construction applies to $E'$, with $\beta'$, $G_{E'}$, a list $\Gamma_{E'}$ and the basis $\cB_{E'}$.
+
+We take rows at two kinds of places. At the moving primes, we determine the local images from the valuations of the coefficients alone (\cref{lem:odd-local,lem:moving-images}). Writing $p=p_i$, we have the following.
+\begin{center}
+\begin{tabular}{ccccll}
+\toprule
+$i\in$ & $v_p(\alpha)$ & $v_p(\beta)$ & $v_p(\beta')$ & $\delta_{E,p}(E(\Q_p))$ & $\delta_{E',p}(E'(\Q_p))$\\
+\midrule
+$I_F$ & $1$ & $1$ & $1$ & $\{\sq1,\sq\beta\}$ & $\{\sq1,\sq{\beta'}\}$\\
+$I_H$ & $0$ & $1$ & $0$ & not used & $\{\sq1\}$\\
+$I_J$ & $0$ & $0$ & $1$ & $\{\sq1\}$ & not used\\
+\bottomrule
+\end{tabular}
+\end{center}
+At a prime $p_i$ with $i\in I_J$, the condition on $E$ says that every class in $\delta_E(E(\Q))$ is a square in $\Q_{p_i}$. The entries of $\cB_E$ are units at $p_i$. The valuations are therefore even automatically, and the condition says that the Legendre symbol modulo $p_i$ of the class is $1$. In other words, the row has the entry $\lambda_i(g)$ at each constant $g\in\Gamma_E$ and the entry $\lambda_i(p_j)$ at each moving prime $p_j$, where $\leg z{p_i}=(-1)^{\lambda_i(z)}$.
+
+At a prime $p_i$ with $i\in I_F$, a class lies in $\{\sq1,\sq\beta\}$ if and only if its Legendre symbol modulo $p_i$, after the factor $p_i$ is removed, equals that of $\beta/p_i$ when the class has odd valuation at $p_i$, and equals $1$ otherwise. The row has the same entries as before, except at the column of $p_i$ itself, where the entry is the character $\lambda_i(\beta/p_i)$. With $\beta=\kappa_E\prod_{j\in G_E}p_j$, where $\kappa_E$ is a constant, we have $\lambda_i(\beta/p_i)=\lambda_i(\kappa_E)+\sum_{j\in G_E\setminus\{i\}}\lambda_i(p_j)$. For the curve $E'$, the roles of $H$ and $J$ are exchanged, since $\alpha'^2-4\beta'=16\beta$. Altogether, each curve has eight moving rows: four at the primes $p_i$ with $i\in I_F$, and four at the primes $p_i$ with $i\in I_J$ for $E$, or $i\in I_H$ for $E'$ (\cref{def:moving-rows,lem:moving-rows}).
+
+We obtain the other rows at the fixed places: $2$, $3$, one or two further primes of $\Gamma_E$ or $\Gamma_{E'}$, and the real place. Here we bound the local images by going through the points of $E(\Q_v)$: the identity, the point $T$, the other points of order two (\cref{lem:two-torsion}), and the points with $y\ne0$, sorted by the valuation of $x$. For most valuations of $x$, one term of the cubic $x^3+\alpha x^2+\beta x$ has strictly smallest valuation and determines the valuation and the leading digits of the cubic (\cref{lem:dominant}); in the remaining cases, the residues of the coefficients decide. The condition that the cubic is the square $y^2$ (\cref{lem:squares}) then restricts the class of $x$. These arguments use only the relation $\beta'=\alpha^2-4\beta$ and the valuations and residues of the coefficients at the fixed prime, modulo a small power of it. The congruence class of $(M,N)$ fixes these residues, and the fixed-place lemmas (\cref{lem:r5-fixed,lem:r6-fixed,lem:r7-fixed}) state the resulting subgroups $U_v$ at the finite fixed places, which are the same for every pair in the class.
+
+At the real place, we use that all twelve forms are positive on the cone. We then have $\alpha'<0<\beta'$, and the cubic $x^3+\alpha'x^2+\beta'x$ is negative for $x<0$. Every point of $E'(\R)$ other than the identity has $x>0$ or is the point $T'$, whose class $\sq{\beta'}$ is trivial. The local image is trivial, which gives the row that records the sign. On $E$, the point $T$ has the negative class $\sq\beta$, and the real place gives no condition. At the finite fixed places, the entry of a fixed row at the column of a moving prime $p_j$ depends only on the residue of $p_j$ modulo $8$ or modulo the fixed prime, which the congruence class also fixes. In the real row, every moving prime is positive and therefore has entry $0$.
+
+\section{Reciprocity and the free sign}\label{sec:overview-sign}
+
+We have seen that the fixed rows are the same at all prime specializations in the chosen congruence class and cone. However, the moving rows consist of Legendre symbols modulo the moving primes, and a priori these depend on $(M,N)$. There are two kinds of entries.
+
+We first consider the entries $\lambda_i(g)$ and $\lambda_i(\kappa_\star)$, for $\star\in\{E,E'\}$, which are characters of fixed integers. By quadratic reciprocity and its supplementary laws, such a character depends only on the residues of $p_i$ modulo $8$ and modulo the odd primes dividing the integer (\cref{lem:fixed-characters}). The modulus $W$ of the congruence class is divisible by a power of $2$ and by these odd primes, and the class fixes the residues of all the $p_i$ modulo them (\cref{tab:r5-residues,tab:r6-residues,tab:r7-res}).
+
+We now turn to the cross symbols $\lambda_i(p_j)$, with $i\ne j$, which are characters of one moving prime modulo another. The residue computations above do not evaluate them. The observation that makes them computable is that the moving primes are values of linear forms in the same two variables. Any three of these forms are linearly dependent, and reducing such a relation modulo one of the primes relates the other two. We have $M=c_0p_0$, since $L_0=M$. Reducing $c_jp_j=a_jM+b_jN$ modulo $p_0$, we find $c_jp_j\equiv b_jN\pmod{p_0}$, which implies that
+\begin{equation*}
+\leg{p_j}{p_0}=\leg{b_jc_j}{p_0}\eps,\qquad\eps=\leg N{p_0}.
+\end{equation*}
+Quadratic reciprocity then determines $\leg{p_0}{p_j}$.
+For $i,j\ge1$, eliminating $N$ between $L_i\equiv0$ and $L_j$ modulo $p_i$, we find $b_iL_j\equiv\Delta_{ji}M\pmod{p_i}$, where $\Delta_{ji}=a_jb_i-a_ib_j$. This expresses $\leg{p_j}{p_i}$ as $\leg{p_0}{p_i}$ times the character of a fixed integer (\cref{lem:reciprocity}). Writing $\eps=(-1)^\eta$ with $\eta\in\F_2$, we find
+\begin{equation*}
+\lambda_i(p_j)=\gamma_{ij}+\eta,
+\end{equation*}
+where $\gamma_{ij}\in\F_2$ is computed from characters of fixed integers at $p_0$ and $p_i$, which the congruence class determines (\cref{cor:eta-structure}). Only the pairs $(i,j)$ that occur in the rows need to be controlled. A pair with both indices in $I_H$, or both in $I_J$, never occurs (\cref{rem:constant-characters}), and the determinants $\Delta_{ij}$ of these pairs need no condition. This is why some primes of $S$, such as $131$, $257$, $409$ and $2089$ in the rank-five family, need not divide $W$.
+
+We conclude that at the prime specializations in the congruence class, the matrix $\mathbf M_\star$ depends on $(M,N)$ only through $\eta$. We write it as $\mathbf M_\star(\eta)$. However, we have no means of prescribing the sign $\eps$. It is a Legendre symbol modulo the growing prime $p_0$, and the Green--Tao--Ziegler theorem produces prime values in a congruence class and a cone, but it gives no control of the Legendre symbols among these primes. We must prove the upper bound for both values of $\eps$.
+
+The way out is to observe how the matrix changes with $\eta$. The fixed rows and the entries of the moving rows in the constant columns do not involve $\eta$. Each entry of a moving row in a moving column $j\ne i$ changes by $\eta$. The entry in the column of $p_i$ is $\lambda_i(\kappa_\star)$ plus a sum of seven cross symbols, and it changes by $7\eta=\eta$ as well. In other words, every moving row satisfies
+\begin{equation*}
+r^\star_i(\eta)=r^\star_i(0)+\eta u_\star,
+\end{equation*}
+where $u_\star$ is the vector with entry $1$ at the eight moving columns and $0$ elsewhere.
+
+Now suppose that there exists a set of rows of $\mathbf M_\star(0)$, containing an even number of moving rows, such that $u_\star$ is their sum. The same set of rows of $\mathbf M_\star(1)$ then also sums to $u_\star$, because the extra copies of $u_\star$ cancel in pairs. Then $u_\star$ lies in both row spaces, and since every row of one matrix is the corresponding row of the other, or that row plus $u_\star$, the two matrices have the same row space (\cref{lem:eta-rank}). In particular, they have the same rank and the same kernel, and one rank computation covers both values of $\eps$. The parity condition cannot be dropped: if a moving row of $\mathbf M_\star(0)$ were equal to $u_\star$, the corresponding row of $\mathbf M_\star(1)$ would be zero. In five of the six cases (three families, two curves), $u_\star$ is the sum of some fixed rows and exactly two moving rows; for the curve $E'$ of the rank-five family, it is the sum of four moving rows (\cref{lem:r5-certificate,lem:r6-rank,lem:r7-ranks}).
+
+\Cref{prop:rank-criterion} collects these steps. Let $\cP$ be a set of prime specializations on which the fixed rows and the numbers $\lambda_i(g)$, $\lambda_i(\kappa_\star)$ and $\gamma_{ij}$ are constant. The proposition states that if, for both curves, the image of $\delta_\star$ contains $k_\star$ independent classes, $\rk\mathbf M_\star(0)=n_\star-k_\star$, and $u_\star$ has a representation as above, then $d_\star=k_\star$ and $\rk E_{M,N}(\Q)=k_E+k_{E'}-2$ at every $(M,N)\in\cP$.
+
+\section{An example: the rank-six family}\label{sec:overview-example}
+
+We now follow these steps through the family of \cref{sec:rank6}. Here $A=70$, $B=784$ and $C=1764$, and the identity $A^2F+4BH=CJ$ is $196$ times $25F+16H=9J$. The forms $L_0=M$ and $L_1=N$ have $c_0=c_1=1$, so that $p_0=M$, $p_1=N$ and $\eps=\leg{p_1}{p_0}$. The lists of constants are $\Gamma_E=\Gamma_{E'}=(-1,2,3,7)$, and the bases
+\begin{equation*}
+\cB_E=(-1,2,3,7;\ p_0,\dots,p_7),\qquad\cB_{E'}=(-1,2,3,7;\ p_0,\dots,p_3,p_8,\dots,p_{11})
+\end{equation*}
+have $n_E=n_{E'}=12$ entries.
+
+\paragraph{The points.} Besides $T$, we use three points on each curve (\cref{tab:r6-points}). For example, $P_1=(14H,588D_0H)$ with $D_0=M^2+30N^2$ lies on $E$, because $F+H=126D_0^2$ (see \eqref{r6:D0}). At a prime specialization, we have $H=2p_4p_5p_6p_7$, and the class of $P_1$ is $\sq{28p_4p_5p_6p_7}=\sq{7p_4p_5p_6p_7}$. The four classes on $E$ are
+\begin{equation*}
+\begin{aligned}
+\delta_E(T)&=\sq{-p_0p_1\cdots p_7},&\qquad\delta_E(P_1)&=\sq{7p_4p_5p_6p_7},\\
+\delta_E(P_2)&=\sq{-p_1p_2p_4p_5},&\qquad\delta_E(P_3)&=\sq{-7p_1p_3p_4p_6}.
+\end{aligned}
+\end{equation*}
+The prime $p_0$ occurs in the first class and in none of the others, $p_7$ occurs in the second class and in neither of the last two, $p_2$ occurs in the third class and not in the fourth, and $p_3$ occurs in the fourth. This triangular pattern shows that the four classes are independent, and $d_E\ge4$. The same argument on $E'$ gives $d_{E'}\ge4$ (\cref{lem:r6-classes}).
+
+\paragraph{The congruence class and the fixed rows.} The congruence class $\cP_6$ consists of the pairs $(M,N)\equiv(M_0,N_0)$ modulo
+\begin{equation*}
+W=2^6\cdot3^4\cdot5\cdot7\cdot11\cdot17\cdot23=780373440,
+\end{equation*}
+and the cone $\cK_6$ is $\{29N<M<31N,\ N>0\}$ (\cref{sec:r6-progression}). By \cref{lem:r6-fixed}, every $(M,N)\in\cP_6$ has the following properties: the image of $\delta_{E,2}$ lies in the subgroup generated by $\sq{-1}$ and $\sq5$, whose classes have even valuation at $2$; the image of $\delta_{E,3}$ is trivial; and the image of $\delta_{E,7}$ lies in $\{\sq1,\sq7\}$. These bounds give four fixed rows of $\mathbf M_E(\eta)$: one at $2$, two at $3$ (one for the valuation and one for the unit part), and one at $7$. On $E'$, we obtain two rows at $2$, one at $7$ and one at the real place. Each matrix has $4+8=12$ rows.
+
+\paragraph{A moving row.} We compute the row of $\mathbf M_E(\eta)$ at the prime $p_{10}$. Since $10\in I_J$, the local image of $E$ at $p_{10}$ is trivial, and the row consists of the characters $\lambda_{10}$ of the entries of $\cB_E$. By \cref{tab:r6-residues}, every $(M,N)\in\cP_6$ has
+\begin{equation*}
+p_{10}\equiv7\pmod8,\qquad p_{10}\equiv2\pmod3,\qquad p_{10}\equiv6\pmod7.
+\end{equation*}
+By the supplementary laws, we have $\leg{-1}{p_{10}}=-1$ and $\leg2{p_{10}}=1$. Since $3$, $7$ and $p_{10}$ are congruent to $3$ modulo $4$, and $2$ and $6$ are not squares modulo $3$ and $7$, quadratic reciprocity yields $\leg3{p_{10}}=-\leg{p_{10}}3=1$ and $\leg7{p_{10}}=-\leg{p_{10}}7=1$. The entries in the constant columns $-1,2,3,7$ are $1,0,0,0$.
+
+For the cross symbols, we use the linear relations among the forms. Since $L_3=25M-169N$, $L_{10}=M-2N$, $c_3=8$ and $c_{10}=3$, we have
+\begin{equation*}
+8p_3=25p_0-169p_1,\qquad 3p_{10}=p_0-2p_1.
+\end{equation*}
+Reducing the second relation modulo $p_0$, we find $3p_{10}\equiv-2p_1\pmod{p_0}$, which implies that $\leg{p_{10}}{p_0}=\leg{-6}{p_0}\eps$. On $\cP_6$, we have $p_0\equiv3\pmod8$ and $p_0\equiv1\pmod3$. Then $\leg{-1}{p_0}=\leg2{p_0}=-1$ and $\leg3{p_0}=-\leg{p_0}3=-1$, which gives $\leg{-6}{p_0}=-1$ and $\leg{p_{10}}{p_0}=-\eps$. As $p_0$ and $p_{10}$ are both congruent to $3$ modulo $4$, quadratic reciprocity implies that $\leg{p_0}{p_{10}}=\eps$, that is, $\lambda_{10}(p_0)=\eta$.
+
+Next, we reduce both relations modulo $p_{10}$. The second becomes $p_0\equiv2p_1\pmod{p_{10}}$, and since $\leg2{p_{10}}=1$, we have $\leg{p_1}{p_{10}}=\leg{p_0}{p_{10}}=\eps$, that is, $\lambda_{10}(p_1)=\eta$. Inserting $2p_1\equiv p_0$ into the first relation, multiplied by $2$, we find $16p_3\equiv-119p_0\pmod{p_{10}}$, where $119=7\cdot17$. We computed $\leg7{p_{10}}=1$ above, and $\leg{17}{p_{10}}=\leg{p_{10}}{17}=\leg{16}{17}=1$, since $p_{10}\equiv16\pmod{17}$ by \cref{tab:r6-residues}. Hence $\leg{p_3}{p_{10}}=\leg{-1}{p_{10}}\eps=-\eps$, that is, $\lambda_{10}(p_3)=1+\eta$. The other cross symbols are computed in the same way, from the integers listed in \cref{tab:r6-K} and the characters in \cref{tab:r6-chars}, and \cref{tab:r6-cross} collects the results. The row is
+\begin{equation*}
+\begin{array}{c|cccc|cccccccc}
+ & -1 & 2 & 3 & 7 & p_0 & p_1 & p_2 & p_3 & p_4 & p_5 & p_6 & p_7\\
+\hline
+r^E_{10}(\eta) & 1 & 0 & 0 & 0 & \eta & \eta & \eta & 1+\eta & 1+\eta & \eta & 1+\eta & \eta
+\end{array}
+\end{equation*}
+For $\eta=0$, it is the row at $p_{10}$ of \cref{tab:r6-ME}. Note that the row is orthogonal to the classes of the points, for both values of $\eta$. For instance, its entries at $7$ and at $p_4,\dots,p_7$ sum to $0+(1+\eta)+\eta+(1+\eta)+\eta=0$ in $\F_2$. This says that $7p_4p_5p_6p_7$ is a square modulo $p_{10}$, which must be so, since $\sq{7p_4p_5p_6p_7}$ is the class of the rational point $P_1$.
+
+\paragraph{The count.} The matrix $\mathbf M_E(0)$ of \cref{tab:r6-ME} has twelve rows and twelve columns. By \cref{lem:r6-rank}, it has an $8\times8$ submatrix that becomes lower triangular with ones on the diagonal after its rows and columns are reordered; the row at $p_{10}$ supplies the diagonal entry in the column of $p_3$. This implies that $\rk\mathbf M_E(0)\ge8$. The four classes of the points lie in the kernel. Hence the rank is exactly $8$, and the kernel is spanned by these classes. The vector $u_E$ is the sum of the fixed row at $2$ and the two moving rows at $p_1$ and $p_8$, and by \cref{lem:eta-rank}, the matrix $\mathbf M_E(1)$ has the same kernel. We conclude that $d_E=4$ and that $\delta_E(E(\Q))$ is spanned by the four classes above. The same count on $E'$ yields $d_{E'}=4$, with $u_{E'}$ the sum of the fixed row at $7$ and the moving rows at $p_1$ and $p_4$. By \cref{lem:rank-formula}, we have
+\begin{equation*}
+\rk E_{M,N}(\Q)=d_E+d_{E'}-2=4+4-2=6
+\end{equation*}
+at every prime specialization in $\cP_6\cap\cK_6$, which is the rank statement of \cref{thm:r6}.
+
+\paragraph{The three families.} \Cref{tab:overview-count} summarizes the same count for all three families. In each case, the rank of $\mathbf M_\star(0)$ is the largest value that the points allow, namely $n-k_\star$, since every row vanishes on the $k_\star$ classes of the points.
+
+\begin{table}[htbp]
+\centering
+\caption{The dimension count in the three families of \cref{sec:rank5,sec:rank6,sec:rank7}. Here $n=n_E=n_{E'}$ is the number of columns, ``rows'' is the number of fixed rows plus the eight moving rows, ``rank'' is $\rk\mathbf M_\star(0)$, and $d_\star=n-\rk\mathbf M_\star(0)$.}
+\label{tab:overview-count}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}ccccccccccc@{}}
+\toprule
+& & & \multicolumn{4}{c}{curve $E$} & \multicolumn{4}{c}{curve $E'$}\\
+\cmidrule(lr){4-7}\cmidrule(lr){8-11}
+$r$ & $\Gamma_E=\Gamma_{E'}$ & $n$ & fixed places & rows & rank & $d_E$ & fixed places & rows & rank & $d_{E'}$\\
+\midrule
+$5$ & $(-1,2,3,5)$ & $12$ & $2,3,5$ & $5+8$ & $9$ & $3$ & $2,5,\infty$ & $3+8$ & $8$ & $4$\\
+$6$ & $(-1,2,3,7)$ & $12$ & $2,3,7$ & $4+8$ & $8$ & $4$ & $2,7,\infty$ & $4+8$ & $8$ & $4$\\
+$7$ & $(-1,2,3,7,13)$ & $13$ & $2,3$ & $4+8$ & $8$ & $5$ & $2,7,13,\infty$ & $6+8$ & $9$ & $4$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Infinitely many prime specializations}\label{sec:overview-primes}
+
+We have explained why the rank statement holds at every prime specialization in $\cP_r\cap\cK_r$, and it remains to show that there are infinitely many of them. We write $M=M_0+WX$ and $N=N_0+WY$ with $(X,Y)\in\Z^2$. The twelve numbers $p_i=L_i(M,N)/c_i$ are the values at $(X,Y)$ of the affine-linear forms
+\begin{equation*}
+\ell_i(X,Y)=\frac{L_i(M_0,N_0)}{c_i}+\frac W{c_i}(a_iX+b_iY),\qquad0\le i\le11,
+\end{equation*}
+whose linear parts are pairwise linearly independent, since $\Delta_{ij}\ne0$. The theorem of Green and Tao on linear equations in primes \cite{GT2010}, which is unconditional by \cite{GT2012,GTZ2012}, is an asymptotic formula for the sum of $\prod_i\Lambda(\ell_i(X,Y))$ over the points $(X,Y)$ of a dilated convex region, where $\Lambda$ is the von Mangoldt function (\cref{thm:gtz}). Apart from the weights and from the contribution of prime powers, which is negligible, this sum counts the points at which all twelve forms take prime values. The main term is the area of the region times a product of local factors, and it is positive if all the forms are positive on the region and no prime $q$ is a local obstruction.
+
+We choose the congruence class in such a way that no prime is a local obstruction (\cref{lem:local-factors}). For a prime $q$ dividing $W$, each form $\ell_i$ is constant modulo $q$, and this constant is prime to $q$ by the choice of $(M_0,N_0)$ and of the cofactors. For a prime $q$ not dividing $W$, there is an obstruction only if the zero lines of the twelve forms $L_i$ modulo $q$ cover all $q+1$ lines through the origin of $\F_q^2$. This cannot happen for $q\ge13$, since there are only twelve forms. In the three families, every prime $q\le11$ divides $W$, except $q=5$ in the rank-seven family, which is checked directly. The points at which two values coincide, or at which a value is a prime of $S$ or a power of a prime with exponent at least two, lie on comparatively few lines, and they contribute only to the error term (\cref{lem:prime-exclusions}). Finally, every form $L_i$ is positive on the cone $\cK_r$ (\cref{lem:r5-cone,lem:r6-cone,lem:r7-cone}). Combining these facts, we obtain infinitely many prime specializations in $\cP_r\cap\cK_r$ (\cref{prop:infinitely-many}). 
+
+It remains to show that these curves represent infinitely many $\Qbar$-isomorphism classes. At a prime specialization, $M$ and $N$ are coprime. Each ratio $M/N$ therefore comes from at most two prime specializations, and there are infinitely many ratios. The $j$-invariant of $E$ is
+\begin{equation*}
+j(E_{M,N})=\frac{256(A^2F+3BH)^3}{B^2CH^2J}.
+\end{equation*}
+By \cref{lem:j-invariant}, the numerator and the denominator are binary forms of degree $12$ in $(M,N)$ without a common zero, so that each value of $j$ is taken for at most twelve ratios $M/N$. The curves have infinitely many $j$-invariants, and they represent infinitely many $\Qbar$-isomorphism classes, because curves with distinct $j$-invariants are not isomorphic over $\Qbar$. This proves the infinitude statements of \cref{thm:r5,thm:r6,thm:r7}, and \cref{sec:proof} deduces \cref{thm:main} from these three theorems.
+
+\section{Where the families come from}\label{sec:overview-origin}
+
+Each family is a base change of a $2$-isogenous pair over $\Q(t)$, along a conic $z^2=q(t)$ that has rational points above each of the six bad parameters $t=\pm e$ of the pair. The starting pairs and earlier uses of this device are described in \cref{sec:intro-method}, and \cref{app:origins} gives the details. When we parametrize the conic by $M/N$, the parameter $t$ becomes a quotient of two binary quadratic forms. Each of the six factors $t\mp e$ then pulls back to a constant times a product of two of the forms $L_i$, divided by the denominator. The three factors $t^2-e^2$ pull back to constant multiples of $F$, $H$ and $J$, divided by the square of the denominator, and the linear relation among these three quadratic polynomials in $t$ becomes the identity $A^2F+4BH=CJ$, up to a constant factor. \Cref{app:origins} also relates some of the points of each family to points of the starting pair or to points over the conic.

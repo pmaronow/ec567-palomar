@@ -1,0 +1,35 @@
+{
+  "preexisting_proof_modules_unchanged": 98,
+  "modules": [
+    {
+      "file": "RankCertificates/FiniteKatai.lean",
+      "original_sha256": "1460dc67312e2b6cdbc11bd94e06ff8dd72c38232b9de1bbabc5efa43a2b8a80",
+      "promoted_sha256": "372d06df50285405cc640c7c66df678eae0d54de686e7f2faca8e62129fbd283",
+      "changes": [
+        "qualify local imports",
+        "qualify namespace into RankCertificates"
+      ],
+      "mathematical_statements_and_proof_bodies_changed": false
+    },
+    {
+      "file": "RankCertificates/PrimeDivisorMoments.lean",
+      "original_sha256": "60a7fc1636959869f586d9d413792efe1cdb9e96fcdc033eaba65e2492c9f283",
+      "promoted_sha256": "d17f0dd97943c606a1aae616947bb81b9afec389bb67d71939e300cc0d6f5440",
+      "changes": [
+        "qualify local imports",
+        "qualify namespace into RankCertificates"
+      ],
+      "mathematical_statements_and_proof_bodies_changed": false
+    },
+    {
+      "file": "RankCertificates/KataiAsymptotic.lean",
+      "original_sha256": "1d8f158a825fa4b57070a3385892c056a69fc43edaa48d263d3567badaff5027",
+      "promoted_sha256": "b7eef37450b2711c2625f39e44b5242e48038897b812a1a2874979c25146ff49",
+      "changes": [
+        "qualify local imports",
+        "qualify namespace into RankCertificates"
+      ],
+      "mathematical_statements_and_proof_bodies_changed": false
+    }
+  ]
+}

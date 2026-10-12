@@ -1,0 +1,131 @@
+{
+  "verdict": "passed read-only public replay-configuration review",
+  "packages": [
+    {
+      "package": "pnt-ap",
+      "package_name": "pntApAudit",
+      "toolchain": "leanprover/lean4:v4.35.0-rc3",
+      "mathlib_pin": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+      "relative_package_dependencies": [],
+      "proof_source_files": 6,
+      "all_proof_sources_real_files": true,
+      "all_sources_use_modern_module_headers": true,
+      "no_OAI_or_Wikipedia_proof_imports": true,
+      "config_snapshot_sha256": {
+        "lakefile.toml": "ff08225561c0703b4492ed7fcdb7fb086555d329dbb09f938380976a0d928852",
+        "lake-manifest.json": "bb3fc7249929043db9bb98c7fee3e2b81623407956daea3e64d304b05eb1122e",
+        "lean-toolchain": "bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47",
+        "README.md": "a2dbc1d6fa3d7042afe54c92b28b409c47f61631eff5e72fa85d5895e2e82c5b",
+        "PntAxiomAudit.lean": "fe6a1c21b3a9a49d2ac6d87f4f7d6d908d8700df8b405957448337fd531b2f63",
+        "axiom-audit.log": "cb2bf3d8b2915c3d0de3266eb5624ca58e1bdd6b1b81d535f32e06b0cff4231d",
+        "verification-status.json": "78fc059c95470c1136ffbe027a352d07d7f451f46e8ff888f630b932eb1ede6b"
+      }
+    },
+    {
+      "package": "mobius-ap",
+      "package_name": "mobiusAp",
+      "toolchain": "leanprover/lean4:v4.35.0-rc3",
+      "mathlib_pin": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+      "relative_package_dependencies": [
+        {
+          "name": "pntApAudit",
+          "relative_path": "../pnt-ap",
+          "resolved_package": "research/pnt-ap"
+        }
+      ],
+      "proof_source_files": 4,
+      "all_proof_sources_real_files": true,
+      "all_sources_use_modern_module_headers": true,
+      "no_OAI_or_Wikipedia_proof_imports": true,
+      "config_snapshot_sha256": {
+        "lakefile.toml": "f7d70440481a7bc2afc04df37eae1d20468bdc5035e211dbed4eb617e9eefc23",
+        "lake-manifest.json": "3894faf7d25a17f7abf50612c5acd04b4286f704cf132a3ed156d980e70a92e8",
+        "lean-toolchain": "bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47",
+        "README.md": "7d31973e026d834baa44a389b8377adf2351d927fe3ca58e38e0a8595f0ddfc7",
+        "MobiusAllAxiomAudit.lean": "905102aa3b70ac67703624cda1d9ae354feb97bdc0e6a9c72399ccabf58ac155",
+        "build-all.sh": "16d409eafd71d3508358f201d0da74f6db1903eb950f41ec08e6e45f408279c1",
+        "all-residue-axiom-audit.log": "a8cf4a6bcc339f715e0df3d10cd33b41596558371ea3834be12fae1970d4ea36",
+        "all-residue-verification-status.json": "b7e4226a1a55d8f373094bee17deef6f5bc2a5b7c5dee6701e53f572165e9c26"
+      }
+    },
+    {
+      "package": "major-arcs",
+      "package_name": "majorArcs",
+      "toolchain": "leanprover/lean4:v4.35.0-rc3",
+      "mathlib_pin": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+      "relative_package_dependencies": [
+        {
+          "name": "pntApAudit",
+          "relative_path": "../pnt-ap",
+          "resolved_package": "research/pnt-ap"
+        },
+        {
+          "name": "mobiusAp",
+          "relative_path": "../mobius-ap",
+          "resolved_package": "research/mobius-ap"
+        }
+      ],
+      "proof_source_files": 10,
+      "all_proof_sources_real_files": true,
+      "all_sources_use_modern_module_headers": true,
+      "no_OAI_or_Wikipedia_proof_imports": true,
+      "config_snapshot_sha256": {
+        "lakefile.toml": "c7b2426877f352f243c856c8bcb1e9c48c70266f18dbd3baddcd936d52fe5de5",
+        "lake-manifest.json": "cf2cbec898ea034d1b9c3ba8606c7319fef1d426ecbf4fdba1135af6a138c8c7",
+        "lean-toolchain": "bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47",
+        "README.md": "e48e393d6d518e59696dfd67b9ba7310bad572848d34ed9fc8c47fcc22b9bad3",
+        "AxiomAudit.lean": "5b0295f807af0a8cf1fac4422c990cb160d56fb69049dc0a3f7bf6c0b5140a2a",
+        "build-local.sh": "2e495c49a5c35f8723f3e323f9e5168a2af2f2cc6e3fbc8fbed5511e20554460",
+        "logs/axiom-audit.log": "603a08709a0c7bdfc96943ebe730ee5beb2daa601b720014615023b3279afeff",
+        "SOURCE_MANIFEST.json": "ce91596b47ed7f9b1c016844078d446fb837801ab04ff0f9905354d801b31ec5",
+        "REPLAY_MANIFEST.json": "9e1b8f7c5ef7be367248424965a5a08142721d49f0549358105298d759001b73"
+      }
+    },
+    {
+      "package": "toral-orthogonality",
+      "package_name": "toralOrthogonality",
+      "toolchain": "leanprover/lean4:v4.35.0-rc3",
+      "mathlib_pin": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+      "relative_package_dependencies": [
+        {
+          "name": "rankCertificates",
+          "relative_path": "../..",
+          "resolved_package": "."
+        },
+        {
+          "name": "mobiusAp",
+          "relative_path": "../mobius-ap",
+          "resolved_package": "research/mobius-ap"
+        }
+      ],
+      "proof_source_files": 11,
+      "all_proof_sources_real_files": true,
+      "all_sources_use_modern_module_headers": true,
+      "no_OAI_or_Wikipedia_proof_imports": true,
+      "config_snapshot_sha256": {
+        "lakefile.toml": "e8fd2cd881c3e35d4eeae24a3fe627f95d5f35d80051db0e5cbe7779e7b8dd86",
+        "lake-manifest.json": "157b93b1d9a36b3c98ebac28311471473a8ec37f1487c9f19688e360e039e2cd",
+        "lean-toolchain": "bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47",
+        "README.md": "1f87c02ea8775636dd657158d4ecf6102a21245ab5476a1e2c70ea86cdabb979",
+        "OwnershipAudit.lean": "fec0114daca45f68380c8ba635c3fb9eff8c18554d03c980aad7bbfcb0be606b",
+        "build-leaves.py": "8ca1f722f977e13b1effa096d434b25caa1ab85a5673347aabbf771f16874735",
+        "ownership-audit.log": "158587ef5f589f35dbea9648dd62ff34a1903f73c498274f6b0d4e6b4a513c84",
+        "VERIFICATION_STATUS.json": "74062b5923af082b16d677768fd4b5bd42b1bdcfe38ea62cd50068e1e18a5553"
+      }
+    }
+  ],
+  "fresh_external_clone_or_cache_download_performed": false,
+  "independent_full_build_performed": false,
+  "compiler_invoked_for_review": false,
+  "existing_cache_layout_validation": "root reports public Lake environments for major-arcs and toral-orthogonality resolve to rc3; review confirms matching package pins and self-contained relative dependencies",
+  "ownership_audit_counts": {
+    "pnt-ap": 743,
+    "mobius-ap": 64,
+    "major-arcs_local": 161,
+    "major-arcs_reaudited_suppliers": 807,
+    "toral-orthogonality": 179
+  },
+  "main_source_edits": false,
+  "recorded_audit_counts_confirmed_from_logs": true,
+  "major_arc_copies_match_all10_source_manifest_and_frozen_originals": true
+}

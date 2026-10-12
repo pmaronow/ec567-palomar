@@ -1,0 +1,60 @@
+\section{The rank-six family}\label{sec:origin-r6}
+
+The datum $\datum_6$ of \cref{sec:rank6} arises from a rank-four surface of Zywina \cite[\S6.5]{Zywina2026}. We use the quadratic forms $D_0$, $D_1$ of \cref{sec:r6-datum,sec:r6-points}.
+
+\paragraph{Zywina's pair.} Let $U=t^2-25^2$, $V=t^2-11^2$ and $W_t=t^2-39^2$. In \cite[\S6.5]{Zywina2026}, Zywina considers the elliptic curve
+\begin{equation}\label{r6o:zywina}
+E_Z\colon y^2=x^3-70U\,x^2+2^47^2\,UV\,x
+\end{equation}
+over $\Q(t)$, and the $2$-isogenous curve $E'_Z\colon y^2=x^3+140U\,x^2+2^23^27^2\,UW_t\,x$. In the notation of \cref{sec:descent}, these are $E_{\alpha_Z,\beta_Z}$ and $E_{\alpha'_Z,\beta'_Z}$ with $\alpha_Z=-70U$ and $\beta_Z=784UV$; indeed $\alpha_Z^2-4\beta_Z=196U(25U-16V)=1764UW_t$, since $25U-16V=9W_t$. Zywina shows that the images of the descent maps of $E_Z$ and $E'_Z$ over $\Q(t)$ have dimension at least three, using the points $(0,0)$,
+\[
+\bigl(14(t^2-11^2),\ 1176(t^2-11^2)\bigr),\qquad \bigl(2(t-11)(t-25),\ (36t+780)(t-11)(t-25)\bigr)
+\]
+on $E_Z$, and the points $(0,0)$,
+\[
+\bigl(2(t-25)(t-39),\ (64t+1760)(t-25)(t-39)\bigr),\qquad \bigl(-14(t^2-25^2),\ 4704(t^2-25^2)\bigr)
+\]
+on $E'_Z$,
+and he deduces from his Theorem~4.1 that, over every number field, there are infinitely many elliptic curves of rank four. The discriminants of $E_Z$ and $E'_Z$ vanish at the six parameters $t=\pm11,\pm25,\pm39$.
+
+\paragraph{A conic over which both curves gain a point.} Let $s,u\in\Q$ with $s^2+u^2=5$, $s\ne0$ and $s\ne u$. Substituting $x=14s^2U$ into the equation of $E_Z$ and dividing by $x^2$, we find $y^2/x^2=q(t)$, where
+\[
+q(t)=x-70U+\frac{784UV}{x}=(14s^2-70)\,U+\frac{56}{s^2}\,V.
+\]
+On $E'_Z$, the substitution $x=-14(s-u)^2U$ gives $y^2/x^2=(2s/(s-u))^2q(t)$; this is where the condition $s^2+u^2=5$ is used, since the difference of the two sides is a rational function whose numerator is divisible by $s^2+u^2-5$. For $(s,u)=(22/13,19/13)$, we find
+\[
+q(t)=\Bigl(\frac{84}{143}\Bigr)^2(47311-30t^2),\qquad \frac{2s}{s-u}=\frac{44}{3}.
+\]
+Then both curves acquire a point over the function field of the conic
+\begin{equation}\label{r6o:conic}
+\mathcal C\colon z^2=47311-30t^2.
+\end{equation}
+The conic has the rational point $(t,z)=(25,169)$, since $47311-30\cdot25^2=169^2$. We also have $47311-30\cdot11^2=209^2$ and $47311-30\cdot39^2=41^2$. In other words, each of the six bad parameters $\pm11,\pm25,\pm39$ lifts to two rational points of $\mathcal C$. The line $z=169+m(t-25)$ meets $\mathcal C$ where $h=t-25$ satisfies $h\bigl((m^2+30)h+338m+1500\bigr)=0$. Its second intersection with $\mathcal C$ is, for $m=M/N$,
+\[
+t=\frac{D_1}{D_0},\qquad z=\frac{Z}{D_0},\qquad Z=-169M^2-1500MN+5070N^2,
+\]
+and $Z^2+30D_1^2=47311D_0^2$. Since $D_0=M^2+30N^2>0$ for $(M,N)\ne(0,0)$, this parametrization has no poles at rational parameters.
+
+\paragraph{The pullbacks.} The six linear factors of $U$, $V$, $W_t$ pull back to products of two of the forms $L_i$ of \cref{tab:r6-forms}:
+\begin{equation}\label{r6o:pullbacks}
+\begin{aligned}
+D_1-25D_0&=-2L_1L_2, & D_1+25D_0&=2L_0L_3,\\
+D_1-11D_0&=2L_4L_5, & D_1+11D_0&=2L_6L_7,\\
+D_1-39D_0&=-2L_8L_9, & D_1+39D_0&=2L_{10}L_{11}.
+\end{aligned}
+\end{equation}
+Multiplying these identities in pairs, we obtain, at $t=D_1/D_0$,
+\[
+U=-\frac{4F}{D_0^2},\qquad V=\frac{4H}{D_0^2},\qquad W_t=-\frac{4J}{D_0^2},
+\]
+and the identity $25U-16V=9W_t$ becomes \eqref{r6:identity}. The change of variables $x_Z=(2/D_0)^2x$, $y_Z=(2/D_0)^3y$ transforms $E_Z$ and $E'_Z$ at $t=D_1/D_0$ into the curves $E$ and $E'$ of \eqref{r6:curves}. For example, the coefficients of $E_Z$ become $-70U(D_0/2)^2=70F$ and $784UV(D_0/2)^4=-784FH$. We conclude that $E_{M,N}$ is the pullback of $E_Z$ along the parametrization of $\mathcal C$, written in the parameter $m=M/N$, and $E'_{M,N}$ is the pullback of $E'_Z$; no quadratic twist occurs. The cofactors $c_i$ and the congruence class of \cref{sec:r6-progression} are not part of this construction.
+
+\paragraph{The points.} Under this change of variables, three of the four points of Zywina displayed above, and the image of the fourth under $t\mapsto-t$, become, up to sign, points of \cref{tab:r6-points}. The two points of $E_Z$ become $P_1$ and $P_2$. The point $(-14(t^2-25^2),4704(t^2-25^2))$ of $E'_Z$ becomes $Q_1$, and the point $(2(t+25)(t+39),(1760-64t)(t+25)(t+39))$, which is the image of $(2(t-25)(t-39),(64t+1760)(t-25)(t-39))$ under $t\mapsto-t$, becomes $-Q_2$. The conic supplies the further points
+\[
+C=\Bigl(-\frac{6776}{169}F,\ -\frac{25872}{2197}FZ\Bigr)\in E(\Q(m)),\qquad C'=\Bigl(\frac{126}{169}F,\ \frac{7056}{2197}FZ\Bigr)\in E'(\Q(m)),
+\]
+which come from the substitutions $x=14s^2U$ and $x=-14(s-u)^2U$; note that $6776/169=14(22/13)^2$ and $126/169=14(3/13)^2$. Their classes $\sq{-14F}=\delta_E(T)\delta_E(P_1)$ and $\sq{14F}=\delta_{E'}(Q_1)$ lie in the span of the classes of the pulled-back points, and $C$ and $C'$ do not enlarge the images of the descent maps directly. The remaining points $P_3$ and $Q_3$ are related to them through the isogenies $\phi$ and $\dual$ of \eqref{eq:isogenies}. Using the group law, one checks that
+\begin{equation}\label{r6o:halving}
+\phi(P_3)=C'-Q_1,\qquad \dual(Q_1+Q_3)=C+P_1+T.
+\end{equation}
+These identities are consistent with \cref{prop:descent}: since $\delta_{E'}(C')=\delta_{E'}(Q_1)$ and $\delta_E(C)=\delta_E(T)\delta_E(P_1)$, the points $C'-Q_1$ and $C+P_1+T$ lie in the kernels $\phi(E(\Q(m)))$ and $\dual(E'(\Q(m)))$ of the descent maps. The classes of the preimages $P_3$ and $Q_1+Q_3$ are not in the span of the classes of the pulled-back points. They account for the increase of the rank from four to six: by \cref{lem:r6-classes}, the classes of $T,P_1,P_2,P_3$ and of $T',Q_1,Q_2,Q_3$ are independent at every prime specialization of $\datum_6$.

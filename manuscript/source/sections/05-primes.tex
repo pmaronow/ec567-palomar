@@ -1,0 +1,210 @@
+\chapter{Linear equations in primes}\label{sec:primes}
+
+The goal of this section is to prove \cref{prop:infinitely-many}. It states that a twelve-form datum has infinitely many prime specializations in a given congruence class and a given open cone, under conditions on the class and the cone that reduce to finite computations. The analytic input is the theorem of Green and Tao on linear equations in primes~\cite{GT2010}, which became unconditional through the work of Green and Tao~\cite{GT2012} and of Green, Tao, and Ziegler~\cite{GTZ2012}. In \cref{sec:primes-gtz}, we state the form of this theorem that we use, \cref{thm:gtz}, and deduce it from the Main Theorem of~\cite{GT2010}. In \cref{sec:primes-exclusions}, we show that the main term in \cref{thm:gtz} does not change when we count only the points at which the values of the forms are distinct primes outside a finite set (\cref{lem:prime-exclusions}). In \cref{sec:primes-local}, we compute the local factors of the affine forms obtained from binary linear forms by restricting the variables to a congruence class (\cref{lem:local-factors}). \Cref{sec:primes-infinitude} combines these results. Apart from the analytic input, the section uses only the notions of \cref{sec:families}: twelve-form data (\cref{def:datum}), prime specializations (\cref{def:prime-specialization}), and \cref{lem:prime-spec-basic,lem:j-invariant}. We use \cref{prop:infinitely-many} to prove the infinitude statements in \cref{thm:r5,thm:r6,thm:r7}.
+
+Simultaneous prime values of linear forms have been used before to choose specializations of families. Harpaz, Skorobogatov, and Wittenberg~\cite{HSW2014} adapted the fibration method over $\Q$ by replacing Schinzel's hypothesis with the theorem of Green, Tao, and Ziegler. Their results concern suitable fibrations over the projective line whose degenerate fibers lie over rational points, and \cite[Theorem~1.1 and Proposition~1.2]{HSW2014} are two-variable statements of the kind we use. Zywina~\cite[Proposition~5.9]{Zywina2026} chose the specializations in his construction of elliptic curves of prescribed rank over number fields with the number-field version of this theorem due to Kai~\cite[Proposition~13.2]{Kai}. Over $\Q$, we can use the theorem of Green, Tao, and Ziegler directly. We describe this history in more detail in \cref{sec:introduction}.
+
+\paragraph{Notation.} Throughout this section, the letter $q$ denotes a prime; we reserve $p_i$ for the prime values of a datum. We write $\Lambda$ for the von Mangoldt function, so that $\Lambda(n)=\log q$ if $n=q^k$ for a prime $q$ and an integer $k\ge1$, and $\Lambda(n)=0$ otherwise; in particular, $\Lambda(n)=0$ for $n\le0$. An affine-linear form on $\Z^2$ is a map $\ell\colon\Z^2\to\Z$ of the form $\ell(\mathbf n)=\langle\mathbf w,\mathbf n\rangle+\ell(\mathbf 0)$ with $\mathbf w\in\Z^2$ and $\ell(\mathbf 0)\in\Z$. Its linear part is $\dot\ell(\mathbf n)=\langle\mathbf w,\mathbf n\rangle$, and we extend $\ell$ and $\dot\ell$ to $\R^2$ by the same formulas. For a set $K\subset\R^2$ and $R>0$, we write $RK=\{R\mathbf x:\mathbf x\in K\}$, and when $K$ is convex, we write $\area(K)$ for its Lebesgue measure. For affine-linear forms $\ell_1,\dots,\ell_t$ and a prime $q$, the reductions of the $\ell_i$ modulo $q$ are functions on $\F_q^2$, and we define the local factor
+\begin{equation}\label{eq:local-factor}
+\beta_q=\Big(\frac q{q-1}\Big)^t\frac{1}{q^2}\,\#\big\{\mathbf n\in\F_q^2:\ell_i(\mathbf n)\ne0\text{ for }1\le i\le t\big\}.
+\end{equation}
+This is the local factor of~\cite[(1.6)]{GT2010}, written as a count: there, $\beta_q$ is the average over $\mathbf n\in(\Z/q\Z)^2$ of $\prod_i\Lambda_{\Z/q\Z}(\ell_i(\mathbf n))$, where $\Lambda_{\Z/q\Z}(m)=q/(q-1)$ if $q\nmid m$ and $\Lambda_{\Z/q\Z}(m)=0$ otherwise.
+
+\section{The theorem of Green, Tao, and Ziegler}\label{sec:primes-gtz}
+
+We use the theorem in the following form. It is a special case of the generalized Hardy--Littlewood conjecture for systems of finite complexity~\cite[Conjecture~1.2]{GT2010}, with two variables, fixed forms, and a region on which all the forms are eventually positive. The qualitative consequence~\cite[Corollary~1.9]{GT2010}, whose two-variable case is~\cite[Theorem~1.1]{HSW2014}, gives infinitely many points at which all the forms are prime. We need the asymptotic form to show, in \cref{sec:primes-exclusions}, that infinitely many of these points have distinct prime values outside a given finite set.
+
+\begin{theorem}[Linear equations in primes]\label{thm:gtz}
+Let $t\ge2$, and let $\ell_1,\dots,\ell_t$ be affine-linear forms on $\Z^2$ with linear parts $\dot\ell_i(\mathbf n)=\langle\mathbf w_i,\mathbf n\rangle$ such that $\det(\mathbf w_i,\mathbf w_j)\ne0$ for all $i\ne j$. Let $K\subset\R^2$ be a nonempty bounded convex set whose closure $\overline K$ is contained in the open cone
+\[
+\mathcal C=\{\mathbf x\in\R^2:\dot\ell_i(\mathbf x)>0\text{ for }1\le i\le t\}.
+\]
+Then the following statements hold.
+\begin{enumerate}[label=(\arabic*)]
+\item\label{item:gtz-product} The product $\mathfrak S=\prod_q\beta_q$ over all primes $q$ converges. It is positive if $\beta_q>0$ for all primes $q$, and zero otherwise.
+\item\label{item:gtz-asymptotic} As $R\to\infty$, we have
+\begin{equation}\label{eq:gtz}
+\sum_{\mathbf n\in RK\cap\Z^2}\ \prod_{i=1}^t\Lambda(\ell_i(\mathbf n))=\area(K)\,\mathfrak S\,R^2+o(R^2),
+\end{equation}
+where the term $o(R^2)$ depends on $\ell_1,\dots,\ell_t$ and $K$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The asymptotic \eqref{eq:gtz} is an instance of the Main Theorem of~\cite{GT2010}, whose two conditional inputs are now theorems. We first bound the complexity of the system and check these inputs. We then fix the scale at which we apply the Main Theorem, compute the archimedean factor, and finally prove \ref{item:gtz-product}.
+
+\paragraph{Complexity.} By~\cite[Definition~1.5]{GT2010}, the system $(\ell_1,\dots,\ell_t)$ has complexity at most $s$ if, for each $i$, the forms $\ell_j$ with $j\ne i$ can be covered by $s+1$ classes such that $\ell_i$ does not lie in the affine-linear span of any of the classes. Fix $i$, and cover the $t-1$ forms $\ell_j$ with $j\ne i$ by the singleton classes $\{\ell_j\}$. If $\ell_i$ lay in the affine-linear span of $\{\ell_j\}$, then $\dot\ell_i$ would be a rational multiple of $\dot\ell_j$, which contradicts $\det(\mathbf w_i,\mathbf w_j)\ne0$. This shows that the system has complexity at most $t-2$, which is also the bound of~\cite[Lemma~1.6]{GT2010}: $t$ minus the dimension of the span of the linear parts. The same hypothesis implies that the forms are nonconstant and that no two of them are rational multiples of each other, as required in~\cite[Definition~1.1]{GT2010}.
+
+Let $s=\max(t-2,3)$. A system of complexity at most $t-2$ also has complexity at most $s$. The inverse conjecture $\mathrm{GI}(s)$ for the Gowers norm~\cite[Conjecture~8.3]{GT2010} holds by~\cite[Theorem~1.3]{GTZ2012}, since $s\ge3$. The M\"obius and nilsequences conjecture $\mathrm{MN}(s)$~\cite[Conjecture~8.5]{GT2010} holds for every $s$ by~\cite[Theorem~1.1]{GT2012} (see the remark that follows that theorem). The Main Theorem of~\cite{GT2010} then implies that~\cite[Conjecture~1.2]{GT2010} holds for our system. For two variables, this conjecture states the following. We write $\mathbf w_i=(w_{i,1},w_{i,2})$, and let $N$ and $L$ be positive integers such that
+\begin{equation}\label{eq:gt-size}
+\sum_{i=1}^t\big(|w_{i,1}|+|w_{i,2}|\big)+\frac1N\sum_{i=1}^t|\ell_i(\mathbf 0)|\le L;
+\end{equation}
+the left side is the size of the system at scale $N$, defined in~\cite[(1.1)]{GT2010}. Then for every convex set $K'\subset[-N,N]^2$, we have
+\begin{equation}\label{eq:gt-conjecture}
+\sum_{\mathbf n\in K'\cap\Z^2}\ \prod_{i=1}^t\Lambda(\ell_i(\mathbf n))=\beta_\infty(K')\prod_q\beta_q+o_{t,L}(N^2),
+\end{equation}
+where $\beta_\infty(K')$ is the area of $\{\mathbf x\in K':\ell_i(\mathbf x)>0\text{ for }1\le i\le t\}$~\cite[(1.4)]{GT2010}, the $\beta_q$ are the local factors \eqref{eq:local-factor}, and the error term is at most $\rho_{t,L}(N)N^2$ for a function $\rho_{t,L}$ with $\rho_{t,L}(N)\to0$ as $N\to\infty$.
+
+\paragraph{The scale.} Fix a positive integer $h$ such that $K\subset[-h,h]^2$, and let $L=\sum_{i}\big(|w_{i,1}|+|w_{i,2}|+|\ell_i(\mathbf 0)|\big)$, which is a positive integer. For $R\ge1$, let $N_R=\lceil hR\rceil$. Then $RK\subset[-N_R,N_R]^2$, and \eqref{eq:gt-size} holds with $N=N_R$ because $N_R\ge1$. We use \eqref{eq:gt-conjecture} with $N=N_R$ and $K'=RK$. Because $N_R\le2hR$, the error term is at most $4h^2\rho_{t,L}(N_R)R^2$, which is $o(R^2)$ as $R\to\infty$. Note that the coefficients of the forms enter only through $L$, which does not depend on $R$, and that they may be large.
+
+\paragraph{The archimedean factor.} Since $\overline K$ is compact and contained in the open cone $\mathcal C$, the number
+\[
+\delta=\min_{1\le i\le t}\ \min_{\mathbf y\in\overline K}\dot\ell_i(\mathbf y)
+\]
+is positive. Let $G=\max_i|\ell_i(\mathbf 0)|$. For $\mathbf x=R\mathbf y$ with $\mathbf y\in K$, we have
+\begin{equation}\label{eq:gtz-positive}
+\ell_i(\mathbf x)=R\,\dot\ell_i(\mathbf y)+\ell_i(\mathbf 0)\ge\delta R-G,
+\end{equation}
+which is positive when $R>G/\delta$. For such $R$, all the forms are positive on $RK$, and $\beta_\infty(RK)=\area(RK)=\area(K)R^2$. Inserting this into \eqref{eq:gt-conjecture}, we obtain \eqref{eq:gtz}.
+
+\paragraph{The singular product.} Let $D=\prod_{i<j}\det(\mathbf w_i,\mathbf w_j)$, which is a nonzero integer, and let $q$ be a prime with $q\nmid D$ and $q\ge2t$. Then $\mathbf w_i\not\equiv\mathbf 0\pmod q$ for every $i$, since otherwise $q$ would divide $\det(\mathbf w_i,\mathbf w_j)$ for $j\ne i$. We see that the zero set $Z_i\subset\F_q^2$ of $\ell_i$ modulo $q$ is an affine line, with $q$ points. For $i\ne j$, the lines $Z_i$ and $Z_j$ meet in exactly one point, because $\det(\mathbf w_i,\mathbf w_j)\not\equiv0\pmod q$. By inclusion and exclusion, truncated after the second term, we have
+\[
+tq-\binom t2\le\Big|\bigcup_{i=1}^tZ_i\Big|\le tq.
+\]
+By \eqref{eq:local-factor}, we have $\beta_q=(1-1/q)^{-t}\big(1-q^{-2}|\bigcup_iZ_i|\big)$, and the previous display implies that
+\begin{equation}\label{eq:gtz-generic-factor}
+\Big(1-\frac1q\Big)^{-t}\Big(1-\frac tq\Big)\le\beta_q\le\Big(1-\frac1q\Big)^{-t}\Big(1-\frac tq+\frac{t^2}{2q^2}\Big).
+\end{equation}
+For the lower bound, we use $(1-1/q)^{-t}\ge(1+1/q)^t\ge1+t/q$, and find $\beta_q\ge1-t^2/q^2$. For the upper bound, we use $-\log(1-u)\le u+u^2$ for $0\le u\le1/2$ and $1+v\le e^v$, and find
+\[
+\beta_q\le\exp\Big(\frac tq+\frac t{q^2}-\frac tq+\frac{t^2}{2q^2}\Big)\le\exp\Big(\frac{t^2}{q^2}\Big)\le1+\frac{2t^2}{q^2},
+\]
+where in the second step we used $t\ge2$, and in the last step $e^v\le1+2v$ for $0\le v\le1$. Combining the two bounds, we find that $|\beta_q-1|\le2t^2/q^2\le1/2$. This is the estimate $\beta_q=1+O(q^{-2})$ of~\cite[Lemma~1.3]{GT2010}, with explicit constants. Using $|\log(1+x)|\le2|x|$ for $|x|\le1/2$, we obtain $|\log\beta_q|\le4t^2/q^2$. Because $\sum_q q^{-2}<\infty$, the product of the $\beta_q$ over the primes $q\nmid D$ with $q\ge2t$ converges absolutely to a positive number. The remaining factors are finitely many nonnegative numbers. This proves \ref{item:gtz-product} and completes the proof.
+\end{proof}
+
+\begin{remark}\label{rem:gtz-fixed}
+In \cref{thm:gtz}, we fix the forms and the set $K$, and the error term depends on them. In \cref{sec:primes-infinitude}, the linear coefficients of the forms contain the factors $W/c_i$, which are large in our applications, but they do not depend on $R$. No uniformity in the coefficients is needed.
+
+Kai~\cite[Theorem~12.1]{Kai} proved an analogue of \eqref{eq:gt-conjecture} over number fields, with an error term $O(N^2(\log N)^{-A})$. For the field $\Q$ and the ideal $\Z$, his weight at an integer $m$ is $\Lambda(|m|)$, which agrees with $\Lambda(m)$ at the values $m=\ell_i(\mathbf n)$ with $\mathbf n\in RK$ and $R>G/\delta$, since these values are positive by \eqref{eq:gtz-positive}. His local factors are those of \eqref{eq:local-factor}, since the residue of the Riemann zeta function at $1$ is $1$. His hypothesis that $\dot\ell_i$ restricted to $\ker\dot\ell_j$ has finite cokernel holds because $\det(\mathbf w_i,\mathbf w_j)\ne0$: the image of $\ker\dot\ell_j\cap\Z^2$ under $\dot\ell_i$ is a nonzero subgroup of $\Z$. His theorem, applied with $N=N_R$ and the region $RK$, also gives \eqref{eq:gtz}.
+\end{remark}
+
+\section{Distinct prime values}\label{sec:primes-exclusions}
+
+The sum in \eqref{eq:gtz} also counts points at which some $\ell_i(\mathbf n)$ is a power of a prime with exponent at least two, points at which two forms take the same value, and points at which a form takes a value in a given finite set. We now show that these points, which lie on few lines, do not contribute to the main term.
+
+\begin{lemma}[Distinct prime values]\label{lem:prime-exclusions}
+Assume the hypotheses of \cref{thm:gtz}, let $S$ be a finite set of primes, and let $\mathcal A$ be a finite set of lines in $\R^2$. For $R\ge1$, let $\mathcal N(R)$ be the set of $\mathbf n\in RK\cap\Z^2$ such that $\ell_1(\mathbf n),\dots,\ell_t(\mathbf n)$ are $t$ distinct primes not in $S$ and $\mathbf n$ lies on no line of $\mathcal A$. Then, as $R\to\infty$,
+\begin{equation}\label{eq:prime-exclusions}
+\sum_{\mathbf n\in\mathcal N(R)}\ \prod_{i=1}^t\Lambda(\ell_i(\mathbf n))=\area(K)\,\mathfrak S\,R^2+o(R^2).
+\end{equation}
+If moreover $\area(K)>0$ and $\beta_q>0$ for all primes $q$, then there exists $c>0$ such that $|\mathcal N(R)|\ge cR^2(\log R)^{-t}$ for all sufficiently large $R$. In particular, for every $R_1\ge1$, the set $\bigcup_{R\ge R_1}\mathcal N(R)$ is infinite.
+\end{lemma}
+
+\begin{proof}
+Let $\Sigma(R)$ and $\Sigma'(R)$ denote the left sides of \eqref{eq:gtz} and \eqref{eq:prime-exclusions}. By \cref{thm:gtz}, it suffices to show that $\Sigma(R)-\Sigma'(R)=o(R^2)$.
+
+We keep the notation $h$, $N_R$, $\delta$, and $G$ of the proof of \cref{thm:gtz}, and set
+\[
+\Theta=G+\max_{1\le i\le t}\ \max_{\mathbf y\in\overline K}\dot\ell_i(\mathbf y).
+\]
+Note that $\Theta\ge\delta>0$. Let $R>\max(1,G/\delta,2/\Theta)$, so that $\Theta R\ge2$, and let $\mathbf n\in RK\cap\Z^2$. By \eqref{eq:gtz-positive}, every $\ell_i(\mathbf n)$ is a positive integer, and $\ell_i(\mathbf n)\le\Theta R$. Using $\Lambda(m)\le\log m$ for $m\ge1$, we find that every term of $\Sigma(R)$ is at most $(\log\Theta R)^t$.
+
+A point $\mathbf n$ contributes to $\Sigma(R)$ but not to $\Sigma'(R)$ only if $\Lambda(\ell_i(\mathbf n))>0$ for every $i$ and one of the following holds:
+\begin{enumerate}[label=(\roman*)]
+\item\label{item:excl-power} $\ell_i(\mathbf n)=q^k$ for some $i$, some prime $q$, and some $k\ge2$;
+\item\label{item:excl-equal} $\ell_i(\mathbf n)=\ell_j(\mathbf n)$ for some $i<j$;
+\item\label{item:excl-S} $\ell_i(\mathbf n)\in S$ for some $i$;
+\item\label{item:excl-lines} $\mathbf n$ lies on a line of $\mathcal A$.
+\end{enumerate}
+Indeed, if $\Lambda(\ell_i(\mathbf n))>0$, then $\ell_i(\mathbf n)$ is a power of a prime, and it is a prime if \ref{item:excl-power} fails; if \ref{item:excl-equal}--\ref{item:excl-lines} fail as well, then $\mathbf n\in\mathcal N(R)$.
+
+Each of these conditions places $\mathbf n$ on one of a finite set of lines. Since $\mathbf w_i\ne\mathbf 0$, every set $\{\ell_i=m\}$ with $m\in\Z$ is a line. In case~\ref{item:excl-power}, $\mathbf n$ lies on the line $\{\ell_i=q^k\}$, where $q^k\le\Theta R$. Only the exponents $k\le\log_2(\Theta R)$ occur, and for each of them there are at most $(\Theta R)^{1/k}\le(\Theta R)^{1/2}$ primes $q$. Altogether, there are at most $t(\Theta R)^{1/2}\log_2(\Theta R)$ such lines. In case~\ref{item:excl-equal}, $\mathbf n$ lies on the set $\{\ell_i-\ell_j=0\}$, which is a line because $\mathbf w_i$ and $\mathbf w_j$ are linearly independent; there are $\binom t2$ such lines. In case~\ref{item:excl-S}, $\mathbf n$ lies on one of the $t|S|$ lines $\{\ell_i=q\}$ with $q\in S$, and in case~\ref{item:excl-lines}, on one of the $|\mathcal A|$ lines of $\mathcal A$. A line $\{\mathbf x\in\R^2:a_1x_1+a_2x_2=b\}$ with $(a_1,a_2)\ne(0,0)$ contains at most $2N_R+1$ points of $[-N_R,N_R]^2\cap\Z^2$: if $a_2\ne0$, then $x_1$ determines $x_2$, and otherwise $x_1=b/a_1$ is fixed. Since $RK\subset[-N_R,N_R]^2$, we obtain
+\[
+0\le\Sigma(R)-\Sigma'(R)\le(2N_R+1)\Big(t(\Theta R)^{1/2}\log_2(\Theta R)+\binom t2+t|S|+|\mathcal A|\Big)(\log\Theta R)^t.
+\]
+The right side is $O(R^{3/2}(\log R)^{t+1})=o(R^2)$, because $N_R\le2hR$. This proves \eqref{eq:prime-exclusions}.
+
+Now assume that $\area(K)>0$ and that $\beta_q>0$ for all primes $q$. Then $\mathfrak S>0$ by \cref{thm:gtz}, and \eqref{eq:prime-exclusions} implies that $\Sigma'(R)\ge\area(K)\mathfrak S R^2/2$ for all large $R$. Each term of $\Sigma'(R)$ is at most $(\log\Theta R)^t$, and $\log\Theta R\le2\log R$ for $R\ge\Theta$. We conclude that
+\[
+|\mathcal N(R)|\ge\frac{\area(K)\,\mathfrak S\,R^2}{2(\log\Theta R)^t}\ge\frac{\area(K)\,\mathfrak S}{2^{t+1}}\,\frac{R^2}{(\log R)^t}
+\]
+for all large $R$. Since $|\mathcal N(R)|\to\infty$, the last claim follows.
+\end{proof}
+
+\section{Local factors in a congruence class}\label{sec:primes-local}
+
+We now compute the local factors of the forms that arise from a datum. Let $t\ge2$, let $(a_i,b_i)\in\Z^2$ for $0\le i\le t-1$ be primitive vectors, that is, $\gcd(a_i,b_i)=1$, and let $L_i(M,N)=a_iM+b_iN$. In \cref{sec:primes-infinitude}, we take for them the twelve forms of a datum. We write $\Delta_{ij}=a_ib_j-a_jb_i$. Let $c_0,\dots,c_{t-1}$ and $W$ be positive integers, and let $(M_0,N_0)\in\Z^2$.
+
+For a prime $q$, let $Z_i(q)=\{(m,n)\in\F_q^2:a_im+b_in=0\}$. Since $(a_i,b_i)$ is primitive, it is nonzero modulo $q$, and $Z_i(q)$ is a line through the origin of $\F_q^2$. Recall that $\F_q^2$ has exactly $q+1$ lines through the origin, and that two nonzero vectors span the same line if and only if their determinant vanishes. In particular, $Z_i(q)=Z_j(q)$ if and only if $q\mid\Delta_{ij}$. We let $d_q$ be the number of distinct lines among $Z_0(q),\dots,Z_{t-1}(q)$.
+
+\begin{lemma}[Local factors in a congruence class]\label{lem:local-factors}
+With the notation above, assume that
+\begin{enumerate}[label=(\roman*)]
+\item\label{item:lf-cofactors} every prime dividing $c_0c_1\cdots c_{t-1}$ divides $W$, and $v_q(W)>v_q(c_i)$ for every prime $q\mid W$ and every $i$;
+\item\label{item:lf-anchor} $c_i\mid L_i(M_0,N_0)$ and $\gcd\big(L_i(M_0,N_0)/c_i,W\big)=1$ for every $i$.
+\end{enumerate}
+Then $c_i\mid W$ for every $i$, and
+\begin{equation}\label{eq:affine-forms}
+\ell_i(X,Y)=\frac{L_i(M_0+WX,N_0+WY)}{c_i}=\ell_i(\mathbf 0)+\frac W{c_i}(a_iX+b_iY),\qquad\ell_i(\mathbf 0)=\frac{L_i(M_0,N_0)}{c_i},
+\end{equation}
+are affine-linear forms on $\Z^2$. Their local factors \eqref{eq:local-factor} are as follows.
+\begin{enumerate}[label=(\alph*)]
+\item\label{item:lf-divides} If $q\mid W$, then $\beta_q=(q/(q-1))^t$.
+\item\label{item:lf-coprime} If $q\nmid W$, then
+\begin{equation}\label{eq:local-factor-formula}
+\beta_q=\Big(\frac q{q-1}\Big)^t\frac{(q-1)(q+1-d_q)}{q^2}.
+\end{equation}
+\end{enumerate}
+In particular, $\beta_q>0$ if $q\mid W$ or $q\ge t$. If $q\nmid W$, then $\beta_q>0$ if and only if there exists $(m,n)\in\F_q^2$ with $\prod_iL_i(m,n)\ne0$. If $q\nmid W\prod_{i<j}\Delta_{ij}$, then $d_q=t$.
+\end{lemma}
+
+\begin{proof}
+By \ref{item:lf-cofactors}, every prime $q$ dividing $c_i$ divides $W$ and satisfies $v_q(c_i)<v_q(W)$. This implies that $c_i\mid W$. We have $L_i(M_0+WX,N_0+WY)=L_i(M_0,N_0)+W(a_iX+b_iY)$, which gives the second equality in \eqref{eq:affine-forms}. Its coefficients $\ell_i(\mathbf 0)$, $Wa_i/c_i$, and $Wb_i/c_i$ are integers by \ref{item:lf-anchor} and $c_i\mid W$.
+
+\paragraph{Primes dividing $W$.} Let $q\mid W$. By \ref{item:lf-cofactors}, we have $v_q(W/c_i)\ge1$, and \eqref{eq:affine-forms} implies that $\ell_i(X,Y)\equiv\ell_i(\mathbf 0)\pmod q$ for all $(X,Y)$. Also, $q\nmid\ell_i(\mathbf 0)$ by \ref{item:lf-anchor}. Every point of $\F_q^2$ is therefore counted in \eqref{eq:local-factor}, and we have $\beta_q=(q/(q-1))^t$.
+
+\paragraph{Primes not dividing $W$.} Let $q\nmid W$. Then \ref{item:lf-cofactors} implies that $q\nmid c_i$ for all $i$. The map $(X,Y)\mapsto(M_0+WX,N_0+WY)$ is a bijection of $\F_q^2$, and $\ell_i(X,Y)\equiv c_i^{-1}L_i(M_0+WX,N_0+WY)\pmod q$. We find that the count in \eqref{eq:local-factor} equals the number of points of $\F_q^2$ outside $Z_0(q)\cup\dots\cup Z_{t-1}(q)$. Distinct lines through the origin meet only at the origin, and each of them contains $q-1$ nonzero points. The union therefore has $1+d_q(q-1)$ points, and its complement has
+\[
+q^2-1-d_q(q-1)=(q-1)(q+1-d_q)
+\]
+points. Inserting this count into \eqref{eq:local-factor} gives \eqref{eq:local-factor-formula}.
+
+It remains to prove the last three claims. If $q\nmid W$ and $q\ge t$, then $q+1-d_q\ge q+1-t\ge1$, and we have $\beta_q>0$ by \eqref{eq:local-factor-formula}. For $q\nmid W$, the count of points outside the union is positive if and only if some $(m,n)\in\F_q^2$ satisfies $\prod_iL_i(m,n)\ne0$. Finally, if $q$ divides no $\Delta_{ij}$, then the lines $Z_i(q)$ are pairwise distinct, and $d_q=t$.
+\end{proof}
+
+When $d_q=t$, we see from \eqref{eq:local-factor-formula} that $\beta_q=(q/(q-1))^{t-1}(1-(t-1)/q)$, which is $1+O(q^{-2})$, in accordance with \eqref{eq:gtz-generic-factor}.
+
+\section{Prime specializations of a twelve-form datum}\label{sec:primes-infinitude}
+
+We now return to a twelve-form datum $\datum$ (\cref{def:datum}), with forms $L_i=a_iM+b_iN$ and cofactors $c_i$ for $0\le i\le11$, and to a finite set $S$ of primes as in \cref{def:prime-specialization}. In \cref{sec:rank5,sec:rank6,sec:rank7}, we apply the next proposition to a congruence class $(M_0,N_0)$ modulo $W$ chosen with the Chinese remainder theorem and to a cone $\cK$ on which the twelve forms are positive. By an open convex cone, we mean an open convex subset of $\R^2$ that is closed under multiplication by positive real numbers.
+
+\begin{proposition}[Infinitely many prime specializations]\label{prop:infinitely-many}
+Let $\datum$ be a twelve-form datum with forms $L_0,\dots,L_{11}$ and cofactors $c_0,\dots,c_{11}$, and let $S$ be a finite set of primes as in \cref{def:prime-specialization}. Let $W$ be a positive integer, let $(M_0,N_0)\in\Z^2$, and let $\cK\subset\R^2$ be a nonempty open convex cone. Assume that
+\begin{enumerate}[label=(\alph*)]
+\item\label{item:inf-progression} every prime dividing $c_0c_1\cdots c_{11}$ divides $W$; $v_q(W)>v_q(c_i)$ for all primes $q\mid W$ and all $i$; and $c_i\mid L_i(M_0,N_0)$ and $\gcd\big(L_i(M_0,N_0)/c_i,W\big)=1$ for all $i$;
+\item\label{item:inf-small-primes} for every prime $q\le11$ with $q\nmid W$, there exists $(m,n)\in\F_q^2$ such that $\prod_{i=0}^{11}L_i(m,n)\ne0$;
+\item\label{item:inf-cone} $L_i(\mathbf x)>0$ for all $\mathbf x\in\cK$ and $0\le i\le11$.
+\end{enumerate}
+Then there exist infinitely many prime specializations $(M,N)\in\cK$ with $M\equiv M_0$ and $N\equiv N_0\pmod W$. Every such pair satisfies $\gcd(M,N)=1$ and $N\ne0$. The ratios $M/N$ of these pairs take infinitely many values, and so do the $j$-invariants $j(E_{M,N})$.
+\end{proposition}
+
+\begin{proof}
+We use \cref{thm:gtz} and \cref{lem:prime-exclusions} for the forms $\ell_0,\dots,\ell_{11}$ of \eqref{eq:affine-forms}, with $t=12$. We first check that their linear parts are pairwise independent and that their local factors are positive. We then choose a convex set $K_0$ whose large dilates correspond to pairs in $\cK$, and deduce the claims about prime specializations, ratios, and $j$-invariants.
+
+\paragraph{The forms.} Hypothesis \ref{item:inf-progression} consists of the conditions \ref{item:lf-cofactors} and \ref{item:lf-anchor} of \cref{lem:local-factors} for the forms $L_0,\dots,L_{11}$, whose coefficient vectors are primitive by \cref{def:datum}. That lemma shows that the $\ell_i$ are affine-linear forms with $\mathbf w_i=(W/c_i)(a_i,b_i)$, and for $i\ne j$ we have
+\[
+\det(\mathbf w_i,\mathbf w_j)=\frac{W^2\Delta_{ij}}{c_ic_j}\ne0,
+\]
+because $\Delta_{ij}\ne0$ by \cref{def:datum}.
+
+\paragraph{Local factors.} Let $q$ be a prime. If $q\mid W$, then $\beta_q>0$ by \cref{lem:local-factors}\ref{item:lf-divides}. If $q\nmid W$ and $q\le11$, then $\beta_q>0$ by hypothesis \ref{item:inf-small-primes} and \cref{lem:local-factors}. If $q\nmid W$ and $q\ge13$, then $\beta_q>0$ by \cref{lem:local-factors}, since $q\ge t$: each $L_i$ vanishes modulo $q$ on a single line through the origin, and twelve lines cannot exhaust the $q+1\ge14$ lines of $\F_q^2$. By \cref{thm:gtz}, we have $\mathfrak S>0$.
+
+\paragraph{The region.} Since $\cK$ is open and nonempty, there exist $\mathbf x_0\in\cK$ and $r>0$ such that the closed disk of radius $2r$ about $\mathbf x_0$ is contained in $\cK$. Let $K_0$ be the closed disk of radius $r$ about $\mathbf x_0$. Then $K_0$ is compact and convex, and $\area(K_0)=\pi r^2>0$. By \ref{item:inf-cone}, we have $\dot\ell_i(\mathbf x)=(W/c_i)L_i(\mathbf x)>0$ for $\mathbf x\in K_0$. In other words, $K_0$ is contained in the cone $\mathcal C$ of \cref{thm:gtz}. For $R>0$ and $\mathbf n=(X,Y)\in RK_0$, we have
+\begin{equation}\label{eq:inf-dilate}
+(M_0+WX,\,N_0+WY)=WR\Big(R^{-1}\mathbf n+(WR)^{-1}(M_0,N_0)\Big).
+\end{equation}
+Let $R_1=\max\big(1,|(M_0,N_0)|/(Wr)\big)$, where $|\cdot|$ is the Euclidean norm. Let $R\ge R_1$. The point $R^{-1}\mathbf n$ lies in $K_0$, and the shift $(WR)^{-1}(M_0,N_0)$ has norm at most $r$. The point in parentheses in \eqref{eq:inf-dilate} therefore lies in the disk of radius $2r$ about $\mathbf x_0$, which is contained in $\cK$. As $\cK$ is a cone and $WR>0$, the pair $(M_0+WX,N_0+WY)$ lies in $\cK$ as well.
+
+\paragraph{Prime specializations.} By the last two paragraphs, \cref{lem:prime-exclusions} applies to $\ell_0,\dots,\ell_{11}$, the set $K_0$, the set $S$, and $\mathcal A=\emptyset$. We obtain infinitely many $\mathbf n=(X,Y)\in\Z^2$, each in $RK_0$ for some $R\ge R_1$, such that $\ell_0(\mathbf n),\dots,\ell_{11}(\mathbf n)$ are twelve distinct primes not in $S$. For each such $\mathbf n$, let $(M,N)=(M_0+WX,N_0+WY)$. Then $M\equiv M_0$ and $N\equiv N_0\pmod W$, and $(M,N)\in\cK$ by the previous paragraph. By \eqref{eq:affine-forms}, we have $L_i(M,N)=c_i\ell_i(\mathbf n)$ for all $i$. This shows that $c_i\mid L_i(M,N)$ and that the numbers $L_i(M,N)/c_i=\ell_i(\mathbf n)$ are twelve distinct primes not in $S$, that is, $(M,N)$ is a prime specialization in the sense of \cref{def:prime-specialization}. Distinct points $\mathbf n$ give distinct pairs $(M,N)$, which proves the first claim.
+
+\paragraph{Ratios and $j$-invariants.} By \cref{lem:prime-spec-basic}, every prime specialization $(M,N)$ satisfies $\gcd(M,N)=1$ and $p_0\nmid N$, so that $N\ne0$. A rational number has exactly two representations $m/n$ with $m,n\in\Z$ and $\gcd(m,n)=1$. It follows that infinitely many such pairs give infinitely many ratios $M/N$. By \cref{lem:j-invariant}, $j(E_{M,N})$ depends only on $M/N$, and each value of $j$ occurs for at most twelve ratios. If the $j(E_{M,N})$ took only $k$ values, at most $12k$ ratios would occur. Therefore the $j$-invariants take infinitely many values, which completes the proof.
+\end{proof}
+
+\begin{remark}\label{rem:primes-threshold}
+By \cref{lem:local-factors}, hypothesis \ref{item:inf-small-primes} says that $d_q\le q$ for every prime $q\le11$ with $q\nmid W$. As we saw in the proof, larger primes need no check. At $q=11$, the check is needed even when $11$ divides no $\Delta_{ij}$. For example, the twelve forms $M+iN$ with $0\le i\le10$ and $N$ have pairwise determinants in $\{\pm1,\dots,\pm10\}$, but their zero sets modulo $11$ are all twelve lines of $\F_{11}^2$, and \cref{lem:local-factors} gives $\beta_{11}=0$ when $11\nmid W$. In the three families, every prime $q\le11$ divides $W$, except $q=5$ in the rank-seven family.
+\end{remark}
+
+\begin{remark}\label{rem:geometric-classes}
+Elliptic curves that are isomorphic over $\Qbar$ have the same $j$-invariant~\cite[Proposition~III.1.4(b)]{SilvermanAEC}. %
+Hence the curves $E_{M,N}$ at the prime specializations of \cref{prop:infinitely-many} represent infinitely many $\Qbar$-isomorphism classes.
+\end{remark}

@@ -1,0 +1,33 @@
+Exhaustive transitive axiom audit passed for 70 declarations in 3 owned modules. Allowed: propext, Quot.sound, Classical.choice.
+'ArithmeticOrthogonality.finite_katai_inequality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.finite_katai_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.katai_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.katai_criterion_of_large_orthogonal_prime_windows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ArithmeticOrthogonality.katai_criterion_of_bounded_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.moebius_orthogonality_of_bounded_prime_dilation_cancellation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ArithmeticOrthogonality.moebius_orthogonality_of_bounded_large_orthogonal_prime_windows' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ArithmeticOrthogonality.VanishingPrimeDilationCorrelations : (ℕ → ℂ) → Prop
+@ArithmeticOrthogonality.finite_katai_explicit : ∀ {a f : ℕ → ℂ} {P : Finset ℕ} {N : ℕ},
+  (∀ p ∈ P, Nat.Prime p) →
+    (∀ (n : ℕ), ‖a n‖ ≤ 1) →
+      (∀ (n : ℕ), ‖f n‖ ≤ 1) →
+        (∀ (m n : ℕ), m.Coprime n → f (m * n) = f m * f n) →
+          ArithmeticOrthogonality.reciprocalMass P * ‖∑ n ∈ ArithmeticOrthogonality.initialInterval N, f n * a n‖ ≤
+            √(↑N *
+                    (↑N * ArithmeticOrthogonality.reciprocalMass P +
+                      2 * ArithmeticOrthogonality.reciprocalMass P * ↑P.card)) +
+                √(↑N *
+                    (↑N * ArithmeticOrthogonality.reciprocalMass P + ArithmeticOrthogonality.offDiagonalMass a P N)) +
+              2 * ↑N * ∑ p ∈ P, 1 / ↑p ^ 2
+@ArithmeticOrthogonality.moebius_orthogonality_of_bounded_prime_dilation_cancellation : ∀ {a : ℕ → ℂ} {C : ℝ},
+  0 < C →
+    (∀ (n : ℕ), ‖a n‖ ≤ C) →
+      ArithmeticOrthogonality.VanishingPrimeDilationCorrelations a →
+        Filter.Tendsto (ArithmeticOrthogonality.normalizedSum ArithmeticOrthogonality.complexMoebius a) Filter.atTop
+          (nhds 0)

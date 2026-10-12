@@ -1,0 +1,423 @@
+\begin{thebibliography}{55}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bender and Swinnerton-Dyer(2001)]{BenderSwinnertonDyer2001}
+A.~O. Bender and Peter Swinnerton-Dyer.
+\newblock Solubility of certain pencils of curves of genus 1, and of the
+  intersection of two quadrics in {$\mathbb{P}^4$}.
+\newblock \emph{Proceedings of the London Mathematical Society}, 83\penalty0
+  (2):\penalty0 299--329, 2001.
+\newblock \doi{10.1112/plms/83.2.299}.
+
+\bibitem[Bhargava and Skinner(2014)]{BhargavaSkinner2014}
+Manjul Bhargava and Christopher Skinner.
+\newblock A positive proportion of elliptic curves over {$\mathbb Q$} have rank
+  one.
+\newblock \emph{Journal of the Ramanujan Mathematical Society}, 29\penalty0
+  (2):\penalty0 221--242, 2014.
+
+\bibitem[Browning et~al.(2014)Browning, Matthiesen, and
+  Skorobogatov]{BrowningMatthiesenSkorobogatov2014}
+Tim~D. Browning, Lilian Matthiesen, and Alexei~N. Skorobogatov.
+\newblock Rational points on pencils of conics and quadrics with many
+  degenerate fibres.
+\newblock \emph{Annals of Mathematics}, 180\penalty0 (1):\penalty0 381--402,
+  2014.
+\newblock \doi{10.4007/annals.2014.180.1.8}.
+
+\bibitem[Byeon and Jeong(2016)]{ByeonJeong2016}
+Dongho Byeon and Keunyoung Jeong.
+\newblock Infinitely many elliptic curves of rank exactly two.
+\newblock \emph{Proceedings of the Japan Academy, Series A, Mathematical
+  Sciences}, 92\penalty0 (5):\penalty0 64--66, 2016.
+\newblock \doi{10.3792/pjaa.92.64}.
+
+\bibitem[Cassels(1991)]{Cassels1991}
+J.~W.~S. Cassels.
+\newblock \emph{Lectures on Elliptic Curves}, volume~24 of \emph{London
+  Mathematical Society Student Texts}.
+\newblock Cambridge University Press, Cambridge, 1991.
+\newblock \doi{10.1017/CBO9781139172530}.
+
+\bibitem[Colliot-Th{\'e}l{\`e}ne(2001)]{ColliotThelene2001}
+Jean-Louis Colliot-Th{\'e}l{\`e}ne.
+\newblock {Hasse} principle for pencils of curves of genus one whose
+  {Jacobians} have a rational {$2$}-division point: close variation on a paper
+  of {Bender} and {Swinnerton-Dyer}.
+\newblock In Emmanuel Peyre and Yuri Tschinkel, editors, \emph{Rational Points
+  on Algebraic Varieties}, volume 199 of \emph{Progress in Mathematics}, pages
+  117--161. Birkh{\"a}user, Basel, 2001.
+\newblock \doi{10.1007/978-3-0348-8368-9_5}.
+
+\bibitem[Colliot-Th{\'e}l{\`e}ne and Sansuc(1982)]{ColliotTheleneSansuc1982}
+Jean-Louis Colliot-Th{\'e}l{\`e}ne and Jean-Jacques Sansuc.
+\newblock Sur le principe de {Hasse} et l'approximation faible, et sur une
+  hypoth{\`e}se de {Schinzel}.
+\newblock \emph{Acta Arithmetica}, 41\penalty0 (1):\penalty0 33--53, 1982.
+\newblock \doi{10.4064/aa-41-1-33-53}.
+
+\bibitem[Colliot-Th{\'e}l{\`e}ne and
+  Swinnerton-Dyer(1994)]{ColliotTheleneSwinnertonDyer1994}
+Jean-Louis Colliot-Th{\'e}l{\`e}ne and Peter Swinnerton-Dyer.
+\newblock {Hasse} principle and weak approximation for pencils of
+  {Severi--Brauer} and similar varieties.
+\newblock \emph{Journal f{\"u}r die reine und angewandte Mathematik},
+  453:\penalty0 49--112, 1994.
+\newblock \doi{10.1515/crll.1994.453.49}.
+
+\bibitem[Colliot-Th{\'e}l{\`e}ne et~al.(1998)Colliot-Th{\'e}l{\`e}ne,
+  Skorobogatov, and Swinnerton-Dyer]{CSS1998GenusOne}
+Jean-Louis Colliot-Th{\'e}l{\`e}ne, Alexei~N. Skorobogatov, and Peter
+  Swinnerton-Dyer.
+\newblock {Hasse} principle for pencils of curves of genus one whose
+  {Jacobians} have rational {$2$}-division points.
+\newblock \emph{Inventiones Mathematicae}, 134\penalty0 (3):\penalty0 579--650,
+  1998.
+\newblock \doi{10.1007/s002220050274}.
+
+\bibitem[Dujella and Peral(2020)]{DujellaPeral2020}
+Andrej Dujella and Juan~Carlos Peral.
+\newblock High rank elliptic curves induced by rational {Diophantine} triples.
+\newblock \emph{Glasnik Matematički. Series III}, 55\penalty0 (2):\penalty0
+  237--252, 2020.
+\newblock \doi{10.3336/gm.55.2.05}.
+
+\bibitem[Dujella and Peral(2024)]{DujellaPeral2024}
+Andrej Dujella and Juan~Carlos Peral.
+\newblock An elliptic curve over {$\mathbb{Q}(u)$} with torsion
+  {$\mathbb{Z}/4\mathbb{Z}$} and rank 6.
+\newblock \emph{Rad Hrvatske akademije znanosti i umjetnosti. Matematičke
+  znanosti}, 28:\penalty0 185--192, 2024.
+\newblock \doi{10.21857/y54jof4o2m}.
+\newblock Mathematical-series volume 28, academy volume 558.
+
+\bibitem[Dujella et~al.(2021)Dujella, Kazalicki, and
+  Peral]{DujellaKazalickiPeral2021}
+Andrej Dujella, Matija Kazalicki, and Juan~Carlos Peral.
+\newblock Elliptic curves with torsion groups {$\mathbb{Z}/8\mathbb{Z}$} and
+  {$\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/6\mathbb{Z}$}.
+\newblock \emph{Revista de la Real Academia de Ciencias Exactas, Físicas y
+  Naturales. Serie A. Matemáticas}, 115, 2021.
+\newblock \doi{10.1007/s13398-021-01112-5}.
+\newblock Article 169.
+
+\bibitem[Elkies(2007)]{Elkies2007}
+Noam~D. Elkies.
+\newblock Elliptic curves and surfaces of high rank, {I, II, III}.
+\newblock In \emph{Explicit Methods in Number Theory}, volume~4 of
+  \emph{Oberwolfach Reports}, pages 1992--2006. European Mathematical Society,
+  2007.
+\newblock \doi{10.4171/OWR/2007/34}.
+\newblock Contribution to the workshop report, whose DOI is given here;
+  preprint entitled Three lectures on elliptic surfaces and curves of high
+  rank.
+
+\bibitem[Elkies(2026)]{Elkies2026}
+Noam~D. Elkies.
+\newblock An elliptic {K3} surface {$X/\mathbb{Q}(t)$} with {Mordell--Weil}
+  rank 17, {I}: Formulas for {$X$} and base changes of rank 18 and 19.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2608.25406v1}{arXiv:2608.25406v1}, 2026.
+
+\bibitem[Feng(1996)]{Feng1996}
+Keqin Feng.
+\newblock Non-congruent numbers, odd graphs and the {Birch--Swinnerton-Dyer}
+  conjecture.
+\newblock \emph{Acta Arithmetica}, 75\penalty0 (1):\penalty0 71--83, 1996.
+\newblock \doi{10.4064/aa-75-1-71-83}.
+
+\bibitem[Green and Tao(2012)]{GT2012}
+Ben Green and Terence Tao.
+\newblock The {M\"obius} function is strongly orthogonal to nilsequences.
+\newblock \emph{Annals of Mathematics}, 175\penalty0 (2):\penalty0 541--566,
+  2012.
+\newblock \doi{10.4007/annals.2012.175.2.3}.
+
+\bibitem[Green et~al.(2012)Green, Tao, and Ziegler]{GTZ2012}
+Ben Green, Terence Tao, and Tamar Ziegler.
+\newblock An inverse theorem for the {Gowers} {$U^{s+1}[N]$}-norm.
+\newblock \emph{Annals of Mathematics}, 176\penalty0 (2):\penalty0 1231--1372,
+  2012.
+\newblock \doi{10.4007/annals.2012.176.2.11}.
+\newblock See also the authors'
+  \href{https://terrytao.wordpress.com/wp-content/uploads/2024/04/erratum-4.pdf}{2024
+  erratum} and the corrected preprint
+  \href{https://arxiv.org/abs/1009.3998v5}{arXiv:1009.3998v5} (2026).
+
+\bibitem[Green and Tao(2010)]{GT2010}
+Benjamin Green and Terence Tao.
+\newblock Linear equations in primes.
+\newblock \emph{Annals of Mathematics}, 171\penalty0 (3):\penalty0 1753--1850,
+  2010.
+\newblock \doi{10.4007/annals.2010.171.1753}.
+
+\bibitem[Harpaz et~al.(2014)Harpaz, Skorobogatov, and Wittenberg]{HSW2014}
+Yonatan Harpaz, Alexei~N. Skorobogatov, and Olivier Wittenberg.
+\newblock The {Hardy--Littlewood} conjecture and rational points.
+\newblock \emph{Compositio Mathematica}, 150\penalty0 (12):\penalty0
+  2095--2111, 2014.
+\newblock \doi{10.1112/S0010437X14007568}.
+
+\bibitem[Heath-Brown(1994)]{HeathBrownMonsky1994}
+D.~R. Heath-Brown.
+\newblock The size of {Selmer} groups for the congruent number problem, {II}.
+\newblock \emph{Inventiones Mathematicae}, 118:\penalty0 331--370, 1994.
+\newblock \doi{10.1007/BF01231536}.
+\newblock With an appendix by P. Monsky, pp. 365--370.
+
+\bibitem[Ireland and Rosen(1990)]{IrelandRosen}
+Kenneth Ireland and Michael Rosen.
+\newblock \emph{A Classical Introduction to Modern Number Theory}, volume~84 of
+  \emph{Graduate Texts in Mathematics}.
+\newblock Springer-Verlag, New York, second edition, 1990.
+\newblock \doi{10.1007/978-1-4757-2103-4}.
+
+\bibitem[Jeong(2019)]{Jeong2019}
+Keunyoung Jeong.
+\newblock Infinitely many elliptic curves of rank exactly two {II}.
+\newblock \emph{Proceedings of the Japan Academy, Series A, Mathematical
+  Sciences}, 95\penalty0 (6):\penalty0 53--57, 2019.
+\newblock \doi{10.3792/pjaa.95.53}.
+
+\bibitem[Kai(2023)]{Kai}
+Wataru Kai.
+\newblock Linear patterns of prime elements in number fields.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2306.16983v5}{arXiv:2306.16983v5}, 2023.
+\newblock Revised 12 March 2026.
+
+\bibitem[Kane and Klagsbrun(2017)]{KaneKlagsbrun2017}
+Daniel Kane and Zev Klagsbrun.
+\newblock On the joint distribution of {$\mathrm{Sel}_\phi(E/\mathbb{Q})$} and
+  {$\mathrm{Sel}_{\hat\phi}(E'/\mathbb{Q})$} in quadratic twist families.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/1702.02687v1}{arXiv:1702.02687v1}, 2017.
+
+\bibitem[Kling and Savoie(2024)]{KlingSavoie2024}
+Anthony Kling and Ben Savoie.
+\newblock A graph-theoretic approach to computing {Selmer} groups of elliptic
+  curves {$y^2=x^3+bx$} over {$\mathbb{Q}(i)$}.
+\newblock \href{https://arxiv.org/abs/2410.22714v2} {arXiv:2410.22714v2}, 2024.
+\newblock Version 2, 21 June 2025. Published online in Journal of Number
+  Theory, 25 September 2026, doi:10.1016/j.jnt.2026.08.014.
+
+\bibitem[Koymans and Pagano(2025)]{KoymansPagano2025}
+Peter Koymans and Carlo Pagano.
+\newblock Elliptic curves of rank one over number fields.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2505.16910v1}{arXiv:2505.16910v1}, 2025.
+
+\bibitem[Loughran and Salgado(2022)]{LoughranSalgado2022}
+Daniel Loughran and Cec{\'i}lia Salgado.
+\newblock Rank jumps on elliptic surfaces and the {Hilbert} property.
+\newblock \emph{Annales de l'Institut Fourier}, 72\penalty0 (2):\penalty0
+  617--638, 2022.
+\newblock \doi{10.5802/aif.3457}.
+
+\bibitem[Lu(2026)]{Lu2026}
+Junyu Lu.
+\newblock Prescribed ideal classes and elliptic points in {Ennola} cubic
+  fields.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2610.04254v1}{arXiv:2610.04254v1}, 2026.
+
+\bibitem[Mazur and Rubin(2010)]{MazurRubin2010}
+Barry Mazur and Karl Rubin.
+\newblock Ranks of twists of elliptic curves and {Hilbert}'s tenth problem.
+\newblock \emph{Inventiones Mathematicae}, 181\penalty0 (3):\penalty0 541--575,
+  2010.
+\newblock \doi{10.1007/s00222-010-0252-0}.
+
+\bibitem[Mestre(1991)]{Mestre1991}
+Jean-François Mestre.
+\newblock Courbes elliptiques de rang {$\geq 12$} sur {$\mathbb{Q}(t)$}.
+\newblock \emph{Comptes Rendus de l'Académie des Sciences. Série I.
+  Mathématique}, 313:\penalty0 171--174, 1991.
+
+\bibitem[Mordell(1922)]{Mordell1922}
+Louis~J. Mordell.
+\newblock On the rational solutions of the indeterminate equations of the third
+  and fourth degrees.
+\newblock \emph{Proceedings of the Cambridge Philosophical Society},
+  21:\penalty0 179--192, 1922.
+
+\bibitem[Oguiso and Shioda(1991)]{OguisoShioda1991}
+Keiji Oguiso and Tetsuji Shioda.
+\newblock The {Mordell--Weil} lattice of a rational elliptic surface.
+\newblock \emph{Commentarii Mathematici Universitatis Sancti Pauli},
+  40\penalty0 (1):\penalty0 83--99, 1991.
+
+\bibitem[Park et~al.(2019)Park, Poonen, Voight, and Wood]{PPVW2019}
+Jennifer Park, Bjorn Poonen, John Voight, and Melanie~Matchett Wood.
+\newblock A heuristic for boundedness of ranks of elliptic curves.
+\newblock \emph{Journal of the European Mathematical Society}, 21\penalty0
+  (9):\penalty0 2859--2903, 2019.
+\newblock \doi{10.4171/JEMS/893}.
+
+\bibitem[R{\'e}dei(1934)]{Redei1934}
+L{\'a}szl{\'o} R{\'e}dei.
+\newblock Arithmetischer {B}eweis des {S}atzes {\"u}ber die {A}nzahl der durch
+  vier teilbaren {I}nvarianten der absoluten {K}lassengruppe im quadratischen
+  {Z}ahlk{\"o}rper.
+\newblock \emph{Journal f{\"u}r die reine und angewandte Mathematik},
+  171:\penalty0 55--60, 1934.
+\newblock \doi{10.1515/crll.1934.171.55}.
+
+\bibitem[R{\'e}dei and Reichardt(1934)]{RedeiReichardt1934}
+L{\'a}szl{\'o} R{\'e}dei and Hans Reichardt.
+\newblock Die {A}nzahl der durch 4 teilbaren {I}nvarianten der {K}lassengruppe
+  eines beliebigen quadratischen {Z}ahlk{\"o}rpers.
+\newblock \emph{Journal f{\"u}r die reine und angewandte Mathematik},
+  170:\penalty0 69--74, 1934.
+\newblock \doi{10.1515/crll.1934.170.69}.
+
+\bibitem[Salgado(2012)]{Salgado2012}
+Cec{\'i}lia Salgado.
+\newblock On the rank of the fibers of rational elliptic surfaces.
+\newblock \emph{Algebra \& Number Theory}, 6\penalty0 (7):\penalty0 1289--1313,
+  2012.
+\newblock \doi{10.2140/ant.2012.6.1289}.
+
+\bibitem[Savoie(2025)]{Savoie2025}
+Ben Savoie.
+\newblock Infinitely many elliptic curves over {$\mathbb Q(i)$} with rank 2 and
+  {$j$}-invariant 1728.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2506.17605v2}{arXiv:2506.17605v2}, 2025.
+
+\bibitem[Savoie(2026)]{Savoie2026}
+Ben Savoie.
+\newblock Infinitely many elliptic curves over {$\mathbb{Q}(i)$} of exact ranks
+  4 and 6 with {$j$}-invariant 1728.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2608.13202v1}{arXiv:2608.13202v1}, 2026.
+
+\bibitem[Schinzel and Sierpi{\'n}ski(1958)]{SchinzelSierpinski1958}
+Andrzej Schinzel and Wac{\l}aw Sierpi{\'n}ski.
+\newblock Sur certaines hypoth{\`e}ses concernant les nombres premiers.
+\newblock \emph{Acta Arithmetica}, 4\penalty0 (3):\penalty0 185--208, 1958.
+\newblock \doi{10.4064/aa-4-3-185-208}.
+\newblock Correction: Acta Arithmetica 5 (1959), no. 2, 259,
+  \href{https://doi.org/10.4064/aa-5-2-259}{doi:10.4064/aa-5-2-259}.
+
+\bibitem[Sch{\"u}tt and Shioda(2010)]{SchuttShioda2010}
+Matthias Sch{\"u}tt and Tetsuji Shioda.
+\newblock Elliptic surfaces.
+\newblock \emph{Advanced Studies in Pure Mathematics}, 60:\penalty0 51--160,
+  2010.
+
+\bibitem[Shioda(1992)]{Shioda1992}
+Tetsuji Shioda.
+\newblock Some remarks on elliptic curves over function fields.
+\newblock \emph{Ast{\'e}risque}, 209:\penalty0 99--114, 1992.
+\newblock URL \url{https://www.numdam.org/item/AST_1992__209__99_0/}.
+\newblock Journ{\'e}es Arithm{\'e}tiques, 1991 (Geneva).
+
+\bibitem[Silverman(1983)]{Silverman1983}
+Joseph~H. Silverman.
+\newblock Heights and the specialization map for families of abelian varieties.
+\newblock \emph{Journal für die reine und angewandte Mathematik},
+  342:\penalty0 197--211, 1983.
+\newblock \doi{10.1515/crll.1983.342.197}.
+
+\bibitem[Silverman(2009)]{SilvermanAEC}
+Joseph~H. Silverman.
+\newblock \emph{The Arithmetic of Elliptic Curves}, volume 106 of
+  \emph{Graduate Texts in Mathematics}.
+\newblock Springer, Dordrecht, second edition, 2009.
+\newblock \doi{10.1007/978-0-387-09494-6}.
+
+\bibitem[Silverman and Tate(2015)]{SilvermanTate2015}
+Joseph~H. Silverman and John~T. Tate.
+\newblock \emph{Rational Points on Elliptic Curves}.
+\newblock Undergraduate Texts in Mathematics. Springer, Cham, second edition,
+  2015.
+\newblock \doi{10.1007/978-3-319-18588-0}.
+
+\bibitem[Skorobogatov and
+  Swinnerton-Dyer(2005)]{SkorobogatovSwinnertonDyer2005}
+Alexei Skorobogatov and Peter Swinnerton-Dyer.
+\newblock {$2$}-descent on elliptic curves and rational points on certain
+  {Kummer} surfaces.
+\newblock \emph{Advances in Mathematics}, 198\penalty0 (2):\penalty0 448--483,
+  2005.
+\newblock \doi{10.1016/j.aim.2005.06.005}.
+
+\bibitem[Swinnerton-Dyer(1995)]{SwinnertonDyer1995}
+Peter Swinnerton-Dyer.
+\newblock Rational points on certain intersections of two quadrics.
+\newblock In Wolf Barth, Klaus Hulek, and Herbert Lange, editors, \emph{Abelian
+  Varieties}, pages 273--292. Walter de Gruyter, Berlin, 1995.
+\newblock \doi{10.1515/9783110889437.273}.
+
+\bibitem[Tao and Ziegler(2008)]{TaoZiegler2008}
+Terence Tao and Tamar Ziegler.
+\newblock The primes contain arbitrarily long polynomial progressions.
+\newblock \emph{Acta Mathematica}, 201\penalty0 (2):\penalty0 213--305, 2008.
+\newblock \doi{10.1007/s11511-008-0032-5}.
+\newblock See the 2013 erratum.
+
+\bibitem[Tao and Ziegler(2013)]{TaoZieglerErratum2013}
+Terence Tao and Tamar Ziegler.
+\newblock Erratum to ``{T}he primes contain arbitrarily long polynomial
+  progressions''.
+\newblock \emph{Acta Mathematica}, 210\penalty0 (2):\penalty0 403--404, 2013.
+\newblock \doi{10.1007/s11511-013-0097-7}.
+
+\bibitem[Tate(1975)]{Tate1975}
+John Tate.
+\newblock Algorithm for determining the type of a singular fiber in an elliptic
+  pencil.
+\newblock In Bryan~J. Birch and Willem Kuyk, editors, \emph{Modular Functions
+  of One Variable IV}, volume 476 of \emph{Lecture Notes in Mathematics}, pages
+  33--52. Springer, Berlin, Heidelberg, 1975.
+\newblock \doi{10.1007/BFb0097582}.
+
+\bibitem[Weil(1929)]{Weil1929}
+Andr{\'e} Weil.
+\newblock L'arithm{\'e}tique sur les courbes alg{\'e}briques.
+\newblock \emph{Acta Mathematica}, 52:\penalty0 281--315, 1929.
+\newblock \doi{10.1007/BF02592688}.
+
+\bibitem[Xiong and Zaharescu(2009)]{XiongZaharescu2009}
+Maosheng Xiong and Alexandru Zaharescu.
+\newblock {Selmer} groups and {Tate--Shafarevich} groups for the congruent
+  number problem.
+\newblock \emph{Commentarii Mathematici Helvetici}, 84\penalty0 (1):\penalty0
+  21--56, 2009.
+\newblock \doi{10.4171/CMH/151}.
+
+\bibitem[Zywina(2025{\natexlab{a}})]{Zywina2025}
+David Zywina.
+\newblock There are infinitely many elliptic curves over the rationals of rank
+  2.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2502.01957v1}{arXiv:2502.01957v1},
+  2025{\natexlab{a}}.
+
+\bibitem[Zywina(2025{\natexlab{b}})]{ZywinaNoJumps2025}
+David Zywina.
+\newblock An elliptic surface with infinitely many fibers for which the rank
+  does not jump.
+\newblock Preprint, \href{https://arxiv.org/abs/2502.01026}{arXiv:2502.01026},
+  2025{\natexlab{b}}.
+
+\bibitem[Zywina(2025{\natexlab{c}})]{ZywinaRankOne2025}
+David Zywina.
+\newblock Rank one elliptic curves and rank stability.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2505.16960v1}{arXiv:2505.16960v1},
+  2025{\natexlab{c}}.
+
+\bibitem[Zywina(2026)]{Zywina2026}
+David Zywina.
+\newblock On the infinitude of elliptic curves over a number field with
+  prescribed small rank.
+\newblock Preprint,
+  \href{https://arxiv.org/abs/2602.10865v1}{arXiv:2602.10865v1}, 2026.
+
+\end{thebibliography}

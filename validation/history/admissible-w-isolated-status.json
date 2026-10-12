@@ -1,0 +1,38 @@
+{
+  "project": "isolated finite admissible W-residue",
+  "toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "mathlib_commit": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+  "build": "passed warning-free, 3147 jobs, final leaf 3.3s",
+  "exhaustive_private_ModuleData_axiom_audit": "passed",
+  "audited_private_generated_kernel_declarations": 42,
+  "owned_module_counts": {
+    "AdmissibleWResidue": 42
+  },
+  "aggregate_dependency_root": "AdmissibleWResidueExhaustiveDependencyRoot",
+  "every_dependency_root_retained_in_checked_aggregate": true,
+  "allowed_transitive_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "source_sha256": {
+    "AdmissibleWResidue.lean": "3e4ce290fae28f7a4f20802969854b2523eac73380a5223286ee4b1e3363fc81"
+  },
+  "direct_imports": [
+    "RankCertificates.LiteralAffineSystems",
+    "Mathlib.Data.Nat.ChineseRemainder",
+    "Mathlib.Data.Nat.GCD.BigOperators"
+  ],
+  "core_source_dependencies": [
+    "RankCertificates.ExtractionBounds",
+    "RankCertificates.PrimePatterns",
+    "RankCertificates.Admissibility"
+  ],
+  "actual_CRT_construction_proved": true,
+  "bounded_nonnegative_representatives_proved": true,
+  "all_integer_W_shifts_preserve_avoidance_and_coprimality": true,
+  "literal_rank5_rank6_rank7_specializations_proved": true,
+  "actual_positive_offset_representatives_proved": true,
+  "density_or_prime_counting_asserted": false,
+  "main_sources_modified": false
+}

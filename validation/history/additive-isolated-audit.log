@@ -1,0 +1,14 @@
+Exhaustive transitive axiom audit passed for 21 declarations owned by AdditiveVanDerCorput. Allowed: propext, Quot.sound, Classical.choice.
+'ArithmeticOrthogonality.additive_shift_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.finite_additive_van_der_corput' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.normalized_additive_van_der_corput' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.additive_van_der_corput' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ArithmeticOrthogonality.additive_van_der_corput_of_bounded_sequence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ArithmeticOrthogonality.VanishingAdditiveCorrelations : (ℕ → ℂ) → Prop
+@ArithmeticOrthogonality.additive_van_der_corput_of_bounded_sequence : ∀ {a : ℕ → ℂ} {C : ℝ},
+  0 < C →
+    (∀ (n : ℕ), ‖a n‖ ≤ C) →
+      ArithmeticOrthogonality.VanishingAdditiveCorrelations a →
+        Filter.Tendsto (ArithmeticOrthogonality.additiveMean a) Filter.atTop (nhds 0)

@@ -1,0 +1,295 @@
+\chapter{Descent by a rational 2-isogeny}\label{sec:descent}
+
+This section collects the facts about descent by a rational $2$-isogeny that we use. For an elliptic curve $E_{\alpha,\beta}\colon y^2=x^3+\alpha x^2+\beta x$, we define the descent maps (\cref{def:descent-map}) and recall that they are homomorphisms whose kernels are the images of the two isogenies (\cref{prop:descent}). The rank of $E_{\alpha,\beta}(\Q)$ is determined by the dimensions of the images of the two descent maps (\cref{lem:rank-formula}). We bound these images from above in two ways: globally, by the prime divisors of $\beta$ (\cref{lem:support}), and locally, at an odd prime where the coefficients have one of two valuation patterns (\cref{lem:odd-local}). In \cref{sec:descent-linear}, we write local conditions as linear equations over $\F_2$ (\cref{lem:upper-bound}) and record how explicit points give matching lower bounds (\cref{lem:independence,cor:exact-dimension}).
+
+Descent by a $2$-isogeny is classical. We follow \cite[Example~X.4.8 and Proposition~X.4.9]{SilvermanAEC} and \cite[Sections~3.4--3.6]{SilvermanTate2015}. Zywina's work \cite[Section~3]{Zywina2026}, whose strategy we follow, starts from the same formalism. We include short proofs of the facts we use, so that every upper bound in this paper can be checked line by line. The results of this section are used in \cref{sec:families}, where \cref{lem:odd-local} gives the linear conditions at the twelve moving primes, and in \cref{sec:rank5,sec:rank6,sec:rank7}, where the local conditions at the fixed places are proved with \cref{lem:dominant,lem:squares,lem:two-torsion}.
+
+\section{Valuations and squareclasses}\label{sec:descent-conventions}
+
+A place of $\Q$ is a prime $p$ or $\infty$, and $\Q_\infty=\R$. Primes are positive. For a prime $p$, we write $v_p$ for the $p$-adic valuation on $\Q_p$, normalized by $v_p(p)=1$, with $v_p(0)=+\infty$, and $\Z_p^\times$ for the group of units of $\Z_p$. For a field $K$, the group $\sqgp K$ of squareclasses is a vector space over $\F_2$. We write its group law multiplicatively, call its elements classes, and write $\sq u$ for the class of $u\in K^\times$; linear independence and spans refer to this vector space. For a place $v$, we let $\operatorname{loc}_v\colon\sqgp\Q\to\sqgp{\Q_v}$ be the homomorphism induced by the inclusion $\Q\subset\Q_v$.
+
+For an odd prime $p$ and $z\in\Z_p^\times$, we write $\leg zp$ for the Legendre symbol of the reduction of $z$ modulo $p$, and we define $\chi_p(z)\in\F_2$ by
+\begin{equation}\label{eq:chi-def}
+\leg zp=(-1)^{\chi_p(z)}.
+\end{equation}
+Then $\chi_p(zw)=\chi_p(z)+\chi_p(w)$, and $\chi_p(z)$ depends only on $z$ modulo $p$. We use $\chi_p(z)$ mostly for integers $z$ prime to $p$. After \cref{lem:squares}, we extend $\chi_p$ to $\Q_p^\times$.
+
+\begin{lemma}[Dominant terms]\label{lem:dominant}
+Let $p$ be a prime, and let $z_1,\dots,z_m\in\Q_p$ with $z_1\ne0$.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:dominant-val} If $v_p(z_1)<v_p(z_k)$ for $2\le k\le m$, then $v_p(z_1+\dots+z_m)=v_p(z_1)$.
+\item\label{item:dominant-unit} If $h\ge1$ is an integer and $v_p(z_k)\ge v_p(z_1)+h$ for $2\le k\le m$, then there exists $t\in\Z_p$ such that $z_1+\dots+z_m=z_1(1+p^ht)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Under the hypothesis of \ref{item:dominant-unit}, each quotient $z_k/z_1$ with $k\ge2$ has valuation at least $h$. Then $t=p^{-h}\sum_{k\ge2}z_k/z_1$ lies in $\Z_p$, and $z_1+\dots+z_m=z_1(1+p^ht)$. The hypothesis of \ref{item:dominant-val} is the case $h=1$ of \ref{item:dominant-unit}, because valuations are integers. As $1+pt$ is a unit, we obtain $v_p(z_1+\dots+z_m)=v_p(z_1)$.
+\end{proof}
+
+In the local computations of this paper, $z_1,\dots,z_m$ are the terms of the right side of a Weierstrass equation. We then call $z_1$ the \emph{dominant term}.
+
+\begin{lemma}[Squareclasses of $\Q_p$]\label{lem:squares}
+Let $p$ be a prime, and write $u\in\Q_p^\times$ as $u=p^ku_0$ with $k=v_p(u)$ and $u_0\in\Z_p^\times$.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:squares-odd} Let $p$ be odd. Then $u$ is a square if and only if $k$ is even and $\chi_p(u_0)=0$. The map $\sq u\mapsto(k\bmod2,\chi_p(u_0))$ is a well-defined isomorphism $\sqgp{\Q_p}\to\F_2^2$.
+\item\label{item:squares-two} Let $p=2$. Then $u$ is a square if and only if $k$ is even and $u_0\equiv1\pmod8$. Every class in $\sqgp{\Q_2}$ is equal to $\sq{(-1)^{e_1}2^{e_2}5^{e_3}}$ for exactly one $(e_1,e_2,e_3)\in\F_2^3$. For the class of $u$, we have $e_2=k\bmod2$, and
+\begin{equation}\label{eq:two-adic-coordinates}
+(e_1,e_3)=(0,0),\ (1,1),\ (0,1),\ (1,0)\quad\text{according as}\quad u_0\equiv1,\ 3,\ 5,\ 7\pmod8.
+\end{equation}
+\item\label{item:squares-one} If $p$ is odd and $h\ge1$, or if $p=2$ and $h\ge3$, then every element of $1+p^h\Z_p$ is a square in $\Q_p$.
+\end{enumerate}
+\end{lemma}
+
+The isomorphisms in \ref{item:squares-odd} and \ref{item:squares-two} are the coordinates on $\sqgp{\Q_p}$ that we use to write local conditions, and we name them as follows. At $p=2$, the coordinates of the class of $z\in\Q_2^\times$ are the bits $e_1(z),e_2(z),e_3(z)$ of \ref{item:squares-two}. At an odd prime $p$, we write $z\in\Q_p^\times$ as $z=p^kz_0$ with $z_0\in\Z_p^\times$, and we set
+\begin{equation}\label{eq:odd-coordinates}
+\nu_p(z)=k\bmod2,\qquad\chi_p(z)=\chi_p(z_0),
+\end{equation}
+so that $\leg{z_0}p=(-1)^{\chi_p(z)}$. By \ref{item:squares-odd}, the map $\sq z\mapsto(\nu_p(z),\chi_p(z))$ is an isomorphism $\sqgp{\Q_p}\to\F_2^2$. At the real place, $\sqgp\R=\{\sq1,\sq{-1}\}$, and the coordinate of the class of $z\in\R^\times$ is $\mathrm{sgn}(z)\in\F_2$, which is $1$ if $z<0$ and $0$ if $z>0$. All these coordinates are linear maps from the groups of squareclasses to $\F_2$. We use the indexed symbols $\lambda_i$ for the characters at the moving primes $p_i$ of \cref{sec:families}: $\lambda_i(z)=\chi_{p_i}(z)$ for integers $z$ prime to $p_i$.
+
+\begin{proof}[Proof of \cref{lem:squares}]
+We begin with \ref{item:squares-odd}. The two conditions are necessary: a square $w^2$ has even valuation $2v_p(w)$, and its unit part is the square of the unit part of $w$. Conversely, it suffices to show that a unit $u_0$ with $\chi_p(u_0)=0$ is a square. This is Hensel's lemma; we recall the argument. Since $\chi_p(u_0)=0$, there exists $z_1\in\Z$ with $z_1^2\equiv u_0\pmod p$. Suppose that $z_n\in\Z_p$ satisfies $z_n^2\equiv u_0\pmod{p^n}$. There exists $t\in\Z$ with $2z_nt\equiv(u_0-z_n^2)/p^n\pmod p$, because $2z_n$ is a unit, and we set $z_{n+1}=z_n+tp^n$. Then
+\begin{equation}
+z_{n+1}^2=z_n^2+2z_ntp^n+t^2p^{2n}\equiv u_0\pmod{p^{n+1}}.
+\end{equation}
+The sequence $(z_n)$ converges in $\Z_p$ because $z_{n+1}-z_n\in p^n\Z_p$, and its limit is a square root of $u_0$. The map in \ref{item:squares-odd} is a homomorphism, because valuations add and $\chi_p$ is additive. It vanishes on squares, and its kernel consists of squares by the criterion just proved. It is surjective, because the classes of $p$ and of a unit $u_0$ with $\chi_p(u_0)=1$ map to $(1,0)$ and $(0,1)$.
+
+For \ref{item:squares-two}, the two conditions are necessary because the square of an odd integer is $1$ modulo $8$. Conversely, let $u_0\equiv1\pmod8$, and let $z_3=1$. If $z_n$ is odd and $z_n^2\equiv u_0\pmod{2^n}$ with $n\ge3$, we set $z_{n+1}=z_n+e2^{n-1}$ with $e\in\{0,1\}$. Since $2n-2\ge n+1$, we have
+\begin{equation}
+z_{n+1}^2\equiv z_n^2+e2^nz_n\pmod{2^{n+1}},
+\end{equation}
+and exactly one choice of $e$ gives $z_{n+1}^2\equiv u_0\pmod{2^{n+1}}$, because $z_n$ is odd and $u_0-z_n^2\equiv0\pmod{2^n}$. The limit of $(z_n)$ is a square root of $u_0$. The numbers $(-1)^{e_1}5^{e_3}$ with $(e_1,e_3)=(0,0),(1,1),(0,1),(1,0)$ are $1,-5,5,-1$, which are congruent to $1,3,5,7$ modulo $8$. Given $u=2^ku_0$, we choose $e_2=k\bmod2$ and $(e_1,e_3)$ by \eqref{eq:two-adic-coordinates}. Then $u/((-1)^{e_1}2^{e_2}5^{e_3})$ has even valuation and unit part congruent to $1$ modulo $8$, and it is a square by the criterion just proved. If two triples give the same class, then the quotient $(-1)^{d_1}2^{d_2}5^{d_3}$ is a square. Its valuation shows that $d_2=0$, and the list of residues above then shows that $d_1=d_3=0$.
+
+Finally, \ref{item:squares-one} follows from \ref{item:squares-odd} and \ref{item:squares-two}, since an element of $1+p^h\Z_p$ is a unit congruent to $1$ modulo $p$ (if $p$ is odd and $h\ge1$) or modulo $8$ (if $p=2$ and $h\ge3$).
+\end{proof}
+
+\section{Descent maps and the rank}\label{sec:descent-maps}
+
+Let $K$ be a field of characteristic $0$, and let $\alpha,\beta\in K$ with $\beta(\alpha^2-4\beta)\ne0$. We write
+\begin{equation}\label{eq:E-alpha-beta}
+E_{\alpha,\beta}\colon y^2=x^3+\alpha x^2+\beta x,\qquad T=(0,0).
+\end{equation}
+Since $\beta\ne0$ and $\alpha^2-4\beta\ne0$, the cubic $x(x^2+\alpha x+\beta)$ has three distinct roots. Then $E_{\alpha,\beta}$ is an elliptic curve, with origin $O$ at infinity, and $T$ is a point of order two; it is the only point of $E_{\alpha,\beta}$ with $x=0$. We set
+\begin{equation}\label{eq:isogenous-coefficients}
+\alpha'=-2\alpha,\qquad\beta'=\alpha^2-4\beta.
+\end{equation}
+Note that $\alpha'^2-4\beta'=16\beta$. Then $\beta'(\alpha'^2-4\beta')\ne0$, and $E_{\alpha',\beta'}$ is again an elliptic curve. We write $E=E_{\alpha,\beta}$ and $E'=E_{\alpha',\beta'}$, and $T'=(0,0)$ and $O'$ for the corresponding points of $E'$; points of $E'$ are written $(x',y')$. We define $\phi\colon E\to E'$ and $\dual\colon E'\to E$ by $\phi(O)=\phi(T)=O'$, $\dual(O')=\dual(T')=O$, and
+\begin{equation}\label{eq:isogenies}
+\phi(x,y)=\Bigl(\frac{x^2+\alpha x+\beta}{x},\ \frac{y(x^2-\beta)}{x^2}\Bigr),\qquad
+\dual(x',y')=\Bigl(\frac{y'^2}{4x'^2},\ \frac{y'(x'^2-\beta')}{8x'^2}\Bigr)
+\end{equation}
+for $x\ne0$ and $x'\ne0$. Note that on $E$, the first coordinate $x'$ of $\phi(x,y)$ is equal to $y^2/x^2$. The identity
+\begin{equation}\label{eq:phi-into-Eprime}
+\Bigl(\frac{x^2+\alpha x+\beta}{x}\Bigr)^2-2\alpha\,\frac{x^2+\alpha x+\beta}{x}+\alpha^2-4\beta=\frac{(x^2-\beta)^2}{x^2}
+\end{equation}
+implies that $x'(x'^2-2\alpha x'+\beta')$ is the square of the second coordinate $y(x^2-\beta)/x^2$, so $\phi$ maps $E$ into $E'$. A parallel identity shows that $\dual$ maps $E'$ into $E$.
+
+\begin{definition}[Descent maps]\label{def:descent-map}
+Let $K$, $\alpha$, $\beta$ be as above. The \emph{descent map} $\delta^K_{\alpha,\beta}\colon E_{\alpha,\beta}(K)\to\sqgp K$ is defined by
+\begin{equation}\label{eq:descent-map}
+\delta^K_{\alpha,\beta}(O)=\sq1,\qquad\delta^K_{\alpha,\beta}(T)=\sq\beta,\qquad\delta^K_{\alpha,\beta}((x,y))=\sq x\quad\text{for }x\ne0.
+\end{equation}
+For $\alpha,\beta\in\Q$, we write $\delta=\delta^{\Q}_{\alpha,\beta}$ and, for a place $v$, $\delta_v=\delta^{\Q_v}_{\alpha,\beta}$. For the curve $E'=E_{\alpha',\beta'}$, we write $\delta'=\delta^{\Q}_{\alpha',\beta'}$ and $\delta'_v$; in particular $\delta'(T')=\sq{\alpha^2-4\beta}$. When a curve has a name, such as $E$, we also write $\delta_E$ and $\delta_{E,v}$.
+\end{definition}
+
+\begin{proposition}[Descent via a $2$-isogeny]\label{prop:descent}
+Let $K$ be a field of characteristic $0$, let $\alpha,\beta\in K$ with $\beta(\alpha^2-4\beta)\ne0$, and let $E=E_{\alpha,\beta}$ and $E'=E_{\alpha',\beta'}$.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:descent-isogeny} The maps $\phi\colon E(K)\to E'(K)$ and $\dual\colon E'(K)\to E(K)$ are homomorphisms with kernels $\{O,T\}$ and $\{O',T'\}$, and $\dual\circ\phi=[2]$ on $E(K)$ and $\phi\circ\dual=[2]$ on $E'(K)$.
+\item\label{item:descent-kernel} The map $\delta^K_{\alpha,\beta}$ is a homomorphism with kernel $\dual(E'(K))$, and $\delta^K_{\alpha',\beta'}$ is a homomorphism with kernel $\phi(E(K))$.
+\item\label{item:descent-local} Let $K=\Q$. For every $P\in E(\Q)$ and every place $v$, we have $\delta_v(P)=\operatorname{loc}_v(\delta(P))$.
+\end{enumerate}
+\end{proposition}
+
+Part \ref{item:descent-isogeny} is classical; see \cite[Section~3.4]{SilvermanTate2015} and \cite[Example~III.4.5 and Theorem~III.4.8]{SilvermanAEC}. Part \ref{item:descent-kernel} is \cite[Proposition~3.8]{SilvermanTate2015} for $K=\Q$; for general $K$, see \cite[Example~X.4.8 and Proposition~X.4.9]{SilvermanAEC} and \cite[Section~3.1]{Zywina2026}. Since the upper bounds of this paper rest on \ref{item:descent-kernel} and \ref{item:descent-local}, we give their elementary proof.
+
+\begin{proof}[Proof of \cref{prop:descent}\ref{item:descent-kernel} and \ref{item:descent-local}]
+Throughout the proof, we write $\delta=\delta^K_{\alpha,\beta}$ and $\delta'=\delta^K_{\alpha',\beta'}$. We first show that $\delta$ and $\delta'$ are homomorphisms, using the chord-and-tangent construction of the group law \cite[Section~III.2, especially Proposition~III.2.2]{SilvermanAEC}. We then determine the two kernels: we check that the images of the isogenies lie in them, and we write down a preimage of every element of each kernel. Part \ref{item:descent-local} follows directly from the definitions.
+
+\paragraph{The homomorphism property.} Since $-(x,y)=(x,-y)$, $-T=T$ and $-O=O$, we have $\delta(-P)=\delta(P)$ for every $P$. It therefore suffices to show that $\delta(P)\delta(Q)\delta(R)=\sq1$ whenever $P+Q+R=O$. If one of the three points is $O$, the other two are negatives of each other, and $\delta(P)\delta(-P)=\delta(P)^2=\sq1$. Otherwise, the line through $P$ and $Q$ (the tangent line if $P=Q$) meets $E$ at $P$, $Q$, $R$, counted with multiplicity. This line is not vertical, since a vertical line through $P$ meets $E$ at $-P$ and at $O$. We write it as $y=mx+n$. The $x$-coordinates of $P$, $Q$, $R$ are then the three roots, counted with multiplicity, of
+\begin{equation}\label{eq:chord-cubic}
+x^3+\alpha x^2+\beta x-(mx+n)^2=x^3+(\alpha-m^2)x^2+(\beta-2mn)x-n^2,
+\end{equation}
+whose product is $n^2$. If $n\ne0$, no root is $0$. Then none of $P$, $Q$, $R$ is $T$, and the product of their classes is $\sq{n^2}=\sq1$. If $n=0$, the polynomial \eqref{eq:chord-cubic} is $x(x^2+(\alpha-m^2)x+\beta)$. Since $\beta\ne0$, the root $0$ is simple, which implies that exactly one of $P$, $Q$, $R$ is $T$. The $x$-coordinates of the other two are the roots of $x^2+(\alpha-m^2)x+\beta$, whose product is $\beta$. The product of the three classes is $\sq\beta\cdot\sq\beta=\sq1$. The same argument applies to $\delta'$, and both maps are homomorphisms.
+
+\paragraph{The kernel of $\delta$.} We first show that $\dual(E'(K))\subseteq\ker\delta$. We have $\dual(O')=\dual(T')=O$. If $x'\ne0$ and $y'\ne0$, then $\dual(x',y')$ has $x$-coordinate $(y'/2x')^2\ne0$, whose class is trivial. If $x'\ne0$ and $y'=0$, then $\dual(x',0)=T$, and $x'$ is a root of $x'^2-2\alpha x'+\beta'$, whose discriminant is $16\beta$. Then $16\beta=(2x'-2\alpha)^2$, and $\delta(T)=\sq\beta=\sq1$.
+
+Conversely, let $P\in\ker\delta$. If $P=O$, then $P=\dual(O')$. If $P=T$, then $\beta=s^2$ with $s\in K^\times$, and the points $(\alpha\pm2s,0)$ lie on $E'$, since $(\alpha\pm2s)^2-2\alpha(\alpha\pm2s)+\alpha^2-4s^2=0$; their $x$-coordinates are nonzero because their product is $\beta'\ne0$, and $\dual(\alpha\pm2s,0)=T$. Finally, let $P=(x,y)$ with $x=s^2$ and $s\in K^\times$; here $y$ may be $0$. We set
+\begin{equation}\label{eq:preimage-dual}
+x'=\alpha+2s^2+\frac{2y}{s},\qquad y'=2sx'.
+\end{equation}
+Using $y^2=s^6+\alpha s^4+\beta s^2$, we find
+\begin{equation}\label{eq:preimage-dual-product}
+\Bigl(\alpha+2s^2+\frac{2y}s\Bigr)\Bigl(\alpha+2s^2-\frac{2y}s\Bigr)=(\alpha+2s^2)^2-\frac{4y^2}{s^2}=\alpha^2-4\beta=\beta'.
+\end{equation}
+This implies that $x'\ne0$ and that $x'+\beta'/x'=2\alpha+4s^2$. Then
+\begin{equation}
+x'^3-2\alpha x'^2+\beta'x'=x'^2\Bigl(x'-2\alpha+\frac{\beta'}{x'}\Bigr)=4s^2x'^2=y'^2,
+\end{equation}
+and $(x',y')\in E'(K)$. By \eqref{eq:isogenies}, the $x$-coordinate of $\dual(x',y')$ is $s^2=x$, and its $y$-coordinate is
+\begin{equation}
+\frac{2sx'(x'^2-\beta')}{8x'^2}=\frac s4\Bigl(x'-\frac{\beta'}{x'}\Bigr)=\frac s4\cdot\frac{4y}s=y,
+\end{equation}
+where we used \eqref{eq:preimage-dual-product} to write $x'-\beta'/x'$ as the difference of the two factors on its left side. We conclude that $P=\dual(x',y')$, and that $\ker\delta=\dual(E'(K))$.
+
+\paragraph{The kernel of $\delta'$.} The argument is the same with the roles of the two curves exchanged. We have $\phi(O)=\phi(T)=O'$. For $x\ne0$ and $y\ne0$, the $x'$-coordinate of $\phi(x,y)$ is $(y/x)^2$. For $x\ne0$ and $y=0$, we have $\phi(x,0)=T'$; since $x$ is a root of $x^2+\alpha x+\beta$, we have $\beta'=\alpha^2-4\beta=(2x+\alpha)^2$, which is a square. This proves that $\phi(E(K))\subseteq\ker\delta'$.
+
+Conversely, if $\delta'(T')=\sq1$, then $\beta'=s^2$ with $s\in K^\times$. The points $((-\alpha\pm s)/2,0)$ lie on $E$, their $x$-coordinates are nonzero because their product is $\beta$, and both map to $T'$. Finally, let $(x',y')\in E'(K)$ with $x'=s^2$ and $s\in K^\times$. We set
+\begin{equation}\label{eq:preimage-phi}
+x=\frac12\Bigl(s^2-\alpha+\frac{y'}s\Bigr),\qquad y=sx.
+\end{equation}
+Using $y'^2=s^6-2\alpha s^4+\beta's^2$, we find
+\begin{equation}\label{eq:preimage-phi-product}
+\Bigl(s^2-\alpha+\frac{y'}s\Bigr)\Bigl(s^2-\alpha-\frac{y'}s\Bigr)=(s^2-\alpha)^2-\frac{y'^2}{s^2}=\alpha^2-\beta'=4\beta.
+\end{equation}
+Then $x\ne0$ and $\beta/x=(s^2-\alpha-y'/s)/2$, which implies that $x+\beta/x=s^2-\alpha$ and $x-\beta/x=y'/s$. Using the first of these identities, we find $x^3+\alpha x^2+\beta x=x^2(x+\alpha+\beta/x)=s^2x^2=y^2$, and $(x,y)\in E(K)$. By \eqref{eq:isogenies} and the second identity, we have
+\begin{equation}
+\phi(x,y)=\Bigl(\frac{y^2}{x^2},\ s\Bigl(x-\frac\beta x\Bigr)\Bigr)=(s^2,y')=(x',y').
+\end{equation}
+Hence $\ker\delta'=\phi(E(K))$.
+
+\paragraph{Compatibility with localization.} Let $K=\Q$, $P\in E(\Q)$ and $v$ a place. The point $P$ is also a point of $E(\Q_v)$, and the formulas \eqref{eq:descent-map} for $\delta$ and $\delta_v$ are the same. The map $\operatorname{loc}_v$ sends $\sq x$ to the class of $x$ in $\sqgp{\Q_v}$, which gives $\delta_v(P)=\operatorname{loc}_v(\delta(P))$.
+\end{proof}
+
+\begin{lemma}[Rank from the images of the two descent maps]\label{lem:rank-formula}
+Let $\alpha,\beta\in\Q$ with $\beta(\alpha^2-4\beta)\ne0$, let $E=E_{\alpha,\beta}$ and $E'=E_{\alpha',\beta'}$, and let
+\begin{equation}\label{eq:d-dprime}
+d=\dim_{\F_2}\delta(E(\Q)),\qquad d'=\dim_{\F_2}\delta'(E'(\Q)).
+\end{equation}
+Then $\rk E(\Q)=d+d'-2$.
+\end{lemma}
+
+The formula is \cite[Section~3.6]{SilvermanTate2015}, where it is written as $2^{\rk E(\Q)}=\#\delta(E(\Q))\cdot\#\delta'(E'(\Q))/4$, and \cite[Lemma~3.1]{Zywina2026}. It holds whether or not $\alpha^2-4\beta$ is a square in $\Q$. In the families of \cref{sec:families}, $\alpha^2-4\beta$ is not a square (\cref{lem:prime-spec-basic}), but the proof below does not need this.
+
+\begin{proof}
+Let $\Gamma=E(\Q)$, $\Gamma'=E'(\Q)$, $r=\rk E(\Q)$, and let $2^t$ be the order of $\Gamma[2]$. Then $t\in\{1,2\}$, since $T\in\Gamma[2]$ and $\Gamma[2]$ has at most four elements. By \cref{prop:descent}\ref{item:descent-kernel}, the map $\delta$ induces an isomorphism $\Gamma/\dual(\Gamma')\to\delta(\Gamma)$, and $\delta'$ induces an isomorphism $\Gamma'/\phi(\Gamma)\to\delta'(\Gamma')$. Comparing orders, we find
+\begin{equation}\label{eq:rank-indices}
+[\Gamma:\dual(\Gamma')]=2^d,\qquad[\Gamma':\phi(\Gamma)]=2^{d'}.
+\end{equation}
+Since $\dual\circ\phi=[2]$, we have $2\Gamma\subseteq\dual(\Gamma')\subseteq\Gamma$, and $[\Gamma:2\Gamma]=2^d[\dual(\Gamma'):2\Gamma]$.
+
+We compute the second index. The homomorphism $\Gamma'\to\dual(\Gamma')/2\Gamma$ that sends $Q$ to the coset of $\dual(Q)$ is surjective. Its kernel consists of the points $Q$ with $\dual(Q)=2P=\dual(\phi(P))$ for some $P\in\Gamma$, that is, of the points of $\phi(\Gamma)+\{O',T'\}$, by \cref{prop:descent}\ref{item:descent-isogeny}. We obtain
+\begin{equation}
+[\dual(\Gamma'):2\Gamma]=[\Gamma':\phi(\Gamma)+\{O',T'\}]=2^{d'}/[\phi(\Gamma)+\{O',T'\}:\phi(\Gamma)].
+\end{equation}
+The last index is $1$ if $T'\in\phi(\Gamma)$ and $2$ otherwise. If $\phi(P)=T'$, then $2P=\dual(T')=O$, and $P\in\Gamma[2]$. Conversely, $\phi$ maps $\Gamma[2]$ into $\ker\dual=\{O',T'\}$, since $\dual(\phi(P))=2P$, and its kernel is $\{O,T\}$; the image $\phi(\Gamma[2])$ has $2^{t-1}$ elements. It follows that $T'\in\phi(\Gamma)$ if and only if $t=2$, and in both cases
+\begin{equation}
+[\dual(\Gamma'):2\Gamma]=2^{d'+t-2}.
+\end{equation}
+By the Mordell--Weil theorem \cite[Theorem~VIII.6.7]{SilvermanAEC}, $\Gamma\cong\Z^r\oplus\Gamma_{\mathrm{tors}}$ with $\Gamma_{\mathrm{tors}}$ finite. For a finite abelian group $U$, the quotient $U/2U$ and the subgroup $U[2]$ have the same order, which implies that $[\Gamma:2\Gamma]=2^r\cdot2^t$. Combining the three displays, we obtain $2^{r+t}=2^d\cdot2^{d'+t-2}$, which gives $r=d+d'-2$.
+\end{proof}
+
+\section{Support and local images}\label{sec:descent-local}
+
+\begin{lemma}[Support of the global image]\label{lem:support}
+Let $\alpha,\beta\in\Z$ with $\beta(\alpha^2-4\beta)\ne0$. Then every class in $\delta(E_{\alpha,\beta}(\Q))$ is represented by a signed squarefree divisor of $\beta$. Equivalently, $\delta(E_{\alpha,\beta}(\Q))$ lies in the subgroup of $\sqgp\Q$ spanned by $\sq{-1}$ and the classes of the primes dividing $\beta$.
+\end{lemma}
+
+This is \cite[Proposition~3.8(c)]{SilvermanTate2015}.
+
+\begin{proof}
+The classes $\delta(O)=\sq1$ and $\delta(T)=\sq\beta$ have the required form. Let $P=(x,y)$ with $x\ne0$, and let $p$ be a prime not dividing $\beta$. It suffices to show that $r=v_p(x)$ is even, since then removing square factors from $x$ leaves a signed product of distinct primes dividing $\beta$.
+
+Suppose first that $y=0$. Then $x$ is a root of $x^2+\alpha x+\beta$. If $r<0$, the term $x^2$ has valuation $2r$, smaller than $v_p(\alpha x)\ge r$ and $v_p(\beta)\ge0$, and \cref{lem:dominant}\ref{item:dominant-val} implies that the sum $x^2+\alpha x+\beta$ has valuation $2r$, so that it is not $0$. If $r>0$, the term $\beta$ has valuation $0$, smaller than those of $x^2$ and $\alpha x$, and again the sum is not $0$. We conclude that $r=0$.
+
+Suppose now that $y\ne0$. If $r<0$, the term $x^3$ of $x^3+\alpha x^2+\beta x$ has valuation $3r$, smaller than $v_p(\alpha x^2)\ge2r$ and $v_p(\beta x)\ge r$. By \cref{lem:dominant}\ref{item:dominant-val}, we have $2v_p(y)=3r$, and $r$ is even. If $r>0$, the term $\beta x$ has valuation $r$, smaller than $v_p(\alpha x^2)\ge2r$ and $v_p(x^3)=3r$, and we find $2v_p(y)=r$. In all cases $r$ is even.
+\end{proof}
+
+\begin{lemma}[Points of order two]\label{lem:two-torsion}
+Let $K$ be a field of characteristic $0$, and let $\alpha,\beta\in K$ with $\beta(\alpha^2-4\beta)\ne0$. The points of order two of $E_{\alpha,\beta}(K)$ are $T$ and the points $(x_0,0)$ with $x_0\in K$ a root of $x^2+\alpha x+\beta$. Points $(x_0,0)$ with $x_0\ne0$ exist if and only if $\alpha^2-4\beta$ is a square in $K$. In that case there are exactly two of them, $(x_0,0)$ and $(x_1,0)$, with $x_0\ne x_1$ and $x_0x_1=\beta$, and their classes are $\delta^K_{\alpha,\beta}((x_k,0))=\sq{x_k}$; in particular $\sq{x_0}\sq{x_1}=\sq\beta$.
+\end{lemma}
+
+\begin{proof}
+Recall that $-(x,y)=(x,-y)$ on the model \eqref{eq:E-alpha-beta}. A point $P\ne O$ therefore satisfies $2P=O$ if and only if $y=0$, that is, if and only if $x(x^2+\alpha x+\beta)=0$. The root $x=0$ gives $T$. The quadratic $x^2+\alpha x+\beta$ has a root in $K$ if and only if its discriminant $\alpha^2-4\beta$ is a square in $K$. Its two roots are then distinct because $\alpha^2-4\beta\ne0$, and both are nonzero because their product is $\beta\ne0$. Their classes are given by \eqref{eq:descent-map}.
+\end{proof}
+
+The next lemma gives the local conditions at the moving primes of \cref{sec:families}. Its first part applies when $p$ divides the coefficient $\alpha$ and divides $\beta$ exactly once, and its second part when $\alpha$ and $\beta$ are units but $p$ divides $\alpha^2-4\beta$ exactly once. The second part is the case $n=1$ of \cite[Lemma~3.3(i)]{Zywina2026}, applied after exchanging the two isogenous curves. We give elementary valuation proofs of both parts.
+
+\crefformat{oddlocal}{\cref{lem:odd-local}#2#1#3}
+\Crefformat{oddlocal}{\Cref{lem:odd-local}#2#1#3}
+\crefmultiformat{oddlocal}{\cref{lem:odd-local}#2#1#3}{ and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\Crefmultiformat{oddlocal}{\Cref{lem:odd-local}#2#1#3}{ and~#2#1#3}{, #2#1#3}{, and~#2#1#3}
+\begin{lemma}[Local images at odd primes]\label{lem:odd-local}
+Let $p$ be an odd prime, and let $\alpha,\beta\in\Z_p$.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label[oddlocal]{item:odd-local-F} If $v_p(\alpha)\ge1$ and $v_p(\beta)=1$, then $\beta(\alpha^2-4\beta)\ne0$ and $\delta_p(E_{\alpha,\beta}(\Q_p))=\{\sq1,\sq\beta\}$.
+\item\label[oddlocal]{item:odd-local-J} If $\alpha,\beta\in\Z_p^\times$ and $v_p(\alpha^2-4\beta)=1$, then $\delta_p(E_{\alpha,\beta}(\Q_p))=\{\sq1\}$.
+\end{enumerate}
+Here $\delta_p=\delta^{\Q_p}_{\alpha,\beta}$.
+\end{lemma}
+
+\begin{proof}
+In both parts, we first show that $v_p(\alpha^2-4\beta)=1$. We deduce that $E(\Q_p)[2]=\{O,T\}$, so that $T$ is the only affine point of $E=E_{\alpha,\beta}$ over $\Q_p$ with $y=0$. We then treat the points $(x,y)$ with $x\ne0$ and $y\ne0$ according to the sign of $r=v_p(x)$. For such a point, we have $\sq{y^2}=\sq1$ and $y^2=x^3+\alpha x^2+\beta x$.
+
+\paragraph{Part \ref{item:odd-local-F}.} Since $v_p(\alpha^2)\ge2$ and $v_p(4\beta)=1$, \cref{lem:dominant}\ref{item:dominant-val} implies that $v_p(\alpha^2-4\beta)=1$. Then $\alpha^2-4\beta\ne0$, and $\beta\ne0$. As $v_p(\alpha^2-4\beta)$ is odd, $\alpha^2-4\beta$ is not a square in $\Q_p$ by \cref{lem:squares}\ref{item:squares-odd}, and \cref{lem:two-torsion} shows that $T$ is the only point of order two in $E(\Q_p)$. The points $O$ and $T$ have classes $\sq1$ and $\sq\beta$.
+
+Let $(x,y)\in E(\Q_p)$ with $x\ne0$, so that $y\ne0$. If $r\le0$, then
+\begin{equation}
+v_p(\alpha x^2)\ge1+2r\ge3r+1,\qquad v_p(\beta x)=1+r\ge3r+1,
+\end{equation}
+and the term $x^3$ is dominant. By \cref{lem:dominant}\ref{item:dominant-unit} with $h=1$, we have $y^2=x^3(1+pt)$ with $t\in\Z_p$. The factor $1+pt$ is a square by \cref{lem:squares}\ref{item:squares-one}, and we find $\sq x=\sq{x^3}=\sq{y^2}=\sq1$. If $r\ge1$, then
+\begin{equation}
+v_p(\beta x)=1+r,\qquad v_p(\alpha x^2)\ge1+2r\ge(1+r)+1,\qquad v_p(x^3)=3r\ge(1+r)+1,
+\end{equation}
+and $\beta x$ is the dominant term. By \cref{lem:dominant}\ref{item:dominant-unit} and \cref{lem:squares}\ref{item:squares-one}, we obtain $y^2=\beta x(1+pt)$ with $t\in\Z_p$ and $1+pt$ a square. This implies that $\sq{\beta x}=\sq1$, that is, $\sq x=\sq\beta$. Every point therefore has class $\sq1$ or $\sq\beta$, and both classes occur.
+
+\paragraph{Part \ref{item:odd-local-J}.} Here $v_p(\alpha^2-4\beta)=1$ by hypothesis, and as in part \ref{item:odd-local-F}, $T$ is the only affine point of $E(\Q_p)$ with $y=0$. We first show that $\beta$ is a square in $\Q_p$. Indeed, we have $\chi_p(\beta)=\chi_p(4\beta)=\chi_p(\alpha^2)=0$, since $4\beta\equiv\alpha^2\pmod p$ and $\alpha$ is a unit. As $\beta$ is a unit, \cref{lem:squares}\ref{item:squares-odd} shows that $\beta$ is a square, and $\delta_p(O)=\delta_p(T)=\sq1$.
+
+Let $(x,y)\in E(\Q_p)$ with $x\ne0$, so that $y\ne0$. If $r\le-1$, then $v_p(\alpha x^2)=2r\ge3r+1$ and $v_p(\beta x)=r\ge3r+1$. As in part \ref{item:odd-local-F}, \cref{lem:dominant}\ref{item:dominant-unit} and \cref{lem:squares}\ref{item:squares-one} give $y^2=x^3(1+pt)$ and $\sq x=\sq1$. If $r\ge1$, then $v_p(\beta x)=r$, while $v_p(\alpha x^2)=2r$ and $v_p(x^3)=3r$ are at least $r+1$. The same argument gives $y^2=\beta x(1+pt)$ and $\sq x=\sq\beta=\sq1$.
+
+It remains to treat $r=0$. Let $D=\alpha^2-4\beta$ and $z=x+\alpha/2\in\Z_p$, so that
+\begin{equation}\label{eq:odd-local-complete-square}
+y^2=x\,(x^2+\alpha x+\beta)=x\Bigl(z^2-\frac D4\Bigr).
+\end{equation}
+If $z$ is a unit, then $v_p(z^2)=0<1=v_p(D/4)$, and by \cref{lem:dominant}\ref{item:dominant-unit}, we have $z^2-D/4=z^2(1+pt)$ with $t\in\Z_p$. This is a square by \cref{lem:squares}\ref{item:squares-one}, and \eqref{eq:odd-local-complete-square} implies that $\sq x=\sq1$. If $z\in p\Z_p$, then $v_p(z^2)\ge2>1=v_p(D/4)$, and we have $v_p(z^2-D/4)=1$ by \cref{lem:dominant}\ref{item:dominant-val}. Since $x$ is a unit, the right side of \eqref{eq:odd-local-complete-square} then has valuation $1$, which is impossible for the square $y^2$. Every point therefore has class $\sq1$.
+\end{proof}
+
+\section{Local conditions as linear equations}\label{sec:descent-linear}
+
+We now write the local conditions as linear equations over $\F_2$. We also record the two elementary facts that turn explicit points into lower bounds. Linear equations over $\F_2$ whose coefficients are Legendre symbols are a standard tool in $2$-descent: examples include Monsky's appendix to \cite[pp.~365--369, especially p.~366]{HeathBrownMonsky1994} for full $2$-descent on the congruent-number curves, and for descent by a $2$-isogeny they appear in \cite[Sections~2--3]{Feng1996}, \cite[Section~3.1, Theorem~3]{XiongZaharescu2009} and \cite[Section~4]{KaneKlagsbrun2017}.
+
+\begin{definition}[Ambient bases and rows]\label{def:rows}
+Let $\alpha,\beta\in\Q$ with $\beta(\alpha^2-4\beta)\ne0$, and let $E=E_{\alpha,\beta}$. Let $\cB=(g_1,\dots,g_n)$ be a list of nonzero rational numbers. For $\mathbf w\in\F_2^n$ we write
+\begin{equation}\label{eq:coordinates}
+\sq{\mathbf w}_{\cB}=\sq{g_1^{w_1}\cdots g_n^{w_n}}\in\sqgp\Q,
+\end{equation}
+and we call $\mathbf w$ a coordinate vector of this class. We say that $\cB$ is an \emph{ambient basis} for $E$ if the map $\mathbf w\mapsto\sq{\mathbf w}_{\cB}$ is injective and its image contains $\delta(E(\Q))$. Let $v$ be a place of $\Q$, let $U_v\subseteq\sqgp{\Q_v}$ be a subgroup containing $\delta_v(E(\Q_v))$, and let $f\colon\sqgp{\Q_v}\to\F_2$ be a linear map that vanishes on $U_v$. The \emph{row} defined by $(v,U_v,f)$ is the vector $r\in\F_2^n$ with entries
+\begin{equation}\label{eq:row-entries}
+r_j=f\bigl(\operatorname{loc}_v(\sq{g_j})\bigr),\qquad1\le j\le n.
+\end{equation}
+For $r,\mathbf w\in\F_2^n$, we write $r\cdot\mathbf w=\sum_jr_jw_j$.
+\end{definition}
+
+\begin{lemma}[Local conditions give upper bounds]\label{lem:upper-bound}
+In the setting of \cref{def:rows}, let $r$ be the row defined by $(v,U_v,f)$. Then $r\cdot\mathbf w=0$ for every $\mathbf w\in\F_2^n$ such that $\sq{\mathbf w}_{\cB}\in\delta(E(\Q))$. If, moreover, $\cB$ is an ambient basis for $E$ and $\mathbf M$ is a matrix over $\F_2$ with $n$ columns whose rows are rows in the sense of \cref{def:rows}, possibly at different places, then the coordinate vectors of the classes in $\delta(E(\Q))$ form a subspace of $\ker\mathbf M$, and
+\begin{equation}\label{eq:upper-bound}
+\dim_{\F_2}\delta(E(\Q))\le n-\rk\mathbf M.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The map $\mathbf w\mapsto f(\operatorname{loc}_v(\sq{\mathbf w}_{\cB}))$ is linear, because $\operatorname{loc}_v$ and $f$ are homomorphisms, and by \eqref{eq:row-entries} it is equal to $\mathbf w\mapsto r\cdot\mathbf w$. If $\sq{\mathbf w}_{\cB}=\delta(P)$ with $P\in E(\Q)$, then \cref{prop:descent}\ref{item:descent-local} implies that $\operatorname{loc}_v(\sq{\mathbf w}_{\cB})=\delta_v(P)\in U_v$, and we obtain $r\cdot\mathbf w=f(\delta_v(P))=0$. If $\cB$ is an ambient basis, the map $\mathbf w\mapsto\sq{\mathbf w}_{\cB}$ identifies $\delta(E(\Q))$ with a subspace of $\F_2^n$, which lies in $\ker\mathbf M$ by the first part. This proves \eqref{eq:upper-bound}, since $\dim\ker\mathbf M=n-\rk\mathbf M$.
+\end{proof}
+
+In practice, $f$ is written in the coordinates named after \cref{lem:squares}. At an odd prime $p$, a linear map on $\sqgp{\Q_p}\cong\F_2^2$ is a combination of the valuation coordinate $\nu_p$ and the character coordinate $\chi_p$ of \eqref{eq:odd-coordinates}. If $U_p=\{\sq1\}$, both coordinates vanish on $U_p$. If $U_p=\{\sq1,\sq z\}$ with $z=pz_0$ and $z_0\in\Z_p^\times$, then $\sq z$ has coordinates $(\nu_p(z),\chi_p(z))=(1,\chi_p(z_0))$, and the linear map $\chi_p+\chi_p(z_0)\,\nu_p$ vanishes on $U_p$. At $p=2$, the coordinates are $e_1,e_2,e_3$ of \cref{lem:squares}\ref{item:squares-two}, and at $\infty$ the only nonzero linear map is the sign coordinate $\mathrm{sgn}$, which vanishes on $U_\infty=\{\sq1\}$.
+
+\begin{remark}[What the upper bounds measure]\label{rem:selmer}
+The classes in $\sqgp\Q$ whose localization lies in $\delta_v(E(\Q_v))$ for every place $v$ form the Selmer group of the isogeny $\dual$ \cite[Section~X.4]{SilvermanAEC}, and $\delta(E(\Q))$ is contained in it. A matrix $\mathbf M$ as in \cref{lem:upper-bound} imposes conditions at finitely many places only, with subgroups $U_v$ that may be larger than $\delta_v(E(\Q_v))$. Its kernel contains the coordinate vectors of the classes of this Selmer group that lie in the span of $\cB$. We use only the inclusion of $\delta(E(\Q))$ in $\ker\mathbf M$. Together with explicit points (\cref{cor:exact-dimension}), this determines $\delta(E(\Q))$; no separate Selmer-group computation is needed, and the finiteness of the Tate--Shafarevich group is not used.
+\end{remark}
+
+\begin{lemma}[A triangular criterion for independence]\label{lem:independence}
+Let $\mathbf w_1,\dots,\mathbf w_k\in\F_2^n$. Suppose that there exist distinct indices $j_1,\dots,j_k\in\{1,\dots,n\}$ such that, for each $s$, the $j_s$-th entry of $\mathbf w_s$ is $1$ and the $j_s$-th entry of $\mathbf w_t$ is $0$ for every $t>s$. Then $\mathbf w_1,\dots,\mathbf w_k$ are linearly independent. In particular, if $\cB$ is an ambient basis for $E$, the classes $\sq{\mathbf w_1}_{\cB},\dots,\sq{\mathbf w_k}_{\cB}$ are linearly independent.
+\end{lemma}
+
+\begin{proof}
+Suppose that $\sum_tc_t\mathbf w_t=0$ with $c_t\in\F_2$, and that $c_1=\dots=c_{s-1}=0$ for some $s\le k$. Then $\sum_{t\ge s}c_t\mathbf w_t=0$, and its $j_s$-th entry is $c_s$, which gives $c_s=0$. By induction on $s$, all $c_t$ vanish. The last statement holds because $\mathbf w\mapsto\sq{\mathbf w}_{\cB}$ is injective and linear.
+\end{proof}
+
+When $g_j$ is a prime $q$ that divides none of the other entries of $\cB$, the $j$-th coordinate of a class is its $q$-adic valuation modulo $2$. In \cref{sec:rank5,sec:rank6,sec:rank7}, the indices $j_s$ in \cref{lem:independence} are such primes, and the lemma amounts to eliminating the coefficients of a relation one at a time by their valuations at these primes.
+
+\begin{corollary}[Exact dimension]\label{cor:exact-dimension}
+Let $\cB$ be an ambient basis for $E=E_{\alpha,\beta}$ with $n$ entries, and let $\mathbf M$ be a matrix whose rows are rows in the sense of \cref{def:rows}. Suppose that $\mathbf w_1,\dots,\mathbf w_k\in\F_2^n$ are linearly independent, that $\sq{\mathbf w_s}_{\cB}\in\delta(E(\Q))$ for every $s$, and that $\rk\mathbf M=n-k$. Then $\dim_{\F_2}\delta(E(\Q))=k$, and $\delta(E(\Q))$ is the span of $\sq{\mathbf w_1}_{\cB},\dots,\sq{\mathbf w_k}_{\cB}$. It consists of the classes $\sq{\mathbf w}_{\cB}$ with $\mathbf w\in\ker\mathbf M$.
+\end{corollary}
+
+\begin{proof}
+Let $V_0$ be the span of $\mathbf w_1,\dots,\mathbf w_k$, and let $V_1$ be the subspace of coordinate vectors of the classes in $\delta(E(\Q))$. Since $\delta(E(\Q))$ is a group, we have $V_0\subseteq V_1$, and \cref{lem:upper-bound} implies that $V_1\subseteq\ker\mathbf M$. The dimensions of $V_0$ and $\ker\mathbf M$ are both $k$, which implies that $V_0=V_1=\ker\mathbf M$.
+\end{proof}

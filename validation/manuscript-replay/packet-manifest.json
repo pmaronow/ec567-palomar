@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "frozen_utc": "2026-10-12T03:51:47.391104+00:00",
+  "passed": true,
+  "literal_checks": 1176,
+  "certificate_table_checks": 42,
+  "guard_and_regression_checks": 26,
+  "entry_count": 22,
+  "entries": [
+    {
+      "path": "PACKET_RECEIPT.md",
+      "bytes": 3140,
+      "sha256": "ff97fd9c7f9efe2b2d7b5911c54681d3aaef39e9fcc43b00b69cd6c9a1d00e93"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4103,
+      "sha256": "b3ef793b6d845b9a62ccc6b2fc469a7204f248fb382a812465ddc8236288bea0"
+    },
+    {
+      "path": "certificate_compare.py",
+      "bytes": 13755,
+      "sha256": "308669cb0a99a88bbfae60e720755d9fde52c40bb89b9488244981eeaf65b33a"
+    },
+    {
+      "path": "literal_compare.py",
+      "bytes": 32876,
+      "sha256": "d8b2514a984ec15d296d9872927c439795366a20b6ee081a13a5050a497b852c"
+    },
+    {
+      "path": "portable-replay-status.json",
+      "bytes": 4130,
+      "sha256": "e0fefeba2511c49332e3701408bafd9610f03476d0269191c16e5f5a3510c49c"
+    },
+    {
+      "path": "replay.py",
+      "bytes": 10240,
+      "sha256": "d258e6369a86bba141ecf86a2c3fad50b72471f39eb0f34d2c8405a128828d5d"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 14,
+      "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc"
+    },
+    {
+      "path": "verified-directory/certificate-comparison.json",
+      "bytes": 35059,
+      "sha256": "f4a5e2d2b195ad06c13ecad1ce77bff33624edaf26b4fe4b5901a0c96b2998d6"
+    },
+    {
+      "path": "verified-directory/certificate_compare.py.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verified-directory/certificate_compare.py.stdout.log",
+      "bytes": 523,
+      "sha256": "ff1d5429399e1bc59ae68306d0f11b45f92033d9d5693fed0b1865698862e6cc"
+    },
+    {
+      "path": "verified-directory/literal-comparison.json",
+      "bytes": 176067,
+      "sha256": "ea87ecfa2080bafcb3c30dea2b172057ce282ad9129d5375020e95ac0fa3f55c"
+    },
+    {
+      "path": "verified-directory/literal_compare.py.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verified-directory/literal_compare.py.stdout.log",
+      "bytes": 39,
+      "sha256": "edaedee1cc96648747a1607cd8249550ce46987c8fc78907558f42c8201bca1a"
+    },
+    {
+      "path": "verified-directory/replay-receipt.json",
+      "bytes": 12272,
+      "sha256": "ed0450ce51b8abfdbf3cf6e3ae9fb9f19f04ad2607eaf178d603cffef99732b4"
+    },
+    {
+      "path": "verified-zip/certificate-comparison.json",
+      "bytes": 35185,
+      "sha256": "169d99a324111e3d44e3eadb01a680444feb58e06b8a437a46396263464bd176"
+    },
+    {
+      "path": "verified-zip/certificate_compare.py.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verified-zip/certificate_compare.py.stdout.log",
+      "bytes": 517,
+      "sha256": "fbfc104f1b83aa456e1c875f906d1b5f28fc10819580120772e713467f4f4c7d"
+    },
+    {
+      "path": "verified-zip/literal-comparison.json",
+      "bytes": 176147,
+      "sha256": "498af1301da114b878685f2c5598ece7984b394d0013faa68f9a56fed17f8fa1"
+    },
+    {
+      "path": "verified-zip/literal_compare.py.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verified-zip/literal_compare.py.stdout.log",
+      "bytes": 39,
+      "sha256": "edaedee1cc96648747a1607cd8249550ce46987c8fc78907558f42c8201bca1a"
+    },
+    {
+      "path": "verified-zip/replay-receipt.json",
+      "bytes": 12668,
+      "sha256": "a52105f5773f9be75da4d757066a0e890aa697cb0928abee170c25d8583665a2"
+    },
+    {
+      "path": "verify_packet.py",
+      "bytes": 8300,
+      "sha256": "ca87d7408a6971461f1db6f494846f27d0bff66fbc0a831f165943f4ffb24e1e"
+    }
+  ],
+  "limitations": "Finite read-only source/data/AST comparison, not a fresh Lean build or a proof of the analytic prime theorem."
+}

@@ -1,0 +1,11 @@
+✔ [2188/2188] Built RankCertificates.FiniteKatai (2.7s)
+Build completed successfully (2188 jobs).
+✔ [2189/2189] Built RankCertificates.PrimeDivisorMoments (2.8s)
+Build completed successfully (2189 jobs).
+✔ [2536/2536] Built RankCertificates.KataiAsymptotic (3.2s)
+Build completed successfully (2536 jobs).
+✔ [9121/9122] Built RankCertificates (3.7s)
+Build completed successfully (9122 jobs).
+Axiom audit passed for 3143 project declarations. Allowed: propext, Quot.sound, Classical.choice.
+Source audit passed for 103 Lean files: complete aggregate imports, no source symlinks, proof placeholders, custom axioms, or native_decide.
+Negative audit test passed: an exported theorem using a private custom axiom was rejected.

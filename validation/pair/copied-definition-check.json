@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "scope": "Whitespace-normalized declaration text comparison (23 declarations); generated proof-auxiliary fidelity additionally verified by full elaborated pp.all comparison.",
+  "checks": [
+    {
+      "declaration": "rationalRank",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/Specification.lean"
+    },
+    {
+      "declaration": "HasExactRank",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/Specification.lean"
+    },
+    {
+      "declaration": "RationalEllipticCurve",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/Specification.lean"
+    },
+    {
+      "declaration": "RationalEllipticCurve.j",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/Specification.lean"
+    },
+    {
+      "declaration": "GeometricallyIsomorphic",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/Specification.lean"
+    },
+    {
+      "declaration": "InfinitelyManyExactRank",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/Specification.lean"
+    },
+    {
+      "declaration": "RanksFiveThroughSeven",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/Specification.lean"
+    },
+    {
+      "declaration": "AffineForm",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/PrimePatterns.lean"
+    },
+    {
+      "declaration": "AffineForm.eval",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/PrimePatterns.lean"
+    },
+    {
+      "declaration": "Avoids",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/PrimePatterns.lean"
+    },
+    {
+      "declaration": "IntegerAffine",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/ExtractionBounds.lean"
+    },
+    {
+      "declaration": "IntegerAffine.eval",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/ExtractionBounds.lean"
+    },
+    {
+      "declaration": "patternWeight",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/ExtractionBounds.lean"
+    },
+    {
+      "declaration": "fromAffine",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/LiteralAffineSystems.lean"
+    },
+    {
+      "declaration": "affineAllowedResidues",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/SingularSeries.lean"
+    },
+    {
+      "declaration": "affineNormalizedLocalFactor",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/SingularSeries.lean"
+    },
+    {
+      "declaration": "integerAffineLocalFactor",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/SingularSeries.lean"
+    },
+    {
+      "declaration": "outputsLocalFactor",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/SingularSeries.lean"
+    },
+    {
+      "declaration": "unitRectangle",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/conditional-prime-patterns/RankCertificates/ConditionalPrimePatterns.lean"
+    },
+    {
+      "declaration": "FiniteComplexityPrimeAsymptotic",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/conditional-prime-patterns/RankCertificates/ConditionalPrimePatterns.lean"
+    },
+    {
+      "declaration": "allowedResidues",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/SingularSeries.lean"
+    },
+    {
+      "declaration": "normalizedLocalFactor",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/SingularSeries.lean"
+    },
+    {
+      "declaration": "integerLocalFactor",
+      "identical_normalized_source": true,
+      "source": "/workspace/work/lean-ranks/RankCertificates/SingularSeries.lean"
+    }
+  ],
+  "elaborated_local_factor_terms_identical": true,
+  "all_23_elaborated_types_and_bodies_byte_identical": true
+}

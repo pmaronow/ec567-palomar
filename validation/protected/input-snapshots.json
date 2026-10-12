@@ -1,0 +1,38 @@
+{
+  "source_snapshot": {
+    "/workspace/work/ec567-temp/Challenge.lean": "becb1dfec3cad6cd1475820e54eec8c7cd38d1ba72bedf01a6dcbe3430daeb6d",
+    "/workspace/work/ec567-temp/Solution.lean": "d2850f370f81c0aecde045067593bee57db6f03a2a5ded84d2b761e1701cb373",
+    "/workspace/work/ec567-temp/comparator.json": "348f6d6b4c494a894470c3806131f5a236ee2d170350e54a507bfde41966cd34",
+    "/workspace/work/ec567-temp/lean-toolchain": "34fd5b5c9b57eef426e1613747fce3de3bfba7c5ed59cb6abe257fe65a6f8ef0",
+    "/workspace/work/ec567-temp/lakefile.toml": "7aa6a6b275b6ff59b78be1b667770345c6be7cfc7db7d1bc0663b53d42f0128f",
+    "/workspace/work/ec567-temp/lake-manifest.json": "951091ae0d0c57f8f56ed60f26e3a28670b426673b252a4d9ab9cb207c717f38"
+  },
+  "selected_object_snapshot": {
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.ir.sig.hash": "6798896279d1699a9275aa84cedcfbfe373f504c7d4ed049342934f4610a1775",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.ir.sig": "9e89f3025088fb7b85c4613cdabfcd690abe159b350616e616396292a6543baa",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.ilean.hash": "daa1d385ceb1e590e9d48d89825f463a018ddad098ba15a3342dc1096039786d",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.ir": "848987eedf4b731df2ca46fe3e2776681c23c3e7bbd5efdaee27e637643d9b00",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.olean.server": "48dcbbfab249adaf9e7d46d5cfb0444c76a480d87474815577d1b730f74a2e37",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.olean.private": "5bd8daed37b07e80888670390f183853434fb7b6de7d4ad01b3a2c73e559411d",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.trace": "fa4e56b1bf2d16d12e44d2fbe43faff1194fe435c652b7d93ab131cef4eddcd1",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.olean.server.hash": "2c4a778d5e384b65a28518d1e63bd11ad950ff0989fc073898d7f69ec3915af0",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.olean": "cc6425c7bd4675aca8d43695336ac3e7d78a32788eb4e6b9bb21fc9d13c4a585",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.olean.private.hash": "80fb826875f13099590f0d34bd610eb786acf300f9a64ed860eb6515488dba17",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.ilean": "b6aeba66d58096c58fc6c2ec382d2ce66beea894119ed61769dec090e9660475",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.ir.hash": "b4b75ba725f2a00c1aee08ffb41b30d774c4e119c28e1e7699054a00a1e87238",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Challenge.olean.hash": "c7b4cffb8ff20bd370f9388e189abede4772da277c777feafb3764cac1aa1e49",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.ir.sig": "89c7d54cad53daba5ed46f8b9a5ed81193347e7f380dbae2676807ce43b03eb4",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.olean.private.hash": "5bbfd9fb1391fae8c63dfdd8d75d5cc0004f3f61154cf801929c1abe0f0c9783",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.olean.server.hash": "f291226d381f9345c7a9aa5769d951e6a508a1a33392f2b0e8f215fdf1ac11da",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.ir.sig.hash": "dbc97c8026a708b128b9551b172194a3569272074a0c79a590e6530807c6cff9",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.ilean": "af0512b20fca26786d4661142e32495584538ca06ba1ff95faf38fdd7b4068cf",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.olean.private": "3a5ebbec76569f854171fb403652b590941356a7587f48d5fc7e2a2d61976fb1",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.olean": "d46ed13531d02c22944891431f8d1e85ed5e72d8cbe4812dbde260ee08f4b28f",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.ilean.hash": "b1f7e93f50b9cd07f459dc7a638fab6c2dd4bdd5de74d0ed6a5d0162ef8b5271",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.olean.server": "9b8cf9288096124d096ccc476e04bf6fe80af3d36861b247ad04b8a0f7ca70c2",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.trace": "6be8f22f6a34b38be789036e03fb049906e6899ff94c0b9b3a3ae3142611e631",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.ir.hash": "0c5c953ca61b98c1d8da1179cf0e87e94fcb801bde59805a6a1e5a6d911cb91f",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.olean.hash": "9f38fe1499adf4d54c2f8a08ca65c6fd7b5960c73c5a760baaf7e45b02c9c096",
+    "/workspace/work/ec567-temp/.lake/build/lib/lean/Solution.ir": "b7f68c7af62ce841376f9766500f0f5945963d9838256bb0a9ff18f6bfef9dec"
+  }
+}

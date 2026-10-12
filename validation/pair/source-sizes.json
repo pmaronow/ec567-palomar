@@ -1,0 +1,17 @@
+{
+  "Challenge.lean": {
+    "sha256": "becb1dfec3cad6cd1475820e54eec8c7cd38d1ba72bedf01a6dcbe3430daeb6d",
+    "bytes": 9114,
+    "lines": 208
+  },
+  "Solution.lean": {
+    "sha256": "d2850f370f81c0aecde045067593bee57db6f03a2a5ded84d2b761e1701cb373",
+    "bytes": 813,
+    "lines": 23
+  },
+  "comparator.json": {
+    "sha256": "348f6d6b4c494a894470c3806131f5a236ee2d170350e54a507bfde41966cd34",
+    "bytes": 257,
+    "lines": 12
+  }
+}

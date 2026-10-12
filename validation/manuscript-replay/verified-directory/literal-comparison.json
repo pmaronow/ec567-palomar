@@ -1,0 +1,7607 @@
+{
+  "scope": "Independent read-only literal comparison of updated family chapters with original archive certificates and existing checked Lean owners. This is a transcription audit, not a new kernel proof or a proof of prime-pattern infinitude.",
+  "archive_scripts_executed": false,
+  "core_files_modified": false,
+  "audit_script": {
+    "path": "/workspace/work/ec567-manuscript-replay/literal_compare.py",
+    "sha256": "d8b2514a984ec15d296d9872927c439795366a20b6ee081a13a5050a497b852c"
+  },
+  "sources": [
+    {
+      "path": "/workspace/work/updated-ec567-manuscript/source/sections/06-rank5.tex",
+      "sha256": "e4bd7545b3083d044498a5dd57ccf56dcc7db34f5b4f1b5805f1e632626ef95f"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/Rank5.lean",
+      "sha256": "5c0001ad51cda4bd2903c6bfdcd2638e78457511b32e58b0efa0a728590cc07c"
+    },
+    {
+      "path": "/workspace/work/rank-5-elliptic-curves-main/research/paper/final_rank5.tex",
+      "sha256": "85c0ffb166b9604b2d7a779ac64819ee0d06c3f2b6890849b2303bcb2a88f885"
+    },
+    {
+      "path": "/workspace/work/updated-ec567-manuscript/source/sections/07-rank6.tex",
+      "sha256": "3f99dff971a994081eb2ae6c4958ecb26cd67fdc66d0cf0ada7451b1a74d37f9"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/Rank6.lean",
+      "sha256": "cdc38b866b38258a9e6c60a952822628eee9d5863ada858a4158f552c19837a3"
+    },
+    {
+      "path": "/workspace/work/rank-5-elliptic-curves-main/research/rank6/paper/rank6_infinitude.tex",
+      "sha256": "d8695c3d9c6946eebfb7fbdcab0bab394ae86309f1bc65b7454913607335e6d1"
+    },
+    {
+      "path": "/workspace/work/updated-ec567-manuscript/source/sections/08-rank7.tex",
+      "sha256": "34b98b31bfa017821e0b788efc383d8dac0d2a122ca41cce92a960038cee71d6"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/Rank7.lean",
+      "sha256": "063ba1a15cbc3cdea959126122fc51b4c4120d3ecf1c2a3db58e9b2b76dd1ad0"
+    },
+    {
+      "path": "/workspace/work/rank-5-elliptic-curves-main/research/rank7/paper/rank7_infinitude.tex",
+      "sha256": "b4f90f1655ebd5df23cc482bb28bf1c20480c73eb1bc7647e37751353c4450e2"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "sha256": "23bfd46777757599f62a41042ff06651a166c22e14eb5d5aee307f9aaa1d4c3c"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/RankLowerBounds.lean",
+      "sha256": "c90536582ee95f657b4b3170ad35db8085ab32b2a04f8edd8b80eee2db0f126b"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/Rank5ExactRank.lean",
+      "sha256": "99ce540b12ac79c5fdb8eef08ce037117d67cb310c38b8c9924000024151dab5"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/Rank6ExactRank.lean",
+      "sha256": "ca506dc496d8a6fc6349a0a38c8f3bf5884815f1f88867fdea7da0f64578984b"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/Rank7ExactRank.lean",
+      "sha256": "cde4e0a0c5ca1257f6395df2ac1d604fcc157e7aebf100816bbb83cf49508c19"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/Rank5OddRows.lean",
+      "sha256": "c5a8a3514f1ef6121dc61162b59c7da319b2a463c7454fe1a76e921ccf3c8a13"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/LiteralAffineSystems.lean",
+      "sha256": "648992eec93101ccfc0e7ffd68c06ae569c839a6f4a4cede9ae5c2058cac5b7d"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/LiteralCyclicBridge.lean",
+      "sha256": "121f8084888520d1de96b6ae579f74f53747d76b0be9c15918bbb3deb19ec60b"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/PrimeSpecializations.lean",
+      "sha256": "b376603b4e23960bda9415332d982cb0f01d169772aaf34ddf0f17844576dcf8"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/DescentWitnesses.lean",
+      "sha256": "ad1779b7d51892ca14eabe10bfccd98f8208787c790748dfea22dfa6a0e4a1a6"
+    }
+  ],
+  "certificates": [
+    {
+      "rank": 5,
+      "updated": "/workspace/work/updated-ec567-manuscript/source/certificates/rank5/final155_certificate.json",
+      "original": "/workspace/work/rank-5-elliptic-curves-main/research/paper/final155_certificate.json",
+      "updated_sha256": "daa3a196c1e7bfad19be03b7d5ffe3bfb1672a5041149ba33ca650205fa610f8",
+      "original_sha256": "ed596d8253b230962840411a49c6625fc8a45d4c8588f0dedf08375fe0056730",
+      "byte_identical": false,
+      "metadata_differences": [
+        {
+          "key": "coordinate",
+          "updated": "u=M/N; N>0; N need not be prime",
+          "original": "u=M/N; final max155 positive-N model; N need not be prime"
+        },
+        {
+          "key": "review_status",
+          "updated": null,
+          "original": "Internal draft; analytic prime-pattern theorem is a separate published input."
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "updated": "/workspace/work/updated-ec567-manuscript/source/certificates/rank6/rank6_certificate.json",
+      "original": "/workspace/work/rank-5-elliptic-curves-main/research/rank6/paper/rank6_certificate.json",
+      "updated_sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b",
+      "original_sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b",
+      "byte_identical": true,
+      "metadata_differences": []
+    },
+    {
+      "rank": 7,
+      "updated": "/workspace/work/updated-ec567-manuscript/source/certificates/rank7/rank7_certificate.json",
+      "original": "/workspace/work/rank-5-elliptic-curves-main/research/rank7/paper/rank7_certificate.json",
+      "updated_sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d",
+      "original_sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d",
+      "byte_identical": true,
+      "metadata_differences": []
+    }
+  ],
+  "table_inventory": [
+    {
+      "rank": 5,
+      "label": "tab:r5-data",
+      "line": 16,
+      "data_rows": 4
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-det",
+      "line": 54,
+      "data_rows": 22
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-points",
+      "line": 136,
+      "data_rows": 5
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-quartics",
+      "line": 174,
+      "data_rows": 13
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-classes",
+      "line": 210,
+      "data_rows": 7
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-crt",
+      "line": 262,
+      "data_rows": 2
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-residues",
+      "line": 279,
+      "data_rows": 8
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-fixed",
+      "line": 340,
+      "data_rows": 4
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-fixed-rows",
+      "line": 456,
+      "data_rows": 8
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-const-char",
+      "line": 482,
+      "data_rows": 9
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-K",
+      "line": 521,
+      "data_rows": 15
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-cross",
+      "line": 549,
+      "data_rows": 12
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-diagonal",
+      "line": 588,
+      "data_rows": 5
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-ME",
+      "line": 614,
+      "data_rows": 13
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-MEp",
+      "line": 637,
+      "data_rows": 11
+    },
+    {
+      "rank": 5,
+      "label": "tab:r5-minors",
+      "line": 689,
+      "data_rows": 18
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-forms",
+      "line": 32,
+      "data_rows": 12
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-points",
+      "line": 105,
+      "data_rows": 6
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-quartics",
+      "line": 146,
+      "data_rows": 6
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-classes",
+      "line": 166,
+      "data_rows": 8
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-crt",
+      "line": 238,
+      "data_rows": 2
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-residues",
+      "line": 256,
+      "data_rows": 12
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-coeffs",
+      "line": 338,
+      "data_rows": 4
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-coords",
+      "line": 414,
+      "data_rows": 5
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-chars",
+      "line": 456,
+      "data_rows": 8
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-pivot",
+      "line": 491,
+      "data_rows": 11
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-K",
+      "line": 514,
+      "data_rows": 22
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-cross",
+      "line": 550,
+      "data_rows": 12
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-ME",
+      "line": 597,
+      "data_rows": 12
+    },
+    {
+      "rank": 6,
+      "label": "tab:r6-MEp",
+      "line": 623,
+      "data_rows": 12
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-forms",
+      "line": 55,
+      "data_rows": 6
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-det",
+      "line": 133,
+      "data_rows": 22
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-points",
+      "line": 219,
+      "data_rows": 7
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-coeff",
+      "line": 278,
+      "data_rows": 7
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-classes",
+      "line": 310,
+      "data_rows": 9
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-vectors",
+      "line": 338,
+      "data_rows": 10
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-crt",
+      "line": 423,
+      "data_rows": 2
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-res",
+      "line": 450,
+      "data_rows": 8
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-anchor",
+      "line": 496,
+      "data_rows": 12
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-raw",
+      "line": 522,
+      "data_rows": 6
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-coef-local",
+      "line": 628,
+      "data_rows": 4
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-coords",
+      "line": 830,
+      "data_rows": 5
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-lambda",
+      "line": 874,
+      "data_rows": 9
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-gamma",
+      "line": 901,
+      "data_rows": 12
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-recip",
+      "line": 929,
+      "data_rows": 11
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-diag",
+      "line": 1093,
+      "data_rows": 5
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-ME",
+      "line": 1113,
+      "data_rows": 12
+    },
+    {
+      "rank": 7,
+      "label": "tab:r7-MEp",
+      "line": 1143,
+      "data_rows": 14
+    }
+  ],
+  "checks": [
+    {
+      "rank": 5,
+      "category": "certificate_numerical_provenance",
+      "reference": "/workspace/work/updated-ec567-manuscript/source/certificates/rank5/final155_certificate.json",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "linear_forms",
+      "reference": "tab:r5-forms/data",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactors",
+      "reference": "tab:r5-forms/data",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_linear_form",
+      "reference": "Rank5.L11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank5.F",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank5.H",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank5.J",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quadratic_literal",
+      "reference": "r5:quadratics",
+      "match": true,
+      "detail": "\n\nD=-165M^2-226MN+62N^2"
+    },
+    {
+      "rank": 5,
+      "category": "quadratic_literal",
+      "reference": "r5:quadratics",
+      "match": true,
+      "detail": "D_1=-8745M^2-5440MN+1550N^2,"
+    },
+    {
+      "rank": 5,
+      "category": "quadratic_literal",
+      "reference": "r5:quadratics",
+      "match": true,
+      "detail": "\nV=-7755M^2-3187MN+1240N^2, \n\n"
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r5-points:P1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r5-points:P1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r5-points:P2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r5-points:P2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r5-points:P'1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r5-points:P'1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r5-points:P'2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r5-points:P'2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r5-points:P'3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r5-points:P'3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "polynomial_identity",
+      "reference": "r5:identity",
+      "match": true,
+      "detail": "625F+3H=16J"
+    },
+    {
+      "rank": 5,
+      "category": "polynomial_identity",
+      "reference": "r5:quartic-identities",
+      "match": true,
+      "detail": "32D^2=75F+H"
+    },
+    {
+      "rank": 5,
+      "category": "polynomial_identity",
+      "reference": "r5:quartic-identities",
+      "match": true,
+      "detail": "64(2D_1-55D)^2=10L_2L_3L_6L_7+73500F-648270L_0L_1L_4L_5"
+    },
+    {
+      "rank": 5,
+      "category": "polynomial_identity",
+      "reference": "r5:quartic-identities",
+      "match": true,
+      "detail": "6D^2=J-25F"
+    },
+    {
+      "rank": 5,
+      "category": "polynomial_identity",
+      "reference": "r5:quartic-identities",
+      "match": true,
+      "detail": "36(3D_1+65D)^2=5880L_0L_1L_8L_9-147000F+23520L_2L_3L_{10}L_{11}"
+    },
+    {
+      "rank": 5,
+      "category": "polynomial_identity",
+      "reference": "r5:quartic-identities",
+      "match": true,
+      "detail": "4V^2=1600L_1L_2L_8L_{10}-147000F+86436L_0L_3L_9L_{11}"
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:F",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:H",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:J",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:D^2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:(2D_1-55D)^2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:(3D_1+65D)^2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:V^2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:L_0L_1L_4L_5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:L_2L_3L_6L_7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:L_0L_1L_8L_9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:L_2L_3L_{10}L_{11}",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:L_1L_2L_8L_{10}",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r5-quartics:L_0L_3L_9L_{11}",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_modulus",
+      "reference": "tab:r5-crt",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:64",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:81",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:17",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:19",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "CRT_residues",
+      "reference": "tab:r5-crt:31",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 5: W",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 5: M0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 5: N0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L0/c0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L1/c1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L2/c2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L3/c3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L4/c4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L5/c5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L6/c6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L7/c7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L8/c8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L9/c9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L10/c10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cofactor_integrality",
+      "reference": "Rank5:L11/c11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:17",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:19",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "prime_residue_table",
+      "reference": "tab:r5-residues:31",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:-1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:17",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:19",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "constant_character_table",
+      "reference": "tab:r5-characters:31",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:0,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:1,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:2,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:3,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:4,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:5,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:6,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:7,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:8,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:9,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:10,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "cross_character_table",
+      "reference": "tab:r5-gamma:11,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "matrix_literal",
+      "reference": "tab:r5-ME",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank5.E0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank5.E1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "matrix_literal",
+      "reference": "tab:r5-MEp",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank5.Ep0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank5.Ep1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_kernel_generators",
+      "reference": "MatrixCertificates.Rank5.Egenerators",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "Lean_kernel_generators",
+      "reference": "MatrixCertificates.Rank5.Epgenerators",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "actual_point_squareclass_codes",
+      "reference": "tab:r5-classes",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:4,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:5,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:5,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:5,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:5,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:5,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:5,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:6,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:6,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:6,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:0,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:6,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:6,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:7,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:7,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:7,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:3,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:7,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:4,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:8,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:4,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:8,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:4,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:8,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:4,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:9,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:1,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:4,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:9,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:2,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:4,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_table",
+      "reference": "tab:r5-det:10,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:8,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:8,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:8,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:9,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:9,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:10,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:4,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:4,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:5,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:5,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:5,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:5,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:5,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:5,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:5,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:5,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:6,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:6,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:6,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:6,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:6,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:6,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:6,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:6,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:1,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:1,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:7,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:7,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:7,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:7,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:3,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:3,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:7,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:7,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:4,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:4,8",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:7,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:7,11",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,6",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:4,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:4,9",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:2,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:2,7",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r5-K:4,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "reciprocity_operand_character",
+      "reference": "tab:r5-K:4,10",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r5-diagonal:0",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r5-diagonal:1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r5-diagonal:2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r5-diagonal:3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "manuscript_kernel_generators",
+      "reference": "r5:class-vectors",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^E_1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^E_2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^E_3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^E_4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^E_5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^{E'}_1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^{E'}_2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "fixed_row_constant_coordinates",
+      "reference": "tab:r5-fixed-rows:f^{E'}_3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:f^{E}_4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:f^{E}_1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E}_1(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:f^{E}_5",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E}_{11}(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:f^{E}_3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E}_0(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E}_3(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E}_2(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:f^{E'}_3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E'}_0(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E'}_1(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E'}_2(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E'}_4(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E'}_6(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E'}_3(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "triangular_minor_literal",
+      "reference": "tab:r5-minors:r^{E'}_7(0)",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "five_displayed_points_literal",
+      "reference": "r5:five-points:P1",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "five_displayed_points_literal",
+      "reference": "r5:five-points:P2",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "five_displayed_points_literal",
+      "reference": "r5:five-points:P3",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "five_displayed_points_literal",
+      "reference": "r5:five-points:P4",
+      "match": true
+    },
+    {
+      "rank": 5,
+      "category": "five_displayed_points_literal",
+      "reference": "r5:five-points:P5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "certificate_numerical_provenance",
+      "reference": "/workspace/work/updated-ec567-manuscript/source/certificates/rank6/rank6_certificate.json",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "linear_forms",
+      "reference": "tab:r6-forms/data",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactors",
+      "reference": "tab:r6-forms/data",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_linear_form",
+      "reference": "Rank6.L11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank6.F",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank6.H",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank6.J",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "quadratic_literal",
+      "reference": "r6:D",
+      "match": true,
+      "detail": "\n\nD_1=25M^2-338MN-750N^2"
+    },
+    {
+      "rank": 6,
+      "category": "quadratic_literal",
+      "reference": "r6:D",
+      "match": true,
+      "detail": " D_2=52M^2+375MN-975N^2,"
+    },
+    {
+      "rank": 6,
+      "category": "quadratic_literal",
+      "reference": "r6:D",
+      "match": true,
+      "detail": "\nD_3=39M^2-500MN+4550N^2.\n\n"
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r6-points:P1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r6-points:P1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r6-points:P2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r6-points:P2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r6-points:P3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r6-points:P3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r6-points:Q1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r6-points:Q1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r6-points:Q2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r6-points:Q2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r6-points:Q3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r6-points:Q3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:FHJ",
+      "match": true,
+      "detail": "F=4225M^3N-9811M^2N^2-126750MN^3"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:FHJ",
+      "match": true,
+      "detail": "H=126M^4-4225M^3N+17371M^2N^2+126750MN^3+113400N^4"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:FHJ",
+      "match": true,
+      "detail": "J=224M^4+4225M^3N+3629M^2N^2-126750MN^3+201600N^4"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:D0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:D0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:identity",
+      "match": true,
+      "detail": "25F+16H=9J"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:quartics",
+      "match": true,
+      "detail": "1764D_0^2=14F+14H"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:quartics",
+      "match": true,
+      "detail": "9(3D_1+65D_0)^2=-2L_1L_2L_4L_5+70F+392L_0L_3L_6L_7"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:quartics",
+      "match": true,
+      "detail": "441D_2^2=-4375L_1L_3L_4L_6+1750F+112L_0L_2L_5L_7"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:quartics",
+      "match": true,
+      "detail": "28224D_0^2=-126F+126J"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:quartics",
+      "match": true,
+      "detail": "64(2D_1-55D_0)^2=2L_0L_3L_{10}L_{11}-140F+882L_1L_2L_8L_9"
+    },
+    {
+      "rank": 6,
+      "category": "polynomial_identity",
+      "reference": "r6:quartics",
+      "match": true,
+      "detail": "64D_3^2=18L_0L_2L_8L_{11}-3500F+61250L_1L_3L_9L_{10}"
+    },
+    {
+      "rank": 6,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r6-coeff/quartics:P_1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r6-coeff/quartics:P_2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r6-coeff/quartics:P_3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r6-coeff/quartics:Q_1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r6-coeff/quartics:Q_2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r6-coeff/quartics:Q_3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_modulus",
+      "reference": "tab:r6-crt",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_residues",
+      "reference": "tab:r6-crt:64",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_residues",
+      "reference": "tab:r6-crt:81",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_residues",
+      "reference": "tab:r6-crt:5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_residues",
+      "reference": "tab:r6-crt:7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_residues",
+      "reference": "tab:r6-crt:11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_residues",
+      "reference": "tab:r6-crt:17",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "CRT_residues",
+      "reference": "tab:r6-crt:23",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 6: W",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 6: M0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 6: N0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L0/c0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L1/c1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L2/c2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L3/c3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L4/c4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L5/c5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L6/c6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L7/c7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L8/c8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L9/c9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L10/c10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cofactor_integrality",
+      "reference": "Rank6:L11/c11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "signed_anchor_values",
+      "reference": "tab:r6-residues:11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "prime_residue_table",
+      "reference": "tab:r6-residues:8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "prime_residue_table",
+      "reference": "tab:r6-residues:3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "prime_residue_table",
+      "reference": "tab:r6-residues:5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "prime_residue_table",
+      "reference": "tab:r6-residues:7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "prime_residue_table",
+      "reference": "tab:r6-residues:11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "prime_residue_table",
+      "reference": "tab:r6-residues:17",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "prime_residue_table",
+      "reference": "tab:r6-residues:23",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:-1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:17",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "constant_character_table",
+      "reference": "tab:r6-characters:23",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:0,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:1,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:2,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:3,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:4,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:5,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:6,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:7,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:8,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:9,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:10,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "cross_character_table",
+      "reference": "tab:r6-gamma:11,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "matrix_literal",
+      "reference": "tab:r6-ME",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank6.E0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank6.E1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "matrix_literal",
+      "reference": "tab:r6-MEp",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank6.Ep0",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank6.Ep1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_kernel_generators",
+      "reference": "MatrixCertificates.Rank6.Egenerators",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "Lean_kernel_generators",
+      "reference": "MatrixCertificates.Rank6.Epgenerators",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "actual_point_squareclass_codes",
+      "reference": "tab:r6-classes",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:0,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:1,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:2,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:3,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:4,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:5,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:6,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:7,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:8,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:8,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:8,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:9,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:9,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "determinant_certificate",
+      "reference": "certificate determinant:10,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:4,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:4,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:4,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:4,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:1,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:5,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:5,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:5,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:5,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:6,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:6,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:6,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:6,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:7,8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:2,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:7,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:7,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:7,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "reciprocity_operand_row",
+      "reference": "tab:r6-K:3,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:4",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:8",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "pivot_operand_row",
+      "reference": "tab:r6-pivot:11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r6-coeffs:\\alpha=70F",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r6-coeffs:\\beta=-784FH",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r6-coeffs:\\alpha'=-140F",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r6-coeffs:\\beta'=1764FJ",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r6-coords:-1",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r6-coords:2",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r6-coords:3",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r6-coords:7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:4,5",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:6,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:4,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:4,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:5,6",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:5,7",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:8,9",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:10,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:8,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:8,11",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:9,10",
+      "match": true
+    },
+    {
+      "rank": 6,
+      "category": "same_group_determinant_literal",
+      "reference": "r6:samegroup:9,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "certificate_numerical_provenance",
+      "reference": "/workspace/work/updated-ec567-manuscript/source/certificates/rank7/rank7_certificate.json",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "linear_forms",
+      "reference": "tab:r7-forms/data",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactors",
+      "reference": "tab:r7-forms/data",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_linear_form",
+      "reference": "Rank7.L11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank7.F",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank7.H",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_homogeneous_form",
+      "reference": "Rank7.J",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "quadratic_literal",
+      "reference": "r7:quadratics",
+      "match": true,
+      "detail": "\n\n D_0=M^2+10557N^2"
+    },
+    {
+      "rank": 7,
+      "category": "quadratic_literal",
+      "reference": "r7:quadratics",
+      "match": true,
+      "detail": "D_1=175M^2+10738MN+2470338N^2,"
+    },
+    {
+      "rank": 7,
+      "category": "quadratic_literal",
+      "reference": "r7:quadratics",
+      "match": true,
+      "detail": "\n D_2=364M^2+36639MN-2825550N^2"
+    },
+    {
+      "rank": 7,
+      "category": "quadratic_literal",
+      "reference": "r7:quadratics",
+      "match": true,
+      "detail": "D_3=728M^2-592647MN+28820610N^2,"
+    },
+    {
+      "rank": 7,
+      "category": "quadratic_literal",
+      "reference": "r7:quadratics",
+      "match": true,
+      "detail": "\n V_1=49M^2-43862MN-2026944N^2"
+    },
+    {
+      "rank": 7,
+      "category": "quadratic_literal",
+      "reference": "r7:quadratics",
+      "match": true,
+      "detail": "V_2=2912M^2+2544237MN-432309150N^2,\n\n"
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r7-points:p1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r7-points:p1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r7-points:p2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r7-points:p2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r7-points:p3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r7-points:p3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r7-points:p4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r7-points:p4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r7-points:q1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r7-points:q1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r7-points:q2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r7-points:q2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_abscissa",
+      "reference": "tab:r7-points:q3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "exact_point_ordinate",
+      "reference": "tab:r7-points:q3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:FHJ",
+      "match": true,
+      "detail": "F=182M^3N-22567M^2N^2-1921374MN^3"
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:FHJ",
+      "match": true,
+      "detail": "H=3600M^4-10570742M^3N+1386724327M^2N^2+111595323294MN^3+401220896400N^4"
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:FHJ",
+      "match": true,
+      "detail": "J=52998400M^4+12595448502M^3N-442758190887M^2N^2-132970149835614MN^3+5906684876601600N^4"
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:identity",
+      "match": true,
+      "detail": "91205^2F+4\\cdot33124\\,H=9J"
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:quartics",
+      "match": true,
+      "detail": "3600\\,D_0^2=58081F+H "
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:quartics",
+      "match": true,
+      "detail": "16\\,D_1^2=30625L_{0,2,6,7}+20521125F-54756L_{1,3,4,5} "
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:quartics",
+      "match": true,
+      "detail": "36\\,D_2^2=-56875L_{1,2,5,6}+2280125F+364L_{0,3,4,7} "
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:quartics",
+      "match": true,
+      "detail": "D_3^2=182L_{2,3,6,7}+32925005F-23718422L_{0,1,4,5} "
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:quartics",
+      "match": true,
+      "detail": "476985600\\,D_0^2=-622851849F+9J "
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:quartics",
+      "match": true,
+      "detail": "4225\\,V_1^2=2401L_{0,2,8,9}-572037760F+36864L_{1,3,10,11} "
+    },
+    {
+      "rank": 7,
+      "category": "polynomial_identity",
+      "reference": "r7:quartics",
+      "match": true,
+      "detail": "V_2^2=256L_{0,3,8,10}-656676000F+455625L_{1,2,9,11} "
+    },
+    {
+      "rank": 7,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r7-coeff/quartics:P_1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r7-coeff/quartics:P_2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r7-coeff/quartics:P_3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r7-coeff/quartics:P_4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r7-coeff/quartics:Q_1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r7-coeff/quartics:Q_2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "quartic_coefficient_table",
+      "reference": "tab:r7-coeff/quartics:Q_3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_modulus",
+      "reference": "tab:r7-crt",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:512",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:81",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:13",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:17",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:19",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "CRT_residues",
+      "reference": "tab:r7-crt:23",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 7: W",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 7: M0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "lattice_literal_present",
+      "reference": "chapter rank 7: N0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L0/c0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L1/c1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L2/c2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L3/c3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L4/c4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L5/c5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L6/c6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L7/c7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L8/c8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L9/c9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L10/c10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cofactor_integrality",
+      "reference": "Rank7:L11/c11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:13",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:17",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:19",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "prime_residue_table",
+      "reference": "tab:r7-residues:23",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:-1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:13",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:17",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:19",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "constant_character_table",
+      "reference": "tab:r7-characters:23",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:0,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:1,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:2,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:3,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:4,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:5,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:6,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:7,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:8,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:9,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:10,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "cross_character_table",
+      "reference": "tab:r7-gamma:11,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "matrix_literal",
+      "reference": "tab:r7-ME",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank7.E0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank7.E1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "matrix_literal",
+      "reference": "tab:r7-MEp",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank7.Ep0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_matrix_literal",
+      "reference": "MatrixCertificates.Rank7.Ep1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_kernel_generators",
+      "reference": "MatrixCertificates.Rank7.Egenerators",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "Lean_kernel_generators",
+      "reference": "MatrixCertificates.Rank7.Epgenerators",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "manuscript_kernel_generators",
+      "reference": "tab:r7-vectors",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "actual_point_squareclass_codes",
+      "reference": "tab:r7-classes",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:4,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:5,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:5,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:5,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:5,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:5,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:5,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:6,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:6,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:6,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:0,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:6,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:6,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:7,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:7,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:7,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:3,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:7,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:4,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:8,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:4,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:8,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:4,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:8,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:4,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:9,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:1,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:4,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:9,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:2,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:4,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "determinant_table",
+      "reference": "tab:r7-det:10,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "pivot_squarefree_operands",
+      "reference": "tab:r7-recip:sj",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "pivot_squarefree_characters",
+      "reference": "tab:r7-recip:lambda0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:1,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:2,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:3,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:4,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:4,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:4,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:4,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:5,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:5,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:5,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:5,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:6,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:6,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:6,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:6,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:7,8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:7,9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:7,10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "reciprocity_squarefree_operand",
+      "reference": "tab:r7-recip:7,11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:4",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:5",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:6",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:8",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:9",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:10",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "signed_anchor_row",
+      "reference": "tab:r7-anchor:11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "raw_CRT_form_values",
+      "reference": "tab:r7-raw:7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "raw_CRT_form_values",
+      "reference": "tab:r7-raw:11",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "raw_CRT_form_values",
+      "reference": "tab:r7-raw:13",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "raw_CRT_form_values",
+      "reference": "tab:r7-raw:17",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "raw_CRT_form_values",
+      "reference": "tab:r7-raw:19",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "raw_CRT_form_values",
+      "reference": "tab:r7-raw:23",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r7-diagonal:0",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r7-diagonal:1",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r7-diagonal:2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "diagonal_operand_row",
+      "reference": "tab:r7-diagonal:3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r7-coords:(e_1,e_2,e_3)(g)",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r7-coords:(\\chi_3,\\nu_3)(g)",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r7-coords:(\\chi_7,\\nu_7)(g)",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r7-coords:(\\chi_{13},\\nu_{13})(g)",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_local_constant_coordinates",
+      "reference": "tab:r7-coords:\\mathrm{sgn}(g)",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r7-coef-local:2",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r7-coef-local:3",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r7-coef-local:7",
+      "match": true
+    },
+    {
+      "rank": 7,
+      "category": "fixed_coefficient_valuation_units",
+      "reference": "tab:r7-coef-local:13",
+      "match": true
+    }
+  ],
+  "check_count": 1176,
+  "failed_checks": [],
+  "literal_conclusion": "All 1176 checked arithmetic/transcription comparisons match. No numerical datum change requires a new Lean proof. Certificate rank5 metadata was edited; rank6 and rank7 certificates are byte-identical to the originals.",
+  "expected_check_count": 1176,
+  "check_count_matches_expected": true,
+  "dependencies": {
+    "python": "3.12.14",
+    "sympy": "1.14.0"
+  },
+  "input_roots": {
+    "updated": "/workspace/work/updated-ec567-manuscript/source",
+    "original": "/workspace/work/rank-5-elliptic-curves-main/research",
+    "lean_modules": "/workspace/work/ec567-temp/RankCertificates"
+  },
+  "statement_coverage": [
+    {
+      "statement": "thm:r5, thm:r6, thm:r7: exact Mordell-Weil rank at each prime specialization",
+      "status": "covered for the same literal CRT lattice and positive distinct prime outputs",
+      "Lean": [
+        "RankCertificates.Rank5ExactRank.hasExactRank",
+        "RankCertificates.Rank6ExactRank.hasExactRank",
+        "RankCertificates.Rank7ExactRank.hasExactRank"
+      ],
+      "qualification": "These endpoints have no cone premise. The manuscript prime-specialization condition avoids the full intrinsic set S; the core hypothesis only needs the smaller fixed column primes and explicit distinctness. Rewriting (M,N) as the literal CRT lattice is necessary to apply the endpoints."
+    },
+    {
+      "statement": "thm:r5, thm:r6, thm:r7: unconditional infinitude in the stated progression and cone",
+      "status": "not supplied by the existing unconditional core",
+      "qualification": "Existing extraction endpoints still take actual Mangoldt/cyclic prime mass hypotheses. Neither arithmetic data equivalence nor an inverse-Gowers theorem supplies that prime-pattern analytic input."
+    },
+    {
+      "statement": "prop:r5-five-points: the exact five displayed points are Z-linearly independent",
+      "status": "coordinate identities and nonsingular memberships covered; actual point independence not yet an existing Lean endpoint",
+      "Lean": [
+        "Rank5.P1_onCurve",
+        "Rank5.P2_onCurve",
+        "Rank5.P3_onCurve",
+        "Rank5.P4_onCurve",
+        "Rank5.P5_onCurve",
+        "Rank5.P3_dualCoordinates",
+        "Rank5.P4_dualCoordinates",
+        "Rank5.P5_dualCoordinates",
+        "RankCertificates.RankLowerBounds.rank_lowerBound_of_twoIsogeny_images"
+      ],
+      "required_new_proof": "An actual group-theoretic adapter must show these five points generate a subgroup of full rank (using the two quotient image bases, dual-isogeny composition, and finite generation), then conclude LinearIndependent over Z. Existing LinearIndependent declarations concern ZMod 2 squareclasses or binary vectors; a cardinality rank bound alone is not this claim."
+    },
+    {
+      "statement": "lem:r5-fixed, lem:r6-fixed, lem:r7-fixed: full local images on E(Q_p), E\u2032(Q_p), and E\u2032(R)",
+      "status": "necessary restrictions on actual rational-point images covered; standalone full-local-field assertions not covered",
+      "Lean": [
+        "Rank5OddRows.three_actualImage",
+        "Rank5OddRows.five_E_actualImage",
+        "Rank5OddRows.five_Ep_actualImage",
+        "Rank5ExactRank.fixedFunctionalE_zero",
+        "Rank5ExactRank.fixedFunctionalEp_zero",
+        "Rank6ExactRank.characterFamilyE_zero",
+        "Rank6ExactRank.characterFamilyEp_zero",
+        "Rank7ExactRank.E_fixed_rows",
+        "Rank7ExactRank.Ep_fixed_rows"
+      ],
+      "required_new_proof": "Generalize the valuation/descent maps and images to all local-field points and instantiate the stated inclusions/equalities. In particular rank6 E(Q_3)={1}, rank7 E(Q_3)={1}, rank7 E\u2032(Q_7)=E\u2032(Q_13)={1}, and the full real-image equalities are stronger standalone statements than rational-image character vanishing. The latter are sufficient for the already checked rational exact-rank theorem."
+    }
+  ],
+  "cone_and_progression_comparison": [
+    {
+      "rank": 5,
+      "original_and_updated": "M>0 and 19M/20<N<11M/10",
+      "changed": false,
+      "additional_updated_observation": "All twelve forms are positive exactly for M>0 and 55M/62<N<3M; this does not redefine the chosen cone.",
+      "core_sector": "x,y in [20T,21T]",
+      "scope": "Its translated lattice lies in the chosen cone for all sufficiently large T. The existing core does not state this exact cone-membership wrapper."
+    },
+    {
+      "rank": 6,
+      "original_and_updated": "N>0 and 29N<M<31N",
+      "changed": false,
+      "core_sector": "x in [60T,61T], y in [T,2T]",
+      "scope": "This sector contains points with M/N near 60 and fails the upper bound M<31N. It meets the paper cone but no existing extraction theorem restricts the mass to that intersection. The core exact-rank statement needs only positive outputs, so its arithmetic conclusion is not affected."
+    },
+    {
+      "rank": 7,
+      "original_and_updated": "N>0 and 2999N<M<3001N",
+      "changed": false,
+      "core_sector": "x in [8000T,8001T], y in [T,2T]",
+      "scope": "For every T>=1 the whole translated sector has M>3001N, outside the paper cone. At the minimum x=8000T,y=2T, M-3001N=1998WT+M0-3001N0>0 already at T=1. The existing sector infinitude statement therefore cannot establish infinitude inside the paper cone."
+    }
+  ],
+  "additional_standalone_proof_obligations": [
+    "Actual Z-linear independence of the exact five displayed rank5 points",
+    "Full Qp and R local-image assertions, if those standalone lemmas are included in the formalization target",
+    "An infinitude adapter for the manuscript-specific narrow rank6 and rank7 cones",
+    "The actual unconditional prime-pattern analytic supplier already identified by the parent audit"
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "file": "RankCertificates/LiteralFiniteField.lean",
+    "source_sha256": "76bd70b144e992c3c3607cc9a161f16f8ef34212f5765e73030c7cf32048a6f9",
+    "promoted_sha256": "76bd70b144e992c3c3607cc9a161f16f8ef34212f5765e73030c7cf32048a6f9",
+    "changes": "qualify local import only",
+    "mathematical_statements_or_proof_bodies_changed": false
+  },
+  {
+    "file": "RankCertificates/LiteralCyclicBridge.lean",
+    "source_sha256": "2e752c4d82abca7fe50a7f44773a6b09946e21e68538dc6d1477fc31956e1b28",
+    "promoted_sha256": "121f8084888520d1de96b6ae579f74f53747d76b0be9c15918bbb3deb19ec60b",
+    "changes": "qualify local import only",
+    "mathematical_statements_or_proof_bodies_changed": false
+  }
+]

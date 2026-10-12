@@ -1,0 +1,763 @@
+\chapter{The rank-six family}\label{sec:rank6}
+
+The goal of this section is to prove \cref{thm:r6}, which states that every prime specialization of the datum $\datum_6$ defined below that lies in a progression $\cP_6$ and a real cone $\cK_6$ gives an elliptic curve over $\Q$ of rank exactly six, and that these curves represent infinitely many $\Qbar$-isomorphism classes. The proof consists of checking the hypotheses of two general results. The rank comes from \cref{prop:rank-criterion}, which requires four points on each of the two curves, local conditions at the fixed places $2$, $3$, $7$ and $\infty$, the quadratic characters at the moving primes, and the ranks of two $12\times12$ matrices over $\F_2$. The infinitude comes from \cref{prop:infinitely-many}. Besides these two propositions, we use the lemmas of \cref{sec:descent,sec:families}, cited where they enter. \Cref{thm:r6} is used in \cref{sec:proof} for the case $r=6$ of \cref{thm:main}. \Cref{sec:origin-r6} explains how the family was obtained from a rank-four surface of Zywina \cite[\S6.5]{Zywina2026}.
+
+The section is organized as follows. In \cref{sec:r6-datum}, we define the datum and the two curves and fix the set $S$ and the bases. \Cref{sec:r6-points} gives three points on each curve besides $(0,0)$ and proves that the four resulting classes on each side are independent. \Cref{sec:r6-progression} defines $\cP_6$ and $\cK_6$ and computes the residues of the primes $p_i$ on $\cP_6$. \Cref{sec:r6-fixed} proves the local conditions at the fixed places, and \cref{sec:r6-characters} computes the characters at the moving primes. In \cref{sec:r6-matrices}, we assemble the two matrices and show that they have rank eight. \Cref{sec:r6-theorem} contains the proof of \cref{thm:r6}.
+
+Throughout this section, $E=E_{M,N}$ and $E'=E'_{M,N}$ are the curves of $\datum_6$, given in \eqref{r6:curves} below, and $T$ and $T'$ are their points $(0,0)$. We write
+\[
+\alpha=70F,\qquad \beta=-784FH,\qquad \alpha'=-140F,\qquad \beta'=1764FJ,
+\]
+so that $E=E_{\alpha,\beta}$ and $E'=E_{\alpha',\beta'}$ in the notation of \cref{sec:descent}. The index sets $I_F$, $I_H$, $I_J$, $G_E$, $G_{E'}$ are those of \cref{sec:families}, and for a prime specialization $(M,N)$ we write $p_i=L_i(M,N)/c_i$.
+
+\section{The datum}\label{sec:r6-datum}
+
+The twelve linear forms are $L_i=a_iM+b_iN$, with the coefficients $a_i$, $b_i$ and the cofactors $c_i$ listed in \cref{tab:r6-forms}. As in \cref{sec:families}, we set $F=L_0L_1L_2L_3$, $H=L_4L_5L_6L_7$ and $J=L_8L_9L_{10}L_{11}$. Multiplying out these products, we have
+\begin{equation}\label{r6:FHJ}
+\begin{aligned}
+F&=4225M^3N-9811M^2N^2-126750MN^3,\\
+H&=126M^4-4225M^3N+17371M^2N^2+126750MN^3+113400N^4,\\
+J&=224M^4+4225M^3N+3629M^2N^2-126750MN^3+201600N^4.
+\end{aligned}
+\end{equation}
+Let $D_0=M^2+30N^2$, so that $D_0^2=M^4+60M^2N^2+900N^4$. Comparing coefficients in \eqref{r6:FHJ}, we find
+\begin{equation}\label{r6:D0}
+F+H=126D_0^2,\qquad J-F=224D_0^2.
+\end{equation}
+Using \eqref{r6:D0} twice, we have $25F+16H=9F+16(F+H)=9F+2016D_0^2=9(F+224D_0^2)$, that is,
+\begin{equation}\label{r6:identity}
+25F+16H=9J.
+\end{equation}
+
+\begin{table}[htbp]
+\centering
+\caption{The linear forms $L_i=a_iM+b_iN$ of $\datum_6$, their groups, the factorizations of the $b_i$, and the cofactors $c_i$.}
+\label{tab:r6-forms}
+\begin{tabular}{cccrlc}
+\toprule
+$i$ & group & $a_i$ & $b_i$ & $b_i$ factored & $c_i$\\
+\midrule
+0 & $F$ & $1$ & $0$ & & $1$ \\
+1 & $F$ & $0$ & $1$ & $1$ & $1$ \\
+2 & $F$ & $169$ & $750$ & $2\cdot3\cdot5^{3}$ & $1$ \\
+3 & $F$ & $25$ & $-169$ & $-13^{2}$ & $8$ \\
+4 & $H$ & $1$ & $-27$ & $-3^{3}$ & $2$ \\
+5 & $H$ & $7$ & $20$ & $2^{2}\cdot5$ & $1$ \\
+6 & $H$ & $2$ & $-21$ & $-3\cdot7$ & $1$ \\
+7 & $H$ & $9$ & $10$ & $2\cdot5$ & $1$ \\
+8 & $J$ & $1$ & $15$ & $3\cdot5$ & $8$ \\
+9 & $J$ & $7$ & $64$ & $2^{6}$ & $27$ \\
+10 & $J$ & $1$ & $-2$ & $-2$ & $3$ \\
+11 & $J$ & $32$ & $-105$ & $-3\cdot5\cdot7$ & $1$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We define $\datum_6$ to be the twelve-form datum (\cref{def:datum}) with the forms and cofactors of \cref{tab:r6-forms}, the constants
+\[
+A=70,\qquad B=784,\qquad C=1764,
+\]
+and the lists $\Gamma_E=\Gamma_{E'}=(-1,2,3,7)$. We check the conditions of \cref{def:datum}. We have $(a_0,b_0)=(1,0)$, each pair $(a_i,b_i)$ is primitive, $b_i\ne0$ for $i\ge1$, and $\min_ic_i=1$. The identity $A^2F+4BH=CJ$, that is, $4900F+3136H=1764J$, is $196$ times \eqref{r6:identity}. Finally, every determinant $\Delta_{ij}=a_ib_j-a_jb_i$ with $i\ne j$ is nonzero. To see this, note that $\Delta_{0j}=b_j$, and that the determinants $\Delta_{ji}$ with $1\le i<j$ and $\{i,j\}$ contained in neither $I_H$ nor $I_J$ are factored in \cref{tab:r6-K} below. The remaining twelve determinants are
+\begin{equation}\label{r6:samegroup}
+\begin{gathered}
+\Delta_{4,5}=\Delta_{6,7}=11\cdot19,\quad \Delta_{4,6}=3\cdot11,\quad \Delta_{4,7}=11\cdot23,\quad \Delta_{5,6}=-11\cdot17,\\
+\Delta_{5,7}=-2\cdot5\cdot11,\quad \Delta_{8,9}=\Delta_{10,11}=-41,\quad \Delta_{8,10}=-17,\\
+\Delta_{8,11}=-3^{2}\cdot5\cdot13,\quad \Delta_{9,10}=-2\cdot3\cdot13,\quad \Delta_{9,11}=-11^{2}\cdot23.
+\end{gathered}
+\end{equation}
+The curves of $\datum_6$ are
+\begin{equation}\label{r6:curves}
+E:\ y^2=x^3+70Fx^2-784FHx,\qquad E':\ y^2=x^3-140Fx^2+1764FJx.
+\end{equation}
+By \cref{lem:datum-basic}, we have $\beta'=\alpha^2-4\beta$; this means that $E'$ is the curve $2$-isogenous to $E$ considered in \cref{sec:descent}. The discriminant of $E$ is $16\beta^2\beta'=2^{14}3^27^6F^3H^2J$.
+
+We take
+\begin{equation}\label{r6:S}
+S=\{2,3,5,7,11,13,17,19,23,41\}.
+\end{equation}
+We note that $S$ satisfies the requirement of \cref{def:prime-specialization}: we have $6ABC=2^83^35\cdot7^5$, the cofactors are products of $2$ and $3$, the $b_i$ have their prime factors in $\{2,3,5,7,13\}$ by \cref{tab:r6-forms}, and the determinants have their prime factors in $S$ by \eqref{r6:samegroup} and \cref{tab:r6-K}. The primes in $\Gamma_E\cup\Gamma_{E'}$ are $2$, $3$ and $7$. In fact $S$ is exactly the set of primes dividing $6ABC\prod_ic_i\prod_{i\ge1}b_i\prod_{i<j}\Delta_{ij}$. Throughout this section, prime specializations of $\datum_6$ are taken with respect to this set $S$.
+
+The ambient bases of \cref{sec:families} are
+\begin{equation}\label{r6:bases}
+\cB_E=(-1,2,3,7;\ p_0,p_1,\dots,p_7),\qquad \cB_{E'}=(-1,2,3,7;\ p_0,p_1,p_2,p_3,p_8,p_9,p_{10},p_{11}),
+\end{equation}
+so that $n_E=n_{E'}=12$. The cofactors of \cref{tab:r6-forms} satisfy $\prod_{i\in I_F}c_i=8$, $\prod_{i\in I_H}c_i=2$ and $\prod_{i\in I_J}c_i=648=2^33^4$. Inserting $L_i=c_ip_i$, we find
+\begin{equation}\label{r6:FHJ-p}
+F=8p_0p_1p_2p_3,\qquad H=2p_4p_5p_6p_7,\qquad J=648\,p_8p_9p_{10}p_{11},
+\end{equation}
+and the constants of \cref{def:moving-rows} are
+\begin{equation}\label{r6:kappa}
+\kappa_E=-784\cdot16=-112^2,\qquad \kappa_{E'}=1764\cdot8\cdot648=3024^2.
+\end{equation}
+The primes dividing $\kappa_E$ and $\kappa_{E'}$ belong to $\{2,3,7\}$, and $\Gamma_E=\Gamma_{E'}$ consists of $-1$ and the distinct primes $2$, $3$, $7$. By \cref{lem:prime-spec-basic}, at every prime specialization of $\datum_6$ the lists $\cB_E$ and $\cB_{E'}$ are ambient bases for $E$ and $E'$ in the sense of \cref{def:rows}, and $E(\Q)[2]=\{O,T\}$. Since the prime $3$ divides neither $\kappa_E$ nor $\beta$, the entry $3$ of $\Gamma_E$ is not needed for $\cB_E$ to contain $\delta_E(E(\Q))$ in its span. It does no harm: the local condition at $3$ forces its coefficient to vanish (see the fixed row $f^E_3$, defined at $3$ by the coordinate $\nu_3$, in \cref{tab:r6-ME}).
+
+\section{Rational points and the lower bound}\label{sec:r6-points}
+
+Besides $D_0=M^2+30N^2$, we use the quadratic forms
+\begin{equation}\label{r6:D}
+\begin{gathered}
+D_1=25M^2-338MN-750N^2,\qquad D_2=52M^2+375MN-975N^2,\\
+D_3=39M^2-500MN+4550N^2.
+\end{gathered}
+\end{equation}
+\Cref{tab:r6-points} defines three points on each curve. For each point, it gives the $x$-coordinate and the ratio $y/x$.
+
+\begin{table}[htbp]
+\centering
+\caption{Three points on $E$ and three points on $E'$. The $y$-coordinate is the product of the last two columns.}
+\label{tab:r6-points}
+\begin{tabular}{ccll}
+\toprule
+curve & point & $x$ & $y/x$\\
+\midrule
+$E$ & $P_1$ & $14H$ & $42D_0$\\
+$E$ & $P_2$ & $-2L_1L_2L_4L_5$ & $3(3D_1+65D_0)$\\
+$E$ & $P_3$ & $-175L_1L_3L_4L_6$ & $(21/5)D_2$\\
+$E'$ & $Q_1$ & $14F$ & $-168D_0$\\
+$E'$ & $Q_2$ & $2L_0L_3L_{10}L_{11}$ & $8(2D_1-55D_0)$\\
+$E'$ & $Q_3$ & $(18/25)L_0L_2L_8L_{11}$ & $(8/5)D_3$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Rational points]\label{lem:r6-points}
+Let $(M,N)\in\Z^2$ with $FHJ\ne0$. Then $P_1,P_2,P_3\in E(\Q)$ and $Q_1,Q_2,Q_3\in E'(\Q)$, and each of these six points has nonzero $x$-coordinate.
+\end{lemma}
+
+\begin{proof}
+Every $x$-coordinate in \cref{tab:r6-points} is a nonzero constant times a product of four of the forms $L_i$; it does not vanish when $FHJ\ne0$. A point $(x,y)$ with $x\ne0$ and $y=xr$ lies on $E$ if and only if $r^2=x+\alpha+\beta/x$, and it lies on $E'$ if and only if $r^2=x+\alpha'+\beta'/x$. For each point of the table, $x$ divides $\beta$ (respectively $\beta'$) in $\Q[M,N]$. For example, for $P_3$ we have
+\[
+\frac{\beta}{x}=\frac{-784FH}{-175L_1L_3L_4L_6}=\frac{112}{25}L_0L_2L_5L_7.
+\]
+After we multiply by $25$ for $P_3$ and $Q_3$, the six conditions become the following identities between binary quartic forms:
+\begin{equation}\label{r6:quartics}
+\begin{aligned}
+(P_1)&\quad 1764D_0^2=14F+14H,\\
+(P_2)&\quad 9(3D_1+65D_0)^2=-2L_1L_2L_4L_5+70F+392L_0L_3L_6L_7,\\
+(P_3)&\quad 441D_2^2=-4375L_1L_3L_4L_6+1750F+112L_0L_2L_5L_7,\\
+(Q_1)&\quad 28224D_0^2=-126F+126J,\\
+(Q_2)&\quad 64(2D_1-55D_0)^2=2L_0L_3L_{10}L_{11}-140F+882L_1L_2L_8L_9,\\
+(Q_3)&\quad 64D_3^2=18L_0L_2L_8L_{11}-3500F+61250L_1L_3L_9L_{10}.
+\end{aligned}
+\end{equation}
+The identities for $P_1$ and $Q_1$ are $14$ and $126$ times the two identities in \eqref{r6:D0}. We check each identity in \eqref{r6:quartics} by expanding both sides and comparing the coefficients of $M^4$, $M^3N$, $M^2N^2$, $MN^3$ and $N^4$; \cref{tab:r6-quartics} lists the common values. This completes the proof.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{The coefficients of $M^4,M^3N,M^2N^2,MN^3,N^4$, in this order, common to both sides of each identity in \eqref{r6:quartics}.}
+\label{tab:r6-quartics}
+\begin{tabular}{crrrrr}
+\toprule
+point & $M^4$ & $M^3N$ & $M^2N^2$ & $MN^3$ & $N^4$\\
+\midrule
+$P_1$ & $1764$ & $0$ & $105840$ & $0$ & $1587600$\\
+$P_2$ & $176400$ & $-2555280$ & $8497764$ & $5475600$ & $810000$\\
+$P_3$ & $1192464$ & $17199000$ & $17298225$ & $-322481250$ & $419225625$\\
+$Q_1$ & $28224$ & $0$ & $1693440$ & $0$ & $25401600$\\
+$Q_2$ & $1600$ & $432640$ & $31262464$ & $272563200$ & $635040000$\\
+$Q_3$ & $97344$ & $-2496000$ & $38713600$ & $-291200000$ & $1324960000$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+At a prime specialization, we compute the classes of these points by inserting $L_i=c_ip_i$ and \eqref{r6:FHJ-p}. We collect the results in \cref{tab:r6-classes}.
+
+\begin{table}[htbp]
+\centering
+\caption{The classes of $T,P_1,P_2,P_3$ under $\delta_E$ and of $T',Q_1,Q_2,Q_3$ under $\delta_{E'}$ at a prime specialization. The second column is $\beta$ or $\beta'$ for $T$ and $T'$ and the $x$-coordinate otherwise.}
+\label{tab:r6-classes}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{cllll}
+\toprule
+point & $x$ (or $\beta$, $\beta'$) & in terms of the $p_i$ & class & moving support\\
+\midrule
+$T$ & $-784FH$ & $-112^2\,p_0p_1\cdots p_7$ & $\sq{-p_0p_1\cdots p_7}$ & $0,1,\dots,7$\\
+$P_1$ & $14H$ & $2^2\cdot7\,p_4p_5p_6p_7$ & $\sq{7p_4p_5p_6p_7}$ & $4,5,6,7$\\
+$P_2$ & $-2L_1L_2L_4L_5$ & $-2^2\,p_1p_2p_4p_5$ & $\sq{-p_1p_2p_4p_5}$ & $1,2,4,5$\\
+$P_3$ & $-175L_1L_3L_4L_6$ & $-20^2\cdot7\,p_1p_3p_4p_6$ & $\sq{-7p_1p_3p_4p_6}$ & $1,3,4,6$\\
+\midrule
+$T'$ & $1764FJ$ & $3024^2\,p_0p_1p_2p_3p_8\cdots p_{11}$ & $\sq{p_0p_1p_2p_3p_8\cdots p_{11}}$ & $0,1,2,3,8,9,10,11$\\
+$Q_1$ & $14F$ & $4^2\cdot7\,p_0p_1p_2p_3$ & $\sq{7p_0p_1p_2p_3}$ & $0,1,2,3$\\
+$Q_2$ & $2L_0L_3L_{10}L_{11}$ & $4^2\cdot3\,p_0p_3p_{10}p_{11}$ & $\sq{3p_0p_3p_{10}p_{11}}$ & $0,3,10,11$\\
+$Q_3$ & $(18/25)L_0L_2L_8L_{11}$ & $(12/5)^2\,p_0p_2p_8p_{11}$ & $\sq{p_0p_2p_8p_{11}}$ & $0,2,8,11$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Independent classes]\label{lem:r6-classes}
+Let $(M,N)$ be a prime specialization of $\datum_6$. Then the classes $\delta_E(T)$, $\delta_E(P_1)$, $\delta_E(P_2)$, $\delta_E(P_3)$ and $\delta_{E'}(T')$, $\delta_{E'}(Q_1)$, $\delta_{E'}(Q_2)$, $\delta_{E'}(Q_3)$ are those listed in \cref{tab:r6-classes}, and the four classes on each side are independent. In particular, $d_E\ge4$ and $d_{E'}\ge4$.
+\end{lemma}
+
+\begin{proof}
+By \cref{def:descent-map}, we have $\delta_E(T)=\sq\beta$ and $\delta_{E'}(T')=\sq{\beta'}$, and every other point is sent to the class of its $x$-coordinate, which is nonzero by \cref{lem:r6-points}. Inserting $L_i=c_ip_i$ and \eqref{r6:FHJ-p}, we obtain the third column of \cref{tab:r6-classes}. For example, $P_3$ has $x=-175L_1L_3L_4L_6=-175\cdot c_1c_3c_4c_6\,p_1p_3p_4p_6=-2800\,p_1p_3p_4p_6$, and $2800=20^2\cdot7$. Removing the square factor gives the class in the fourth column.
+
+Since the $p_j$ are distinct primes outside $S$, the coordinate of each class at the column $p_j$ of $\cB_E$ or $\cB_{E'}$ is $1$ if $j$ belongs to its moving support and $0$ otherwise. The coordinates of the four classes on $E$ at the columns $p_0,p_7,p_2,p_3$, and those of the four classes on $E'$ at the columns $p_9,p_1,p_3,p_2$, are
+\[
+\begin{array}{c|cccc}
+ & p_0 & p_7 & p_2 & p_3\\
+\hline
+\delta_E(T) & 1 & 1 & 1 & 1\\
+\delta_E(P_1) & 0 & 1 & 0 & 0\\
+\delta_E(P_2) & 0 & 0 & 1 & 0\\
+\delta_E(P_3) & 0 & 0 & 0 & 1
+\end{array}
+\qquad\qquad
+\begin{array}{c|cccc}
+ & p_9 & p_1 & p_3 & p_2\\
+\hline
+\delta_{E'}(T') & 1 & 1 & 1 & 1\\
+\delta_{E'}(Q_1) & 0 & 1 & 1 & 1\\
+\delta_{E'}(Q_2) & 0 & 0 & 1 & 0\\
+\delta_{E'}(Q_3) & 0 & 0 & 0 & 1
+\end{array}
+\]
+Both arrays are upper triangular with ones on the diagonal, and \cref{lem:independence} implies that the four classes on each side are independent. Since they are classes of points of $E(\Q)$ and $E'(\Q)$ (\cref{lem:r6-points}), we have $d_E\ge4$ and $d_{E'}\ge4$.
+\end{proof}
+
+\section{The congruence class and the real cone}\label{sec:r6-progression}
+
+We impose the congruences of \cref{tab:r6-crt}. The moduli are pairwise coprime, and their product is
+\[
+W=2^6\cdot3^4\cdot5\cdot7\cdot11\cdot17\cdot23=780373440.
+\]
+By the Chinese remainder theorem, the congruences of \cref{tab:r6-crt} hold if and only if $(M,N)\equiv(M_0,N_0)\pmod W$, where
+\begin{equation}\label{r6:crt}
+M_0=416513683,\qquad N_0=91046603.
+\end{equation}
+We define the progression and the cone
+\begin{equation}\label{r6:cone}
+\begin{aligned}
+\cP_6&=\{(M,N)\in\Z^2:\ M\equiv M_0\ \text{and}\ N\equiv N_0\ (\mathrm{mod}\ W)\},\\
+\cK_6&=\{(M,N)\in\R^2:\ N>0\ \text{and}\ 29N<M<31N\}.
+\end{aligned}
+\end{equation}
+Equivalently, $\cP_6$ consists of the pairs $(M_0+WX,N_0+WY)$ with $(X,Y)\in\Z^2$.
+
+\begin{table}[htbp]
+\centering
+\caption{The congruences defining $\cP_6$.}
+\label{tab:r6-crt}
+\begin{tabular}{crrrrrrr}
+\toprule
+modulus & $64$ & $81$ & $5$ & $7$ & $11$ & $17$ & $23$\\
+\midrule
+$M\bmod{}$modulus & $19$ & $19$ & $3$ & $5$ & $3$ & $15$ & $13$\\
+$N\bmod{}$modulus & $11$ & $11$ & $3$ & $4$ & $10$ & $9$ & $22$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Residues on the progression]\label{lem:r6-residues}
+Let $(M,N)\in\cP_6$. Then $c_i$ divides $L_i(M,N)$ for every $i$, and the integers $p_i=L_i(M,N)/c_i$ satisfy the congruences of \cref{tab:r6-residues} modulo $8$, $3$, $5$, $7$, $11$, $17$ and $23$. In particular, every $p_i$ is prime to $W$, we have $v_2(L_i(M,N))=v_2(c_i)$ and $v_3(L_i(M,N))=v_3(c_i)$ for every $i$, and $FHJ\ne0$.
+\end{lemma}
+
+\begin{table}[htbp]
+\centering
+\caption{The values $L_i(19,11)$ and $L_i(19,11)/c_i$, and the residues of $p_i=L_i(M,N)/c_i$ for $(M,N)\in\cP_6$ (\cref{lem:r6-residues}).}
+\label{tab:r6-residues} \setlength{\tabcolsep}{4pt}
+\begin{tabular}{crrccccccc}
+\toprule
+$i$ & $L_i(19,11)$ & $L_i(19,11)/c_i$ & $p_i\bmod8$ & $\bmod3$ & $\bmod5$ & $\bmod7$ & $\bmod11$ & $\bmod17$ & $\bmod23$\\
+\midrule
+0 & $19$ & $19$ & 3 & 1 & 3 & 5 & 3 & 15 & 13 \\
+1 & $11$ & $11$ & 3 & 2 & 3 & 4 & 10 & 9 & 22 \\
+2 & $11461$ & $11461$ & 5 & 1 & 2 & 2 & 10 & 3 & 21 \\
+3 & $-1384$ & $-173$ & 3 & 1 & 1 & 2 & 3 & 14 & 10 \\
+4 & $-278$ & $-139$ & 5 & 2 & 1 & 1 & 4 & 5 & 20 \\
+5 & $353$ & $353$ & 1 & 2 & 1 & 3 & 1 & 13 & 2 \\
+6 & $-193$ & $-193$ & 7 & 2 & 3 & 3 & 5 & 11 & 1 \\
+7 & $281$ & $281$ & 1 & 2 & 2 & 1 & 6 & 4 & 15 \\
+8 & $184$ & $23$ & 7 & 2 & 1 & 2 & 4 & 6 & 17 \\
+9 & $837$ & $31$ & 7 & 1 & 4 & 3 & 9 & 12 & 1 \\
+10 & $-3$ & $-1$ & 7 & 2 & 4 & 6 & 9 & 16 & 5 \\
+11 & $-547$ & $-547$ & 5 & 2 & 1 & 6 & 3 & 11 & 15 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}
+We begin with the primes $2$ and $3$. Note that $M_0\equiv19$ and $N_0\equiv11$ modulo $2^6$ and modulo $3^4$, which implies that $(M,N)\equiv(19,11)\pmod{2^63^4}$. We read off from the second and third columns of \cref{tab:r6-residues} that $L_i(19,11)/c_i$ is an integer prime to $6$. By \cref{tab:r6-forms}, every $c_i$ divides $2^33^3$, hence $2^63^4$, and $2^63^4/c_i$ is divisible by $2^3\cdot3$. By \cref{lem:precision} with $W_0=2^63^4$ and $(m,n)=(19,11)$, the cofactor $c_i$ divides $L_i(M,N)$, and $p_i\equiv L_i(19,11)/c_i$ modulo $2^63^4/c_i$, and hence modulo $8$ and modulo $3$; this gives the columns for $8$ and $3$. The integer $p_i$ is then prime to $6$, and $v_2(L_i(M,N))=v_2(c_i)$, $v_3(L_i(M,N))=v_3(c_i)$.
+
+Next, let $q\in\{5,7,11,17,23\}$. Every $c_i$ is invertible modulo $q$, and \cref{tab:r6-crt} prescribes $(M,N)$ modulo $q$. We find that $p_i\equiv c_i^{-1}(a_iM+b_iN)\pmod q$ is determined by the prescribed residues, which gives the remaining columns of \cref{tab:r6-residues}. All entries of the table are nonzero, which shows that $p_i$ is prime to every prime divisor of $W$. Finally, $L_i(M,N)=c_ip_i\ne0$ for every $i$, and $FHJ\ne0$.
+\end{proof}
+
+Several of the quotients $L_i(19,11)/c_i$ are negative, and their residues must be computed with the sign. For example, $L_3(19,11)/8=-173\equiv3\pmod8$, whereas $173\equiv5\pmod8$. The pair $(19,11)$ represents only the classes modulo $2^6$ and $3^4$, and it does not lie in $\cK_6$. At the points of $\cP_6\cap\cK_6$ the $p_i$ are positive and have the residues of \cref{tab:r6-residues}.
+
+\begin{lemma}[Positivity on the cone]\label{lem:r6-cone}
+Every form $L_i$ is positive on $\cK_6$. In particular, $F$, $H$ and $J$ are positive on $\cK_6$.
+\end{lemma}
+
+\begin{proof}
+For $N>0$, we have $L_i/N=a_it+b_i$ with $t=M/N$, which is an affine function of $t$. Its values at the endpoints $t=29$ and $t=31$ are
+\[
+\begin{array}{c|rrrrrrrrrrrr}
+i & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\\
+\hline
+t=29 & 29 & 1 & 5651 & 556 & 2 & 223 & 37 & 271 & 44 & 267 & 27 & 823\\
+t=31 & 31 & 1 & 5989 & 606 & 4 & 237 & 41 & 289 & 46 & 281 & 29 & 887
+\end{array}
+\]
+All of these values are positive. An affine function that is positive at both endpoints of an interval is positive on the whole interval. Then $a_it+b_i>0$ for $29\le t\le31$, and $L_i=N(a_it+b_i)>0$ on $\cK_6$.
+\end{proof}
+
+Among the forms with $a_i\ne0$, the largest root $-b_i/a_i$ is $27$, from $L_4=M-27N$, and $L_1=N$. All forms are therefore positive whenever $N>0$ and $M>27N$, and the cone $\cK_6$ lies inside this region.
+
+\section{Local conditions at the fixed places}\label{sec:r6-fixed}
+
+We now prove the local conditions at the fixed places $2$, $3$, $7$ and $\infty$ and derive the fixed rows of the matrices of \cref{sec:r6-matrices}. We use the coordinates on $\sqgp{\Q_v}$ of \cref{sec:descent-conventions}. At $2$, every class is $\sq{(-1)^{e_1}2^{e_2}5^{e_3}}$ for a unique $(e_1,e_2,e_3)\in\F_2^3$, and an odd unit $w$ has $(e_1,e_3)=(0,0),(1,1),(0,1),(1,0)$ according as $w\equiv1,3,5,7\pmod8$. At an odd prime $q$, we write a class as $\sq{q^kw}$ with $w$ a $q$-adic unit and use the coordinates $\nu_q(q^kw)=k\bmod2$ and $\chi_q(q^kw)=\chi_q(w)$ of \eqref{eq:odd-coordinates}, where $\leg wq=(-1)^{\chi_q(w)}$. At $\infty$, we use the sign coordinate $\mathrm{sgn}$, which is $1$ on $\sq{-1}$ and $0$ on $\sq1$.
+
+\begin{lemma}[Local images at the fixed places]\label{lem:r6-fixed}
+Let $(M,N)\in\cP_6$. Then $FHJ\ne0$, and
+\[
+\begin{aligned}
+\delta_{E,2}(E(\Q_2))&\subseteq\langle\sq{-1},\sq5\rangle, & \delta_{E',2}(E'(\Q_2))&\subseteq\{\sq1,\sq5\},\\
+\delta_{E,3}(E(\Q_3))&=\{\sq1\}, & &\\
+\delta_{E,7}(E(\Q_7))&\subseteq\{\sq1,\sq7\}, & \delta_{E',7}(E'(\Q_7))&\subseteq\{\sq1,\sq{21}\}.
+\end{aligned}
+\]
+If moreover $(M,N)\in\cK_6$, then $\delta_{E',\infty}(E'(\R))=\{\sq1\}$.
+\end{lemma}
+
+We use no condition at $3$ on $E'$ and no condition at $\infty$ on $E$.
+
+\begin{proof}
+We have $FHJ\ne0$ by \cref{lem:r6-residues}. We first compute the valuations and unit residues of the four coefficients $\alpha,\beta,\alpha',\beta'$ on $\cP_6$. We then treat the places $2$, $3$, $7$ and $\infty$ in turn. At each place we consider the point $O$, the point $(0,0)$, the other points with $y=0$, and the points with $y\ne0$, the last according to the valuation of $x$.
+
+\paragraph{The coefficients.} Let $\pi_F=p_0p_1p_2p_3$, $\pi_H=p_4p_5p_6p_7$ and $\pi_J=p_8p_9p_{10}p_{11}$, where $p_i=L_i(M,N)/c_i$ are the integers of \cref{lem:r6-residues}. The computation leading to \eqref{r6:FHJ-p} applies to every $(M,N)\in\cP_6$ and gives $F=8\pi_F$, $H=2\pi_H$ and $J=648\pi_J$. Multiplying the residues of \cref{tab:r6-residues}, we find
+\[
+\begin{aligned}
+\pi_F&\equiv7,& \pi_H&\equiv3,& \pi_J&\equiv3 &&\pmod 8,\\
+\pi_F&\equiv2,& \pi_H&\equiv1,& \pi_J&\equiv2 &&\pmod 3,\\
+\pi_F&\equiv3,& \pi_H&\equiv2,& \pi_J&\equiv6 &&\pmod 7.
+\end{aligned}
+\]
+We have $\alpha=560\pi_F$, $\beta=-12544\pi_F\pi_H$, $\alpha'=-1120\pi_F$ and $\beta'=9144576\pi_F\pi_J$, where $560=2^4\cdot5\cdot7$, $12544=2^87^2$, $1120=2^5\cdot5\cdot7$ and $9144576=2^83^67^2$. Inserting the residues above, we obtain \cref{tab:r6-coeffs}. Together with $\alpha'=-2\alpha$ and $\beta'=\alpha^2-4\beta$, these are the only properties of the coefficients that we use below, and by \cref{lem:r6-residues} they hold for every $(M,N)\in\cP_6$.
+
+\begin{table}[htbp]
+\centering
+\caption{Valuations of the coefficients at $2$, $3$, $7$, and their unit parts $z\,p^{-v_p(z)}$ modulo $8$, $3$, $7$, for $(M,N)\in\cP_6$.}
+\label{tab:r6-coeffs}
+\begin{tabular}{crrrrrr}
+\toprule
+coefficient & $v_2$ & unit $\bmod 8$ & $v_3$ & unit $\bmod 3$ & $v_7$ & unit $\bmod 7$\\
+\midrule
+$\alpha=70F$ & $4$ & $5$ & $0$ & $1$ & $1$ & $2$\\
+$\beta=-784FH$ & $8$ & $3$ & $0$ & $1$ & $2$ & $4$\\
+$\alpha'=-140F$ & $5$ & $3$ & $0$ & $1$ & $1$ & $3$\\
+$\beta'=1764FJ$ & $8$ & $5$ & $6$ & $1$ & $2$ & $2$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The prime $2$, curve $E$.} The change of variables $x=2^4\tilde x$, $y=2^6\tilde y$ is a bijection from the affine points of $E(\Q_2)$ to those of
+\[
+\tilde y^2=\tilde x^3+\alpha_2\tilde x^2+\beta_2\tilde x,\qquad \alpha_2=2^{-4}\alpha,\quad \beta_2=2^{-8}\beta,
+\]
+and $\sq x=\sq{\tilde x}$ since $2^4$ is a square. Using \cref{tab:r6-coeffs}, we see that $\alpha_2$ and $\beta_2$ are $2$-adic units with $\alpha_2\equiv5$ and $\beta_2\equiv3\pmod8$. The point $O$ has class $\sq1$, and $\delta_{E,2}(T)=\sq\beta=\sq{\beta_2}=\sq3=\sq{-5}$. The discriminant of $\tilde x^2+\alpha_2\tilde x+\beta_2$ is $\alpha_2^2-4\beta_2=2^{-8}\beta'$, which is a unit congruent to $5$ modulo $8$ and hence not a square in $\Q_2$ by \cref{lem:squares}\ref{item:squares-two}. By \cref{lem:two-torsion}, $E$ has no other point with $y=0$. Now let $(\tilde x,\tilde y)$ be a point such that $\tilde y\ne0$, and let $r=v_2(\tilde x)$. If $r<0$, the term $\tilde x^3$ has strictly smaller valuation than $\alpha_2\tilde x^2$ and $\beta_2\tilde x$, since $3r<2r<r$. \Cref{lem:dominant}\ref{item:dominant-val} implies that $v_2(\tilde y^2)=3r$, and since $v_2(\tilde y^2)$ is even, $r$ is even. If $r>0$, the term $\beta_2\tilde x$ has the strictly smallest valuation $r$; as before, $r$ is even. If $r=0$, then $r$ is even. In every case $\sq{\tilde x}$ has $e_2=0$, which shows that $\delta_{E,2}(E(\Q_2))\subseteq\langle\sq{-1},\sq5\rangle$.
+
+\paragraph{The prime $2$, curve $E'$.} The same change of variables transforms $E'$ into
+\[
+\tilde y^2=\tilde x^3-2\alpha_2\tilde x^2+\beta'_2\tilde x,\qquad \beta'_2=2^{-8}\beta'=\alpha_2^2-4\beta_2,
+\]
+and we have $\beta'_2\equiv5\pmod 8$ by \cref{tab:r6-coeffs}. The point $O$ has class $\sq1$, and $\delta_{E',2}(T')=\sq{\beta'_2}=\sq5$. The discriminant of $\tilde x^2-2\alpha_2\tilde x+\beta'_2$ is $4\alpha_2^2-4\beta'_2=16\beta_2$, whose class $\sq{\beta_2}=\sq3$ is not trivial. By \cref{lem:two-torsion}, there is no other point with $\tilde y=0$. Let $(\tilde x,\tilde y)$ be a point with $\tilde y\ne0$, and write $\tilde x=2^rw$ with $w$ a unit. Recall from \cref{lem:squares}\ref{item:squares-two} that a unit of $\Z_2$ is a square in $\Q_2$ if and only if it is congruent to $1$ modulo $8$.
+
+Suppose that $r<0$. The valuations of $\tilde x^3$, $-2\alpha_2\tilde x^2$ and $\beta'_2\tilde x$ are $3r$, $1+2r$ and $r$, and $3r$ is the strictly smallest. By \cref{lem:dominant}\ref{item:dominant-val}, we have $v_2(\tilde y^2)=3r$, which implies that $r$ is even, and $r\le-2$. The other two terms then have valuations $1+2r\ge3r+3$ and $r\ge3r+4$, and by \cref{lem:dominant}\ref{item:dominant-unit} with $h=3$ we have $\tilde y^2=\tilde x^3(1+8t)$ with $t\in\Z_2$. The factor $1+8t$ is a square by \cref{lem:squares}\ref{item:squares-one}. Then $\tilde x^3$ is a square, and $\sq{\tilde x}=\sq{\tilde x^3}=\sq1$.
+
+Suppose that $r>0$. Now $\beta'_2\tilde x$ has the strictly smallest valuation $r$, and as before $r$ is even, so that $r\ge2$. The other two terms have valuations $1+2r\ge r+3$ and $3r\ge r+4$, and \cref{lem:dominant}\ref{item:dominant-unit} gives $\tilde y^2=\beta'_2\tilde x(1+8t)$ with $t\in\Z_2$. We see that $\beta'_2\tilde x$ is a square, and $\sq{\tilde x}=\sq{\beta'_2}=\sq5$.
+
+Suppose that $r=0$, so that $\tilde x=w$. Since $\beta'_2=\alpha_2^2-4\beta_2$, we have
+\[
+\tilde x^2-2\alpha_2\tilde x+\beta'_2=(w-\alpha_2)^2-4\beta_2=4\Bigl(\Bigl(\frac{w-\alpha_2}{2}\Bigr)^2-\beta_2\Bigr),
+\]
+where $(w-\alpha_2)/2$ belongs to $\Z_2$ because $w$ and $\alpha_2$ are odd. If $w\equiv3\pmod4$, then $w-\alpha_2\equiv2\pmod 4$, because $\alpha_2\equiv1\pmod4$. Then $(w-\alpha_2)/2$ is odd, its square is congruent to $1$ modulo $8$, and the bracket is congruent to $1-3\equiv6\pmod8$ and has valuation one. It follows that $\tilde y^2=w(\tilde x^2-2\alpha_2\tilde x+\beta'_2)$ has valuation three, which is impossible. Therefore $w\equiv1\pmod4$, that is, $w\equiv1$ or $5\pmod8$, and $\sq{\tilde x}=\sq w\in\{\sq1,\sq5\}$.
+
+Combining the three cases with the classes of $O$ and $T'$, we obtain $\delta_{E',2}(E'(\Q_2))\subseteq\{\sq1,\sq5\}$.
+
+\paragraph{The prime $3$, curve $E$.} By \cref{tab:r6-coeffs}, $\alpha$ and $\beta$ are $3$-adic units with $\alpha\equiv\beta\equiv1\pmod3$, and $\beta'=3^6w'$ with a unit $w'\equiv1\pmod3$. The point $O$ has class $\sq1$, and $\delta_{E,3}(T)=\sq\beta=\sq1$, since $\beta$ is a unit congruent to $1$ modulo $3$ (\cref{lem:squares}\ref{item:squares-odd}). Let $(x,y)\in E(\Q_3)$ be a point such that $x\ne0$, and let $r=v_3(x)$.
+
+If $r<0$, the term $x^3$ has valuation $3r$, and the other two terms have valuations $2r$ and $r$, which are at least $3r+1$. By \cref{lem:dominant}\ref{item:dominant-unit}, we have $y^2=x^3(1+3t)$ with $t\in\Z_3$. Then $y\ne0$, and $r$ is even because $v_3(y^2)=3r$ is even. The factor $1+3t$ is a square by \cref{lem:squares}\ref{item:squares-one}, and $\sq x=\sq{x^3}=\sq1$. If $r>0$, the term $\beta x$ has valuation $r$, and the other two have valuations $2r$ and $3r$, which are at least $r+1$. As before, $y\ne0$, $r$ is even, and $y^2=\beta x(1+3t)$; then $\beta x$ is a square, and $\sq x=\sq\beta=\sq1$. If $r=0$ and $x\equiv1\pmod 3$, then $\sq x=\sq1$. If $r=0$ and $x\equiv2\pmod3$, then $x^2+\alpha x+\beta\equiv4+2+1\equiv1\pmod 3$, and $x^3+\alpha x^2+\beta x\equiv2\pmod3$ is a unit that is not a square; there is no point with such an $x$.
+
+The discriminant $\alpha^2-4\beta=\beta'=3^6w'$ is a square in $\Q_3$. By \cref{lem:two-torsion}, the curve $E$ has two points $(x_0,0)$ and $(x_1,0)$ with $x_0x_1=\beta$. The case analysis above shows that a point with $x\ne0$ and $y=0$ has $r=0$ and $x\equiv1\pmod3$, and these two points have class $\sq1$. We conclude that $\delta_{E,3}(E(\Q_3))=\{\sq1\}$.
+
+\paragraph{The prime $7$.} Let $(\alpha_\star,\beta_\star)$ be $(\alpha,\beta)$ or $(\alpha',\beta')$, so that $y^2=x^3+\alpha_\star x^2+\beta_\star x$ is $E$ or $E'$. Using \cref{tab:r6-coeffs}, we find that $v_7(\alpha_\star)=1$, $v_7(\beta_\star)=2$, and
+\[
+\Bigl(\frac{\alpha_\star}{7},\frac{\beta_\star}{49}\Bigr)\equiv(2,4)\ \text{on } E,\qquad \Bigl(\frac{\alpha_\star}{7},\frac{\beta_\star}{49}\Bigr)\equiv(3,2)\ \text{on } E' \pmod 7.
+\]
+The nonzero squares modulo $7$ are $1$, $2$ and $4$. The point $O$ has class $\sq1$, and $\sq{\beta_\star}=\sq{\beta_\star/49}=\sq1$, since $\beta_\star/49$ is a unit congruent to a nonzero square. Let $(x,y)$ be a point such that $x\ne0$, and let $r=v_7(x)$. The three terms $x^3$, $\alpha_\star x^2$ and $\beta_\star x$ have valuations $3r$, $2r+1$ and $r+2$.
+
+If $r\le0$, then $2r+1$ and $r+2$ are at least $3r+1$. Using \cref{lem:dominant}\ref{item:dominant-unit}, we may write $y^2=x^3(1+7t)$ with $t\in\Z_7$. Then $y\ne0$, the valuation $3r$ of $y^2$ is even, and $r$ is even. We also have $\sq x=\sq{x^3}=\sq1$, because $1+7t$ is a square (\cref{lem:squares}\ref{item:squares-one}). If $r\ge2$, then $3r$ and $2r+1$ are at least $(r+2)+1$, and \cref{lem:dominant}\ref{item:dominant-unit} gives $y^2=\beta_\star x(1+7t)$ with $t\in\Z_7$. As before, $y\ne0$, $r$ is even, and $\sq x=\sq{\beta_\star}=\sq1$.
+
+If $r=1$, write $x=7w$ with $w$ a unit. Then
+\[
+y^2=7^3w\,h_\star(w),\qquad h_\star(w)=w^2+\frac{\alpha_\star}{7}w+\frac{\beta_\star}{49}\in\Z_7.
+\]
+If $h_\star(w)$ were a unit, then $y\ne0$ and $v_7(y^2)=3$, which is impossible. Hence $h_\star(w)\equiv0\pmod 7$, both when $y\ne0$ and when $y=0$. Modulo $7$, we have $h_\star(w)\equiv w^2+2w+4\equiv(w-1)(w-4)$ on $E$ and $h_\star(w)\equiv w^2+3w+2\equiv(w+1)(w+2)$ on $E'$. On $E$, the residue of $w$ is $1$ or $4$, which is a square; then $\sq x=\sq{7w}=\sq7$. On $E'$, the residue of $w$ is $5$ or $6$, which is not a square modulo $7$; then $\sq w=\sq3$ and $\sq x=\sq{21}$.
+
+The points with $y=0$ and $x\ne0$ have $r=1$, since $y\ne0$ in the other cases; they are covered by the last paragraph. By \cref{lem:two-torsion}, such points exist on both curves: the discriminants are $\beta'=49\cdot(\beta'/49)$ on $E$ and $16\beta=49\cdot(16\beta/49)$ on $E'$, and the units $\beta'/49\equiv2$ and $16\beta/49\equiv16\cdot4\equiv1$ are squares modulo $7$. We conclude that $\delta_{E,7}(E(\Q_7))\subseteq\{\sq1,\sq7\}$ and $\delta_{E',7}(E'(\Q_7))\subseteq\{\sq1,\sq{21}\}$.
+
+\paragraph{The real place, curve $E'$.} Let $(M,N)\in\cK_6$. Then $F$, $H$ and $J$ are positive by \cref{lem:r6-cone}, so that $\alpha'=-140F<0$ and $\beta'=1764FJ>0$. For $x<0$, the three terms $x^3$, $\alpha'x^2$ and $\beta'x$ are negative, and $E'(\R)$ has no point with $x<0$. The points $O$ and $T'$ have classes $\sq1$ and $\sq{\beta'}=\sq1$, and therefore $\delta_{E',\infty}(E'(\R))=\{\sq1\}$. This completes the proof.
+\end{proof}
+
+\paragraph{The fixed rows.} In the coordinates above, the subgroups of \cref{lem:r6-fixed} are
+\[
+\begin{aligned}
+\langle\sq{-1},\sq5\rangle&=\{e_2=0\}, & \{\sq1,\sq5\}&=\{e_1=e_2=0\} &&\text{in } \sqgp{\Q_2},\\
+\{\sq1\}&=\{\nu_3=\chi_3=0\} &&&&\text{in } \sqgp{\Q_3},\\
+\{\sq1,\sq7\}&=\{\chi_7=0\}, & \{\sq1,\sq{21}\}&=\{\chi_7+\nu_7=0\} &&\text{in } \sqgp{\Q_7},\\
+\{\sq1\}&=\{\mathrm{sgn}=0\} &&&&\text{in } \sqgp{\R},
+\end{aligned}
+\]
+where we used that $\sq{21}=\sq{7\cdot3}$ has $\nu_7=1$ and $\chi_7=1$. By \cref{lem:upper-bound}, the following linear maps give rows for $\delta_E(E(\Q))$ and $\delta_{E'}(E'(\Q))$, which we name as in \cref{prop:rank-criterion}: on $E$, the fixed rows $f^E_1$, $f^E_2$, $f^E_3$, $f^E_4$ are given by the linear map $e_2$ at $2$, the linear maps $\chi_3$ and $\nu_3$ at $3$, and $\chi_7$ at $7$; on $E'$, the fixed rows $f^{E'}_1$, $f^{E'}_2$, $f^{E'}_3$, $f^{E'}_4$ are given by the linear maps $e_1$ and $e_2$ at $2$, $\chi_7+\nu_7$ at $7$, and $\mathrm{sgn}$ at $\infty$. To write the rows, we evaluate each linear map at the local coordinates of the basis elements. \Cref{tab:r6-coords} lists these coordinates for $-1$, $2$, $3$ and $7$. For the moving basis elements $p_j$ with $(M,N)\in\cP_6\cap\cK_6$, we have $e_1(p_j)=1$ if and only if $p_j\equiv3\pmod 4$, $e_2(p_j)=\nu_3(p_j)=\nu_7(p_j)=\mathrm{sgn}(p_j)=0$, $\chi_3(p_j)=1$ if and only if $p_j\equiv2\pmod3$, and $\chi_7(p_j)=1$ if and only if $p_j\equiv3,5,6\pmod7$. Since these values depend only on the residues of \cref{tab:r6-residues}, the fixed rows are the same at every point of $\cP_6\cap\cK_6$. They are the first four rows of \cref{tab:r6-ME,tab:r6-MEp}.
+
+\begin{table}[htbp]
+\centering
+\caption{Local coordinates of the constant basis elements.}
+\label{tab:r6-coords}
+\begin{tabular}{ccccccccc}
+\toprule
+ & \multicolumn{3}{c}{$\Q_2$} & \multicolumn{2}{c}{$\Q_3$} & \multicolumn{2}{c}{$\Q_7$} & $\R$\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-9}
+ & $e_1$ & $e_2$ & $e_3$ & $\nu_3$ & $\chi_3$ & $\nu_7$ & $\chi_7$ & $\mathrm{sgn}$\\
+\midrule
+$-1$ & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 1\\
+$2$ & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0\\
+$3$ & 1 & 0 & 1 & 1 & 0 & 0 & 1 & 0\\
+$7$ & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Characters at the moving primes}\label{sec:r6-characters}
+
+Fix a prime specialization $(M,N)$ of $\datum_6$ with $(M,N)\in\cP_6$. We compute the characters $\lambda_i(z)$ that enter the moving rows of \cref{lem:moving-rows}. Recall that $\lambda_i(z)\in\F_2$ is defined by $\leg{z}{p_i}=(-1)^{\lambda_i(z)}$ for $z$ prime to $p_i$. Since $(a_0,b_0)=(1,0)$, $(a_1,b_1)=(0,1)$ and $c_0=c_1=1$, we have $p_0=M$ and $p_1=N$. As in \cref{lem:reciprocity}, we define $\eta\in\F_2$ by
+\[
+\eps=\leg{N}{p_0}=(-1)^\eta;
+\]
+here $\eps\ne0$ because $p_1\ne p_0$.
+
+\paragraph{Constant characters.} By \cref{lem:fixed-characters}, that is, by quadratic reciprocity and its supplementary laws \eqref{eq:reciprocity}, we have, for every odd prime $q\ne p_i$,
+\begin{equation}\label{r6:const-rule}
+\begin{gathered}
+\lambda_i(-1)=\mathbf 1[p_i\equiv3\ (\mathrm{mod}\ 4)],\qquad \lambda_i(2)=\mathbf 1[p_i\equiv\pm3\ (\mathrm{mod}\ 8)],\\
+\lambda_i(q)=\mathbf 1[p_i\bmod q\text{ is a nonsquare}]+\mathbf 1[q\equiv3\ (\mathrm{mod}\ 4)]\,\lambda_i(-1).
+\end{gathered}
+\end{equation}
+Combined with \cref{tab:r6-residues}, these rules give \cref{tab:r6-chars} for $q\in\{3,5,7,11,17,23\}$. For checking the table, the nonzero squares modulo these primes are
+\[
+\begin{gathered}
+3:\ 1;\qquad 5:\ 1,4;\qquad 7:\ 1,2,4;\qquad 11:\ 1,3,4,5,9;\\
+17:\ 1,2,4,8,9,13,15,16;\qquad 23:\ 1,2,3,4,6,8,9,12,13,16,18.
+\end{gathered}
+\]
+We write $\sigma_i=\lambda_i(-1)$; this is the first row of \cref{tab:r6-chars}.
+
+\begin{table}[htbp]
+\centering
+\caption{The characters $\lambda_i(g)$ for the constants $g$ that occur in the rows.}
+\label{tab:r6-chars}
+\begin{tabular}{c*{12}{c}}
+\toprule
+$g\backslash i$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\\
+\midrule
+$-1$ & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 1 & 0 \\
+$2$ & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+$3$ & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\
+$5$ & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
+$7$ & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \\
+$11$ & 1 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 0 \\
+$17$ & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 \\
+$23$ & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Cross symbols.} By \cref{cor:eta-structure}, we have $\lambda_i(p_j)=\gamma_{ij}+\eta$ for all distinct $i,j$, with the constants $\gamma_{ij}$ of \eqref{eq:theta} and \eqref{eq:gamma}. Recall from \cref{tab:r6-residues} that $p_0\equiv3\pmod4$, that is, $\lambda_0(-1)=1$. Since $c_0=1$, these constants are
+\begin{equation}\label{r6:gamma}
+\begin{gathered}
+\gamma_{0j}=\lambda_0(b_jc_j),\qquad \gamma_{j0}=\theta_j=\lambda_0(b_jc_j)+\sigma_j\qquad(j\ge1),\\
+\gamma_{ij}=\lambda_i(K_{ij})+\theta_i,\quad\text{where } K_{ij}=c_jb_i\Delta_{ji}\qquad(i,j\ge1,\ i\ne j).
+\end{gathered}
+\end{equation}
+For $1\le i<j$, we compute $\gamma_{ij}$ from \eqref{r6:gamma}. The reverse constant follows from quadratic reciprocity: by \eqref{eq:reciprocity}, $\lambda_j(p_i)=\lambda_i(p_j)+\sigma_i\sigma_j$, which gives
+\begin{equation}\label{r6:reverse}
+\gamma_{ji}=\gamma_{ij}+\sigma_i\sigma_j\qquad(1\le i<j).
+\end{equation}
+In this way, we only need to factor the constants $K_{ij}$ with $i<j$. By \cref{rem:constant-characters}, the moving rows involve $\gamma_{ij}$ only for $i\ne j$ with $\{i,j\}$ contained in neither $I_H$ nor $I_J$. We list $\lambda_0(b_jc_j)$ and $\theta_j$ in \cref{tab:r6-pivot}, and $\gamma_{ij}$ for the needed pairs with $1\le i<j$ in \cref{tab:r6-K}; \cref{tab:r6-cross} collects all the constants.
+
+The constants $b_jc_j$ and $K_{ij}$ in \cref{tab:r6-pivot,tab:r6-K} are a square times their squarefree part $\operatorname{sf}$, and $\lambda_i$ of a constant equals $\lambda_i$ of its squarefree part. Every squarefree part listed is $\pm1$ times a product of primes in $\{2,3,5,7,11,17,23\}$, and its character is the sum of the corresponding entries of \cref{tab:r6-chars}. The primes $13$, $19$ and $41$ of $S$, which do not divide $W$, occur in these constants only to even powers: $13^2$ divides $b_3$ and $\Delta_{21}$, while every other determinant divisible by $13$, $19$ or $41$ belongs to a pair inside $I_H$ or inside $I_J$ by \eqref{r6:samegroup}, and such pairs do not occur. No congruence modulo $13$, $19$ or $41$ is needed.
+
+\begin{table}[htbp]
+\centering
+\caption{The constants $b_ic_i$, their squarefree parts, and the bits $\gamma_{0i}=\lambda_0(b_ic_i)$, $\sigma_i=\lambda_i(-1)$ and $\gamma_{i0}=\theta_i=\lambda_0(b_ic_i)+\sigma_i$.}
+\label{tab:r6-pivot}
+\begin{tabular}{crlrccc}
+\toprule
+$i$ & $b_ic_i$ & factored & $\operatorname{sf}(b_ic_i)$ & $\lambda_0(b_ic_i)$ & $\sigma_i$ & $\theta_i$\\
+\midrule
+1 & $1$ & $1$ & $1$ & 0 & 1 & 1 \\
+2 & $750$ & $2\cdot3\cdot5^{3}$ & $30$ & 1 & 0 & 1 \\
+3 & $-1352$ & $-2^{3}\cdot13^{2}$ & $-2$ & 0 & 1 & 1 \\
+4 & $-54$ & $-2\cdot3^{3}$ & $-6$ & 1 & 0 & 1 \\
+5 & $20$ & $2^{2}\cdot5$ & $5$ & 1 & 0 & 1 \\
+6 & $-21$ & $-3\cdot7$ & $-21$ & 0 & 1 & 1 \\
+7 & $10$ & $2\cdot5$ & $10$ & 0 & 0 & 0 \\
+8 & $120$ & $2^{3}\cdot3\cdot5$ & $30$ & 1 & 1 & 0 \\
+9 & $1728$ & $2^{6}\cdot3^{3}$ & $3$ & 1 & 1 & 0 \\
+10 & $-6$ & $-2\cdot3$ & $-6$ & 1 & 1 & 0 \\
+11 & $-105$ & $-3\cdot5\cdot7$ & $-105$ & 1 & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{3.5pt}
+\caption{For the pairs $1\le i<j$ that occur in the rows: the determinant $\Delta_{ji}=a_jb_i-a_ib_j$, the factor $c_jb_i$, the squarefree part of $K_{ij}=c_jb_i\Delta_{ji}$, the bit $\lambda_i(K_{ij})$, and $\gamma_{ij}=\lambda_i(K_{ij})+\theta_i$.}
+\label{tab:r6-K}
+\begin{tabular}{clrrcc@{\hspace{1.6em}}clrrcc}
+\toprule
+$(i,j)$ & $\Delta_{ji}$ & $c_jb_i$ & $\operatorname{sf}$ & $\lambda_i$ & $\gamma_{ij}$ & $(i,j)$ & $\Delta_{ji}$ & $c_jb_i$ & $\operatorname{sf}$ & $\lambda_i$ & $\gamma_{ij}$\\
+\midrule
+$(1,2)$ & $13^{2}$ & $1$ & $1$ & 0 & 1 & $(3,7)$ & $-7\cdot11\cdot23$ & $-169$ & $1771$ & 0 & 1 \\
+$(1,3)$ & $5^{2}$ & $8$ & $2$ & 1 & 0 & $(3,8)$ & $-2^{5}\cdot17$ & $-1352$ & $17$ & 1 & 0 \\
+$(1,4)$ & $1$ & $2$ & $2$ & 1 & 0 & $(3,9)$ & $-11^{2}\cdot23$ & $-4563$ & $69$ & 1 & 0 \\
+$(1,5)$ & $7$ & $1$ & $7$ & 1 & 0 & $(3,10)$ & $-7\cdot17$ & $-507$ & $357$ & 1 & 0 \\
+$(1,6)$ & $2$ & $1$ & $2$ & 1 & 0 & $(3,11)$ & $-11^{2}\cdot23$ & $-169$ & $23$ & 0 & 1 \\
+$(1,7)$ & $3^{2}$ & $1$ & $1$ & 0 & 1 & $(4,8)$ & $-2\cdot3\cdot7$ & $-216$ & $7$ & 0 & 1 \\
+$(1,8)$ & $1$ & $8$ & $2$ & 1 & 0 & $(4,9)$ & $-11\cdot23$ & $-729$ & $253$ & 1 & 0 \\
+$(1,9)$ & $7$ & $27$ & $21$ & 1 & 0 & $(4,10)$ & $-5^{2}$ & $-81$ & $1$ & 0 & 1 \\
+$(1,10)$ & $1$ & $3$ & $3$ & 0 & 1 & $(4,11)$ & $-3\cdot11\cdot23$ & $-27$ & $253$ & 1 & 0 \\
+$(1,11)$ & $2^{5}$ & $1$ & $2$ & 1 & 0 & $(5,8)$ & $-5\cdot17$ & $160$ & $-34$ & 0 & 1 \\
+$(2,3)$ & $11^{2}\cdot17\cdot23$ & $6000$ & $5865$ & 1 & 0 & $(5,9)$ & $-2^{2}\cdot7\cdot11$ & $540$ & $-1155$ & 0 & 1 \\
+$(2,4)$ & $3\cdot7\cdot11\cdot23$ & $1500$ & $8855$ & 1 & 0 & $(5,10)$ & $2\cdot17$ & $60$ & $510$ & 1 & 0 \\
+$(2,5)$ & $2\cdot5\cdot11\cdot17$ & $750$ & $561$ & 0 & 1 & $(5,11)$ & $5^{3}\cdot11$ & $20$ & $11$ & 0 & 1 \\
+$(2,6)$ & $3^{3}\cdot11\cdot17$ & $750$ & $1870$ & 0 & 1 & $(6,8)$ & $-3\cdot17$ & $-168$ & $238$ & 1 & 0 \\
+$(2,7)$ & $2^{2}\cdot5\cdot11\cdot23$ & $750$ & $1518$ & 1 & 0 & $(6,9)$ & $-5^{2}\cdot11$ & $-567$ & $77$ & 1 & 0 \\
+$(2,8)$ & $-3\cdot5\cdot7\cdot17$ & $6000$ & $-119$ & 1 & 0 & $(6,10)$ & $-17$ & $-63$ & $119$ & 1 & 0 \\
+$(2,9)$ & $-2\cdot11^{2}\cdot23$ & $20250$ & $-115$ & 0 & 1 & $(6,11)$ & $-2\cdot3\cdot7\cdot11$ & $-21$ & $22$ & 1 & 0 \\
+$(2,10)$ & $2^{6}\cdot17$ & $2250$ & $170$ & 1 & 0 & $(7,8)$ & $-5^{3}$ & $80$ & $-1$ & 0 & 0 \\
+$(2,11)$ & $3\cdot5\cdot11^{2}\cdot23$ & $750$ & $46$ & 0 & 1 & $(7,9)$ & $-2\cdot11\cdot23$ & $270$ & $-3795$ & 0 & 0 \\
+$(3,4)$ & $2\cdot11\cdot23$ & $-338$ & $-253$ & 0 & 1 & $(7,10)$ & $2^{2}\cdot7$ & $30$ & $210$ & 0 & 0 \\
+$(3,5)$ & $-3^{2}\cdot11\cdot17$ & $-169$ & $187$ & 0 & 1 & $(7,11)$ & $5\cdot11\cdot23$ & $10$ & $506$ & 0 & 0 \\
+$(3,6)$ & $11\cdot17$ & $-169$ & $-187$ & 1 & 0 & & & & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The constants $\gamma_{ij}$, defined by $\lambda_i(p_j)=\gamma_{ij}+\eta$. Row $i$, column $j$. A dot marks a pair inside $I_H$ or inside $I_J$, which does not occur in the rows.}
+\label{tab:r6-cross}
+\begin{tabular}{c*{12}{c}}
+\toprule
+$i\backslash j$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\\
+\midrule
+$0$ & $\ast$ & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+$1$ & 1 & $\ast$ & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 \\
+$2$ & 1 & 1 & $\ast$ & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 0 & 1 \\
+$3$ & 1 & 1 & 0 & $\ast$ & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
+$4$ & 1 & 0 & 0 & 1 & $\ast$ & $\cdot$ & $\cdot$ & $\cdot$ & 1 & 0 & 1 & 0 \\
+$5$ & 1 & 0 & 1 & 1 & $\cdot$ & $\ast$ & $\cdot$ & $\cdot$ & 1 & 1 & 0 & 1 \\
+$6$ & 1 & 1 & 1 & 1 & $\cdot$ & $\cdot$ & $\ast$ & $\cdot$ & 0 & 0 & 0 & 0 \\
+$7$ & 0 & 1 & 0 & 1 & $\cdot$ & $\cdot$ & $\cdot$ & $\ast$ & 0 & 0 & 0 & 0 \\
+$8$ & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & $\ast$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$9$ & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & $\cdot$ & $\ast$ & $\cdot$ & $\cdot$ \\
+$10$ & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & $\cdot$ & $\cdot$ & $\ast$ & $\cdot$ \\
+$11$ & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & $\cdot$ & $\cdot$ & $\cdot$ & $\ast$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Characters at the moving primes]\label{lem:r6-characters}
+Let $(M,N)\in\cP_6$ be a prime specialization of $\datum_6$, and define $\eta$ by $\leg{N}{p_0}=(-1)^\eta$. Then $\lambda_i(g)$ is given by \cref{tab:r6-chars} for $g\in\{-1,2,3,5,7,11,17,23\}$, and $\lambda_i(p_j)=\gamma_{ij}+\eta$ with $\gamma_{ij}$ given by \cref{tab:r6-cross}, for all $i\ne j$ with $\{i,j\}$ contained in neither $I_H$ nor $I_J$. In particular, the characters $\lambda_i(g)$ and the constants $\gamma_{ij}$ are the same for all prime specializations of $\datum_6$ in $\cP_6$, and the characters $\lambda_i(p_j)$ depend on the specialization only through $\eta$.
+\end{lemma}
+
+\begin{proof}
+The first claim follows from \eqref{r6:const-rule} and \cref{tab:r6-residues}. For the second, we have $\lambda_i(p_j)=\gamma_{ij}+\eta$ by \cref{cor:eta-structure}, and the constants $\gamma_{ij}$ are given by \eqref{r6:gamma} and \eqref{r6:reverse}. In these formulas, $\lambda_0(b_jc_j)$ and $\lambda_i(K_{ij})$ are computed from the squarefree parts in \cref{tab:r6-pivot,tab:r6-K} and the characters in \cref{tab:r6-chars}. For example, for $(i,j)=(2,3)$ we have $\operatorname{sf}(K_{23})=5865=3\cdot5\cdot17\cdot23$. This gives $\lambda_2(K_{23})=0+1+1+1=1$ and $\gamma_{23}=1+\theta_2=0$, and \eqref{r6:reverse} gives $\gamma_{32}=\gamma_{23}+\sigma_2\sigma_3=0$. All these numbers depend only on the residues in \cref{tab:r6-residues}, which are the same at every point of $\cP_6$.
+\end{proof}
+
+\section{The matrices and the upper bound}\label{sec:r6-matrices}
+
+We now assemble the matrices $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$ of \eqref{eq:matrix-def}. We index the columns by the bases \eqref{r6:bases}. The first four rows are the fixed rows of \cref{sec:r6-fixed}. The remaining eight rows are the moving rows $r^E_i(0)+\eta u_E$ for $i\in I_F$ and then $i\in I_J$, respectively $r^{E'}_i(0)+\eta u_{E'}$ for $i\in I_F$ and then $i\in I_H$. By \cref{cor:eta-structure}, the entries of $r^\star_i(0)$ are as follows: at a constant column $g\in\{-1,2,3,7\}$, the entry is $\lambda_i(g)$, from \cref{tab:r6-chars}; at a moving column $j\ne i$, it is $\gamma_{ij}$, from \cref{tab:r6-cross}; and for $i\in I_F$, the entry at the moving column $i$ is $\gamma^\star_{ii}=\lambda_i(\kappa_\star)+\sum_{j\in G_\star\setminus\{i\}}\gamma_{ij}$, as in \eqref{eq:gamma-diagonal}. Using \eqref{r6:kappa}, we find $\lambda_i(\kappa_E)=\lambda_i(-1)=\sigma_i$ and $\lambda_i(\kappa_{E'})=0$. The diagonal constants are
+\[
+\begin{array}{c|ccc|cc}
+i & \sum_{j\in G_E\setminus\{i\}}\gamma_{ij} & \sigma_i & \gamma^E_{ii} & \sum_{j\in G_{E'}\setminus\{i\}}\gamma_{ij} & \gamma^{E'}_{ii}\\
+\hline
+0 & 3 & 1 & 0 & 5 & 1 \\
+1 & 3 & 1 & 0 & 3 & 1 \\
+2 & 4 & 0 & 0 & 4 & 0 \\
+3 & 5 & 1 & 0 & 3 & 1
+\end{array}
+\]
+\Cref{tab:r6-ME,tab:r6-MEp} display $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$. Recall from \eqref{eq:matrix-def} that $\mathbf M_\star(1)$ is obtained by adding the vector $u_E=u_{E'}=(0,0,0,0,1,1,1,1,1,1,1,1)$ to each of the eight moving rows; that is, the entries of a moving row in a moving column are complemented, and all other entries are unchanged. The row codes used by the certificate are listed in \cref{app:verification}.
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4.2pt}
+\caption{The matrix $\mathbf M_E(0)$. The rows above the rule are the fixed rows $f^E_k$, with the place and the linear map that define them; the rows below are the moving rows $r^E_i(0)$ at $p_0,\dots,p_3$ and $p_8,\dots,p_{11}$. The entries that lie both in a moving row and in one of the columns $p_0,\dots,p_7$ are those at $\eta=0$; for $\eta=1$ each of them is replaced by $1$ minus its value, and all other entries are unchanged.}
+\label{tab:r6-ME}
+\begin{tabular}{cc@{\hspace{10pt}}cccc@{\hspace{12pt}}cccccccc}
+\toprule
+ & & $-1$ & $2$ & $3$ & $7$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_4$ & $p_5$ & $p_6$ & $p_7$\\
+\midrule
+$f^E_1$ & $(2,e_2)$ & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+$f^E_2$ & $(3,\chi_3)$ & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+$f^E_3$ & $(3,\nu_3)$ & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+$f^E_4$ & $(7,\chi_7)$ & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 \\
+\midrule
+$r^{E}_0(0)$ & $p_0$ & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 \\
+$r^{E}_1(0)$ & $p_1$ & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
+$r^{E}_2(0)$ & $p_2$ & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 \\
+$r^{E}_3(0)$ & $p_3$ & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 \\
+$r^{E}_8(0)$ & $p_8$ & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\
+$r^{E}_9(0)$ & $p_9$ & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \\
+$r^{E}_{10}(0)$ & $p_{10}$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+$r^{E}_{11}(0)$ & $p_{11}$ & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\setlength{\tabcolsep}{4.2pt}
+\caption{The matrix $\mathbf M_{E'}(0)$, with the conventions of \cref{tab:r6-ME}. The moving rows $r^{E'}_i(0)$ are at $p_0,\dots,p_3$ and $p_4,\dots,p_7$, and the moving columns are $p_0,\dots,p_3,p_8,\dots,p_{11}$.}
+\label{tab:r6-MEp}
+\begin{tabular}{cc@{\hspace{10pt}}cccc@{\hspace{12pt}}cccccccc}
+\toprule
+ & & $-1$ & $2$ & $3$ & $7$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_8$ & $p_9$ & $p_{10}$ & $p_{11}$\\
+\midrule
+$f^{E'}_1$ & $(2,e_1)$ & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\
+$f^{E'}_2$ & $(2,e_2)$ & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+$f^{E'}_3$ & $(7,\chi_7+\nu_7)$ & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \\
+$f^{E'}_4$ & $(\infty,\mathrm{sgn})$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\midrule
+$r^{E'}_0(0)$ & $p_0$ & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+$r^{E'}_1(0)$ & $p_1$ & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 0 \\
+$r^{E'}_2(0)$ & $p_2$ & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 0 & 1 \\
+$r^{E'}_3(0)$ & $p_3$ & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
+$r^{E'}_4(0)$ & $p_4$ & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+$r^{E'}_5(0)$ & $p_5$ & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 \\
+$r^{E'}_6(0)$ & $p_6$ & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+$r^{E'}_7(0)$ & $p_7$ & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Rank of the matrices]\label{lem:r6-rank}
+The matrices $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$ of \cref{tab:r6-ME,tab:r6-MEp} have rank $8$. Moreover,
+\begin{equation}\label{r6:u-sums}
+u_E=f^E_1+r^E_1(0)+r^E_8(0),\qquad u_{E'}=f^{E'}_3+r^{E'}_1(0)+r^{E'}_4(0).
+\end{equation}
+Each of these two sums contains exactly two moving rows.
+\end{lemma}
+
+\begin{proof}
+The two sums are computed directly from \cref{tab:r6-ME,tab:r6-MEp}:
+\[
+\begin{array}{c|cccc|cccccccc}
+\multicolumn{13}{c}{\text{rows of }\mathbf M_E(0)}\\
+ & -1 & 2 & 3 & 7 & p_0 & p_1 & p_2 & p_3 & p_4 & p_5 & p_6 & p_7\\
+\hline
+f^E_1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+r^{E}_1(0) & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 \\
+r^{E}_8(0) & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\
+\hline
+\text{sum} & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1
+\end{array}
+\]
+\[
+\begin{array}{c|cccc|cccccccc}
+\multicolumn{13}{c}{\text{rows of }\mathbf M_{E'}(0)}\\
+ & -1 & 2 & 3 & 7 & p_0 & p_1 & p_2 & p_3 & p_8 & p_9 & p_{10} & p_{11}\\
+\hline
+f^{E'}_3 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \\
+r^{E'}_1(0) & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 0 \\
+r^{E'}_4(0) & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+\hline
+\text{sum} & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1
+\end{array}
+\]
+
+To bound the ranks from below, we exhibit an $8\times8$ submatrix of each matrix that becomes lower triangular with ones on the diagonal after reordering its rows and columns. In $\mathbf M_E(0)$, take the rows $f^E_1$, $f^E_3$, $f^E_4$, $r^E_0(0)$, $r^E_2(0)$, $f^E_2$, $r^E_{10}(0)$, $r^E_8(0)$ and the columns $2$, $3$, $p_0$, $p_2$, $p_1$, $p_7$, $p_3$, $7$, in these orders. In $\mathbf M_{E'}(0)$, take the rows $f^{E'}_2$, $f^{E'}_4$, $r^{E'}_6(0)$, $r^{E'}_1(0)$, $r^{E'}_7(0)$, $r^{E'}_4(0)$, $f^{E'}_1$, $f^{E'}_3$ and the columns $2$, $-1$, $p_2$, $7$, $3$, $p_8$, $p_9$, $p_{11}$, in these orders. Reading the entries off \cref{tab:r6-ME,tab:r6-MEp}, we find the two submatrices
+\[
+\begin{array}{c|cccccccc}
+ & 2 & 3 & p_0 & p_2 & p_1 & p_7 & p_3 & 7\\
+\hline
+f^E_1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+f^E_3 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+f^E_4 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+r^{E}_0(0) & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+r^{E}_2(0) & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
+f^E_2 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+r^{E}_{10}(0) & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+r^{E}_8(0) & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1
+\end{array}
+\qquad
+\begin{array}{c|cccccccc}
+ & 2 & -1 & p_2 & 7 & 3 & p_8 & p_9 & p_{11}\\
+\hline
+f^{E'}_2 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+f^{E'}_4 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+r^{E'}_6(0) & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+r^{E'}_1(0) & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+r^{E'}_7(0) & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+r^{E'}_4(0) & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+f^{E'}_1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 \\
+f^{E'}_3 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1
+\end{array}
+\]
+Both are lower triangular with ones on the diagonal, and they have determinant $1$ over $\F_2$. This implies that both matrices have rank at least $8$.
+
+To bound the ranks from above, consider the coordinate vectors of the four classes of \cref{lem:r6-classes} in the bases \eqref{r6:bases}:
+\[
+\begin{array}{c|cccc|cccccccc}
+ & -1 & 2 & 3 & 7 & p_0 & p_1 & p_2 & p_3 & p_4 & p_5 & p_6 & p_7\\
+\hline
+\delta_E(T) & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\delta_E(P_1) & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+\delta_E(P_2) & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 \\
+\delta_E(P_3) & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 0
+\end{array}
+\]
+\[
+\begin{array}{c|cccc|cccccccc}
+ & -1 & 2 & 3 & 7 & p_0 & p_1 & p_2 & p_3 & p_8 & p_9 & p_{10} & p_{11}\\
+\hline
+\delta_{E'}(T') & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+\delta_{E'}(Q_1) & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+\delta_{E'}(Q_2) & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 \\
+\delta_{E'}(Q_3) & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1
+\end{array}
+\]
+We check directly that each of these vectors has zero dot product with every row of the corresponding matrix in \cref{tab:r6-ME,tab:r6-MEp}. The four vectors on each side are independent by \cref{lem:r6-classes}. This implies that the kernel of each matrix has dimension at least $4$, and each rank is at most $12-4=8$. This completes the proof.
+\end{proof}
+
+Since every moving support in \cref{tab:r6-classes} has four or eight elements, each class vector also has zero dot product with $u_\star$, and hence with every row of $\mathbf M_\star(1)$. Together with \cref{lem:r6-rank,lem:eta-rank}, this shows that the kernel of $\mathbf M_\star(\eta)$ is spanned by the four class vectors for both values of $\eta$. The proof of \cref{thm:r6} does not need this, but it is a useful check on the tables: an error in an entry of a row would typically make one of these dot products nonzero.
+
+\section{Exact rank and infinitude}\label{sec:r6-theorem}
+
+\begin{theorem}[Exact rank six]\label{thm:r6}
+Let $(M,N)\in\cP_6\cap\cK_6$ be a prime specialization of $\datum_6$ with respect to the set $S$ of \eqref{r6:S}. Then $\rk E_{M,N}(\Q)=6$. Moreover, there exist infinitely many such $(M,N)$, and the curves $E_{M,N}$ obtained from them represent infinitely many $\Qbar$-isomorphism classes.
+\end{theorem}
+
+\begin{proof}
+We prove the rank statement with \cref{prop:rank-criterion}, and then the infinitude statements with \cref{prop:infinitely-many}.
+
+\paragraph{The rank.} Let $\cP$ be the set of prime specializations of $\datum_6$ that lie in $\cP_6\cap\cK_6$. We apply \cref{prop:rank-criterion} to the datum $\datum_6$, the set $S$ of \eqref{r6:S} and the set $\cP$, with $n_E=n_{E'}=12$ and $k_E=k_{E'}=4$. The lists $\Gamma_E=\Gamma_{E'}=(-1,2,3,7)$ consist of $-1$ and distinct primes, including every prime dividing $\kappa_E=-2^87^2$ and $\kappa_{E'}=2^83^67^2$. We check the four hypotheses.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Fixed rows.} Let $f^E_1,\dots,f^E_4$ and $f^{E'}_1,\dots,f^{E'}_4$ be the first four rows of \cref{tab:r6-ME,tab:r6-MEp}. By \cref{lem:r6-fixed} and the discussion of the fixed rows after it, at every $(M,N)\in\cP$ each of them is the row defined, in the sense of \cref{def:rows}, by a place $v\in\{2,3,7,\infty\}$, the subgroup $U_v$ of \cref{lem:r6-fixed}, and one of the listed linear maps.
+\item \emph{Constant characters.} By \cref{lem:r6-characters}, the bits $\lambda_i(g)$ with $g\in\{-1,2,3,7\}$ and $\gamma_{ij}$ are the same at every $(M,N)\in\cP$, and so are $\lambda_i(\kappa_E)=\sigma_i$ and $\lambda_i(\kappa_{E'})=0$. In other words, the bits \eqref{eq:constant-bits} are constant on $\cP$, and the matrices $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$ of \eqref{eq:matrix-def} are those of \cref{tab:r6-ME,tab:r6-MEp}.
+\item \emph{Points.} By \cref{lem:r6-points,lem:r6-classes}, at every $(M,N)\in\cP$ the image $\delta_E(E(\Q))$ contains the four independent classes of $T,P_1,P_2,P_3$, and $\delta_{E'}(E'(\Q))$ contains the four independent classes of $T',Q_1,Q_2,Q_3$.
+\item \emph{Rank.} By \cref{lem:r6-rank}, $\rk\mathbf M_E(0)=\rk\mathbf M_{E'}(0)=8=12-4$, and $u_E$ and $u_{E'}$ are sums of rows of $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$, respectively, in each of which exactly two moving rows occur.
+\end{enumerate}
+By \cref{prop:rank-criterion}, every $(M,N)\in\cP$ has $d_E=d_{E'}=4$ and $\rk E_{M,N}(\Q)=4+4-2=6$. The last statement of \cref{prop:rank-criterion} also shows that $\delta_E(E(\Q))$ and $\delta_{E'}(E'(\Q))$ are spanned by the four classes of \cref{tab:r6-classes} on the respective sides.
+
+\paragraph{Infinitude.} We check the hypotheses of \cref{prop:infinitely-many} for $W$, the pair $(M_0,N_0)$ of \eqref{r6:crt}, and the cone $\cK_6$. For \ref{item:inf-progression}, the primes dividing $c_0c_1\cdots c_{11}$ are $2$ and $3$, which divide $W$. Every $c_i$ divides $2^3\cdot3^3$, while $v_2(W)=6$ and $v_3(W)=4$, and we have $v_q(W)>v_q(c_i)$ for $q=2,3$; for the other primes $q\mid W$, we have $v_q(c_i)=0<1=v_q(W)$. Applying \cref{lem:r6-residues} to $(M_0,N_0)\in\cP_6$, we find that $c_i\mid L_i(M_0,N_0)$ and that $L_i(M_0,N_0)/c_i$ is prime to $W$. Hypothesis \ref{item:inf-small-primes} is empty, because every prime $q\le11$ divides $W$. Hypothesis \ref{item:inf-cone} is \cref{lem:r6-cone}. By \cref{prop:infinitely-many}, there exist infinitely many prime specializations $(M,N)\in\cK_6$ with $M\equiv M_0$ and $N\equiv N_0\pmod W$, that is, infinitely many elements of $\cP$, and their $j$-invariants $j(E_{M,N})$ take infinitely many values. Each of these curves has rank six by the first part. Curves with distinct $j$-invariants are not isomorphic over $\Qbar$ (\cref{rem:geometric-classes}). This completes the proof.
+\end{proof}
+
+\begin{remark}\label{rem:r6-j}
+By \cref{rem:j-families}, we have $j(E_{M,N})=(16/9)(25F+12H)^3/(H^2J)$; here $A^2F+3BH=196(25F+12H)$ and $B^2C=144\cdot196^3$. The primes of $S$ that do not divide $W$ are $13$, $19$ and $41$; \cref{prop:infinitely-many} needs no check at them. For comparison with \cref{lem:local-factors}, the twelve forms define $8$ distinct lines through the origin in $\F_{13}^2$ (the zero lines of the pairs $\{0,3\}$, $\{1,2\}$, $\{8,11\}$, $\{9,10\}$ coincide), $10$ in $\F_{19}^2$ (the pairs $\{4,5\}$, $\{6,7\}$), and $10$ in $\F_{41}^2$ (the pairs $\{8,9\}$, $\{10,11\}$). At every other prime not dividing $W$, they define $12$ distinct lines.
+\end{remark}

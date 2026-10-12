@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "challenge_imports": [
+    "Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point",
+    "Mathlib.AlgebraicGeometry.EllipticCurve.IsomOfJ",
+    "Mathlib.FieldTheory.AlgebraicClosure",
+    "Mathlib.LinearAlgebra.Dimension.StrongRankCondition",
+    "Mathlib.Data.Set.Finite.Lattice",
+    "Mathlib.Data.Int.Interval",
+    "Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt",
+    "Mathlib.Algebra.Field.ZMod",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+    "Mathlib.Analysis.SpecialFunctions.Log.Summable"
+  ],
+  "challenge_selected_theorem_holes": 1,
+  "solution_forbidden_hole_or_axiom_tokens": 0,
+  "compared_theorems": [
+    "RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven"
+  ],
+  "unspecified_definition_values": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "challenge_elaboration_exit": 0,
+  "challenge_elaboration_warning": "Selected theorem deliberate sorry only; expected by Challenge/Solution protocol.",
+  "solution_elaboration_status": "PASS: strict exit 0, empty build log; typed proof audit standard axioms only.",
+  "copied_definitions": 23,
+  "challenge_source_sha256": "becb1dfec3cad6cd1475820e54eec8c7cd38d1ba72bedf01a6dcbe3430daeb6d",
+  "challenge_elaboration_flags": [
+    "-j1",
+    "-DautoImplicit=false"
+  ],
+  "full_lake_build_exit": 0
+}

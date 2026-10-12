@@ -1,0 +1,1389 @@
+\chapter{The rank-seven family}\label{sec:rank7}
+
+In this section we prove \cref{thm:r7}, the case $r=7$ of \cref{thm:main}.
+It concerns the twelve-form datum $\datum_7$ of \cref{sec:r7-datum}, the
+progression $\cP_7$ modulo $W=308403583488$ of \cref{sec:r7-progression},
+and the cone $\cK_7=\{(M,N)\in\R^2:N>0,\ 2999N<M<3001N\}$. \Cref{thm:r7}
+states that, for every prime specialization $(M,N)\in\cP_7\cap\cK_7$ of
+$\datum_7$, the curve $E_{M,N}$ has rank exactly seven, and that these
+curves represent infinitely many $\Qbar$-isomorphism classes. It is used, together
+with \cref{thm:r5,thm:r6}, in \cref{sec:proof}.
+
+The proof follows the scheme of \cref{part:tools}, and this section supplies
+the data of the family and checks hypotheses. In \cref{sec:r7-datum,sec:r7-points}
+we define the datum and exhibit four rational points on $E$ and three on
+$E'$. Together with the points of order two, their classes show that
+$d_E\ge5$ and $d_{E'}\ge4$ (\cref{lem:r7-independent}). In
+\cref{sec:r7-progression} we show that the residues of the prime values $p_i$
+are constant on $\cP_7$ (\cref{lem:r7-residues}). The local computations
+are \cref{lem:r7-fixed}, at the fixed places $2$, $3$, $7$, $13$ and
+$\infty$, and \cref{lem:r7-characters}, at the moving primes. In
+\cref{sec:r7-matrices} we display the matrices $\mathbf M_E(0)$ and
+$\mathbf M_{E'}(0)$ and prove that their ranks are $8=13-5$ and $9=13-4$
+(\cref{lem:r7-ranks}). Finally, in \cref{sec:r7-theorem} we check the
+hypotheses of \cref{prop:rank-criterion,prop:infinitely-many} and prove
+\cref{thm:r7}. From \cref{sec:descent} we use
+\cref{lem:dominant,lem:squares,lem:two-torsion,lem:upper-bound,lem:independence},
+and from \cref{sec:families} we use
+\cref{lem:datum-basic,lem:j-invariant,lem:prime-spec-basic,lem:precision,lem:moving-images,lem:moving-rows,lem:reciprocity,lem:fixed-characters,cor:eta-structure,lem:eta-rank}.
+
+The family comes from a conic base change of a $2$-isogeny pair of the same
+split-factor form as the rank-four pair of Zywina
+\cite[\S6.5]{Zywina2026}. \Cref{sec:origin-r7} explains this.
+
+\paragraph{Notation.}
+In this section, $A=91205$, $B=33124=182^2$ and $C=9$. For $(M,N)\in\Z^2$
+with $FHJ\ne0$, we write $E=E_{M,N}$ and $E'=E'_{M,N}$. We set
+\[
+ \alpha=AF,\qquad \beta=-BFH,\qquad \alpha'=-2AF,\qquad \beta'=CFJ,
+\]
+so that $E=E_{\alpha,\beta}$ and $E'=E_{\alpha',\beta'}$. Let
+$T=(0,0)$ on $E$ and $T'=(0,0)$ on $E'$, and let $\delta_{E,v}$ and
+$\delta_{E',v}$ be the descent maps over $\Q_v$. At a prime
+specialization, $p_i=L_i(M,N)/c_i$, and $\lambda_i$ is the additive
+Legendre symbol at $p_i$, defined by $\leg z{p_i}=(-1)^{\lambda_i(z)}$. As in
+\cref{sec:families}, the fixed rows of $\mathbf M_E(\eta)$ and
+$\mathbf M_{E'}(\eta)$ are denoted $f^E_k$ and $f^{E'}_k$, and their moving
+rows are denoted $r^E_i$ ($i\in I_F\cup I_J$) and $r^{E'}_i$
+($i\in I_F\cup I_H$).
+
+\section{The datum}\label{sec:r7-datum}
+
+The coefficients of the twelve forms $L_i=a_iM+b_iN$ and the cofactors
+$c_i$ are listed in \cref{tab:r7-forms}. The index sets are $I_F=\{0,1,2,3\}$, $I_H=\{4,5,6,7\}$ and $I_J=\{8,9,10,11\}$, and we have $L_0=M$ and $L_1=N$.
+
+\begin{table}[htbp]
+\centering
+\caption{The forms $L_i=a_iM+b_iN$ of $\datum_7$, their groups, and the
+cofactors $c_i$.}
+\label{tab:r7-forms}
+\begin{tabular}{rcrrr@{\hspace{3em}}rcrrr}
+\toprule
+$i$ & group & $a_i$ & $b_i$ & $c_i$ & $i$ & group & $a_i$ & $b_i$ & $c_i$\\
+\midrule
+$0$ & $F$ & $1$ & $0$ & $18$ & $6$ & $H$ & $2$ & $-5589$ & $9$\\
+$1$ & $F$ & $0$ & $1$ & $1$ & $7$ & $H$ & $8$ & $425$ & $1$\\
+$2$ & $F$ & $1$ & $-182$ & $64$ & $8$ & $J$ & $13$ & $2688$ & $6$\\
+$3$ & $F$ & $182$ & $10557$ & $9$ & $9$ & $J$ & $325$ & $49266$ & $1728$\\
+$4$ & $H$ & $9$ & $34$ & $8$ & $10$ & $J$ & $14$ & $-975$ & $3$\\
+$5$ & $H$ & $25$ & $-4968$ & $18$ & $11$ & $J$ & $896$ & $-45747$ & $9$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Expanding the products of the four forms in each group, we find
+\begin{equation}\label{r7:FHJ}
+\begin{aligned}
+F&=182M^3N-22567M^2N^2-1921374MN^3,\\
+H&=3600M^4-10570742M^3N+1386724327M^2N^2\\
+ &\qquad+111595323294MN^3+401220896400N^4,\\
+J&=52998400M^4+12595448502M^3N-442758190887M^2N^2\\
+ &\qquad-132970149835614MN^3+5906684876601600N^4.
+\end{aligned}
+\end{equation}
+Comparing the five coefficients of each side, we obtain the identity
+\begin{equation}\label{r7:identity}
+ 91205^2F+4\cdot33124\,H=9J,
+\end{equation}
+that is, $A^2F+4BH=CJ$. For instance, since $F$ has no $M^4$ term, the
+coefficients of $M^4$ give $4\cdot33124\cdot3600=476985600=9\cdot52998400$.
+The two curves are
+\begin{equation}\label{r7:curves}
+\begin{split}
+ E_{M,N}:\quad y^2&=x^3+91205Fx^2-33124FHx,\\
+ E'_{M,N}:\quad y^2&=x^3-182410Fx^2+9FJx.
+\end{split}
+\end{equation}
+
+\begin{lemma}[The datum]\label{lem:r7-datum}
+The forms and cofactors of \cref{tab:r7-forms}, the constants $A=91205$,
+$B=33124$ and $C=9$, and the lists $\Gamma_E=\Gamma_{E'}=(-1,2,3,7,13)$ form
+a twelve-form datum $\datum_7$. The set
+\begin{equation}\label{r7:S}
+ S=\{2,3,5,7,11,13,17,19,23,29,37,41,47,59,61,109,241,409\}
+\end{equation}
+satisfies the requirement of \cref{def:prime-specialization}.
+\end{lemma}
+
+\begin{proof}
+We check the conditions of \cref{def:datum}. We have $(a_0,b_0)=(1,0)$ and
+$b_i\ne0$ for $i\ge1$. The $66$ determinants
+$\Delta_{ij}=a_ib_j-a_jb_i$ with $i<j$ are listed, factored, in
+\cref{tab:r7-det}; none of them vanishes. Each pair $(a_i,b_i)$ is
+primitive. Indeed, $(a_0,b_0)=(1,0)$ and $(a_1,b_1)=(0,1)$; for $i\ge2$ the
+coefficients $a_i$ are
+\[
+ 1,\ 2\cdot7\cdot13,\ 3^2,\ 5^2,\ 2,\ 2^3,\ 13,\ 5^2\cdot13,\ 2\cdot7,\
+ 2^7\cdot7,
+\]
+the coefficients $b_i=\Delta_{0i}$ are factored in the first eleven entries
+of \cref{tab:r7-det}, and for each $i$ the two factorizations have no prime
+in common. The identity $A^2F+4BH=CJ$ is \eqref{r7:identity}, the
+cofactors are positive with $c_1=1$, and $\Gamma_E$ and $\Gamma_{E'}$
+consist of $-1$ and distinct primes.
+
+\Cref{tab:r7-det} shows that the primes dividing some $b_i$ with $i\ge1$ or some
+$\Delta_{ij}$ with $i<j$ are exactly the elements of $S$. The other primes
+that \cref{def:prime-specialization} requires also lie in $S$: we have
+$6ABC=2\cdot3\cdot(5\cdot17\cdot29\cdot37)\cdot(2^2\cdot7^2\cdot13^2)\cdot3^2$,
+every $c_i$ is of the form $2^a3^b$, and the primes in
+$\Gamma_E\cup\Gamma_{E'}$ are $2$, $3$, $7$ and $13$.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{The determinants $\Delta_{ij}=a_ib_j-a_jb_i$ for $i<j$, factored.
+Since $(a_0,b_0)=(1,0)$, the first eleven entries are
+$\Delta_{0j}=b_j$.}
+\label{tab:r7-det}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rl@{\hspace{1.2em}}rl@{\hspace{1.2em}}rl}
+\toprule
+$(i,j)$ & $\Delta_{ij}$ & $(i,j)$ & $\Delta_{ij}$ & $(i,j)$ & $\Delta_{ij}$\\
+\midrule
+$(0,1)$ & $1$ & $(2,4)$ & $2^{3}\cdot 11\cdot 19$ & $(4,11)$ & $-17\cdot 19\cdot 37^{2}$ \\
+$(0,2)$ & $-2\cdot 7\cdot 13$ & $(2,5)$ & $-2\cdot 11\cdot 19$ & $(5,6)$ & $-3^{3}\cdot 11\cdot 19\cdot 23$ \\
+$(0,3)$ & $3^{3}\cdot 17\cdot 23$ & $(2,6)$ & $-5^{2}\cdot 11\cdot 19$ & $(5,7)$ & $11\cdot 19\cdot 241$ \\
+$(0,4)$ & $2\cdot 17$ & $(2,7)$ & $3^{2}\cdot 11\cdot 19$ & $(5,8)$ & $2^{3}\cdot 3\cdot 17^{2}\cdot 19$ \\
+$(0,5)$ & $-2^{3}\cdot 3^{3}\cdot 23$ & $(2,8)$ & $2\cdot 7\cdot 19^{2}$ & $(5,9)$ & $2\cdot 3^{2}\cdot 5^{4}\cdot 11\cdot 23$ \\
+$(0,6)$ & $-3^{5}\cdot 23$ & $(2,9)$ & $2^{7}\cdot 7\cdot 11^{2}$ & $(5,10)$ & $3\cdot 11\cdot 37^{2}$ \\
+$(0,7)$ & $5^{2}\cdot 17$ & $(2,10)$ & $11^{2}\cdot 13$ & $(5,11)$ & $3^{2}\cdot 19\cdot 23\cdot 29^{2}$ \\
+$(0,8)$ & $2^{7}\cdot 3\cdot 7$ & $(2,11)$ & $5^{2}\cdot 13\cdot 19^{2}$ & $(6,7)$ & $2\cdot 11\cdot 19\cdot 109$ \\
+$(0,9)$ & $2\cdot 3^{2}\cdot 7\cdot 17\cdot 23$ & $(3,4)$ & $-5^{2}\cdot 11\cdot 17\cdot 19$ & $(6,8)$ & $3\cdot 19\cdot 37^{2}$ \\
+$(0,10)$ & $-3\cdot 5^{2}\cdot 13$ & $(3,5)$ & $-3^{5}\cdot 11\cdot 19\cdot 23$ & $(6,9)$ & $3^{2}\cdot 11\cdot 23\cdot 29^{2}$ \\
+$(0,11)$ & $-3^{2}\cdot 13\cdot 17\cdot 23$ & $(3,6)$ & $-2^{3}\cdot 3^{3}\cdot 11\cdot 19\cdot 23$ & $(6,10)$ & $2^{3}\cdot 3\cdot 11\cdot 17^{2}$ \\
+$(1,2)$ & $-1$ & $(3,7)$ & $-2\cdot 11\cdot 17\cdot 19$ & $(6,11)$ & $2\cdot 3^{2}\cdot 5^{4}\cdot 19\cdot 23$ \\
+$(1,3)$ & $-2\cdot 7\cdot 13$ & $(3,8)$ & $3\cdot 5^{2}\cdot 13\cdot 19^{2}$ & $(7,8)$ & $19\cdot 29^{2}$ \\
+$(1,4)$ & $-3^{2}$ & $(3,9)$ & $3^{2}\cdot 11^{2}\cdot 13\cdot 17\cdot 23$ & $(7,9)$ & $11\cdot 17\cdot 37^{2}$ \\
+$(1,5)$ & $-5^{2}$ & $(3,10)$ & $-2^{7}\cdot 3\cdot 7\cdot 11^{2}$ & $(7,10)$ & $-2\cdot 5^{4}\cdot 11$ \\
+$(1,6)$ & $-2$ & $(3,11)$ & $-2\cdot 3^{2}\cdot 7\cdot 17\cdot 19^{2}\cdot 23$ & $(7,11)$ & $-2^{3}\cdot 17^{3}\cdot 19$ \\
+$(1,7)$ & $-2^{3}$ & $(4,5)$ & $-2\cdot 11\cdot 19\cdot 109$ & $(8,9)$ & $-2\cdot 3\cdot 7^{2}\cdot 13\cdot 61$ \\
+$(1,8)$ & $-13$ & $(4,6)$ & $-11\cdot 19\cdot 241$ & $(8,10)$ & $-3\cdot 41\cdot 409$ \\
+$(1,9)$ & $-5^{2}\cdot 13$ & $(4,7)$ & $11\cdot 17\cdot 19$ & $(8,11)$ & $-3\cdot 19^{2}\cdot 47\cdot 59$ \\
+$(1,10)$ & $-2\cdot 7$ & $(4,8)$ & $2\cdot 5^{4}\cdot 19$ & $(9,10)$ & $-3\cdot 11^{2}\cdot 47\cdot 59$ \\
+$(1,11)$ & $-2^{7}\cdot 7$ & $(4,9)$ & $2^{3}\cdot 11\cdot 17^{3}$ & $(9,11)$ & $-3^{2}\cdot 17\cdot 23\cdot 41\cdot 409$ \\
+$(2,3)$ & $11^{2}\cdot 19^{2}$ & $(4,10)$ & $-11\cdot 29^{2}$ & $(10,11)$ & $2\cdot 3\cdot 7^{2}\cdot 13\cdot 61$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Cref{lem:datum-basic} implies that $\beta'=\alpha^2-4\beta$, that the curves
+\eqref{r7:curves} are nonsingular exactly when $FHJ\ne0$, that $E'_{M,N}$ is
+the curve $2$-isogenous to $E_{M,N}$ of \cref{sec:descent}, and that
+replacing $(M,N)$ by $(\lambda M,\lambda N)$ with $\lambda\in\Q^\times$ gives
+$\Q$-isomorphic curves.
+
+At a prime specialization, the ambient bases of \cref{sec:families} are
+\[
+ \cB_E=(-1,2,3,7,13,p_0,p_1,\dots,p_7),\qquad
+ \cB_{E'}=(-1,2,3,7,13,p_0,p_1,p_2,p_3,p_8,p_9,p_{10},p_{11}),
+\]
+so $n_E=n_{E'}=13$. The products of the cofactors over the three groups are
+\begin{equation}\label{r7:cofactor-products}
+ \prod_{i\in I_F}c_i=2^7 3^4=2\cdot72^2,\qquad
+ \prod_{i\in I_H}c_i=2^4 3^4=36^2,\qquad
+ \prod_{i\in I_J}c_i=2^7 3^7=6\cdot216^2.
+\end{equation}
+With these products, the constants of \eqref{eq:kappa} are
+\begin{equation}\label{r7:kappa}
+ \kappa_E=-B\prod_{j\in G_E}c_j=-2^{13}3^8 7^2 13^2,\qquad
+ \kappa_{E'}=C\prod_{j\in G_{E'}}c_j=2^{14}3^{13},
+\end{equation}
+with squareclasses $\sq{\kappa_E}=\sq{-2}$ and $\sq{\kappa_{E'}}=\sq3$. The
+list $\Gamma_E$ contains $-1$ and the primes $2,3,7,13$ dividing
+$\kappa_E$, and $\Gamma_{E'}$ contains $-1$ and the primes $2,3$ dividing
+$\kappa_{E'}$, as \cref{lem:prime-spec-basic} requires. The entries $7$ and
+$13$ of $\Gamma_{E'}$ are not needed there. We keep them so that both bases
+have the same constant part; the conditions at $7$ and $13$ in
+\cref{lem:r7-fixed} force their exponents to vanish.
+
+\section{Rational points and the lower bound}\label{sec:r7-points}
+
+We define the binary quadratic forms
+\begin{equation}\label{r7:quadratics}
+\begin{aligned}
+ D_0&=M^2+10557N^2, & D_1&=175M^2+10738MN+2470338N^2,\\
+ D_2&=364M^2+36639MN-2825550N^2, & D_3&=728M^2-592647MN+28820610N^2,\\
+ V_1&=49M^2-43862MN-2026944N^2, & V_2&=2912M^2+2544237MN-432309150N^2,
+\end{aligned}
+\end{equation}
+and we abbreviate products of the forms $L_i$ by their indices, so that
+$L_{0,2,6,7}=L_0L_2L_6L_7$, for example.
+
+\begin{lemma}[Rational points]\label{lem:r7-points}
+Let $(M,N)\in\Z^2$ with $FHJ\ne0$. Then the points $P_1,\dots,P_4$ of
+\cref{tab:r7-points} lie on $E$, and the points $Q_1,Q_2,Q_3$ lie on $E'$.
+\end{lemma}
+
+\begin{table}[htbp]
+\centering
+\caption{Rational points on $E=E_{M,N}$ and $E'=E'_{M,N}$. The ordinate is
+the product of the third and fourth columns. The last column is the factor
+by which \eqref{r7:reduced} is multiplied to obtain \eqref{r7:quartics}.}
+\label{tab:r7-points}
+\begin{tabular}{cclll}
+\toprule
+curve & point & $x$ & $y/x$ & multiplier\\
+\midrule
+$E$ & $P_1$ & $-58081F$ & $10920\,D_0/241$ & $58081/33124$\\
+$E$ & $P_2$ & $(1225/9)L_{0,2,6,7}$ & $4D_1/15$ & $225$\\
+$E$ & $P_3$ & $-2275L_{1,2,5,6}$ & $-6D_2/5$ & $25$\\
+$E$ & $P_4$ & $(182/361)L_{2,3,6,7}$ & $D_3/19$ & $361$\\
+\addlinespace
+$E'$ & $Q_1$ & $3481F$ & $21840\,D_0/59$ & $3481$\\
+$E'$ & $Q_2$ & $(49/64)L_{0,2,8,9}$ & $65V_1/56$ & $3136$\\
+$E'$ & $Q_3$ & $(16/225)L_{0,3,8,10}$ & $V_2/60$ & $3600$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}
+Every $L_i(M,N)$ is nonzero because $FHJ\ne0$, and each abscissa $x$ in
+\cref{tab:r7-points} is nonzero. For $y=xr$ with $x\ne0$, the equation
+$y^2=x^3+\alpha x^2+\beta x$ is equivalent to
+\begin{equation}\label{r7:reduced}
+ r^2=x+\alpha+\beta/x,
+\end{equation}
+and similarly on $E'$ with $\alpha',\beta'$ in place of $\alpha,\beta$. For
+each of the seven points, $\beta/x$ (respectively $\beta'/x$) is a constant
+times the product of the four forms of $FH$ (respectively $FJ$) that do not
+occur in $x$; for $P_1$ and $Q_1$, it is a constant times $H$ and $J$,
+respectively.
+Multiplying \eqref{r7:reduced} by the factor in the last column of
+\cref{tab:r7-points}, we find that the seven assertions are equivalent to
+the identities
+\begin{equation}\label{r7:quartics}
+\begin{aligned}
+ 3600\,D_0^2&=58081F+H &&(P_1),\\
+ 16\,D_1^2&=30625L_{0,2,6,7}+20521125F-54756L_{1,3,4,5} &&(P_2),\\
+ 36\,D_2^2&=-56875L_{1,2,5,6}+2280125F+364L_{0,3,4,7} &&(P_3),\\
+ D_3^2&=182L_{2,3,6,7}+32925005F-23718422L_{0,1,4,5} &&(P_4),\\
+ 476985600\,D_0^2&=-622851849F+9J &&(Q_1),\\
+ 4225\,V_1^2&=2401L_{0,2,8,9}-572037760F+36864L_{1,3,10,11} &&(Q_2),\\
+ V_2^2&=256L_{0,3,8,10}-656676000F+455625L_{1,2,9,11} &&(Q_3).
+\end{aligned}
+\end{equation}
+For example, for $P_1$ we have $x+\alpha=(91205-58081)F=33124F$ and
+$\beta/x=33124H/58081$. Using $10920=60\cdot182$ and $58081=241^2$, and
+multiplying \eqref{r7:reduced} by $58081/33124$, we obtain the first line
+of \eqref{r7:quartics}. Each line of \eqref{r7:quartics} is an equality of
+binary quartic forms. It holds if and only if the coefficients of
+$M^4,M^3N,M^2N^2,MN^3,N^4$ on the two sides agree. We list these common
+coefficients in \cref{tab:r7-coeff}, and expanding both sides of each line
+confirms them. The program of \cref{app:verification} checks the
+seven point equations by exact coefficient arithmetic.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{The coefficients of both sides of each identity in
+\eqref{r7:quartics}.}
+\label{tab:r7-coeff}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{crrrrr}
+\toprule
+ & $M^4$ & $M^3N$ & $M^2N^2$ & $MN^3$ & $N^4$\\
+\midrule
+$P_1$ & $3600$ & $0$ & $76010400$ & $0$ & $401220896400$\\
+$P_2$ & $490000$ & $60132800$ & $15678767104$ & $848847662208$ & $97641117347904$\\
+$P_3$ & $4769856$ & $960234912$ & $-25725026844$ & $-7453823504400$ & $287414380890000$\\
+$P_4$ & $529984$ & $-862894032$ & $393193274769$ & $-34160896109340$ & $830627560772100$\\
+$Q_1$ & $476985600$ & $0$ & $10071073958400$ & $0$ & $53160163889414400$\\
+$Q_2$ & $10144225$ & $-18161061100$ & $7289115897700$ & $751254159801600$ & $17358420861849600$\\
+$Q_3$ & $8479744$ & $14817636288$ & $3955373422569$ & $-2199793869737100$ & $186891201173722500$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Together with $T$ and $T'$, these points give five classes in
+$\delta_E(E(\Q))$ and four in $\delta_{E'}(E'(\Q))$. At a prime
+specialization, \cref{tab:r7-classes} expresses them in terms of the primes
+$p_i$. Each entry follows from $L_i=c_ip_i$ and
+\eqref{r7:cofactor-products}: the abscissa of the point (for $T$ and $T'$,
+the coefficient $\beta$ or $\beta'$) equals $sh^2\prod_{i\in I}p_i$ with the listed $s$, $I$ and $h$. For example,
+$c_2c_3c_6c_7=64\cdot9\cdot9\cdot1=72^2$, so that
+$x(P_4)=182\,(72/19)^2\,p_2p_3p_6p_7$, and
+$\beta=-182^2\cdot2^{11}3^8\,p_0\cdots p_7=-2\,(182\cdot2^5 3^4)^2\,p_0\cdots p_7$.
+
+\begin{table}[htbp]
+\centering
+\caption{At a prime specialization, the class of each point is
+$\sq{s\prod_{i\in I}p_i}$; the abscissa (for $T$ and $T'$, the coefficient $\beta$ or $\beta'$) is $sh^2\prod_{i\in I}p_i$.}
+\label{tab:r7-classes}
+\begin{tabular}{ccrlr}
+\toprule
+curve & point & $s$ & $I$ & $h$\\
+\midrule
+$E$ & $T$ & $-2$ & $\{0,1,2,3,4,5,6,7\}$ & $471744$\\
+$E$ & $P_1$ & $-2$ & $\{0,1,2,3\}$ & $17352$\\
+$E$ & $P_2$ & $2$ & $\{0,2,6,7\}$ & $840$\\
+$E$ & $P_3$ & $-182$ & $\{1,2,5,6\}$ & $360$\\
+$E$ & $P_4$ & $182$ & $\{2,3,6,7\}$ & $72/19$\\
+\addlinespace
+$E'$ & $T'$ & $3$ & $\{0,1,2,3,8,9,10,11\}$ & $93312$\\
+$E'$ & $Q_1$ & $2$ & $\{0,1,2,3\}$ & $4248$\\
+$E'$ & $Q_2$ & $1$ & $\{0,2,8,9\}$ & $3024$\\
+$E'$ & $Q_3$ & $1$ & $\{0,3,8,10\}$ & $72/5$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the bases $\cB_E$ and $\cB_{E'}$, these classes have the coordinate
+vectors of \cref{tab:r7-vectors}. The entry at $g\in\{-1,2,3,7,13\}$ is the
+exponent of $g$ in the squarefree constant $s$, and the entry at $p_j$
+is $1$ exactly when $j\in I$.
+
+\begin{table}[htbp]
+\centering
+\caption{The coordinate vectors of the classes of \cref{tab:r7-classes} in
+the bases $\cB_E$ (top) and $\cB_{E'}$ (bottom).}
+\label{tab:r7-vectors}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l@{\hspace{10pt}}ccccc@{\hspace{12pt}}cccccccc}
+\toprule
+ & $-1$ & $2$ & $3$ & $7$ & $13$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_4$ & $p_5$ & $p_6$ & $p_7$\\
+\midrule
+$\delta_E(T)$ & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+$\delta_E(P_1)$ & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+$\delta_E(P_2)$ & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 1\\
+$\delta_E(P_3)$ & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0\\
+$\delta_E(P_4)$ & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1\\
+\midrule
+ & $-1$ & $2$ & $3$ & $7$ & $13$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_8$ & $p_9$ & $p_{10}$ & $p_{11}$\\
+\midrule
+$\delta_{E'}(T')$ & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+$\delta_{E'}(Q_1)$ & 0 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+$\delta_{E'}(Q_2)$ & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 0\\
+$\delta_{E'}(Q_3)$ & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Independence of the point classes]\label{lem:r7-independent}
+Let $(M,N)$ be a prime specialization of $\datum_7$. Then the classes
+$\delta_E(T),\delta_E(P_1),\dots,\delta_E(P_4)$ are independent, and the
+classes $\delta_{E'}(T'),\delta_{E'}(Q_1),\delta_{E'}(Q_2),\delta_{E'}(Q_3)$
+are independent. In particular, $d_E\ge5$ and $d_{E'}\ge4$.
+\end{lemma}
+
+\begin{proof}
+By \cref{lem:prime-spec-basic}\ref{item:psb-independent}, the classes of
+the entries of $\cB_E$ are independent, and the vectors of
+\cref{tab:r7-vectors} are the coordinate vectors of the five classes on
+$E$. We order the classes as $T,P_3,P_1,P_2,P_4$ and take the columns
+$p_4,p_5,p_1,p_0,p_7$. The
+corresponding entries of \cref{tab:r7-vectors} form the matrix
+\[
+\begin{array}{c|ccccc}
+ & p_4 & p_5 & p_1 & p_0 & p_7\\\hline
+ T & 1 & 1 & 1 & 1 & 1\\
+ P_3 & 0 & 1 & 1 & 0 & 0\\
+ P_1 & 0 & 0 & 1 & 1 & 0\\
+ P_2 & 0 & 0 & 0 & 1 & 1\\
+ P_4 & 0 & 0 & 0 & 0 & 1
+\end{array}
+\]
+which has ones on the diagonal and zeros below it. \Cref{lem:independence}
+implies that the five classes are independent. In words, the valuation at
+$p_4$ eliminates $T$ from a relation, and then the valuations at $p_5$,
+$p_1$, $p_0$ and $p_7$ eliminate $P_3$, $P_1$, $P_2$ and $P_4$ in turn. On $E'$,
+we use the order $T',Q_2,Q_3,Q_1$ and the columns $p_{11},p_9,p_{10},p_1$,
+for which the corresponding matrix is
+\[
+\begin{array}{c|cccc}
+ & p_{11} & p_9 & p_{10} & p_1\\\hline
+ T' & 1 & 1 & 1 & 1\\
+ Q_2 & 0 & 1 & 0 & 0\\
+ Q_3 & 0 & 0 & 1 & 0\\
+ Q_1 & 0 & 0 & 0 & 1
+\end{array}
+\]
+and \cref{lem:independence} applies in the same way.
+\end{proof}
+
+\section{The congruence class and the real cone}\label{sec:r7-progression}
+
+We impose the congruences of \cref{tab:r7-crt}. The moduli are pairwise
+coprime, and by the Chinese remainder theorem these congruences are
+equivalent to $(M,N)\equiv(M_0,N_0)\pmod W$, where
+\begin{equation}\label{r7:crt}
+\begin{gathered}
+ W=2^9\cdot3^4\cdot7\cdot11\cdot13\cdot17\cdot19\cdot23=308403583488,\\
+ M_0=79151095314,\qquad N_0=151444919819.
+\end{gathered}
+\end{equation}
+We write $\cP_7$ for the set of $(M,N)\in\Z^2$ with
+$(M,N)\equiv(M_0,N_0)\pmod W$. As in \cref{sec:primes}, we parametrize
+$\cP_7$ by $M=M_0+WX$ and $N=N_0+WY$ with $(X,Y)\in\Z^2$. We also set
+$\ell_i(X,Y)=L_i(M_0+WX,N_0+WY)/c_i$.
+
+\begin{table}[htbp]
+\centering
+\caption{The congruences defining $\cP_7$.}
+\label{tab:r7-crt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+modulus $q^k$ & $2^9$ & $3^4$ & $7$ & $11$ & $13$ & $17$ & $19$ & $23$\\
+\midrule
+$M\bmod q^k$ & $18$ & $18$ & $4$ & $5$ & $5$ & $3$ & $15$ & $4$\\
+$N\bmod q^k$ & $11$ & $11$ & $4$ & $6$ & $11$ & $4$ & $12$ & $6$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Residues on the progression]\label{lem:r7-residues}
+Let $(M,N)\in\cP_7$. For every $i$, the cofactor $c_i$ divides $L_i(M,N)$,
+and the quotient $L_i(M,N)/c_i$ is prime to $W$ and has the residues
+modulo $8,3,7,11,13,17,19,23$ listed in \cref{tab:r7-res}. In particular,
+$FHJ\ne0$ and
+\begin{equation}\label{r7:FHJ-cofactors}
+ F=2^7 3^4\prod_{i\in I_F}\frac{L_i}{c_i},\qquad
+ H=2^4 3^4\prod_{i\in I_H}\frac{L_i}{c_i},\qquad
+ J=2^7 3^7\prod_{i\in I_J}\frac{L_i}{c_i},
+\end{equation}
+where all three products are prime to $6$.
+\end{lemma}
+
+\begin{table}[htbp]
+\centering
+\caption{The residues of $p_i=L_i(M,N)/c_i$ for $(M,N)\in\cP_7$.}
+\label{tab:r7-res}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{l@{\hspace{10pt}}rrrrrrrrrrrr}
+\toprule
+$i$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$p_i\bmod 8$ & $1$ & $3$ & $1$ & $3$ & $3$ & $5$ & $5$ & $3$ & $7$ & $5$ & $5$ & $7$ \\
+$p_i\bmod 3$ & $1$ & $2$ & $2$ & $1$ & $1$ & $1$ & $1$ & $1$ & $2$ & $2$ & $1$ & $2$ \\
+$p_i\bmod 7$ & $1$ & $4$ & $4$ & $2$ & $4$ & $6$ & $5$ & $3$ & $4$ & $2$ & $2$ & $3$ \\
+$p_i\bmod 11$ & $7$ & $6$ & $10$ & $5$ & $5$ & $4$ & $9$ & $5$ & $2$ & $1$ & $2$ & $9$ \\
+$p_i\bmod 13$ & $1$ & $11$ & $8$ & $7$ & $2$ & $5$ & $11$ & $9$ & $1$ & $5$ & $6$ & $11$ \\
+$p_i\bmod 17$ & $3$ & $4$ & $7$ & $4$ & $14$ & $8$ & $10$ & $7$ & $5$ & $16$ & $6$ & $4$ \\
+$p_i\bmod 19$ & $4$ & $12$ & $5$ & $9$ & $18$ & $18$ & $12$ & $14$ & $3$ & $1$ & $8$ & $18$ \\
+$p_i\bmod 23$ & $13$ & $6$ & $6$ & $17$ & $7$ & $3$ & $6$ & $6$ & $21$ & $4$ & $16$ & $20$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}
+Every $(M,N)\in\cP_7$ satisfies $(M,N)\equiv(18,11)$ modulo $2^9$ and
+modulo $3^4$, that is, modulo $2^93^4$. \Cref{tab:r7-anchor} lists the
+values $L_i(18,11)$ and their valuations at $2$ and $3$. These valuations
+agree with the exponents of $2$ and $3$ in $c_i$, so that $c_i$ divides
+$L_i(18,11)$ and the quotient $L_i(18,11)/c_i$ is prime to $6$. They are at
+most $6$ at $2$ and at most $3$ at $3$. Then $c_i$ divides $2^93^4$, and
+$2^93^4/c_i$ is divisible by $2^3\cdot3$. By \cref{lem:precision} with
+$W_0=2^93^4$ and $(m,n)=(18,11)$, the cofactor $c_i$ divides $L_i(M,N)$,
+and $L_i(M,N)/c_i\equiv L_i(18,11)/c_i$ modulo $2^93^4/c_i$, and hence
+modulo $8$ and modulo $3$. Since $L_i(18,11)/c_i$ is prime to $6$, so is $L_i(M,N)/c_i$, and the valuations $v_2(L_i(M,N))$ and $v_3(L_i(M,N))$ are
+those of the table. We obtain the first two rows of \cref{tab:r7-res} from
+the last two columns of \cref{tab:r7-anchor}.
+
+For $q\in\{7,11,13,17,19,23\}$, the class $\cP_7$ fixes $(M,N)$ modulo $q$
+to the pair $(m_q,n_q)$ of \cref{tab:r7-crt}, and
+$L_i(M,N)\equiv a_im_q+b_in_q\pmod q$. These residues are listed in
+\cref{tab:r7-raw}; none of them vanishes. Since $c_i$ is prime to $q$, we
+find that $L_i(M,N)/c_i$ is prime to $q$ and congruent to
+$(a_im_q+b_in_q)c_i^{-1}$ modulo $q$. These are the remaining rows of
+\cref{tab:r7-res}. Finally, \eqref{r7:FHJ-cofactors} follows from
+$L_i=c_i\cdot(L_i/c_i)$ and \eqref{r7:cofactor-products}.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{The values of the forms at $(18,11)$, which fix the exact powers of
+$2$ and $3$ and the residues modulo $8$ and $3$ on $\cP_7$.}
+\label{tab:r7-anchor}
+\small
+\begin{tabular}{rrrrrrrr}
+\toprule
+$i$ & $L_i(18,11)$ & $v_2$ & $v_3$ & $c_i$ & $L_i(18,11)/c_i$ & mod $8$ & mod $3$\\
+\midrule
+$0$ & $18$ & $1$ & $2$ & $18$ & $1$ & $1$ & $1$ \\
+$1$ & $11$ & $0$ & $0$ & $1$ & $11$ & $3$ & $2$ \\
+$2$ & $-1984$ & $6$ & $0$ & $64$ & $-31$ & $1$ & $2$ \\
+$3$ & $119403$ & $0$ & $2$ & $9$ & $13267$ & $3$ & $1$ \\
+$4$ & $536$ & $3$ & $0$ & $8$ & $67$ & $3$ & $1$ \\
+$5$ & $-54198$ & $1$ & $2$ & $18$ & $-3011$ & $5$ & $1$ \\
+$6$ & $-61443$ & $0$ & $2$ & $9$ & $-6827$ & $5$ & $1$ \\
+$7$ & $4819$ & $0$ & $0$ & $1$ & $4819$ & $3$ & $1$ \\
+$8$ & $29802$ & $1$ & $1$ & $6$ & $4967$ & $7$ & $2$ \\
+$9$ & $547776$ & $6$ & $3$ & $1728$ & $317$ & $5$ & $2$ \\
+$10$ & $-10473$ & $0$ & $1$ & $3$ & $-3491$ & $5$ & $1$ \\
+$11$ & $-487089$ & $0$ & $2$ & $9$ & $-54121$ & $7$ & $2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The residues $L_i(m_q,n_q)\bmod q$ for $i=0,\dots,11$.}
+\label{tab:r7-raw}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rr@{\hspace{10pt}}rrrrrrrrrrrr}
+\toprule
+$q$ & $(m_q,n_q)$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$7$ & $(4,4)$ & $4$ & $4$ & $4$ & $4$ & $4$ & $3$ & $3$ & $3$ & $3$ & $5$ & $6$ & $6$ \\
+$11$ & $(5,6)$ & $5$ & $6$ & $2$ & $1$ & $7$ & $6$ & $4$ & $5$ & $1$ & $1$ & $6$ & $4$ \\
+$13$ & $(5,11)$ & $5$ & $11$ & $5$ & $11$ & $3$ & $12$ & $8$ & $9$ & $6$ & $8$ & $5$ & $8$ \\
+$17$ & $(3,4)$ & $3$ & $4$ & $6$ & $2$ & $10$ & $8$ & $5$ & $7$ & $13$ & $6$ & $1$ & $2$ \\
+$19$ & $(15,12)$ & $15$ & $12$ & $16$ & $5$ & $11$ & $1$ & $13$ & $14$ & $18$ & $18$ & $5$ & $10$ \\
+$23$ & $(4,6)$ & $4$ & $6$ & $16$ & $15$ & $10$ & $8$ & $8$ & $6$ & $11$ & $12$ & $2$ & $19$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Several values in \cref{tab:r7-anchor} are negative, and the residues must
+be computed from the signed values. For example,
+$L_2(18,11)/64=-31\equiv1\pmod8$, whereas $31\equiv7\pmod8$. The proof of
+\cref{lem:r7-residues} shows that $-31$ has the correct residue: for every
+$(M,N)\in\cP_7$, including those for which $L_2(M,N)>0$, we have
+$L_2(M,N)/64\equiv1\pmod8$.
+
+The real cone is
+\begin{equation}\label{r7:cone}
+ \cK_7=\{(M,N)\in\R^2:\ N>0,\ 2999N<M<3001N\},
+\end{equation}
+an open convex cone. The pairs $(18,11)$ and $(M_0,N_0)$ do not lie in
+$\cK_7$. This does not matter, since \cref{lem:r7-residues} holds on all of
+$\cP_7$.
+
+\begin{lemma}[Positivity on the cone]\label{lem:r7-cone}
+Every $L_i$ is positive on $\cK_7$. In particular, $F$, $H$ and $J$ are
+positive on $\cK_7$.
+\end{lemma}
+
+\begin{proof}
+Let $(M,N)\in\cK_7$ and set $\rho=M/N>2999$. Then
+$L_i(M,N)=N(a_i\rho+b_i)$, and since $a_i\ge0$ for all $i$, we have
+$a_i\rho+b_i\ge2999a_i+b_i$. The twelve values $2999a_i+b_i$ are
+\[
+ 2999,\ 1,\ 2817,\ 556375,\ 27025,\ 70007,\ 409,\ 24417,\ 41675,\
+ 1023941,\ 41011,\ 2641357,
+\]
+all positive. Then every $L_i(M,N)$ is positive, because $N>0$.
+\end{proof}
+
+More precisely, the twelve forms are all positive exactly on the region
+$\{N>0,\ M/N>5589/2\}$: the largest of the roots $-b_i/a_i$ with $a_i>0$ is
+$5589/2$, from $L_6$, and $\cK_7$ lies inside this region. Finally, since
+$L_0=M$ and $L_1=N$, we have $p_0=M/18$ and $p_1=N$ at every prime
+specialization.
+
+\section{Local conditions at the fixed places}\label{sec:r7-fixed}
+
+We now bound the images of the local descent maps at the places $2$ and $3$ for $E$, and $2$, $7$, $13$ and $\infty$ for $E'$, and write the resulting fixed rows. We use no condition for $E$ at $7$, $13$ and
+$\infty$, or for $E'$ at $3$.
+
+\begin{lemma}[Local images at the fixed places]\label{lem:r7-fixed}
+Let $(M,N)\in\cP_7$. Then $FHJ\ne0$, and the following hold.
+\begin{enumerate}[label=(\alph*)]
+\item\label{item:r7-E2} $\delta_{E,2}(E(\Q_2))\subseteq\{\sq1,\sq{-2}\}$.
+\item\label{item:r7-E3} $\delta_{E,3}(E(\Q_3))=\{\sq1\}$.
+\item\label{item:r7-Ep2} $\delta_{E',2}(E'(\Q_2))\subseteq\{\sq1,\sq2,\sq3,\sq6\}$.
+\item\label{item:r7-Ep713} $\delta_{E',q}(E'(\Q_q))=\{\sq1\}$ for $q=7$ and $q=13$.
+\item\label{item:r7-Epinf} If moreover $(M,N)\in\cK_7$, then
+$\delta_{E',\infty}(E'(\R))=\{\sq1\}$.
+\end{enumerate}
+\end{lemma}
+
+The proof treats the places one at a time. At each place we first find the
+valuations and residues of $\alpha$, $\beta$ and $\beta'$ that we need; by
+\cref{lem:r7-residues}, they are the same for all $(M,N)\in\cP_7$. Then we
+go through all points of the local curve: the point $O$, which has class
+$\sq1$; the point $T$ or $T'$, whose class is $\sq\beta$ or $\sq{\beta'}$;
+the other points with $y=0$, whose existence we decide with
+\cref{lem:two-torsion}; and the points with $y\ne0$, sorted by the
+valuation of $x$. In the last step we use \cref{lem:dominant} to find the
+valuation of the right side of the equation, and \cref{lem:squares} to
+decide whether it is a square. We may rescale the coordinates by squares,
+because multiplying $x$ by a nonzero square does not change its class.
+
+\begin{proof}
+By \cref{lem:r7-residues}, $FHJ\ne0$. We first collect the coefficient data.
+Using \eqref{r7:FHJ-cofactors} and \cref{tab:r7-res}, we find
+\[
+\begin{gathered}
+ F/2^7\equiv3^4\cdot1\cdot3\cdot1\cdot3\equiv1,\qquad
+ H/2^4\equiv3^4\cdot3\cdot5\cdot5\cdot3\equiv1,\\
+ J/2^7\equiv3^7\cdot7\cdot5\cdot5\cdot7\equiv3\pmod8,
+\end{gathered}
+\]
+and $F/3^4\equiv2^7\cdot1\cdot2\cdot2\cdot1\equiv2$ and
+$H/3^4\equiv2^4\equiv1\pmod3$. Modulo $7$ and $13$, the forms are units, and by
+\cref{tab:r7-res} we have $F\equiv4$, $H\equiv3$, $J\equiv1\pmod7$ and
+$F\equiv9$, $H\equiv5$, $J\equiv9\pmod{13}$. Recall that
+$91205=5\cdot17\cdot29\cdot37$ and $33124=2^2\cdot7^2\cdot13^2$. Inserting
+these residues into $\alpha=91205F$, $\beta=-33124FH$ and $\beta'=9FJ$, we
+obtain \cref{tab:r7-coef-local}. For example, at $2$ we have
+$v_2(\beta)=2+7+4=13$ and
+$\beta/2^{13}=-91^2(F/2^7)(H/2^4)\equiv-1\pmod8$, since $91^2\equiv1\pmod8$.
+
+\begin{table}[htbp]
+\centering
+\caption{Valuations and residues of the coefficients at the fixed primes,
+for $(M,N)\in\cP_7$. Here $u$ denotes a unit at the place.}
+\label{tab:r7-coef-local}
+\begin{tabular}{cccc}
+\toprule
+place & $\alpha$ & $\beta$ & $\beta'$\\
+\midrule
+$2$ & $2^7u$, $u\equiv5\pmod 8$ & $2^{13}u$, $u\equiv7\pmod8$ & $2^{14}u$, $u\equiv3\pmod8$\\
+$3$ & $3^4u$, $u\equiv1\pmod3$ & $3^8u$, $u\equiv1\pmod3$ & $v_3(\beta')=13$\\
+$7$ & $\alpha\equiv1\pmod7$ & $7^2u$, $u\equiv1\pmod7$ & $\beta'\equiv1\pmod7$\\
+$13$ & $\alpha\equiv12\pmod{13}$ & $13^2u$, $u\equiv7\pmod{13}$ & $\beta'\equiv1\pmod{13}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The prime $2$, curve $E$.}
+Since $\beta/2^{13}\equiv7$ and $\beta'/2^{14}\equiv3\pmod8$,
+\cref{lem:squares} implies that $\sq\beta=\sq{-2}$ and $\sq{\beta'}=\sq3$ in
+$\sqgp{\Q_2}$. We change coordinates by $x=2^6\tilde x$ and $y=2^9\tilde y$. The equation
+of $E$ becomes
+\[
+ \tilde y^2=\tilde x^3+\alpha_2\tilde x^2+\beta_2\tilde x,\qquad \alpha_2=\alpha/2^6,\quad
+ \beta_2=\beta/2^{12},
+\]
+and $\sq x=\sq{\tilde x}$. In \cref{tab:r7-coef-local}, we see that $\alpha_2$ and
+$\beta_2$ have valuation $1$, with $\alpha_2/2\equiv5$ and
+$\beta_2/2\equiv7\pmod8$. Then $\alpha_2\equiv2$ and $\beta_2\equiv6\pmod8$, and $\sq{\beta_2}=\sq{-2}$.
+
+The point $T$ has class $\sq\beta=\sq{-2}$. Since $\alpha^2-4\beta=\beta'$
+is not a square in $\Q_2$, \cref{lem:two-torsion} shows that $E(\Q_2)$ has
+no other point with $y=0$. Let $(\tilde x,\tilde y)$ be a point with $\tilde y\ne0$, and write
+$\tilde x=2^ru$ with $u\in\Z_2^\times$. The right side of the equation is the
+nonzero square $\tilde y^2$, and its three terms $\tilde x^3$, $\alpha_2\tilde x^2$ and
+$\beta_2\tilde x$ have valuations $3r$, $2r+1$ and $r+1$.
+\begin{itemize}
+\item If $r\le-1$, then $\tilde x^3$ is the dominant term, and
+\cref{lem:dominant} implies that the right side has valuation $3r$. This
+valuation is even, and we have $r\le-2$. The other two terms then have
+valuations at least $3r+3$, and by \cref{lem:dominant}\ref{item:dominant-unit}
+the right side equals $\tilde x^3(1+8t)$ with $t\in\Z_2$. By
+\cref{lem:squares}\ref{item:squares-one}, $1+8t$ is a square. It follows that
+$\tilde x^3$ is a square, and so is $\tilde x=\tilde x^3/\tilde x^2$.
+\item If $r=0$, the right side is a unit, congruent to $u(u^2+2u+6)$
+modulo $8$. For $u\equiv1,3,5,7\pmod8$, this residue is $1,7,5,3$,
+respectively. A square unit is $1$ modulo $8$. We conclude that $u\equiv1\pmod8$
+and $\sq{\tilde x}=\sq1$.
+\item If $r=1$, the valuations are $3$, $3$ and $2$, and the right side has
+valuation $2$. Dividing it by $4$ and using $u^2\equiv1\pmod8$, we obtain
+the unit $2u^3+\alpha_2u^2+(\beta_2/2)u\equiv2u+2+7u\equiv u+2\pmod8$. For
+$u\equiv1,3,5,7\pmod8$, this is $3,5,7,1$. Only $u\equiv7\pmod8$ gives a
+square, and then $\sq{\tilde x}=\sq{2\cdot7}=\sq{-2}$.
+\item If $r\ge2$, then $\beta_2\tilde x$ is the dominant term, with valuation
+$r+1$, and $r$ is odd; in particular, $r\ge3$. The other two terms have
+valuations $2r+1$ and $3r$, which are at least $(r+1)+3$. As in the first
+case, we find that $\beta_2\tilde x$ is a square, and $\sq{\tilde x}=\sq{\beta_2}=\sq{-2}$.
+\end{itemize}
+Together with $O$ and $T$, these cases prove \ref{item:r7-E2}.
+
+\paragraph{The prime $3$, curve $E$.}
+We change coordinates by $x=3^4\tilde x$ and $y=3^6\tilde y$. The equation becomes
+\[
+ \tilde y^2=\tilde x^3+\alpha_3\tilde x^2+\beta_3\tilde x,\qquad \alpha_3=\alpha/3^4,\quad
+ \beta_3=\beta/3^8,
+\]
+where $\alpha_3$ and $\beta_3$ are units congruent to $1$ modulo $3$, by
+\cref{tab:r7-coef-local}. By \cref{lem:squares}, a unit at $3$ is a square
+exactly when it is $1$ modulo $3$. The point $T$ has class
+$\sq\beta=\sq{\beta_3}=\sq1$. The element $\alpha^2-4\beta=\beta'$ has odd
+valuation $v_3(\beta')=13$ and is not a square in $\Q_3$.
+\Cref{lem:two-torsion} then shows that there is no other point with
+$y=0$. Let
+$(\tilde x,\tilde y)$ be a point with $\tilde y\ne0$, and write $\tilde x=3^ru$ with
+$u\in\Z_3^\times$.
+\begin{itemize}
+\item If $r<0$, then $\tilde x^3$ is the dominant term, and the other two terms
+have valuations at least $3r+1$. By \cref{lem:dominant}, the right side
+equals $\tilde x^3(1+3t)$ with $t\in\Z_3$. Its valuation $3r$ is even, and
+$1+3t$ is a square, so $\tilde x^3$ and $\tilde x$ are squares.
+\item If $r>0$, then $\beta_3\tilde x$ is the dominant term, and the other two
+terms have valuations at least $r+1$. As before, $\beta_3\tilde x$ is a square, and
+since $\beta_3$ is a square, so is $\tilde x$.
+\item Finally, let $r=0$. If $u\equiv1\pmod3$, then $\tilde x$ is a square. If
+$u\equiv2\pmod3$, the right side is a unit congruent to
+$2(4+2+1)\equiv2\pmod3$, which is not a square. This case does not occur.
+\end{itemize}
+These cases and the point $O$ prove \ref{item:r7-E3}.
+
+\paragraph{The prime $2$, curve $E'$.}
+We use the following fact: if $s,t\in\Q_2$ are not both zero, then
+$s^2+2t^2\ne0$ and
+\begin{equation}\label{r7:norm-classes}
+ \sq{s^2+2t^2}\in\{\sq1,\sq2,\sq3,\sq6\}.
+\end{equation}
+Indeed, $s^2+2t^2\ne0$ because $-2$ is not a square in $\Q_2$. After
+multiplying $s$ and $t$ by a power of $2$, which changes $s^2+2t^2$ by a
+square, we may assume that $s,t\in\Z_2$ and that one of them is odd. If $s$ is odd, then
+$s^2\equiv1$ and $2t^2\equiv0$ or $2\pmod8$, and $s^2+2t^2$ is a unit
+congruent to $1$ or $3$ modulo $8$; by \cref{lem:squares}, its class is
+$\sq1$ or $\sq3$. If $s$ is even and $t$ is odd, then
+$s^2+2t^2=2(t^2+2(s/2)^2)$, and the same argument shows that its class is
+$\sq2$ or $\sq6$. In other words, the nonzero values of $s^2+2t^2$, which
+are the norms from $\Q_2(\sqrt{-2})$, have classes in
+$\{\sq1,\sq2,\sq3,\sq6\}$.
+
+Since $\sq\beta=\sq{-2}$, there exists $w_0\in\Q_2^\times$ such that
+$\beta=-2w_0^2$. Using $\alpha'=-2\alpha$ and $\beta'=\alpha^2-4\beta$, we
+write the equation of $E'$ as
+\begin{equation}\label{r7:norm-form}
+ y^2=x\bigl((x-\alpha)^2-4\beta\bigr)=x\bigl((x-\alpha)^2+2(2w_0)^2\bigr).
+\end{equation}
+The point $T'$ has class $\sq{\beta'}=\sq{\alpha^2+2(2w_0)^2}$, which lies
+in the set \eqref{r7:norm-classes}; indeed, $\sq{\beta'}=\sq3$. The class
+of $\alpha'^2-4\beta'=16\beta$ is $\sq{-2}\ne\sq1$, and
+\cref{lem:two-torsion} shows that there is no other point with $y=0$. If
+$(x,y)$ is a point with $x\ne0$ and $y\ne0$, we have
+\[
+ \sq x=\sq{y^2/x}=\sq{(x-\alpha)^2+2(2w_0)^2},
+\]
+which lies in the set \eqref{r7:norm-classes} with $s=x-\alpha$ and
+$t=2w_0\ne0$. Together with $O$, this proves \ref{item:r7-Ep2}.
+
+\paragraph{The primes $7$ and $13$, curve $E'$.}
+Let $q\in\{7,13\}$. By \cref{tab:r7-coef-local}, $\alpha$ and $\beta'$ are
+units at $q$, $\beta=q^2b_q$ with $b_q$ a unit, and $\beta'\equiv1\pmod q$.
+By \cref{lem:squares}, a unit at $q$ is a square exactly when its residue
+modulo $q$ is a nonzero square. In particular, $\beta'$ is a square. Further,
+$\alpha$ is congruent to a nonzero square modulo $q$: we have
+$\alpha\equiv1\pmod7$ and $\alpha\equiv12\equiv5^2\pmod{13}$.
+
+The point $T'$ has class $\sq{\beta'}=\sq1$. The other points with $y=0$
+have abscissas $x_0$ with $x_0^2-2\alpha x_0+\beta'=0$, that is,
+$(x_0-\alpha)^2=4\beta=4q^2b_q$, and by \cref{lem:two-torsion} they exist
+exactly when $b_q$ is a square. For $q=13$, we have $b_q\equiv7\pmod{13}$,
+which is not a square, and there are no such points. For $q=7$, we have
+$b_q\equiv1\pmod7$, the two points exist, and
+$x_0=\alpha\pm2\cdot7\sqrt{b_q}\equiv\alpha\equiv1\pmod7$; their class is
+$\sq1$. Let $(x,y)$ be a point with $y\ne0$, and write $x=q^ru$ with
+$u\in\Z_q^\times$. The terms $x^3$, $\alpha'x^2$ and $\beta'x$ of the right
+side have valuations $3r$, $2r$ and $r$.
+\begin{itemize}
+\item If $r<0$, then $x^3$ is the dominant term, and, as at the prime $3$,
+the right side equals $x^3(1+qt)$ with $t\in\Z_q$. Its valuation $3r$ is
+even, $1+qt$ is a square, and $x$ is a square.
+\item If $r>0$, then $\beta'x$ is the dominant term. As before,
+$\beta'x$ is a square, and since $\beta'$ is a square, so is $x$.
+\item If $r=0$, the right side is $x\bigl((x-\alpha)^2-4\beta\bigr)$, and
+$4\beta\equiv0\pmod q$. If $x\not\equiv\alpha\pmod q$, then
+$(x-\alpha)^2-4\beta$ is a unit congruent to the nonzero square
+$(x-\alpha)^2$ modulo $q$. It is a square, and therefore $x$ is a square.
+If $x\equiv\alpha\pmod q$, then $x$ is a square because $\alpha$ is
+congruent to a nonzero square modulo $q$.
+\end{itemize}
+Together with $O$, these cases prove \ref{item:r7-Ep713}.
+
+\paragraph{The real place, curve $E'$.}
+Let $(M,N)\in\cK_7$. The forms $F$, $H$ and $J$ are positive by
+\cref{lem:r7-cone}, and $\alpha>0$, $\beta<0$ and $\beta'>0$. If $x<0$, the three terms
+$x^3$, $-2\alpha x^2$ and $\beta'x$ of the right side are negative, and
+there is no real point with this abscissa. The point $T'$ has class
+$\sq{\beta'}=\sq1$ in $\sqgp{\R}$. The discriminant $\alpha'^2-4\beta'=16\beta$
+is negative, and \cref{lem:two-torsion} shows that there is no other point
+with $y=0$. Every
+other point has $x>0$. Together with $O$, this proves \ref{item:r7-Epinf}.
+\end{proof}
+
+\paragraph{The fixed rows.}
+We write the fixed rows in the coordinates of
+\cref{sec:descent-conventions}. At $2$, the class of $z\in\Q_2^\times$ is
+$\sq{(-1)^{e_1}2^{e_2}5^{e_3}}$, with coordinates $e_1(z),e_2(z),e_3(z)$.
+At an odd prime $q$, we write $z=q^kz_0$ with $z_0\in\Z_q^\times$, and the
+coordinates are $\nu_q(z)=k\bmod2$ and $\chi_q(z)=\chi_q(z_0)$, as in
+\eqref{eq:odd-coordinates}. At $\infty$, the sign coordinate
+$\mathrm{sgn}(z)$ is $0$ or $1$ according as $z>0$ or $z<0$. These coordinates are linear maps on the groups of
+squareclasses. The subgroups of \cref{lem:r7-fixed} are annihilated by the
+following linear maps:
+\begin{itemize}
+\item $e_1+e_2$ and $e_3$ (on $E$ at $2$), since $\sq{-2}$ has coordinates
+$(e_1,e_2,e_3)=(1,1,0)$;
+\item $\chi_3$ and $\nu_3$ (on $E$ at $3$);
+\item $e_1+e_3$ (on $E'$ at $2$), since $\sq2$, $\sq3$ and $\sq6$ have
+coordinates $(0,1,0)$, $(1,0,1)$ and $(1,1,1)$;
+\item $\chi_q$ and $\nu_q$ for $q=7,13$, and $\mathrm{sgn}$ (on $E'$).
+\end{itemize}
+For each map $f$ in this list, we obtain a row as in \cref{def:rows}, whose
+entry at a basis element $g$ is $f(\operatorname{loc}_v(\sq g))$, which we
+denote simply by $f(g)$. These are the fixed rows. In the order of this list, we denote them by
+$f^E_1,\dots,f^E_4$ (for the maps $e_1+e_2$, $e_3$, $\chi_3$, $\nu_3$) and
+$f^{E'}_1,\dots,f^{E'}_6$ (for the maps $e_1+e_3$, $\chi_7$, $\nu_7$,
+$\chi_{13}$, $\nu_{13}$, $\mathrm{sgn}$). They are the first four rows of
+$\mathbf M_E(\eta)$ and the first six rows of $\mathbf M_{E'}(\eta)$ in \cref{tab:r7-ME,tab:r7-MEp}. Their entries at the
+constant columns are given by \cref{tab:r7-coords}. At a column $p_i$, we
+note that $p_i$ is a positive unit at $2,3,7,13$. This gives
+$e_2(p_i)=\nu_3(p_i)=\nu_7(p_i)=\nu_{13}(p_i)=\mathrm{sgn}(p_i)=0$.
+Further, $(e_1,e_3)(p_i)=(0,0),(1,1),(0,1),(1,0)$ for
+$p_i\equiv1,3,5,7\pmod8$ by \eqref{eq:two-adic-coordinates}, and
+$\chi_q(p_i)=0$ exactly when $p_i$ is a square modulo $q$. By
+\cref{lem:r7-residues}, the entries at the finite fixed places are the
+same for all $(M,N)\in\cP_7$. The entries of the real row at the columns
+$p_i$ are zero at every prime specialization, since the $p_i$ are positive.
+
+\begin{table}[htbp]
+\centering
+\caption{Local coordinates of the constant basis elements. At $2$ we used
+$3\equiv-5$, $7\equiv-1$ and $13\equiv5\pmod8$.}
+\label{tab:r7-coords}
+\begin{tabular}{lccccc}
+\toprule
+$g$ & $-1$ & $2$ & $3$ & $7$ & $13$\\
+\midrule
+$(e_1,e_2,e_3)(g)$ & $(1,0,0)$ & $(0,1,0)$ & $(1,0,1)$ & $(1,0,0)$ & $(0,0,1)$\\
+$(\chi_3,\nu_3)(g)$ & $(1,0)$ & $(1,0)$ & $(0,1)$ & $(0,0)$ & $(0,0)$\\
+$(\chi_7,\nu_7)(g)$ & $(1,0)$ & $(0,0)$ & $(1,0)$ & $(0,1)$ & $(1,0)$\\
+$(\chi_{13},\nu_{13})(g)$ & $(0,0)$ & $(1,0)$ & $(0,0)$ & $(1,0)$ & $(0,1)$\\
+$\mathrm{sgn}(g)$ & $1$ & $0$ & $0$ & $0$ & $0$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Characters at the moving primes}\label{sec:r7-characters}
+
+Let $(M,N)$ be a prime specialization in $\cP_7$. By \cref{lem:moving-rows}
+and \cref{cor:eta-structure}, the moving rows of $\mathbf M_E(\eta)$ and
+$\mathbf M_{E'}(\eta)$ are determined by the bits \eqref{eq:constant-bits}:
+the characters $\lambda_i(g)$ for $g\in\{-1,2,3,7,13\}$, the characters
+$\lambda_i(\kappa_E)$ and $\lambda_i(\kappa_{E'})$, and the bits
+$\gamma_{ij}$ of \eqref{eq:gamma}, which satisfy
+$\lambda_i(p_j)=\gamma_{ij}+\eta$. Recall
+that $\eps=\leg N{p_0}=(-1)^\eta$; since $N=p_1$, we have
+$\eps=\leg{p_1}{p_0}$.
+
+\begin{lemma}[Characters at the moving primes]\label{lem:r7-characters}
+Let $(M,N)$ be a prime specialization of $\datum_7$ with $(M,N)\in\cP_7$.
+Then the following hold.
+\begin{enumerate}[label=(\alph*)]
+\item\label{item:r7-lam} For $g\in\{-1,2,3,7,11,13,17,19,23\}$ and
+$0\le i\le11$, the number $\lambda_i(g)$ is given by \cref{tab:r7-lambda}.
+In particular, $\lambda_i(\kappa_E)=\lambda_i(-1)+\lambda_i(2)$ and
+$\lambda_i(\kappa_{E'})=\lambda_i(3)$.
+\item\label{item:r7-cross} For distinct $i,j$ such that $\{i,j\}$ is contained
+neither in $I_H$ nor in $I_J$, the bit $\gamma_{ij}$ of \eqref{eq:gamma} is given by
+\cref{tab:r7-gamma}, and $\lambda_i(p_j)=\gamma_{ij}+\eta$.
+\end{enumerate}
+\end{lemma}
+
+\begin{table}[htbp]
+\centering
+\caption{The characters $\lambda_i(g)$, defined by
+$\leg g{p_i}=(-1)^{\lambda_i(g)}$. The first five rows give the constant
+columns of the moving rows; the last four enter the constants of
+\cref{tab:r7-recip}.}
+\label{tab:r7-lambda}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{l@{\hspace{10pt}}cccccccccccc}
+\toprule
+$i$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$\lambda_i(-1)$ & $0$ & $1$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ \\
+$\lambda_i(2)$ & $0$ & $1$ & $0$ & $1$ & $1$ & $1$ & $1$ & $1$ & $0$ & $1$ & $1$ & $0$ \\
+$\lambda_i(3)$ & $0$ & $0$ & $1$ & $1$ & $1$ & $0$ & $0$ & $1$ & $0$ & $1$ & $0$ & $0$ \\
+$\lambda_i(7)$ & $0$ & $1$ & $0$ & $1$ & $1$ & $1$ & $1$ & $0$ & $1$ & $0$ & $0$ & $0$ \\
+$\lambda_i(13)$ & $0$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ & $1$ \\
+\addlinespace
+$\lambda_i(11)$ & $1$ & $0$ & $1$ & $1$ & $1$ & $0$ & $0$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+$\lambda_i(17)$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $1$ & $1$ & $0$ & $1$ & $0$ \\
+$\lambda_i(19)$ & $0$ & $0$ & $0$ & $1$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ & $1$ & $0$ \\
+$\lambda_i(23)$ & $0$ & $1$ & $0$ & $0$ & $0$ & $0$ & $0$ & $1$ & $0$ & $0$ & $0$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The numbers $\gamma_{ij}$, with $\lambda_i(p_j)=\gamma_{ij}+\eta$:
+row $p_i$, column $p_j$. A dot marks a pair inside $I_H$ or inside $I_J$,
+which does not occur in any row.}
+\label{tab:r7-gamma}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{l@{\hspace{10pt}}cccccccccccc}
+\toprule
+ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_4$ & $p_5$ & $p_6$ & $p_7$ & $p_8$ & $p_9$ & $p_{10}$ & $p_{11}$\\
+\midrule
+$p_{0}$ & $\ast$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+$p_{1}$ & $0$ & $\ast$ & $1$ & $0$ & $0$ & $0$ & $0$ & $0$ & $1$ & $0$ & $1$ & $1$ \\
+$p_{2}$ & $0$ & $1$ & $\ast$ & $1$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $1$ & $0$ \\
+$p_{3}$ & $1$ & $1$ & $1$ & $\ast$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ & $1$ & $1$ \\
+$p_{4}$ & $1$ & $1$ & $0$ & $1$ & $\ast$ & $\cdot$ & $\cdot$ & $\cdot$ & $0$ & $1$ & $0$ & $1$ \\
+$p_{5}$ & $0$ & $0$ & $0$ & $1$ & $\cdot$ & $\ast$ & $\cdot$ & $\cdot$ & $1$ & $1$ & $0$ & $1$ \\
+$p_{6}$ & $0$ & $0$ & $0$ & $1$ & $\cdot$ & $\cdot$ & $\ast$ & $\cdot$ & $1$ & $1$ & $0$ & $1$ \\
+$p_{7}$ & $1$ & $1$ & $0$ & $1$ & $\cdot$ & $\cdot$ & $\cdot$ & $\ast$ & $0$ & $1$ & $0$ & $1$ \\
+$p_{8}$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ & $1$ & $\ast$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+$p_{9}$ & $1$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ & $\cdot$ & $\ast$ & $\cdot$ & $\cdot$ \\
+$p_{10}$ & $0$ & $1$ & $1$ & $1$ & $0$ & $0$ & $0$ & $0$ & $\cdot$ & $\cdot$ & $\ast$ & $\cdot$ \\
+$p_{11}$ & $1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ & $\cdot$ & $\cdot$ & $\cdot$ & $\ast$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The squarefree parts $s_j$ of $b_jc_j$ and $s_{ij}$ of
+$c_0c_jb_i\Delta_{ji}$, for $1\le i<j$ with $\{i,j\}$ not inside $I_H$ or
+$I_J$.}
+\label{tab:r7-recip}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l@{\hspace{10pt}}rrrrrrrrrrr}
+\toprule
+$j$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$s_j$ & $1$ & $-182$ & $1173$ & $17$ & $-69$ & $-69$ & $17$ & $7$ & $16422$ & $-13$ & $-5083$ \\
+$\lambda_0(s_j)$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ \\
+\bottomrule
+\end{tabular}
+
+\medskip
+
+\begin{tabular}{r@{\hspace{10pt}}rrrrrrrrrr}
+\toprule
+$s_{ij}$ & $j=2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$i=1$ & $2$ & $91$ & $1$ & $1$ & $1$ & $1$ & $39$ & $78$ & $21$ & $7$ \\
+$2$ &  & $91$ & $19019$ & $-19019$ & $-19019$ & $19019$ & $39$ & $78$ & $21$ & $7$ \\
+$3$ &  &  & $14421$ & $3553$ & $3553$ & $14421$ & $-15249$ & $-26$ & $8211$ & $21$ \\
+\bottomrule
+\end{tabular}
+\quad
+\begin{tabular}{r@{\hspace{8pt}}rrrr}
+\toprule
+$s_{ij}$ & $j=8$ & $9$ & $10$ & $11$\\
+\midrule
+$i=4$ & $-969$ & $-66$ & $561$ & $19$ \\
+$5$ & $1311$ & $22$ & $759$ & $57$ \\
+$6$ & $1311$ & $22$ & $759$ & $57$ \\
+$7$ & $-969$ & $-66$ & $561$ & $19$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}
+For \ref{item:r7-lam}, recall that every $p_i$ is an odd prime outside $S$;
+in particular, $p_i$ is distinct from $3,7,11,13,17,19,23$. By \eqref{eq:reciprocity} and
+\cref{lem:fixed-characters}, we have, modulo $2$,
+\begin{equation}\label{r7:qr}
+ \lambda_i(-1)=\frac{p_i-1}2,\qquad \lambda_i(2)=\frac{p_i^2-1}8,\qquad
+ \lambda_i(q)=\chi_q(p_i)+\lambda_i(-1)\chi_q(-1)
+\end{equation}
+for every odd prime $q\ne p_i$. Here $\chi_q(p_i)$ is $0$ or $1$
+according as $p_i$ is or is not a square modulo $q$, and among the primes
+$q\in\{3,7,11,13,17,19,23\}$ used here, $\chi_q(-1)=1$ exactly for
+$q\in\{3,7,11,19,23\}$. The right sides depend only on the residues of $p_i$
+modulo $8$ and modulo $q$, which are given in \cref{tab:r7-res}. The nonzero
+squares modulo $3,7,11,13,17,19,23$ are
+\[
+\begin{gathered}
+ \{1\},\quad \{1,2,4\},\quad \{1,3,4,5,9\},\quad \{1,3,4,9,10,12\},\quad
+ \{1,2,4,8,9,13,15,16\},\\
+ \{1,4,5,6,7,9,11,16,17\},\quad \{1,2,3,4,6,8,9,12,13,16,18\}.
+\end{gathered}
+\]
+For example, we have $p_3\equiv3\pmod8$ and $p_3\equiv7\pmod{13}$, which is
+not a square modulo $13$, and \eqref{r7:qr} gives
+$\lambda_3(-1)=\lambda_3(2)=1$ and $\lambda_3(13)=1$. Inserting the residues of \cref{tab:r7-res} into
+\eqref{r7:qr}, we obtain \cref{tab:r7-lambda}. The assertions on
+$\kappa_E$ and $\kappa_{E'}$ follow from $\sq{\kappa_E}=\sq{-2}$ and
+$\sq{\kappa_{E'}}=\sq3$, since $p_i\nmid\kappa_E\kappa_{E'}$.
+
+For \ref{item:r7-cross}, we evaluate \eqref{eq:theta} and \eqref{eq:gamma}.
+Recall from \cref{tab:r7-res} that $p_0\equiv1\pmod8$. Then $\lambda_0(-1)=0$,
+and $\theta_i=\lambda_0(b_ic_i)=\lambda_0(s_i)$, where $s_j$ denotes the
+squarefree part of $b_jc_j$. We obtain
+\[
+ \gamma_{0j}=\gamma_{j0}=\lambda_0(s_j)\qquad(1\le j\le11).
+\]
+For distinct $i,j\ge1$, we have
+\[
+ \gamma_{ij}=\lambda_i(s_{ij})+\lambda_0(s_i),
+\]
+where $s_{ij}$ is the squarefree part of $c_0c_jb_i\Delta_{ji}$. Removing
+square factors does not change the characters, since every prime factor of
+$b_jc_j$ and of $c_0c_jb_i\Delta_{ji}$ lies in $S$, and $p_0,p_i\notin S$.
+The constants $s_j$, and $s_{ij}$ for $i<j$, are listed in
+\cref{tab:r7-recip}. Their prime factors are
+\[
+\begin{gathered}
+ 182=2\cdot7\cdot13,\quad 1173=3\cdot17\cdot23,\quad 69=3\cdot23,\quad
+ 16422=2\cdot3\cdot7\cdot17\cdot23,\\
+ 5083=13\cdot17\cdot23,\quad 91=7\cdot13,\quad 39=3\cdot13,\quad
+ 78=2\cdot3\cdot13,\quad 21=3\cdot7,\\
+ 19019=7\cdot11\cdot13\cdot19,\quad 14421=3\cdot11\cdot19\cdot23,\quad
+ 3553=11\cdot17\cdot19,\\
+ 15249=3\cdot13\cdot17\cdot23,\quad 26=2\cdot13,\quad
+ 8211=3\cdot7\cdot17\cdot23,\quad 969=3\cdot17\cdot19,\\
+ 66=2\cdot3\cdot11,\quad 561=3\cdot11\cdot17,\quad 1311=3\cdot19\cdot23,\\
+ 22=2\cdot11,\quad 759=3\cdot11\cdot23,\quad 57=3\cdot19,
+\end{gathered}
+\]
+so $\lambda_i(s_{ij})$ and $\lambda_0(s_j)$ are sums of entries of
+\cref{tab:r7-lambda}. For $i>j\ge1$, we use the relation
+\[
+ \gamma_{ij}+\gamma_{ji}=\lambda_i(-1)\lambda_j(-1),
+\]
+which follows from \eqref{eq:reciprocity}, since
+$\lambda_i(p_j)=\gamma_{ij}+\eta$ and $\lambda_j(p_i)=\gamma_{ji}+\eta$ by
+\cref{cor:eta-structure}. For example, $s_{3,10}=3\cdot7\cdot17\cdot23$ and
+$s_3=3\cdot17\cdot23$ give
+\[
+\begin{aligned}
+ \gamma_{3,10}&=\lambda_3(3)+\lambda_3(7)+\lambda_3(17)+\lambda_3(23)
+ +\lambda_0(3)+\lambda_0(17)+\lambda_0(23)\\
+ &=1+1+0+0+0+1+0=1,
+\end{aligned}
+\]
+and then $\gamma_{10,3}=\gamma_{3,10}+\lambda_{10}(-1)\lambda_3(-1)=1$.
+In this way, we obtain \cref{tab:r7-gamma}. One finds the same values by
+computing $\gamma_{ij}$ for $i>j$ directly from \eqref{eq:gamma}. The relation
+$\lambda_i(p_j)=\gamma_{ij}+\eta$ is \cref{cor:eta-structure}.
+\end{proof}
+
+The proof shows that the bits \eqref{eq:constant-bits} are the same at every
+prime specialization in $\cP_7$, as \cref{rem:constant-characters}
+requires. In more detail, the pairs $\{i,j\}$ that occur in the rows are the
+$66-6-6=54$ pairs not contained in $I_H$ or in $I_J$. Eleven of them contain
+$0$ and enter through $b_j=\Delta_{0j}$ and
+\cref{lem:reciprocity}\ref{item:rec-pivot}; the other $43$ enter through
+$\Delta_{ji}$ and \cref{lem:reciprocity}\ref{item:rec-cross}.
+In \cref{tab:r7-det}, the primes $5,29,37$ occur in the determinants of
+these pairs and in the $b_j$ only to even powers, and the primes
+$41,47,59,61,109,241,409$ occur only in determinants of pairs inside $I_H$
+or $I_J$. It follows that all the constants have squarefree parts
+supported on
+\[
+ S_0=\{2,3,7,11,13,17,19,23\},
+\]
+and every prime of $S_0$ divides $W$. The primes in $S\setminus S_0$ are
+needed in $S$ only for \cref{def:prime-specialization}.
+
+\section{The matrices and the upper bound}\label{sec:r7-matrices}
+
+We now assemble the matrices $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$
+of \eqref{eq:matrix-def}. The rows of $\mathbf M_E(\eta)$ are the four fixed
+rows $f^E_1,\dots,f^E_4$ of \cref{sec:r7-fixed}, followed by the moving rows
+$r^E_0,r^E_1,r^E_2,r^E_3$ and $r^E_8,r^E_9,r^E_{10},r^E_{11}$; the rows of
+$\mathbf M_{E'}(\eta)$ are the six fixed rows $f^{E'}_1,\dots,f^{E'}_6$,
+followed by $r^{E'}_0,\dots,r^{E'}_3$ and $r^{E'}_4,\dots,r^{E'}_7$. The matrix $\mathbf M_E(\eta)$ has $4+4+4=12$ rows, and $\mathbf M_{E'}(\eta)$ has
+$6+4+4=14$ rows; the two counts differ because $E'$ has conditions at $7$,
+$13$ and $\infty$. By \cref{cor:eta-structure}, the entries of the moving
+rows of $\mathbf M_\star(0)$ are as follows.
+\begin{itemize}
+\item In a constant column $g$, the row at $p_i$ has the entry
+$\lambda_i(g)$ of \cref{tab:r7-lambda}.
+\item In the row at $p_i$ and the moving column $j\ne i$, the entry is
+$\gamma_{ij}$, from \cref{tab:r7-gamma}.
+\item For $i\in I_F$, the entry in the moving column $i$ is the bit
+$\gamma^\star_{ii}=\lambda_i(\kappa_\star)+\sum_{j\in G_\star\setminus\{i\}}\gamma_{ij}$
+of \eqref{eq:gamma-diagonal}; \cref{tab:r7-diag} lists these bits.
+\end{itemize}
+The matrices $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$ are displayed in
+\cref{tab:r7-ME,tab:r7-MEp}. The integer row codes under which the program
+of \cref{app:verification} stores them are listed in
+\cref{tab:codes-r7}.
+
+\begin{table}[htbp]
+\centering
+\caption{The diagonal bits $\gamma^E_{ii}$ and $\gamma^{E'}_{ii}$ for
+$i\in I_F$. The sums are over $j\in G_\star\setminus\{i\}$, modulo $2$, and
+$\lambda_i(\kappa_E)=\lambda_i(-2)$, $\lambda_i(\kappa_{E'})=\lambda_i(3)$.}
+\label{tab:r7-diag}
+\begin{tabular}{c@{\hspace{12pt}}ccc@{\hspace{16pt}}ccc}
+\toprule
+ & \multicolumn{3}{c}{$E$, $\kappa_E$, $G_E=I_F\cup I_H$} & \multicolumn{3}{c}{$E'$, $\kappa_{E'}$, $G_{E'}=I_F\cup I_J$}\\
+\cmidrule(r){2-4}\cmidrule(l){5-7}
+$i$ & $\lambda_i(-2)$ & $\sum_j\gamma_{ij}$ & diagonal & $\lambda_i(3)$ & $\sum_j\gamma_{ij}$ & diagonal\\
+\midrule
+$0$ & $0$ & $1$ & $1$ & $0$ & $1$ & $1$ \\
+$1$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ \\
+$2$ & $0$ & $0$ & $0$ & $1$ & $1$ & $0$ \\
+$3$ & $0$ & $1$ & $1$ & $1$ & $1$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The matrix $\mathbf M_E(0)$ in the basis $\cB_E$: the four fixed
+rows $f^E_k$, with the place and the linear map that define them, and the moving
+rows $r^E_i(0)$ at the primes $p_i$ with $i\in I_F$ and with $i\in I_J$.}
+\label{tab:r7-ME}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{cl@{\hspace{10pt}}ccccc@{\hspace{14pt}}cccccccc}
+\toprule
+ & & $-1$ & $2$ & $3$ & $7$ & $13$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_4$ & $p_5$ & $p_6$ & $p_7$\\
+\midrule
+$f^E_1$ & $(2,e_1+e_2)$ & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 1 \\
+$f^E_2$ & $(2,e_3)$ & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 1 \\
+$f^E_3$ & $(3,\chi_3)$ & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+$f^E_4$ & $(3,\nu_3)$ & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\addlinespace
+$r^{E}_0(0)$ & $p_0$ & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 \\
+$r^{E}_1(0)$ & $p_1$ & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+$r^{E}_2(0)$ & $p_2$ & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+$r^{E}_3(0)$ & $p_3$ & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \\
+\addlinespace
+$r^{E}_8(0)$ & $p_8$ & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+$r^{E}_9(0)$ & $p_9$ & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+$r^{E}_{10}(0)$ & $p_{10}$ & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+$r^{E}_{11}(0)$ & $p_{11}$ & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The matrix $\mathbf M_{E'}(0)$ in the basis $\cB_{E'}$: the six
+fixed rows $f^{E'}_k$, with the place and the linear map that define them, and the
+moving rows $r^{E'}_i(0)$ at the primes $p_i$ with $i\in I_F$ and with
+$i\in I_H$.}
+\label{tab:r7-MEp}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{cl@{\hspace{10pt}}ccccc@{\hspace{14pt}}cccccccc}
+\toprule
+ & & $-1$ & $2$ & $3$ & $7$ & $13$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_8$ & $p_9$ & $p_{10}$ & $p_{11}$\\
+\midrule
+$f^{E'}_1$ & $(2,e_1+e_3)$ & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+$f^{E'}_2$ & $(7,\chi_7)$ & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 \\
+$f^{E'}_3$ & $(7,\nu_7)$ & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+$f^{E'}_4$ & $(13,\chi_{13})$ & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 \\
+$f^{E'}_5$ & $(13,\nu_{13})$ & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+$f^{E'}_6$ & $(\infty,\mathrm{sgn})$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\addlinespace
+$r^{E'}_0(0)$ & $p_0$ & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 \\
+$r^{E'}_1(0)$ & $p_1$ & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 \\
+$r^{E'}_2(0)$ & $p_2$ & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 \\
+$r^{E'}_3(0)$ & $p_3$ & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 \\
+\addlinespace
+$r^{E'}_4(0)$ & $p_4$ & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\
+$r^{E'}_5(0)$ & $p_5$ & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+$r^{E'}_6(0)$ & $p_6$ & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+$r^{E'}_7(0)$ & $p_7$ & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Dependence on $\eta$.}
+By \eqref{eq:matrix-def}, every moving row of $\mathbf M_\star(1)$ is the
+corresponding row of $\mathbf M_\star(0)$ plus $u_\star$, where $u_E$ and
+$u_{E'}$ are the indicator vectors of the eight moving columns:
+\[
+ u_E=u_{E'}=(0,0,0,0,0,1,1,1,1,1,1,1,1).
+\]
+In words, $\mathbf M_\star(1)$ is obtained from $\mathbf M_\star(0)$ by
+replacing every entry of the lower right block of \cref{tab:r7-ME} or
+\cref{tab:r7-MEp} (moving rows, moving columns) by its complement. The
+fixed rows and the constant columns do not depend on $\eta$. As explained
+in \cref{cor:eta-structure}, this reflects the fact that every cross symbol
+$\lambda_i(p_j)$ equals $\gamma_{ij}+\eta$, and that an odd number (seven)
+of cross symbols enter each diagonal entry.
+
+\paragraph{The repeated row.}
+The rows $r^{E'}_5(0)$ and $r^{E'}_6(0)$ of $\mathbf M_{E'}(0)$ are equal. This is not
+an error: the two rows are the conditions at the two different primes $p_5$
+and $p_6$, and they happen to coincide. Indeed, $p_5$ and $p_6$ have the
+same residues modulo $8$ and $3$, the residues $6$ and $5$ modulo $7$ are
+both nonsquares, and the residues $5$ and $11$ modulo $13$ are both
+nonsquares; so the constant entries agree. The cross entries agree because
+$s_5=s_6$, $s_{j5}=s_{j6}$ for $j=1,2,3$, and $s_{5j}=s_{6j}$ for
+$j=8,\dots,11$ (\cref{tab:r7-recip}), and because $\lambda_5(q)=\lambda_6(q)$
+for the primes $q\in\{2,3,11,19,23\}$ that divide the last four constants
+(\cref{tab:r7-lambda}). Since both rows change by $u_{E'}$ when $\eta$
+changes, they also coincide at $\eta=1$. This explains the two equal
+consecutive codes in each of the two lists for $E'$ in
+\cref{tab:codes-r7}.
+The repeated row adds nothing to the rank, and the certificate below does
+not use $r^{E'}_6(0)$.
+
+\begin{lemma}[Rank certificates]\label{lem:r7-ranks}
+For every prime specialization in $\cP_7\cap\cK_7$, we have
+\[
+ \rk\mathbf M_E(0)=8=n_E-5,\qquad \rk\mathbf M_{E'}(0)=9=n_{E'}-4.
+\]
+Moreover,
+\begin{equation}\label{r7:u-sums}
+ u_E=f^E_4+r^E_9(0)+r^E_{10}(0),\qquad u_{E'}=f^{E'}_4+f^{E'}_5+r^{E'}_0(0)+r^{E'}_5(0),
+\end{equation}
+where the rows are those of $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$. Each
+of these sums contains exactly two moving rows.
+\end{lemma}
+
+\begin{proof}
+By \cref{lem:r7-fixed,lem:r7-characters}, the matrices
+$\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$ are those of
+\cref{tab:r7-ME,tab:r7-MEp} for every prime specialization in
+$\cP_7\cap\cK_7$.
+
+We begin with the lower bound on the rank of $\mathbf M_E(0)$. We take the
+rows $f^E_4$, $r^E_0(0)$, $r^E_2(0)$, $f^E_2$, $r^E_{11}(0)$, $r^E_9(0)$,
+$r^E_{10}(0)$, $r^E_8(0)$ and the
+columns $3$, $p_0$, $p_1$, $p_5$, $-1$, $2$, $p_2$, $7$ of
+\cref{tab:r7-ME}, in this order. The corresponding submatrix is
+\[
+\begin{array}{c|cccccccc}
+ & 3 & p_0 & p_1 & p_5 & -1 & 2 & p_2 & 7\\\hline
+f^E_4 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+r^{E}_0(0) & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+r^{E}_2(0) & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+f^E_2 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
+r^{E}_{11}(0) & 0 & 1 & 0 & 1 & 1 & 0 & 0 & 0 \\
+r^{E}_9(0) & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 0 \\
+r^{E}_{10}(0) & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 \\
+r^{E}_8(0) & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1
+\end{array}
+\]
+This submatrix has ones on the diagonal and zeros above it. Its
+determinant is therefore $1$, and $\rk\mathbf M_E(0)\ge8$. For $\mathbf M_{E'}(0)$, we
+take the rows $f^{E'}_6$, $f^{E'}_3$, $f^{E'}_5$, $f^{E'}_1$, $r^{E'}_5(0)$,
+$f^{E'}_2$, $r^{E'}_2(0)$, $r^{E'}_0(0)$, $f^{E'}_4$ and the columns $-1$, $7$, $13$, $p_8$,
+$2$, $3$, $p_1$, $p_0$, $p_2$ of \cref{tab:r7-MEp}, in this order. The
+corresponding submatrix is
+\[
+\begin{array}{c|ccccccccc}
+ & -1 & 7 & 13 & p_8 & 2 & 3 & p_1 & p_0 & p_2\\\hline
+f^{E'}_6 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+f^{E'}_3 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+f^{E'}_5 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+f^{E'}_1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+r^{E'}_5(0) & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+f^{E'}_2 & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 \\
+r^{E'}_2(0) & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 \\
+r^{E'}_0(0) & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 \\
+f^{E'}_4 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1
+\end{array}
+\]
+which again has ones on the diagonal and zeros above it. This gives
+$\rk\mathbf M_{E'}(0)\ge9$.
+
+For the upper bound, recall from \cref{lem:upper-bound} and
+\cref{lem:moving-rows} that every row of $\mathbf M_\star(\eta)$ annihilates
+every class in $\delta_\star(\star(\Q))$, where $\eta$ is the sign of the
+specialization. Each vector of \cref{tab:r7-vectors} has an even number of
+entries equal to $1$ in the moving columns (four or eight), so its dot product
+with $u_\star$ vanishes. Since a moving row of $\mathbf M_\star(\eta)$ differs
+from the corresponding row of $\mathbf M_\star(0)$ by $\eta u_\star$, every row
+of $\mathbf M_\star(0)$ also annihilates these vectors. By
+\cref{lem:r7-independent}, the five vectors of \cref{tab:r7-vectors} on $E$
+are therefore independent elements of the kernel of $\mathbf M_E(0)$, which
+implies that
+$\rk\mathbf M_E(0)\le13-5=8$. Similarly, $\rk\mathbf M_{E'}(0)\le13-4=9$. One can also check directly that each
+vector of \cref{tab:r7-vectors} has even dot product with each row of
+\cref{tab:r7-ME} or \cref{tab:r7-MEp}.
+
+Finally, we verify \eqref{r7:u-sums}. The rows involved, copied from
+\cref{tab:r7-ME,tab:r7-MEp}, and their sums modulo $2$ are
+\[
+\setlength{\arraycolsep}{3.5pt}
+\begin{array}{l|ccccc|cccccccc}
+ & -1 & 2 & 3 & 7 & 13 & p_0 & p_1 & p_2 & p_3 & p_4 & p_5 & p_6 & p_7\\\hline
+ f^E_4 & 0&0&1&0&0 & 0&0&0&0&0&0&0&0\\
+ r^{E}_9(0) & 0&1&1&0&1 & 1&0&0&0&1&1&1&1\\
+ r^{E}_{10}(0) & 0&1&0&0&1 & 0&1&1&1&0&0&0&0\\\hline
+ \text{sum} & 0&0&0&0&0 & 1&1&1&1&1&1&1&1
+\end{array}
+\]
+and
+\[
+\setlength{\arraycolsep}{3.5pt}
+\begin{array}{l|ccccc|cccccccc}
+ & -1 & 2 & 3 & 7 & 13 & p_0 & p_1 & p_2 & p_3 & p_8 & p_9 & p_{10} & p_{11}\\\hline
+ f^{E'}_4 & 0&1&0&1&0 & 0&1&1&1&0&1&1&1\\
+ f^{E'}_5 & 0&0&0&0&1 & 0&0&0&0&0&0&0&0\\
+ r^{E'}_0(0) & 0&0&0&0&0 & 1&0&0&1&0&1&0&1\\
+ r^{E'}_5(0) & 0&1&0&1&1 & 0&0&0&1&1&1&0&1\\\hline
+ \text{sum} & 0&0&0&0&0 & 1&1&1&1&1&1&1&1
+\end{array}
+\]
+The two sums are $u_E$ and $u_{E'}$. This completes the proof.
+\end{proof}
+
+Since each sum in \eqref{r7:u-sums} contains two moving rows,
+\cref{lem:eta-rank} shows that $\mathbf M_\star(0)$ and $\mathbf M_\star(1)$
+have the same row space, hence the same rank and kernel. This is the
+equality of the reduced row bases for $\eps=\pm1$ that the program of
+\cref{app:verification} checks. Since the kernel of $\mathbf M_E(0)$
+has dimension $13-8=5$ and contains the five independent vectors of
+\cref{tab:r7-vectors}, it is their span; likewise, the kernel of
+$\mathbf M_{E'}(0)$ is spanned by the four vectors of \cref{tab:r7-vectors}
+on $E'$.
+
+\section{Exact rank and infinitude}\label{sec:r7-theorem}
+
+\begin{theorem}[Exact rank seven]\label{thm:r7}
+Let $(M,N)\in\cP_7\cap\cK_7$ be a prime specialization of $\datum_7$
+with respect to the set $S$ of \eqref{r7:S}. Then $d_E=5$, $d_{E'}=4$ and
+$\rk E_{M,N}(\Q)=7$. Moreover, there exist infinitely many such $(M,N)$,
+and the curves $E_{M,N}$ obtained from them represent infinitely many
+$\Qbar$-isomorphism classes.
+\end{theorem}
+
+\begin{proof}
+We apply \cref{prop:rank-criterion} to the datum $\datum_7$, the set $S$ of
+\eqref{r7:S}, and the set $\cP$ of prime specializations in
+$\cP_7\cap\cK_7$. We check its hypotheses.
+By \cref{lem:r7-datum}, $\Gamma_E=\Gamma_{E'}=(-1,2,3,7,13)$ consists of
+$-1$ and distinct primes, and by \eqref{r7:kappa} it contains every prime
+dividing $\kappa_E$ and $\kappa_{E'}$.
+\begin{enumerate}[label=(\roman*)]
+\item By \cref{lem:r7-fixed}, at the places $2$ and $3$ for $E$ and $2$,
+$7$, $13$ and $\infty$ for $E'$, the local images lie in subgroups that do
+not depend on $(M,N)\in\cP$. The fixed rows of \cref{sec:r7-fixed} are the rows
+in the sense of \cref{def:rows} defined by these subgroups and the linear
+maps listed there. Their entries depend only on the residues of the $p_i$,
+which are constant on $\cP_7$ by \cref{lem:r7-residues}. This proves
+\ref{item:crit-fixed}.
+\item By \cref{lem:r7-characters}, the bits \eqref{eq:constant-bits} are
+the same for all $(M,N)\in\cP$, which is \ref{item:crit-characters}. The
+resulting matrices $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$ are those of
+\cref{tab:r7-ME,tab:r7-MEp}.
+\item The points $T,P_1,\dots,P_4$ on $E$ and $T',Q_1,Q_2,Q_3$ on $E'$ are
+given by the formulas of \cref{lem:r7-points}, and their classes are
+independent at every prime specialization by \cref{lem:r7-independent}.
+This proves \ref{item:crit-points} with $k_E=5$ and $k_{E'}=4$.
+\item By \cref{lem:r7-ranks}, $\rk\mathbf M_E(0)=13-5$ and
+$\rk\mathbf M_{E'}(0)=13-4$, and $u_E$ and $u_{E'}$ are sums of rows of
+$\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$ that contain exactly two moving
+rows. This is \ref{item:crit-rank}.
+\end{enumerate}
+\Cref{prop:rank-criterion} now implies that $d_E=5$, $d_{E'}=4$ and
+$\rk E_{M,N}(\Q)=5+4-2=7$ for every $(M,N)\in\cP$. It also shows that
+$\delta_E(E(\Q))$ and $\delta_{E'}(E'(\Q))$ are spanned by the classes of
+\cref{tab:r7-classes}.
+
+For the infinitude, we check the hypotheses of
+\cref{prop:infinitely-many} for $W$, $(M_0,N_0)$ and the cone $\cK_7$.
+\begin{enumerate}[label=(\alph*)]
+\item[\ref{item:inf-progression}] The primes dividing some $c_i$ are $2$ and $3$, and they divide $W$.
+We have $v_2(W)=9>6=\max_iv_2(c_i)$ and $v_3(W)=4>3=\max_iv_3(c_i)$, and
+$v_q(c_i)=0$ for the other primes $q\mid W$. By \cref{lem:r7-residues}
+applied to $(M_0,N_0)\in\cP_7$, every $c_i$ divides $L_i(M_0,N_0)$, and
+$L_i(M_0,N_0)/c_i$ is prime to $W$.
+\item[\ref{item:inf-small-primes}] The only prime $q\le11$ that does not divide $W$ is $q=5$. At
+$(m,n)=(1,1)$, the values $L_i(1,1)=a_i+b_i$ are congruent to
+\[
+ 1,\ 1,\ 4,\ 4,\ 3,\ 2,\ 3,\ 3,\ 1,\ 1,\ 4,\ 4
+\]
+modulo $5$, and their product is not divisible by $5$.
+\item[\ref{item:inf-cone}] By \cref{lem:r7-cone}, every $L_i$ is positive on $\cK_7$.
+\end{enumerate}
+\Cref{prop:infinitely-many} now implies that there exist infinitely many prime
+specializations $(M,N)\in\cK_7$ with $(M,N)\equiv(M_0,N_0)\pmod W$, and
+their ratios $M/N$ take infinitely many values. By
+\cref{lem:j-invariant}\ref{item:j-infinite}, the curves $E_{M,N}$ for these
+pairs lie in infinitely many isomorphism classes over $\Qbar$. In the
+present case, the $j$-invariant of \cref{lem:j-invariant} is
+\[
+ j(E_{M,N})=\frac{256\,(91205^2F+3\cdot33124\,H)^3}{9\cdot33124^2\,H^2J}.
+\]
+This completes the proof.
+\end{proof}

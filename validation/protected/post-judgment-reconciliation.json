@@ -1,0 +1,33 @@
+{
+  "status": "PASS post-judgment selected source/object immutability and tool snapshot reconciliation",
+  "actual_run_directory": "/workspace/work/palomar-tools/target-check-20261012T034857Z",
+  "actual_final_command_exit_code": 0,
+  "actual_comparator_elapsed_seconds": 971.29,
+  "source_files_rehashed_after_judgment": 6,
+  "selected_compiled_artifacts_rehashed_after_judgment": 26,
+  "source_and_selected_artifact_hashes_match_start_snapshot": true,
+  "actual_tool_binary_hashes_match_host_preflight": true,
+  "canonical_challenge_source_equals_submitted_challenge_bytes": true,
+  "exported_canonical_challenge_module": "PalomarCanonicaladc963cbc2fc0ff4688c0f74.Challenge",
+  "protected_config_challenge_module": "PalomarCanonicalfdfd542b2f90962d8a7f9350.Challenge",
+  "module_name_detail": "The live driver generated these two fresh aliases separately. --challenge-from-export judges the explicitly supplied canonical export without loading the config module. The portable helper obtains the source alias directly from the protected config.",
+  "dependency_library_objects_rehashed_for_actual_run": false,
+  "dependencies_provenance": "Pinned shared trusted caches plus root source/import guards; no fresh full dependency-source replay claimed.",
+  "portable_helper_full_target_rerun_performed": false,
+  "portable_helper_validation": "AST parse, focused read-only review, and actual pin/dependency/bubblewrap host preflight passed.",
+  "memory_events": {
+    "low": "0",
+    "high": "0",
+    "max": "89900",
+    "oom": "0",
+    "oom_kill": "0",
+    "oom_group_kill": "0"
+  },
+  "independent_kernel_declarations_accepted_by_con_ron": 77670,
+  "source_compilation_and_export_flags": [
+    "-j1",
+    "-DautoImplicit=false"
+  ],
+  "compiled_comparator_cli_flag_detail": "Bundled lake comparator has no -j1 or -DautoImplicit=false options; it judges precomputed exports without source elaboration.",
+  "no_remote_write_submission_registration_visibility_change_or_export_upload": true
+}

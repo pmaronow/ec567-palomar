@@ -1,0 +1,16 @@
+{
+  "status": "frozen portable replay; host preflight passed; actual protected target driver passed all three kernels",
+  "files": {
+    "verify_protected.py": {
+      "bytes": 14967,
+      "sha256": "979c8be791ffcaa0a3fe8064d43161803a4fe08c4d0aea67cb6e1c41c7946661"
+    },
+    "PROTECTED_REPLAY.md": {
+      "bytes": 6113,
+      "sha256": "4f452e97385e94bb530096d677429954a4442be710f0afbbedc91796ec9c89c1"
+    }
+  },
+  "host_preflight_receipt": "../reproduction-tests/ec567-protected-l8fid8qy/host-preflight.json",
+  "full_target_replay_of_new_script_performed": false,
+  "scope": "script uses same actual verifier primitives as live run, with additional snapshot and environment guards"
+}

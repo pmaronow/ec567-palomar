@@ -1,0 +1,395 @@
+\chapter{Families with twelve linear factors}\label{sec:families}
+
+In this section, we set up the framework shared by the three families of \cref{sec:rank5,sec:rank6,sec:rank7} and prove once the steps that are common to them. A twelve-form datum (\cref{def:datum}) consists of twelve binary linear forms and three integers $A$, $B$, $C$ satisfying the identity $A^2F+4BH=CJ$, where $F$, $H$, $J$ are products of four of the forms each. For each $(M,N)\in\Z^2$ with $F(M,N)H(M,N)J(M,N)\ne0$, it gives a pair of $2$-isogenous curves $E_{M,N}$ and $E'_{M,N}$. In \cref{sec:families-data}, we compute their basic invariants (\cref{lem:datum-basic,lem:j-invariant}). In \cref{sec:families-prime}, we introduce prime specializations, at which the twelve forms take prime values up to fixed cofactors (\cref{def:prime-specialization}), show that a congruence condition on $(M,N)$ forces the divisibility $c_i\mid L_i(M,N)$ and fixes the residues of the quotients (\cref{lem:precision}), and determine the local images of the descent maps at these twelve primes (\cref{lem:moving-images}). \Cref{sec:families-rows} turns these local images into linear conditions (\cref{lem:moving-rows}). The coefficients of these conditions are quadratic characters, and \cref{sec:families-reciprocity} shows that quadratic reciprocity determines them through fixed residues and a single sign $\eps$ (\cref{lem:reciprocity,cor:eta-structure}). Finally, \cref{sec:families-criterion} proves the rank criterion (\cref{prop:rank-criterion}), which reduces the rank of $E_{M,N}(\Q)$ at all prime specializations in a given set to finitely many checks, for both values of $\eps$.
+
+This section uses the results of \cref{sec:descent}. \Cref{sec:primes} uses \cref{def:datum,def:prime-specialization,lem:prime-spec-basic,lem:j-invariant} to produce infinitely many prime specializations, and \cref{sec:rank5,sec:rank6,sec:rank7} verify the hypotheses of \cref{prop:rank-criterion} for the three families.
+
+\section{Twelve-form data}\label{sec:families-data}
+
+\begin{definition}[Twelve-form datum]\label{def:datum}
+A \emph{twelve-form datum} $\datum$ consists of the following.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:datum-forms} Pairs $(a_i,b_i)\in\Z^2$ for $0\le i\le11$, with $\gcd(a_i,b_i)=1$ for every $i$, $(a_0,b_0)=(1,0)$, $b_i\ne0$ for $1\le i\le11$, and $\Delta_{ij}=a_ib_j-a_jb_i\ne0$ for all $i\ne j$.
+\item\label{item:datum-identity} Nonzero integers $A$, $B$, $C$ such that
+\begin{equation}\label{eq:datum-identity}
+A^2F+4BH=CJ
+\end{equation}
+in $\Z[M,N]$, where $L_i=a_iM+b_iN$ for $0\le i\le11$ and
+\begin{equation}\label{eq:FHJ}
+F=L_0L_1L_2L_3,\qquad H=L_4L_5L_6L_7,\qquad J=L_8L_9L_{10}L_{11}.
+\end{equation}
+\item\label{item:datum-cofactors} Positive integers $c_0,\dots,c_{11}$, the \emph{cofactors}, with $\min_ic_i=1$.
+\item\label{item:datum-constants} Two finite ordered lists $\Gamma_E$ and $\Gamma_{E'}$ of nonzero integers.
+\end{enumerate}
+For $(M,N)\in\Z^2$ with $F(M,N)H(M,N)J(M,N)\ne0$, the \emph{curves} of $\datum$ are
+\begin{equation}\label{eq:family-curves}
+E_{M,N}\colon y^2=x^3+AFx^2-BFHx,\qquad E'_{M,N}\colon y^2=x^3-2AFx^2+CFJx,
+\end{equation}
+where $F$, $H$, $J$ are evaluated at $(M,N)$.
+\end{definition}
+
+Throughout this section, we fix a twelve-form datum $\datum$. We write
+\begin{equation}\label{eq:index-sets}
+I_F=\{0,1,2,3\},\qquad I_H=\{4,5,6,7\},\qquad I_J=\{8,9,10,11\},
+\end{equation}
+so that $F=\prod_{i\in I_F}L_i$, $H=\prod_{i\in I_H}L_i$ and $J=\prod_{i\in I_J}L_i$. The moving index sets and the opposite index sets of the two curves are
+\begin{equation}\label{eq:moving-sets}
+G_E=I_F\cup I_H,\qquad G_{E'}=I_F\cup I_J,\qquad O_E=I_J,\qquad O_{E'}=I_H.
+\end{equation}
+The symbol $\star$ stands for either $E$ or $E'$. When $(M,N)$ is fixed, we write $E=E_{M,N}$ and $E'=E'_{M,N}$, and we write
+\begin{equation}\label{eq:family-coefficients}
+\alpha=AF,\qquad\beta=-BFH,\qquad\alpha'=-2AF,\qquad\beta'=CFJ
+\end{equation}
+for their coefficients, so that $E=E_{\alpha,\beta}$ and $E'=E_{\alpha',\beta'}$ in the notation of \eqref{eq:E-alpha-beta}. We let $\delta_E$, $\delta_{E'}$ be their descent maps (\cref{def:descent-map}), $\delta_{E,v}$, $\delta_{E',v}$ the local descent maps, and
+\begin{equation}\label{eq:dE-dEprime}
+d_E=\dim_{\F_2}\delta_E(E(\Q)),\qquad d_{E'}=\dim_{\F_2}\delta_{E'}(E'(\Q)).
+\end{equation}
+Condition \ref{item:datum-forms} of \cref{def:datum} says that the twelve forms are primitive and pairwise nonproportional, so that their zeros are twelve distinct points of $\mathbb P^1$. The cofactors and the lists $\Gamma_E$, $\Gamma_{E'}$ are used only from \cref{sec:families-prime} on.
+
+\begin{lemma}[Basic properties of the curves]\label{lem:datum-basic}
+Let $(M,N)\in\Z^2$ with $FHJ\ne0$.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:datum-basic-dual} We have $\alpha^2-4\beta=CFJ=\beta'$ and $\alpha'^2-4\beta'=16\beta$. In particular, $E'_{M,N}$ is the curve $E_{\alpha',\beta'}$ of \eqref{eq:isogenous-coefficients}, and the maps $\phi$ and $\dual$ of \eqref{eq:isogenies} are the $2$-isogenies between $E_{M,N}$ and $E'_{M,N}$.
+\item\label{item:datum-basic-disc} The discriminants of the models \eqref{eq:family-curves} are
+\begin{equation}\label{eq:family-discriminants}
+\Delta(E_{M,N})=16B^2CF^3H^2J,\qquad\Delta(E'_{M,N})=-256BC^2F^3HJ^2.
+\end{equation}
+Both are nonzero, and $E_{M,N}$ and $E'_{M,N}$ are elliptic curves over $\Q$.
+\item\label{item:datum-basic-scaling} Let $(M_1,N_1)=(\lambda M,\lambda N)\in\Z^2$ with $\lambda\in\Q^\times$. Then $(x,y)\mapsto(\lambda^4x,\lambda^6y)$ is an isomorphism over $\Q$ from $E_{M,N}$ to $E_{M_1,N_1}$, and from $E'_{M,N}$ to $E'_{M_1,N_1}$. It preserves the class $\sq x$ of every point with $x\ne0$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:datum-identity}, we have
+\begin{equation}
+\alpha^2-4\beta=A^2F^2+4BFH=F(A^2F+4BH)=CFJ,
+\end{equation}
+and then $\alpha'^2-4\beta'=4\alpha^2-4(\alpha^2-4\beta)=16\beta$. This proves \ref{item:datum-basic-dual}. For a curve $y^2=x^3+ax^2+bx$, the standard formulas \cite[Section~III.1]{SilvermanAEC} give
+\begin{equation}\label{eq:c4-Delta}
+c_4=16(a^2-3b),\qquad\Delta=16b^2(a^2-4b).
+\end{equation}
+For $E_{M,N}$, we obtain $\Delta=16\beta^2(\alpha^2-4\beta)=16B^2F^2H^2\cdot CFJ$, and for $E'_{M,N}$, we obtain $\Delta=16\beta'^2(\alpha'^2-4\beta')=16C^2F^2J^2\cdot16\beta=-256BC^2F^3HJ^2$. These are nonzero because $B$, $C$ and $FHJ$ are nonzero. For \ref{item:datum-basic-scaling}, since each of $F$, $H$, $J$ is homogeneous of degree four, the coefficients of $E_{M_1,N_1}$ are $\lambda^4\alpha$ and $\lambda^8\beta$. Then
+\begin{equation}
+(\lambda^6y)^2-(\lambda^4x)^3-\lambda^4\alpha(\lambda^4x)^2-\lambda^8\beta(\lambda^4x)=\lambda^{12}(y^2-x^3-\alpha x^2-\beta x),
+\end{equation}
+and the same computation applies to $E'$. Finally, $\sq{\lambda^4x}=\sq x$.
+\end{proof}
+
+\begin{lemma}[The $j$-invariant]\label{lem:j-invariant}
+Let $\mathcal N$ and $\mathcal D$ be the binary forms of degree $12$ given by
+\begin{equation}\label{eq:j-forms}
+\mathcal N=256(A^2F+3BH)^3,\qquad\mathcal D=B^2CH^2J.
+\end{equation}
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:j-formula} For $(M,N)\in\Z^2$ with $FHJ\ne0$, we have $j(E_{M,N})=\mathcal N(M,N)/\mathcal D(M,N)$.
+\item\label{item:j-degree} The forms $\mathcal N$ and $\mathcal D$ have no common zero in $\mathbb P^1(\Qbar)$, and $[M:N]\mapsto[\mathcal N(M,N):\mathcal D(M,N)]$ is a morphism $\mathbb P^1\to\mathbb P^1$ of degree $12$. For every $j_0\in\Q$, at most $12$ points $[M:N]\in\mathbb P^1(\Q)$ with $FHJ(M,N)\ne0$ satisfy $j(E_{M,N})=j_0$.
+\item\label{item:j-infinite} Let $\mathcal Q\subseteq\Z^2$ be a set of pairs with $FHJ\ne0$ at every point of $\mathcal Q$, such that the points $[M:N]$ with $(M,N)\in\mathcal Q$ are infinitely many. Then the curves $E_{M,N}$ with $(M,N)\in\mathcal Q$ lie in infinitely many isomorphism classes over $\Qbar$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:c4-Delta}, we have $j=c_4^3/\Delta=256(a^2-3b)^3/(b^2(a^2-4b))$ for the curve $y^2=x^3+ax^2+bx$. For $E_{M,N}$, we have $\alpha^2-3\beta=A^2F^2+3BFH=F(A^2F+3BH)$, $\beta^2=B^2F^2H^2$ and $\alpha^2-4\beta=CFJ$. Inserting these into the formula for $j$, we obtain
+\begin{equation}
+j(E_{M,N})=\frac{256F^3(A^2F+3BH)^3}{B^2F^2H^2\cdot CFJ}=\frac{256(A^2F+3BH)^3}{B^2CH^2J}.
+\end{equation}
+This proves \ref{item:j-formula}.
+
+The zero of $L_i$ in $\mathbb P^1(\Qbar)$ is the point $[b_i:-a_i]$, and these twelve points are distinct because $\Delta_{ij}\ne0$ for $i\ne j$. Since $B,C\ne0$, the zeros of $\mathcal D$ are the zeros of $L_i$ with $i\in I_H\cup I_J$. At a zero of $L_i$ with $i\in I_H$, we have $H=0$ and $F\ne0$, which gives $A^2F+3BH=A^2F\ne0$. At a zero of $L_i$ with $i\in I_J$, we have $J=0$ and $H\ne0$, and \eqref{eq:datum-identity} implies that $A^2F=-4BH$; then $A^2F+3BH=-BH\ne0$. We conclude that $\mathcal N$ and $\mathcal D$ have no common zero. As both have degree $12$, the map has degree $12$. Let $j_0\in\Q$. The form $\mathcal N-j_0\mathcal D$ is not zero, since otherwise $\mathcal N$ would vanish at the zeros of $\mathcal D$. As a nonzero binary form of degree $12$, it has at most $12$ zeros in $\mathbb P^1(\Qbar)$. If $FHJ(M,N)\ne0$ and $j(E_{M,N})=j_0$, then $\mathcal D(M,N)\ne0$, and \ref{item:j-formula} implies that $(\mathcal N-j_0\mathcal D)(M,N)=0$. This proves \ref{item:j-degree}.
+
+For \ref{item:j-infinite}, two elliptic curves over $\Qbar$ are isomorphic if and only if they have the same $j$-invariant \cite[Proposition~III.1.4(b)]{SilvermanAEC}. If the curves $E_{M,N}$ with $(M,N)\in\mathcal Q$ lay in finitely many classes, then $j(E_{M,N})$ would take finitely many values on $\mathcal Q$, and by \ref{item:j-degree} the points $[M:N]$ would be finitely many.
+\end{proof}
+
+\begin{remark}[The $j$-invariants of the three families]\label{rem:j-families}
+For the data of \cref{sec:rank5,sec:rank6,sec:rank7}, \cref{lem:j-invariant}\ref{item:j-formula} gives the following $j$-invariants; in the rank-seven family, $33124=182^2$.
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Family & $(A,B,C)$ & $j(E_{M,N})$\\
+\midrule
+Rank five & $(1500,2700,57600)$ & $\dfrac49\cdot\dfrac{(2500F+9H)^3}{H^2J}$\\[8pt]
+Rank six & $(70,784,1764)$ & $\dfrac{16}9\cdot\dfrac{(25F+12H)^3}{H^2J}$\\[8pt]
+Rank seven & $(91205,33124,9)$ & $\dfrac{256}{9\cdot182^4}\cdot\dfrac{(91205^2F+3\cdot182^2H)^3}{H^2J}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For example, in the rank-five family $A^2F+3BH=900(2500F+9H)$ and $256\cdot900^3/(2700^2\cdot57600)=4/9$.
+\end{remark}
+
+\begin{remark}[The associated elliptic surfaces]\label{rem:elliptic-surfaces}
+The homogeneous equations define Weierstrass models over the projective parameter line, with coefficients $\alpha$ and $\beta$ of degrees four and eight. In either projective chart, the formulas in \eqref{eq:c4-Delta} give
+\[
+c_4(E)=16F(A^2F+3BH),\qquad \Delta(E)=16B^2CF^3H^2J.
+\]
+The twelve forms have distinct zeros. At the zeros of $F$, $H$ and $J$, the orders of $(c_4,\Delta)$ are $(1,3)$, $(0,2)$ and $(0,1)$, respectively; at a zero of $J$, we use $A^2F+3BH=-BH$. These models are minimal because the discriminant orders are less than $12$ \cite[p.~40, Remark~1]{Tate1975}. Tate's algorithm gives four fibers of type $\mathrm{III}$, four of type $\mathrm I_2$ and four of type $\mathrm I_1$ \cite[p.~34]{Tate1975}; see also \cite[\S4.5, Table~1]{SchuttShioda2010}. For $E'$, the types at $H$ and $J$ are interchanged. There are no other singular fibers, and the minimal discriminant divisor has degree $24$. Thus the relatively minimal smooth elliptic surfaces have $\chi(\mathcal O)=2$. Over the base $\mathbb P^1$, the canonical bundle formula and $h^1(\mathcal O)=0$ then show that they are K3 surfaces \cite[Theorems~6.8 and~6.12 and \S8.2]{SchuttShioda2010}.
+\end{remark}
+
+\section{Prime specializations}\label{sec:families-prime}
+
+\begin{definition}[Prime specializations]\label{def:prime-specialization}
+Let $S$ be a finite set of primes that contains every prime dividing
+\begin{equation}\label{eq:S-condition}
+6ABC\prod_{i=0}^{11}c_i\prod_{i=1}^{11}b_i\prod_{0\le i<j\le11}\Delta_{ij}
+\end{equation}
+and every prime dividing an entry of $\Gamma_E$ or $\Gamma_{E'}$. A pair $(M,N)\in\Z^2$ is a \emph{prime specialization} of $\datum$ (with respect to $S$) if $c_i$ divides $L_i(M,N)$ for $0\le i\le11$ and the twelve numbers
+\begin{equation}\label{eq:prime-values}
+p_i=\frac{L_i(M,N)}{c_i},\qquad0\le i\le11,
+\end{equation}
+are distinct primes, none of which lies in $S$.
+\end{definition}
+
+In \cref{sec:rank5,sec:rank6,sec:rank7}, the divisibility $c_i\mid L_i(M,N)$ and the residues of the numbers $L_i(M,N)/c_i$ come from a congruence condition on $(M,N)$, through the following elementary fact.
+
+\begin{lemma}[Divisibility and residues on a congruence class]\label{lem:precision}
+Let $L=aM+bN$ with $a,b\in\Z$, let $W_0$ be a positive integer, and let $(m,n)\in\Z^2$. Let $c$ be a positive integer that divides both $W_0$ and $L(m,n)$. Then every $(M,N)\in\Z^2$ with $(M,N)\equiv(m,n)\pmod{W_0}$ satisfies $c\mid L(M,N)$ and
+\begin{equation}\label{eq:precision}
+\frac{L(M,N)}c\equiv\frac{L(m,n)}c\pmod{W_0/c}.
+\end{equation}
+In particular, if $q$ is a prime that divides $W_0/c$ and does not divide $L(m,n)/c$, then $v_q(L(M,N))=v_q(c)$.
+\end{lemma}
+
+\begin{proof}
+Since $M-m$ and $N-n$ are divisible by $W_0$, there exists $s\in\Z$ such that $L(M,N)=L(m,n)+W_0s$. Dividing by $c$, we obtain
+\begin{equation}
+\frac{L(M,N)}c=\frac{L(m,n)}c+\frac{W_0}c\,s,
+\end{equation}
+where both terms on the right are integers. This proves that $c$ divides $L(M,N)$ and that \eqref{eq:precision} holds. If $q\mid W_0/c$ and $q\nmid L(m,n)/c$, then \eqref{eq:precision} shows that $L(M,N)/c$ is an integer prime to $q$, which implies that $v_q(L(M,N))=v_q(c)$.
+\end{proof}
+
+At a prime specialization, we write $\lambda_i$ for the restriction of the character $\chi_{p_i}$ of \eqref{eq:chi-def} to the integers prime to $p_i$, so that $\leg z{p_i}=(-1)^{\lambda_i(z)}$ for such integers $z$. We set
+\begin{equation}\label{eq:kappa}
+\kappa_E=-B\prod_{j\in G_E}c_j,\qquad\kappa_{E'}=C\prod_{j\in G_{E'}}c_j.
+\end{equation}
+The \emph{ambient list} $\cB_\star$ consists of the entries of $\Gamma_\star$, in their order, followed by the primes $p_j$ with $j\in G_\star$, in increasing order of $j$; its length is $n_\star=|\Gamma_\star|+8$. We index the entries of a vector in $\F_2^{n_\star}$ by the entries $g$ of $\Gamma_\star$, which we call the constant columns, and by the indices $j\in G_\star$, which we call the moving columns. We let $u_\star\in\F_2^{n_\star}$ be the vector with entry $0$ at each constant column and $1$ at each moving column.
+
+\begin{lemma}[Basic properties of prime specializations]\label{lem:prime-spec-basic}
+Let $(M,N)$ be a prime specialization.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:psb-nonzero} The product $FHJ$ is nonzero, and $E=E_{M,N}$ and $E'=E'_{M,N}$ are elliptic curves. Each $p_i$ is odd, and it divides none of the integers $A$, $B$, $C$, $c_j$ (for all $j$), $b_j$ (for $j\ge1$) and $\Delta_{jk}$ (for $j\ne k$), and no entry of $\Gamma_E$ or $\Gamma_{E'}$.
+\item\label{item:psb-valuations} For all $i$ and $j$, the valuation $v_{p_i}(L_j)$ is $1$ if $i=j$ and $0$ if $i\ne j$.
+\item\label{item:psb-gcd} The integers $M$ and $N$ are coprime, $M=c_0p_0$, and $p_0\nmid N$.
+\item\label{item:psb-torsion} The valuation $v_{p_0}(CFJ)$ is $1$. In particular, $CFJ=\alpha^2-4\beta$ is not a square in $\Q$, and $E(\Q)[2]=\{O,T\}$.
+\item\label{item:psb-beta} The coefficients satisfy $\beta=\kappa_E\prod_{j\in G_E}p_j$ and $\beta'=\kappa_{E'}\prod_{j\in G_{E'}}p_j$.
+\item\label{item:psb-independent} If $\Gamma_\star$ consists of $-1$ and distinct primes, then the classes of the entries of $\cB_\star$ are linearly independent in $\sqgp\Q$.
+\item\label{item:psb-support} If $\Gamma_\star$ contains $-1$ and every prime dividing $\kappa_\star$, then $\delta_\star(\star(\Q))$ is contained in the span of the classes of the entries of $\cB_\star$.
+\end{enumerate}
+In particular, if $\Gamma_\star$ consists of $-1$ and distinct primes, including every prime dividing $\kappa_\star$, then $\cB_\star$ is an ambient basis for $\star$ in the sense of \cref{def:rows}.
+\end{lemma}
+
+\begin{proof}
+We have $L_i(M,N)=c_ip_i\ne0$ for every $i$. Then $FHJ\ne0$, and \cref{lem:datum-basic}\ref{item:datum-basic-disc} shows that $E$ and $E'$ are elliptic curves. The prime $2$ divides \eqref{eq:S-condition} and lies in $S$, and each $p_i$ is odd. The rest of \ref{item:psb-nonzero} holds because $p_i\notin S$. For \ref{item:psb-valuations}, we have $L_j=c_jp_j$ with $p_{i}\nmid c_j$ by \ref{item:psb-nonzero}, and $p_i\ne p_j$ for $j\ne i$.
+
+For \ref{item:psb-gcd}, let $q$ be a prime dividing both $M$ and $N$. Then $q$ divides $L_i=c_ip_i$ for every $i$. By \cref{def:datum}\ref{item:datum-cofactors}, there exists $i_1$ with $c_{i_1}=1$, and then $q=p_{i_1}$. For $i\ne i_1$, we have $q\ne p_i$, so that $q$ divides $c_i$; this contradicts \ref{item:psb-nonzero} for the prime $p_{i_1}$. Hence $\gcd(M,N)=1$. Since $(a_0,b_0)=(1,0)$, we have $M=L_0=c_0p_0$, and then $p_0\nmid N$.
+
+For \ref{item:psb-torsion}, part \ref{item:psb-valuations} implies that $v_{p_0}(F)=1$ and $v_{p_0}(J)=0$, and $p_0\nmid C$ by \ref{item:psb-nonzero}. Then $v_{p_0}(CFJ)=1$ is odd, and $CFJ$ is not a square in $\Q$. By \cref{lem:datum-basic}\ref{item:datum-basic-dual}, $CFJ=\alpha^2-4\beta$, and \cref{lem:two-torsion} with $K=\Q$ shows that $T$ is the only point of order two in $E(\Q)$.
+
+Part \ref{item:psb-beta} follows from $L_j=c_jp_j$ and the definitions \eqref{eq:family-coefficients} and \eqref{eq:kappa}. For \ref{item:psb-independent}, suppose that a product of entries of $\cB_\star$ is a square in $\Q$. For $j\in G_\star$, the prime $p_j$ divides no other entry of $\cB_\star$, by \ref{item:psb-nonzero} and since the $p_i$ are distinct. The valuation at $p_j$ then shows that $p_j$ occurs to an even power. The valuations at the primes of $\Gamma_\star$ show the same for these primes, and then the sign shows it for $-1$.
+
+For \ref{item:psb-support}, the coefficients $\alpha,\beta$ and $\alpha',\beta'$ are integers with $\beta(\alpha^2-4\beta)\ne0$ and $\beta'(\alpha'^2-4\beta')\ne0$. By \cref{lem:support}, every class in $\delta_E(E(\Q))$ is the class of $\pm1$ times a product of distinct primes dividing $\beta$, and by \ref{item:psb-beta} these primes divide $\kappa_E$ or are equal to $p_j$ with $j\in G_E$. The same argument applies to $E'$ with $\beta'$ and $\kappa_{E'}$. The final statement combines \ref{item:psb-independent} and \ref{item:psb-support}.
+\end{proof}
+
+\begin{lemma}[Local images at the moving primes]\label{lem:moving-images}
+Let $(M,N)$ be a prime specialization, let $0\le i\le11$, and let $p=p_i$.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:moving-F} If $i\in I_F$, then $\delta_{E,p}(E(\Q_p))=\{\sq1,\sq\beta\}$ and $\delta_{E',p}(E'(\Q_p))=\{\sq1,\sq{\beta'}\}$.
+\item\label{item:moving-J} If $i\in I_J$, then $\delta_{E,p}(E(\Q_p))=\{\sq1\}$.
+\item\label{item:moving-H} If $i\in I_H$, then $\delta_{E',p}(E'(\Q_p))=\{\sq1\}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By \cref{lem:prime-spec-basic}\ref{item:psb-nonzero} and \ref{item:psb-valuations}, the prime $p$ is odd and does not divide $ABC$. Further, $v_p(F)=1$ if $i\in I_F$ and $v_p(F)=0$ otherwise, and similarly for $H$ with $I_H$ and for $J$ with $I_J$. By \eqref{eq:family-coefficients} and \cref{lem:datum-basic}\ref{item:datum-basic-dual}, the valuations of the coefficients are as follows.
+\begin{center}
+\begin{tabular}{lcccl}
+\toprule
+$i\in$ & $v_p(\alpha)=v_p(\alpha')$ & $v_p(\beta)$ & $v_p(\beta')$ & Case of \cref{lem:odd-local}\\
+\midrule
+$I_F$ & $1$ & $1$ & $1$ & \ref{item:odd-local-F} for $E$ and for $E'$\\
+$I_J$ & $0$ & $0$ & $1$ & \ref{item:odd-local-J} for $E$, since $\alpha^2-4\beta=\beta'$\\
+$I_H$ & $0$ & $1$ & $0$ & \ref{item:odd-local-J} for $E'$, since $\alpha'^2-4\beta'=16\beta$\\
+\bottomrule
+\end{tabular}
+\end{center}
+If $i\in I_F$, then $v_p(\alpha)\ge1$ and $v_p(\beta)=1$, and \cref{item:odd-local-F} shows that $\delta_{E,p}(E(\Q_p))=\{\sq1,\sq\beta\}$; the same holds for $E'$, with $\alpha',\beta'$ in place of $\alpha,\beta$. If $i\in I_J$, then $\alpha$ and $\beta$ are units and $v_p(\alpha^2-4\beta)=v_p(\beta')=1$, and \cref{item:odd-local-J} gives \ref{item:moving-J}. If $i\in I_H$, then $\alpha'$ and $\beta'$ are units and $v_p(\alpha'^2-4\beta')=v_p(16\beta)=1$, and \ref{item:moving-H} follows from \cref{item:odd-local-J}.
+\end{proof}
+
+\section{Rows at the moving primes}\label{sec:families-rows}
+
+The following rows encode \cref{lem:moving-images} in the coordinates of \cref{lem:squares}\ref{item:squares-odd}. By \cref{lem:prime-spec-basic}\ref{item:psb-nonzero} and \ref{item:psb-valuations}, every integer to which we apply $\lambda_i$ below is prime to $p_i$.
+
+\begin{definition}[Moving rows]\label{def:moving-rows}
+Let $(M,N)$ be a prime specialization and $\star\in\{E,E'\}$. For $i\in I_F$, the \emph{moving row} $r^\star_i\in\F_2^{n_\star}$ has the entries
+\begin{equation}\label{eq:moving-row-F}
+\begin{array}{ll}
+\lambda_i(g) & \text{at each constant column }g,\\
+\lambda_i(p_j) & \text{at each moving column }j\in G_\star\setminus\{i\},\\
+\lambda_i(\kappa_\star)+\sum_{j\in G_\star\setminus\{i\}}\lambda_i(p_j)\quad & \text{at the moving column }i.
+\end{array}
+\end{equation}
+For $i\in O_\star$, the \emph{moving row} $r^\star_i$ has entry $\lambda_i(g)$ at each constant column $g$ and entry $\lambda_i(p_j)$ at each moving column $j\in G_\star$.
+\end{definition}
+
+\begin{lemma}[Conditions at the moving primes]\label{lem:moving-rows}
+Let $(M,N)$ be a prime specialization, $\star\in\{E,E'\}$ and $i\in I_F\cup O_\star$. Then $r^\star_i$ is a row for $\star$ and $\cB_\star$ at the place $p_i$, in the sense of \cref{def:rows}. In particular, $r^\star_i\cdot\mathbf w=0$ for every $\mathbf w\in\F_2^{n_\star}$ such that $\sq{\mathbf w}_{\cB_\star}\in\delta_\star(\star(\Q))$.
+\end{lemma}
+
+\begin{proof}
+Let $p=p_i$. We use the coordinates $\sq z\mapsto(\nu_p(z),\chi_p(z))$ of \eqref{eq:odd-coordinates}, so that $\sq{p^ku_0}\mapsto(k\bmod2,\chi_p(u_0))$ for $u_0\in\Z_p^\times$. Every entry of $\cB_\star$ other than $p_i$ is a $p$-adic unit, and its class has coordinates $(0,\lambda_i(g))$ or $(0,\lambda_i(p_j))$; if $p_i$ is an entry of $\cB_\star$, its class has coordinates $(1,0)$.
+
+Let $i\in I_F$, and take $\star=E$; for $\star=E'$, replace $\beta$ and $\kappa_E$ by $\beta'$ and $\kappa_{E'}$. By \cref{lem:moving-images}\ref{item:moving-F}, the local image $\delta_{E,p}(E(\Q_p))$ is the subgroup $U_p=\{\sq1,\sq\beta\}$. By \cref{lem:prime-spec-basic}\ref{item:psb-beta}, we have $\beta=p_iw$ with $w=\kappa_E\prod_{j\in G_E\setminus\{i\}}p_j$ a $p$-adic unit. The class $\sq\beta$ has coordinates $(1,h)$ with
+\begin{equation}
+h=\lambda_i(w)=\lambda_i(\kappa_E)+\sum_{j\in G_E\setminus\{i\}}\lambda_i(p_j).
+\end{equation}
+The linear map $f(k,\ell)=\ell+hk$ vanishes on $U_p=\{(0,0),(1,h)\}$. Its values at the classes of the entries of $\cB_E$ are $\lambda_i(g)$ at a constant column $g$, $\lambda_i(p_j)$ at a moving column $j\ne i$, and $h$ at the moving column $i$. These are the entries \eqref{eq:moving-row-F}, and $r^E_i$ is the row defined by $(p_i,U_p,f)$.
+
+Let $i\in O_\star$. Then $i\notin G_\star$, and \cref{lem:moving-images}\ref{item:moving-J} (for $\star=E$) or \ref{item:moving-H} (for $\star=E'$) shows that the local image at $p$ is $U_p=\{\sq1\}$. The map $f(k,\ell)=\ell$ vanishes on $U_p$, and its values at the entries of $\cB_\star$ are the entries of $r^\star_i$. (The other coordinate $k$ vanishes at every entry of $\cB_\star$ and gives the zero row.) The last statement of the lemma is \cref{lem:upper-bound}.
+\end{proof}
+
+\section{Reciprocity and the sign \texorpdfstring{$\eps$}{epsilon}}\label{sec:families-reciprocity}
+
+The entries of the moving rows are characters $\lambda_i(g)$ and $\lambda_i(\kappa_\star)$ of fixed integers, and characters $\lambda_i(p_j)$ of one moving prime at another. We now express the latter through characters of fixed integers and the single sign
+\begin{equation}\label{eq:eps-def}
+\eps=\leg N{p_0}=(-1)^\eta,\qquad\eta\in\F_2,
+\end{equation}
+which is defined at every prime specialization because $p_0\nmid N$ (\cref{lem:prime-spec-basic}\ref{item:psb-gcd}). We use quadratic reciprocity and its two supplementary laws \cite[Chapter~5, Section~2, Theorem~1, p.~53]{IrelandRosen}. In the notation \eqref{eq:chi-def}, they state that, for distinct odd primes $p$ and $q$,
+\begin{equation}\label{eq:reciprocity}
+\begin{gathered}
+\chi_p(-1)=\frac{p-1}2\bmod2,\qquad\chi_p(2)=\frac{p^2-1}8\bmod2,\\
+\chi_p(q)+\chi_q(p)=\chi_p(-1)\chi_q(-1).
+\end{gathered}
+\end{equation}
+
+The determinant elimination and one-sign reduction below are analogous to the Gaussian reciprocity calculation in \cite[Lemma~4.1]{Savoie2026}.
+
+\begin{lemma}[Reciprocity for the prime values]\label{lem:reciprocity}
+Let $(M,N)$ be a prime specialization, and let $\eps=\leg N{p_0}$.
+\begin{enumerate}[label=(\alph*),ref=(\alph*)]
+\item\label{item:rec-pivot} For $1\le i\le11$, the symbol $\leg{p_i}{p_0}$ is equal to $\leg{b_ic_i}{p_0}\eps$.
+\item\label{item:rec-reverse} For $1\le i\le11$, we have $\leg{p_0}{p_i}=(-1)^{(p_0-1)(p_i-1)/4}\leg{p_i}{p_0}$.
+\item\label{item:rec-cross} For distinct $i,j$ with $1\le i,j\le11$, we have $b_iL_j\equiv\Delta_{ji}M\pmod{p_i}$, and hence
+\begin{equation}\label{eq:rec-cross}
+\leg{p_j}{p_i}=\leg{c_0c_jb_i\Delta_{ji}}{p_i}\leg{p_0}{p_i}.
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For \ref{item:rec-pivot}, recall that $M=c_0p_0$ (\cref{lem:prime-spec-basic}\ref{item:psb-gcd}). Reducing $c_ip_i=a_iM+b_iN$ modulo $p_0$, we find $c_ip_i\equiv b_iN\pmod{p_0}$. The integers $c_i$, $b_i$ and $N$ are prime to $p_0$, by \cref{lem:prime-spec-basic}\ref{item:psb-nonzero} and \ref{item:psb-gcd}. Taking Legendre symbols, we have $\leg{c_i}{p_0}\leg{p_i}{p_0}=\leg{b_i}{p_0}\eps$, and multiplying by $\leg{c_i}{p_0}=\leg{c_i}{p_0}^{-1}$, we obtain \ref{item:rec-pivot}. Part \ref{item:rec-reverse} is quadratic reciprocity for the distinct odd primes $p_0$ and $p_i$.
+
+For \ref{item:rec-cross}, we have $a_iM+b_iN=c_ip_i\equiv0\pmod{p_i}$, that is, $b_iN\equiv-a_iM\pmod{p_i}$. Then
+\begin{equation}
+b_iL_j=a_jb_iM+b_j(b_iN)\equiv(a_jb_i-a_ib_j)M=\Delta_{ji}M\pmod{p_i}.
+\end{equation}
+Inserting $L_j=c_jp_j$ and $M=c_0p_0$, we obtain $b_ic_jp_j\equiv\Delta_{ji}c_0p_0\pmod{p_i}$. All factors are prime to $p_i$ by \cref{lem:prime-spec-basic}\ref{item:psb-nonzero}, and taking Legendre symbols and multiplying by $\leg{b_ic_j}{p_i}$, we find \eqref{eq:rec-cross}.
+\end{proof}
+
+The characters of fixed integers are determined by residues, by the following consequence of \eqref{eq:reciprocity}.
+
+\begin{lemma}[Characters of fixed integers]\label{lem:fixed-characters}
+Let $z=(-1)^\sigma2^e\prod_qq^{f_q}$ be a nonzero integer, where $\sigma\in\{0,1\}$, $e\ge0$, and $q$ runs over the odd primes dividing $z$. Let $p$ be an odd prime not dividing $z$. Then
+\begin{equation}\label{eq:fixed-characters}
+\chi_p(z)=\sigma\chi_p(-1)+e\chi_p(2)+\sum_qf_q\bigl(\chi_q(p)+\chi_p(-1)\chi_q(-1)\bigr).
+\end{equation}
+In particular, $\chi_p(z)$ depends only on the residues of $p$ modulo $8$ and modulo the odd primes that divide $z$ to an odd power.
+\end{lemma}
+
+\begin{proof}
+The map $\chi_p$ is additive, and \eqref{eq:reciprocity} gives $\chi_p(q)=\chi_q(p)+\chi_p(-1)\chi_q(-1)$ for each odd prime $q\ne p$. This proves \eqref{eq:fixed-characters}. By \eqref{eq:reciprocity}, $\chi_p(-1)$ and $\chi_p(2)$ depend only on $p$ modulo $8$, and $\chi_q(p)$ depends only on $p$ modulo $q$. The terms with $f_q$ even vanish in $\F_2$.
+\end{proof}
+
+At a prime specialization, we define the following bits. For $1\le i\le11$, let
+\begin{equation}\label{eq:theta}
+\theta_i=\lambda_0(b_ic_i)+\lambda_0(-1)\lambda_i(-1).
+\end{equation}
+For distinct $i,j\in\{0,\dots,11\}$, let
+\begin{equation}\label{eq:gamma}
+\gamma_{ij}=\begin{cases}
+\lambda_0(b_jc_j)&\text{if }i=0,\\
+\theta_i&\text{if }j=0,\\
+\lambda_i(c_0c_jb_i\Delta_{ji})+\theta_i&\text{if }i,j\ge1,
+\end{cases}
+\end{equation}
+and for $\star\in\{E,E'\}$ and $i\in I_F$, let
+\begin{equation}\label{eq:gamma-diagonal}
+\gamma^\star_{ii}=\lambda_i(\kappa_\star)+\sum_{j\in G_\star\setminus\{i\}}\gamma_{ij}.
+\end{equation}
+
+\begin{corollary}[The moving rows as functions of $\eps$]\label{cor:eta-structure}
+Let $(M,N)$ be a prime specialization, and let $\eps=(-1)^\eta$ be as in \eqref{eq:eps-def}. Then $\lambda_i(p_j)=\gamma_{ij}+\eta$ for all distinct $i,j\in\{0,\dots,11\}$. For $\star\in\{E,E'\}$ and $i\in I_F\cup O_\star$, the moving row $r^\star_i$ has entry $\lambda_i(g)$ at each constant column $g$, entry $\gamma_{ij}+\eta$ at each moving column $j\ne i$, and, if $i\in I_F$, entry $\gamma^\star_{ii}+\eta$ at the moving column $i$. In other words,
+\begin{equation}\label{eq:eta-structure}
+r^\star_i=r^\star_i(0)+\eta u_\star,
+\end{equation}
+where $r^\star_i(0)\in\F_2^{n_\star}$ is the vector with entries $\lambda_i(g)$ at the constant columns, $\gamma_{ij}$ at the moving columns $j\ne i$, and $\gamma^\star_{ii}$ at the moving column $i$ if $i\in I_F$.
+\end{corollary}
+
+\begin{proof}
+Let $j\ge1$. Then \cref{lem:reciprocity}\ref{item:rec-pivot} implies that $\lambda_0(p_j)=\lambda_0(b_jc_j)+\eta=\gamma_{0j}+\eta$. Let $i\ge1$. By \cref{lem:reciprocity}\ref{item:rec-reverse} and \eqref{eq:reciprocity}, we have $\lambda_i(p_0)=\lambda_0(p_i)+\lambda_0(-1)\lambda_i(-1)$, which is $\theta_i+\eta=\gamma_{i0}+\eta$ by the case just treated. For distinct $i,j\ge1$, we find from \eqref{eq:rec-cross} that
+\begin{equation}
+\lambda_i(p_j)=\lambda_i(c_0c_jb_i\Delta_{ji})+\lambda_i(p_0)=\lambda_i(c_0c_jb_i\Delta_{ji})+\theta_i+\eta=\gamma_{ij}+\eta.
+\end{equation}
+This proves the first statement. The entries of $r^\star_i$ at the moving columns $j\ne i$ are $\lambda_i(p_j)=\gamma_{ij}+\eta$, by \cref{def:moving-rows}. For $i\in I_F$, the entry at the moving column $i$ is
+\begin{equation}
+\lambda_i(\kappa_\star)+\sum_{j\in G_\star\setminus\{i\}}(\gamma_{ij}+\eta)=\gamma^\star_{ii}+7\eta=\gamma^\star_{ii}+\eta,
+\end{equation}
+since $G_\star$ has eight elements and contains $i$. The entries at the constant columns do not involve $\eta$. Since $u_\star$ has entry $1$ exactly at the moving columns, this proves \eqref{eq:eta-structure}.
+\end{proof}
+
+\begin{remark}[Which characters must be controlled]\label{rem:constant-characters}
+The bits $\lambda_i(g)$, $\lambda_i(\kappa_\star)$, $\theta_i$, $\gamma_{ij}$ and $\gamma^\star_{ii}$ are characters at $p_0$ or $p_i$ of the fixed integers $-1$, $g\in\Gamma_\star$, $\kappa_\star$, $b_jc_j$ and $c_0c_jb_i\Delta_{ji}$, together with the products $\lambda_0(-1)\lambda_i(-1)$. By \cref{lem:fixed-characters}, they are determined by the residues of $p_0,\dots,p_{11}$ modulo $8$ and modulo the odd primes that divide one of these integers to an odd power; in \cref{sec:rank5,sec:rank6,sec:rank7}, a congruence condition on $(M,N)$ fixes the residues that are needed. Only the pairs $(i,j)$ with $i\in I_F\cup O_\star$ and $j\in G_\star\setminus\{i\}$ occur in the moving rows of $\star$. For $\star=E$, these pairs lie in $I_F\times I_F$, $I_F\times I_H$, $I_J\times I_F$ or $I_J\times I_H$, and for $\star=E'$, they lie in $I_F\times I_F$, $I_F\times I_J$, $I_H\times I_F$ or $I_H\times I_J$. No pair with both indices in $I_H$, or both in $I_J$, occurs. The determinants $\Delta_{ji}$ of such pairs do not enter any moving row, and an odd prime that divides the integers above, for the pairs that occur, only to even powers needs no congruence condition.
+\end{remark}
+
+\begin{remark}[The three families]\label{rem:three-families}
+The results of this section make no assumption on $p_0$ modulo $4$ or on the form $L_1$, and they apply to the three families without change. In the families of \cref{sec:rank5,sec:rank6,sec:rank7}, we have $c_0=54$, $1$ and $18$, and $p_0\equiv1$, $3$ and $1\pmod8$, respectively. Then $\lambda_0(-1)=0$ and $\theta_i=\lambda_0(b_ic_i)$ in the rank-five and rank-seven families, while $\theta_i=\lambda_0(b_ic_i)+\lambda_i(-1)$ in the rank-six family. In the rank-six and rank-seven families, $L_1=N$ and $c_1=1$, so that $p_1=N$ and $\eps=\leg{p_1}{p_0}$.
+\end{remark}
+
+\section{The rank criterion}\label{sec:families-criterion}
+
+With the vectors $r_i^\star(0)$ held fixed, \cref{cor:eta-structure} shows that changing $\eps$ adds the same vector $u_\star$ to every moving row. The following lemma gives a condition under which this does not change the kernel. Its hypothesis cannot be omitted: a moving row equal to $u_\star$ becomes zero when $\eta$ changes. A related common-kernel calculation for two quadratic-residue Laplacians is given in \cite[Lemma~4.2]{Savoie2026}.
+
+\begin{lemma}[Both signs give the same kernel]\label{lem:eta-rank}
+Let $\mathbf M(0)$ and $\mathbf M(1)$ be matrices over $\F_2$ with $n$ columns, whose rows are indexed by the same set $R=R_{\mathrm f}\sqcup R_{\mathrm m}$ of fixed and moving rows. Write $r_k(\eta)$ for the row of $\mathbf M(\eta)$ with index $k$. Suppose that there exists $u\in\F_2^n$ such that $r_k(1)=r_k(0)$ for $k\in R_{\mathrm f}$ and $r_k(1)=r_k(0)+u$ for $k\in R_{\mathrm m}$, and that
+\begin{equation}\label{eq:u-representation}
+u=\sum_{k\in K}r_k(0)
+\end{equation}
+for a set $K\subseteq R$ such that $K\cap R_{\mathrm m}$ has an even number of elements. Then $\mathbf M(0)$ and $\mathbf M(1)$ have the same row space. In particular, $\ker\mathbf M(1)=\ker\mathbf M(0)$ and $\rk\mathbf M(1)=\rk\mathbf M(0)$.
+\end{lemma}
+
+\begin{proof}
+By the hypotheses, we have
+\begin{equation}
+\sum_{k\in K}r_k(1)=\sum_{k\in K}r_k(0)+|K\cap R_{\mathrm m}|\,u=u,
+\end{equation}
+since $|K\cap R_{\mathrm m}|$ is even. Together with \eqref{eq:u-representation}, this shows that $u$ lies in the row spaces of both matrices. Each row of $\mathbf M(1)$ is the corresponding row of $\mathbf M(0)$, or that row plus $u$, and it lies in the row space of $\mathbf M(0)$. By symmetry, the two row spaces are equal. The kernel of a matrix consists of the vectors $\mathbf w$ with $r\cdot\mathbf w=0$ for every $r$ in its row space. Hence the kernels are equal, and so are the ranks.
+\end{proof}
+
+We now define the matrices of the rank criterion. Let $\cP$ be a set of prime specializations, and let $\star\in\{E,E'\}$. Suppose that we are given vectors $f^\star_1,\dots,f^\star_{m_\star}\in\F_2^{n_\star}$, and that the bits
+\begin{equation}\label{eq:constant-bits}
+\lambda_i(g)\ (i\in I_F\cup O_\star,\ g\in\Gamma_\star),\qquad\lambda_i(\kappa_\star)\ (i\in I_F),\qquad\gamma_{ij}\ (i\in I_F\cup O_\star,\ j\in G_\star\setminus\{i\})
+\end{equation}
+take the same values at every $(M,N)\in\cP$. Then the vectors $r^\star_i(0)$ of \cref{cor:eta-structure} are the same at every $(M,N)\in\cP$. For $\eta\in\F_2$, we let $\mathbf M_\star(\eta)$ be the matrix with $n_\star$ columns whose rows are
+\begin{equation}\label{eq:matrix-def}
+f^\star_1,\ \dots,\ f^\star_{m_\star},\ \text{then }r^\star_i(0)+\eta u_\star\ \text{for }i\in I_F,\ \text{then }r^\star_i(0)+\eta u_\star\ \text{for }i\in O_\star,
+\end{equation}
+with $i$ increasing in each group. We call the first $m_\star$ rows the fixed rows and the last eight rows the moving rows of $\mathbf M_\star(\eta)$. By \cref{cor:eta-structure}, at a point of $\cP$ with $\eps=(-1)^\eta$, the moving rows of $\mathbf M_\star(\eta)$ are the moving rows $r^\star_i$ of \cref{def:moving-rows}.
+
+\begin{proposition}[Rank criterion]\label{prop:rank-criterion}
+Let $\datum$ be a twelve-form datum, let $S$ be a set of primes as in \cref{def:prime-specialization}, and let $\cP$ be a set of prime specializations. Suppose that, for $\star=E$ and for $\star=E'$, the list $\Gamma_\star$ consists of $-1$ and distinct primes, including every prime dividing $\kappa_\star$, and that the following hold.
+\begin{enumerate}[label=(\roman*),ref=(\roman*)]
+\item\label{item:crit-fixed} \emph{Fixed rows.} There exist vectors $f^\star_1,\dots,f^\star_{m_\star}\in\F_2^{n_\star}$ such that, for every $(M,N)\in\cP$, each $f^\star_k$ is a row for $\star_{M,N}$ and $\cB_\star$ in the sense of \cref{def:rows}.
+\item\label{item:crit-characters} \emph{Constant characters.} The bits \eqref{eq:constant-bits} take the same values at every $(M,N)\in\cP$. Let $\mathbf M_\star(0)$ and $\mathbf M_\star(1)$ be the matrices \eqref{eq:matrix-def}.
+\item\label{item:crit-points} \emph{Points.} There exists an integer $k_\star\ge0$ such that, for every $(M,N)\in\cP$, the image $\delta_\star(\star_{M,N}(\Q))$ contains $k_\star$ linearly independent classes.
+\item\label{item:crit-rank} \emph{Rank.} We have $\rk\mathbf M_\star(0)=n_\star-k_\star$, and $u_\star$ is the sum of a set of rows of $\mathbf M_\star(0)$ that contains an even number of moving rows.
+\end{enumerate}
+Then every $(M,N)\in\cP$ satisfies $d_E=k_E$, $d_{E'}=k_{E'}$ and
+\begin{equation}\label{eq:rank-criterion}
+\rk E_{M,N}(\Q)=k_E+k_{E'}-2.
+\end{equation}
+Moreover, $\delta_\star(\star_{M,N}(\Q))$ consists of the classes $\sq{\mathbf w}_{\cB_\star}$ with $\mathbf w\in\ker\mathbf M_\star(0)$.
+\end{proposition}
+
+\begin{proof}
+Fix $(M,N)\in\cP$ and $\star\in\{E,E'\}$, and let $\eta\in\F_2$ be such that $\eps=(-1)^\eta$ at $(M,N)$. By \cref{lem:prime-spec-basic}, the list $\cB_\star$ is an ambient basis for $\star$. We first show that every row of $\mathbf M_\star(\eta)$ is a row in the sense of \cref{def:rows} at $(M,N)$. For the fixed rows, this is hypothesis \ref{item:crit-fixed}. By hypothesis \ref{item:crit-characters} and \cref{cor:eta-structure}, the moving rows of $\mathbf M_\star(\eta)$ are the rows $r^\star_i$ of \cref{def:moving-rows} at $(M,N)$, and these are rows by \cref{lem:moving-rows}. By \cref{lem:upper-bound}, the coordinate vectors of the classes in $\delta_\star(\star(\Q))$ lie in $\ker\mathbf M_\star(\eta)$.
+
+The matrices $\mathbf M_\star(0)$ and $\mathbf M_\star(1)$ satisfy the hypotheses of \cref{lem:eta-rank}, with $u=u_\star$, by \eqref{eq:matrix-def} and hypothesis \ref{item:crit-rank}. This lemma implies that $\ker\mathbf M_\star(\eta)=\ker\mathbf M_\star(0)$ and $\rk\mathbf M_\star(\eta)=n_\star-k_\star$. By hypothesis \ref{item:crit-points}, there are $k_\star$ linearly independent classes in $\delta_\star(\star(\Q))$, and their coordinate vectors are linearly independent. Applying \cref{cor:exact-dimension} to $\mathbf M_\star(\eta)$, we find that $d_\star=k_\star$ and that $\delta_\star(\star(\Q))$ consists of the classes $\sq{\mathbf w}_{\cB_\star}$ with $\mathbf w\in\ker\mathbf M_\star(\eta)=\ker\mathbf M_\star(0)$. Finally, by \cref{lem:rank-formula}, we have $\rk E_{M,N}(\Q)=d_E+d_{E'}-2=k_E+k_{E'}-2$.
+\end{proof}
+
+In \cref{sec:rank5,sec:rank6,sec:rank7}, hypothesis \ref{item:crit-fixed} is a lemma on the local images at the fixed places, hypothesis \ref{item:crit-characters} follows from a congruence condition on $(M,N)$ and \cref{rem:constant-characters}, hypothesis \ref{item:crit-points} is verified with explicit points and \cref{lem:independence}, and hypothesis \ref{item:crit-rank} is a finite computation with a certificate that can be checked by hand. Since the criterion holds for both values of $\eps$, the prime specializations produced in \cref{sec:primes} need not satisfy any condition on $\leg N{p_0}$.

@@ -1,0 +1,9 @@
+✔ [9111/9111] Built RankCertificates.LiteralFiniteField (6.7s)
+Build completed successfully (9111 jobs).
+✔ [9112/9112] Built RankCertificates.LiteralCyclicBridge (5.7s)
+Build completed successfully (9112 jobs).
+✔ [9123/9124] Built RankCertificates (2.8s)
+Build completed successfully (9124 jobs).
+Axiom audit passed for 3178 project declarations. Allowed: propext, Quot.sound, Classical.choice.
+Source audit passed for 105 Lean files: complete aggregate imports, no source symlinks, proof placeholders, custom axioms, or native_decide.
+Negative audit test passed: an exported theorem using a private custom axiom was rejected.

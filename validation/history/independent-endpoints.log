@@ -1,0 +1,225 @@
+def RankCertificates.rationalRank : WeierstrassCurve.{0} ℚ → Cardinal.{0} :=
+fun E => Module.rank.{0, 0} ℤ (WeierstrassCurve.Affine.Point.{0} (WeierstrassCurve.toAffine.{0} E))
+def RankCertificates.HasExactRank : WeierstrassCurve.{0} ℚ → ℕ → Prop :=
+fun E r => Eq.{2} (RankCertificates.rationalRank E) ↑r
+def RankCertificates.InfinitelyManyExactRank : ℕ → Prop :=
+fun r => Set.Infinite.{0} (Set.ofPred.{0} fun j => ∃ E, Eq.{1} E.j j ∧ RankCertificates.HasExactRank E.model r)
+def RankCertificates.RanksFiveThroughSeven : Prop :=
+RankCertificates.InfinitelyManyExactRank 5 ∧
+  RankCertificates.InfinitelyManyExactRank 6 ∧ RankCertificates.InfinitelyManyExactRank 7
+structure RankCertificates.PositivePrimeOutputs (outputs : Fin 12 → ℤ) (smallPrimes : List.{0} ℕ) : Prop
+number of parameters: 2
+fields:
+  RankCertificates.PositivePrimeOutputs.positive : ∀ (i : Fin 12), LT.lt.{0} 0 (outputs i)
+  RankCertificates.PositivePrimeOutputs.prime : ∀ (i : Fin 12), Nat.Prime (outputs i).natAbs
+  RankCertificates.PositivePrimeOutputs.distinct : Function.Injective.{1, 1} fun i => (outputs i).natAbs
+  RankCertificates.PositivePrimeOutputs.outside : ∀ (i : Fin 12) (p : ℕ),
+      Membership.mem.{0, 0} smallPrimes p → Ne.{1} (outputs i).natAbs p
+constructor:
+  RankCertificates.PositivePrimeOutputs.mk {outputs : Fin 12 → ℤ} {smallPrimes : List.{0} ℕ}
+    (positive : ∀ (i : Fin 12), LT.lt.{0} 0 (outputs i)) (prime : ∀ (i : Fin 12), Nat.Prime (outputs i).natAbs)
+    (distinct : Function.Injective.{1, 1} fun i => (outputs i).natAbs)
+    (outside : ∀ (i : Fin 12) (p : ℕ), Membership.mem.{0, 0} smallPrimes p → Ne.{1} (outputs i).natAbs p) :
+    RankCertificates.PositivePrimeOutputs outputs smallPrimes
+def RankCertificates.PrimeSpecialization5 : ℤ → ℤ → Prop :=
+fun x y =>
+  RankCertificates.PositivePrimeOutputs (fun i => (RankCertificates.PrimePatterns.Rank5.outputs i).eval x y)
+    (List.cons.{0} 2 (List.cons.{0} 3 (List.cons.{0} 5 List.nil.{0})))
+def RankCertificates.PrimeSpecialization6 : ℤ → ℤ → Prop :=
+fun x y =>
+  RankCertificates.PositivePrimeOutputs (fun i => (RankCertificates.PrimePatterns.Rank6.outputs i).eval x y)
+    (List.cons.{0} 2 (List.cons.{0} 3 (List.cons.{0} 7 List.nil.{0})))
+def RankCertificates.PrimeSpecialization7 : ℤ → ℤ → Prop :=
+fun x y =>
+  RankCertificates.PositivePrimeOutputs (fun i => (RankCertificates.PrimePatterns.Rank7.outputs i).eval x y)
+    (List.cons.{0} 2 (List.cons.{0} 3 (List.cons.{0} 7 (List.cons.{0} 13 List.nil.{0}))))
+@RankCertificates.Rank5ExactRank.actualImageE_card : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization5 x y →
+    Eq.{1}
+      (Nat.card.{0}
+        ↑(RankCertificates.twoIsogenyImage
+            (RankCertificates.Rank5.a (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y))
+            (RankCertificates.Rank5.b (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y))))
+      (HPow.hPow.{0, 0, 0} 2 3)
+@RankCertificates.Rank5ExactRank.actualImageEp_card : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization5 x y →
+    Eq.{1}
+      (Nat.card.{0}
+        ↑(RankCertificates.twoIsogenyImage
+            (HMul.hMul.{0, 0, 0} (-2)
+              (RankCertificates.Rank5.a (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y)))
+            (RankCertificates.Rank5.c (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y))))
+      (HPow.hPow.{0, 0, 0} 2 4)
+@RankCertificates.Rank5ExactRank.actualImageCardinalities : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization5 x y →
+    RankCertificates.ActualImageCardinalities
+      (RankCertificates.Rank5.a (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y))
+      (RankCertificates.Rank5.b (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y)) 3 4
+@RankCertificates.Rank5ExactRank.hasExactRank : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization5 x y →
+    RankCertificates.HasExactRank
+      (RankCertificates.Rank5.E (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y)) 5
+@RankCertificates.Rank6ExactRank.actualImageE_card : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization6 x y →
+    Eq.{1}
+      (Nat.card.{0}
+        ↑(RankCertificates.twoIsogenyImage
+            (RankCertificates.Rank6.a (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y))
+            (RankCertificates.Rank6.b (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y))))
+      (HPow.hPow.{0, 0, 0} 2 4)
+@RankCertificates.Rank6ExactRank.actualImageEp_card : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization6 x y →
+    Eq.{1}
+      (Nat.card.{0}
+        ↑(RankCertificates.twoIsogenyImage
+            (HMul.hMul.{0, 0, 0} (-2)
+              (RankCertificates.Rank6.a (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y)))
+            (RankCertificates.Rank6.c (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y))))
+      (HPow.hPow.{0, 0, 0} 2 4)
+@RankCertificates.Rank6ExactRank.actualImageCardinalities : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization6 x y →
+    RankCertificates.ActualImageCardinalities
+      (RankCertificates.Rank6.a (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y))
+      (RankCertificates.Rank6.b (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y)) 4 4
+@RankCertificates.Rank6ExactRank.hasExactRank : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization6 x y →
+    RankCertificates.HasExactRank
+      (RankCertificates.Rank6.E (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y)) 6
+@RankCertificates.Rank7ExactRank.actualImageE_card : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization7 x y →
+    Eq.{1}
+      (Nat.card.{0}
+        ↑(RankCertificates.twoIsogenyImage
+            (RankCertificates.Rank7.a (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y))
+            (RankCertificates.Rank7.b (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y))))
+      (HPow.hPow.{0, 0, 0} 2 5)
+@RankCertificates.Rank7ExactRank.actualImageEp_card : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization7 x y →
+    Eq.{1}
+      (Nat.card.{0}
+        ↑(RankCertificates.twoIsogenyImage
+            (HMul.hMul.{0, 0, 0} (-2)
+              (RankCertificates.Rank7.a (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y)))
+            (RankCertificates.Rank7.c (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y))))
+      (HPow.hPow.{0, 0, 0} 2 4)
+@RankCertificates.Rank7ExactRank.actualImageCardinalities : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization7 x y →
+    RankCertificates.ActualImageCardinalities
+      (RankCertificates.Rank7.a (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y))
+      (RankCertificates.Rank7.b (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y)) 5 4
+@RankCertificates.Rank7ExactRank.hasExactRank : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization7 x y →
+    RankCertificates.HasExactRank
+      (RankCertificates.Rank7.E (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y)) 7
+theorem RankCertificates.Rank5ExactRank.hasExactRank : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization5 x y →
+    RankCertificates.HasExactRank
+      (RankCertificates.Rank5.E (RankCertificates.Integration.M5 x) (RankCertificates.Integration.N5 y)) 5 :=
+⋯
+theorem RankCertificates.Rank6ExactRank.hasExactRank : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization6 x y →
+    RankCertificates.HasExactRank
+      (RankCertificates.Rank6.E (RankCertificates.Integration.M6 x) (RankCertificates.Integration.N6 y)) 6 :=
+⋯
+theorem RankCertificates.Rank7ExactRank.hasExactRank : ∀ {x y : ℤ},
+  RankCertificates.PrimeSpecialization7 x y →
+    RankCertificates.HasExactRank
+      (RankCertificates.Rank7.E (RankCertificates.Integration.M7 x) (RankCertificates.Integration.N7 y)) 7 :=
+⋯
+RankCertificates.rank5_infinitude_of_prime_values : Set.Infinite.{0}
+    (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization5 v.1 v.2) →
+  RankCertificates.InfinitelyManyExactRank 5
+RankCertificates.rank6_infinitude_of_prime_values : Set.Infinite.{0}
+    (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization6 v.1 v.2) →
+  RankCertificates.InfinitelyManyExactRank 6
+RankCertificates.rank7_infinitude_of_prime_values : Set.Infinite.{0}
+    (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization7 v.1 v.2) →
+  RankCertificates.InfinitelyManyExactRank 7
+RankCertificates.ranksFiveThroughSeven_of_prime_values : Set.Infinite.{0}
+    (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization5 v.1 v.2) →
+  Set.Infinite.{0} (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization6 v.1 v.2) →
+    Set.Infinite.{0} (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization7 v.1 v.2) →
+      RankCertificates.RanksFiveThroughSeven
+theorem RankCertificates.ranksFiveThroughSeven_of_prime_values : Set.Infinite.{0}
+    (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization5 v.1 v.2) →
+  Set.Infinite.{0} (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization6 v.1 v.2) →
+    Set.Infinite.{0} (Set.ofPred.{0} fun v => RankCertificates.PrimeSpecialization7 v.1 v.2) →
+      RankCertificates.RanksFiveThroughSeven :=
+⋯
+RankCertificates.twoIsogenyRankIdentity : ∀ (a b : ℚ),
+  Ne.{1} b 0 → Ne.{1} (RankCertificates.Isogeny.c a b) 0 → RankCertificates.TwoIsogenyRankIdentity a b
+@RankCertificates.twoIsogenyImage_card_le_verifiedCharacterKernel : ∀ {n : ℕ} (a b : ℚ) (columns : Fin n → ℚ)
+  (rows : List.{0} ℕ),
+  (∀ (q : RankCertificates.RationalSquareClasses),
+      Membership.mem.{0, 0} (RankCertificates.twoIsogenyImage a b) q →
+        Membership.mem.{0, 0} (LinearMap.range.{0, 0, 0, 0} (RankCertificates.squareClassLinearMap columns))
+          (Additive.ofMul.{0} q)) →
+    (∀ (row : ℕ),
+        Membership.mem.{0, 0} rows row →
+          ∃ f,
+            Eq.{1} (RankCertificates.squareClassCharacterRow f columns) (RankCertificates.Binary.vector n row) ∧
+              ∀ (q : RankCertificates.RationalSquareClasses),
+                Membership.mem.{0, 0} (RankCertificates.twoIsogenyImage a b) q → Eq.{1} (f (Additive.ofMul.{0} q)) 0) →
+      LE.le.{0} (Nat.card.{0} ↑(RankCertificates.twoIsogenyImage a b))
+        (Nat.card.{0} ↥(RankCertificates.Binary.kernelSubmodule n rows))
+RankCertificates.PrimeComplexity.rank5_exact_complexity : RankCertificates.PrimeComplexity.ComplexityAtMost
+    (Function.comp.{1, 1, 1} RankCertificates.PrimeComplexity.gradient RankCertificates.PrimePatterns.Rank5.outputs)
+    10 ∧
+  ∀ (s : ℕ),
+    RankCertificates.PrimeComplexity.ComplexityAtMost
+        (Function.comp.{1, 1, 1} RankCertificates.PrimeComplexity.gradient RankCertificates.PrimePatterns.Rank5.outputs)
+        s →
+      LE.le.{0} 10 s
+RankCertificates.PrimeComplexity.rank6_exact_complexity : RankCertificates.PrimeComplexity.ComplexityAtMost
+    (Function.comp.{1, 1, 1} RankCertificates.PrimeComplexity.gradient RankCertificates.PrimePatterns.Rank6.outputs)
+    10 ∧
+  ∀ (s : ℕ),
+    RankCertificates.PrimeComplexity.ComplexityAtMost
+        (Function.comp.{1, 1, 1} RankCertificates.PrimeComplexity.gradient RankCertificates.PrimePatterns.Rank6.outputs)
+        s →
+      LE.le.{0} 10 s
+RankCertificates.PrimeComplexity.rank7_exact_complexity : RankCertificates.PrimeComplexity.ComplexityAtMost
+    (Function.comp.{1, 1, 1} RankCertificates.PrimeComplexity.gradient RankCertificates.PrimePatterns.Rank7.outputs)
+    10 ∧
+  ∀ (s : ℕ),
+    RankCertificates.PrimeComplexity.ComplexityAtMost
+        (Function.comp.{1, 1, 1} RankCertificates.PrimeComplexity.gradient RankCertificates.PrimePatterns.Rank7.outputs)
+        s →
+      LE.le.{0} 10 s
+'RankCertificates.Rank5ExactRank.actualImageE_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank5ExactRank.actualImageEp_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank5ExactRank.actualImageCardinalities' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'RankCertificates.Rank5ExactRank.hasExactRank' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank6ExactRank.actualImageE_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank6ExactRank.actualImageEp_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank6ExactRank.actualImageCardinalities' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'RankCertificates.Rank6ExactRank.hasExactRank' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank7ExactRank.actualImageE_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank7ExactRank.actualImageEp_card' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.Rank7ExactRank.actualImageCardinalities' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'RankCertificates.Rank7ExactRank.hasExactRank' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.rank5_infinitude_of_prime_values' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.rank6_infinitude_of_prime_values' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.rank7_infinitude_of_prime_values' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.ranksFiveThroughSeven_of_prime_values' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'RankCertificates.twoIsogenyRankIdentity' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'RankCertificates.twoIsogenyImage_card_le_verifiedCharacterKernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'RankCertificates.PrimeComplexity.rank5_exact_complexity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'RankCertificates.PrimeComplexity.rank6_exact_complexity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'RankCertificates.PrimeComplexity.rank7_exact_complexity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

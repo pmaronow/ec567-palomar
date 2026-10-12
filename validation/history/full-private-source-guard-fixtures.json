@@ -1,0 +1,113 @@
+{
+  "current_source_guard_sha256": "69dc5a6f3217276824f8ed48527782595a862c52354053efb944c417a3dce94b",
+  "cases": [
+    {
+      "case": "baseline",
+      "expected_pass": true,
+      "exit_code": 0,
+      "diagnostic": null,
+      "observed_output": "Source audit passed for 107 Lean files: complete aggregate/private imports, no source symlinks, proof placeholders, custom axioms, or compiler decision bypasses.",
+      "passed": true
+    },
+    {
+      "case": "missing aggregate direct-all",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "missing direct import all of aggregate",
+      "observed_output": "AxiomAudit.lean: missing direct import all of aggregate RankCertificates",
+      "passed": true
+    },
+    {
+      "case": "ordinary child import",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "missing direct import all",
+      "observed_output": "RankCertificates/Common.lean: missing direct import all in private-declaration audit",
+      "passed": true
+    },
+    {
+      "case": "comment-only fake direct-all",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "missing direct import all",
+      "observed_output": "RankCertificates/Common.lean: missing direct import all in private-declaration audit",
+      "passed": true
+    },
+    {
+      "case": "string-only fake direct-all",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "missing direct import all",
+      "observed_output": "RankCertificates/Common.lean: missing direct import all in private-declaration audit",
+      "passed": true
+    },
+    {
+      "case": "comment-only fake public aggregate import",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "missing public aggregate import",
+      "observed_output": "RankCertificates/Common.lean: missing public aggregate import",
+      "passed": true
+    },
+    {
+      "case": "sorry",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "forbidden pattern",
+      "observed_output": "RankCertificates/Common.lean: forbidden pattern \\bsorry\\b",
+      "passed": true
+    },
+    {
+      "case": "admit",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "forbidden pattern",
+      "observed_output": "RankCertificates/Common.lean: forbidden pattern \\badmit\\b",
+      "passed": true
+    },
+    {
+      "case": "native_decide",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "forbidden pattern",
+      "observed_output": "RankCertificates/Common.lean: forbidden pattern \\bnative_decide\\b",
+      "passed": true
+    },
+    {
+      "case": "custom axiom",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "forbidden pattern",
+      "observed_output": "RankCertificates/Common.lean: forbidden pattern (?m)^\\s*(?:private\\s+|public\\s+)?axiom\\s",
+      "passed": true
+    },
+    {
+      "case": "skipKernelTC",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "forbidden pattern",
+      "observed_output": "RankCertificates/Common.lean: forbidden pattern debug\\.skipKernelTC",
+      "passed": true
+    },
+    {
+      "case": "Lean source symlink",
+      "expected_pass": false,
+      "exit_code": 1,
+      "diagnostic": "symbolic link",
+      "observed_output": "RankCertificates/Common.lean: Lean source is a symbolic link",
+      "passed": true
+    },
+    {
+      "case": "benign comment/string tokens",
+      "expected_pass": true,
+      "exit_code": 0,
+      "diagnostic": null,
+      "observed_output": "Source audit passed for 107 Lean files: complete aggregate/private imports, no source symlinks, proof placeholders, custom axioms, or compiler decision bypasses.",
+      "passed": true
+    }
+  ],
+  "all_cases_passed": true,
+  "source_control_changed_during_tests": [],
+  "main_sources_modified": false,
+  "compiler_invoked": false
+}

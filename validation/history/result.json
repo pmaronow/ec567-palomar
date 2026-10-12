@@ -1,0 +1,85 @@
+{
+  "status": "verified_arithmetic_geometry_and_weighted_mass_extraction",
+  "requested_unconditional_theorem_proved": false,
+  "palomar_submission_for_requested_theorem_ready": false,
+  "verified_at_utc": "2026-10-11T22:35:24.123087+00:00",
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "mathlib_commit": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+  "elliptic_curves_commit": "3bfe12446d7b2f5ac5c4ca138c932620fe24331c",
+  "aggregate_build": "passed",
+  "axiom_audit": "passed",
+  "audited_project_declarations": 4897,
+  "source_lean_files": 107,
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "placeholder_source_audit": "passed",
+  "complete_aggregate_import_audit": "passed",
+  "negative_axiom_audit_test": "passed",
+  "arithmetic_and_geometric_reduction_complete": true,
+  "conditional_exact_rank_specialization_theorems": [
+    "RankCertificates.Rank5ExactRank.hasExactRank",
+    "RankCertificates.Rank6ExactRank.hasExactRank",
+    "RankCertificates.Rank7ExactRank.hasExactRank"
+  ],
+  "proved_actual_image_cardinalities": {
+    "5": [
+      8,
+      16
+    ],
+    "6": [
+      16,
+      16
+    ],
+    "7": [
+      32,
+      16
+    ]
+  },
+  "proved_conditional_final_reduction": "RankCertificates.ranksFiveThroughSeven_of_prime_values",
+  "remaining_unproved_statements": [
+    "Set.Infinite {v : Int \u00d7 Int | RankCertificates.PrimeSpecialization5 v.1 v.2}",
+    "Set.Infinite {v : Int \u00d7 Int | RankCertificates.PrimeSpecialization6 v.1 v.2}",
+    "Set.Infinite {v : Int \u00d7 Int | RankCertificates.PrimeSpecialization7 v.1 v.2}"
+  ],
+  "unproved_target": "RankCertificates.RanksFiveThroughSeven",
+  "independent_review": "separate_agent_reviewed",
+  "human_expert_review_claimed": false,
+  "comparator_check_claimed": false,
+  "nanoda_check_claimed": false,
+  "palomar_registration_claimed": false,
+  "finite_prime_power_exclusion_bounds_proved": true,
+  "weighted_prime_counting_asymptotic_proved": false,
+  "new_archive_certificates_byte_identical": true,
+  "new_archive_literal_comparison": "passed",
+  "leancert_is_imported_dependency": false,
+  "isolated_leancert_kernel_log_example": "passed_standard_axioms_only",
+  "asymptotic_discarded_mass_bounds_proved": true,
+  "actual_weighted_mass_to_prime_infinitude_extraction_proved": true,
+  "literal_positive_sectors_and_output_caps_proved": true,
+  "proved_conditional_weighted_mass_reduction": "RankCertificates.AnalyticExtraction.ranksFiveThroughSeven_of_quadraticMangoldtMass",
+  "remaining_sufficient_weighted_mass_inputs": [
+    "RankCertificates.AnalyticExtraction.HasQuadraticMangoldtMass system5 positiveSector5",
+    "RankCertificates.AnalyticExtraction.HasQuadraticMangoldtMass system6 positiveSector6",
+    "RankCertificates.AnalyticExtraction.HasQuadraticMangoldtMass system7 positiveSector7"
+  ],
+  "actual_finite_katai_inequality_proved": true,
+  "qualitative_katai_and_mobius_criteria_proved": true,
+  "native_nilsequence_dilation_cancellation_proved": false,
+  "actual_literal_integer_to_prime_field_transport_proved": true,
+  "prime_modulus_linear_comparability_proved": true,
+  "proved_conditional_cyclic_mass_reduction": "RankCertificates.AnalyticExtraction.ranksFiveThroughSeven_of_cyclicSectorMass",
+  "masked_cyclic_prime_counting_input_proved": false,
+  "actual_finite_additive_van_der_corput_proved": true,
+  "qualitative_additive_van_der_corput_criterion_proved": true,
+  "exhaustive_module_owner_audit": "passed with direct import all each owning proof module and checked ModuleData enumeration",
+  "owned_declarations_in_external_namespaces_included": true,
+  "all_private_generated_declarations_loaded": true,
+  "private_audit_scope": "4891 safe roots retained in safe kernel-checked aggregate; all6 generated partial compiler implementation roots separately checked by Lean.collectAxioms; no owned declarations skipped",
+  "generated_implementation_roots": 6,
+  "finite_admissible_W_residue_classes_proved": true,
+  "literal_positive_admissible_W_offsets_proved": true,
+  "private_audit_source_imports_ignore_comments_and_strings": true
+}

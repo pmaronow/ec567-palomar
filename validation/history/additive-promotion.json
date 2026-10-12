@@ -1,0 +1,11 @@
+{
+  "preexisting_proof_modules_unchanged": 103,
+  "original_sha256": "a68a95eb2f3e252bce201b964ebd353cf08977e638d8b7c2dfc011fd303b869c",
+  "promoted_sha256": "e266b26b46e33985dc90aeadd988ef92f3402d5f934901bc8f3dc12583514696",
+  "changes": [
+    "qualify local import",
+    "qualify namespace into RankCertificates"
+  ],
+  "mathematical_statements_and_proof_bodies_changed": false,
+  "original_owned_declarations": 21
+}

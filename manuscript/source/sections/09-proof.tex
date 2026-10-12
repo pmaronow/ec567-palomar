@@ -1,0 +1,39 @@
+\chapter{Proof of the main theorem}\label{sec:proof}
+
+In this section, we deduce \cref{thm:main} from \cref{thm:r5,thm:r6,thm:r7}, which are proved in \cref{sec:rank5,sec:rank6,sec:rank7}. We then list the results on which these three theorems rest, as a guide to the paper.
+
+\begin{proof}[Proof of \cref{thm:main}]
+Let $r\in\{5,6,7\}$, and let $\datum_r$, $\cP_r$ and $\cK_r$ be the datum, the congruence class and the cone of \cref{sec:rank5}, \cref{sec:rank6} or \cref{sec:rank7}, respectively. Let $\mathcal E_r$ be the set of curves $E_{M,N}$, where $(M,N)$ runs over the prime specializations of $\datum_r$ that lie in $\cP_r\cap\cK_r$, with respect to the set $S$ fixed in that section. Each curve in $\mathcal E_r$ is an elliptic curve over $\Q$ (\cref{lem:prime-spec-basic}). By \cref{thm:r5} if $r=5$, \cref{thm:r6} if $r=6$, and \cref{thm:r7} if $r=7$, every curve in $\mathcal E_r$ has rank $r$ over $\Q$, and the curves in $\mathcal E_r$ represent infinitely many isomorphism classes over $\Qbar$. Choosing one curve of $\mathcal E_r$ in each of these classes, we obtain infinitely many elliptic curves over $\Q$ of rank $r$, pairwise nonisomorphic over $\Qbar$. This completes the proof.
+\end{proof}
+
+\begin{remark}[The structure of the proof]\label{rem:proof-structure}
+In each family, the rank statement is deduced from \cref{prop:rank-criterion}, and the infinitude statement from \cref{prop:infinitely-many}. \Cref{tab:proof-structure} lists the results that verify the hypotheses of these two propositions.
+
+The proof of \cref{prop:rank-criterion} combines the ambient bases of \cref{lem:prime-spec-basic}, the rows at the moving primes of \cref{lem:moving-rows} (which rest on \cref{lem:moving-images,lem:odd-local}), their dependence on the sign $\eps$ (\cref{cor:eta-structure}, which rests on \cref{lem:reciprocity}), the upper bound of \cref{lem:upper-bound}, the comparison of the two signs in \cref{lem:eta-rank}, \cref{cor:exact-dimension}, and the rank formula of \cref{lem:rank-formula}. The proof of \cref{prop:infinitely-many} combines \cref{thm:gtz} with \cref{lem:prime-exclusions,lem:local-factors}, and it uses \cref{lem:j-invariant} for the $j$-invariants.
+
+Besides elementary arguments, the proof uses the following results from the literature: the Mordell--Weil theorem \cite[Theorem~VIII.6.7]{SilvermanAEC}, in the proof of \cref{lem:rank-formula}; the basic properties of the isogenies $\phi$ and $\dual$ in \cref{prop:descent}\ref{item:descent-isogeny}; the formulas for $c_4$ and $\Delta$ and the classification of elliptic curves over $\Qbar$ by their $j$-invariant, in \cref{lem:datum-basic,lem:j-invariant}; quadratic reciprocity and its supplementary laws \eqref{eq:reciprocity}; and the theorem of Green and Tao on linear equations in primes \cite{GT2010}, with its inputs from \cite{GT2012,GTZ2012}, in \cref{thm:gtz}.
+The geometric description of the surfaces in \cref{rem:elliptic-surfaces}, which is not used in the arithmetic rank or infinitude proof, additionally uses Tate's algorithm \cite{Tate1975} and the elliptic-surface formulas in \cite{SchuttShioda2010}.
+\end{remark}
+
+\begin{table}[htbp]
+\centering
+\caption{The results that verify the hypotheses of \cref{prop:rank-criterion} (items (i)--(iv)) and of \cref{prop:infinitely-many} in the three families.}
+\label{tab:proof-structure}
+\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+ & Rank five & Rank six & Rank seven\\
+\midrule
+Datum and identity & \cref{sec:r5-datum} & \cref{sec:r6-datum} & \cref{lem:r7-datum}\\
+(iii) Points & \cref{lem:r5-points,lem:r5-lower} & \cref{lem:r6-points,lem:r6-classes} & \cref{lem:r7-points,lem:r7-independent}\\
+Congruence class & \cref{lem:r5-progression} & \cref{lem:r6-residues} & \cref{lem:r7-residues}\\
+Positivity on the cone & \cref{lem:r5-cone} & \cref{lem:r6-cone} & \cref{lem:r7-cone}\\
+Primes $q\le11$ & divide $W$ & divide $W$ & $q=5$: \cref{thm:r7}\\
+(i) Fixed rows & \cref{lem:r5-fixed} & \cref{lem:r6-fixed} & \cref{lem:r7-fixed}\\
+(ii) Characters & \cref{sec:r5-characters} & \cref{lem:r6-characters} & \cref{lem:r7-characters}\\
+(iv) Ranks & \cref{lem:r5-certificate} & \cref{lem:r6-rank} & \cref{lem:r7-ranks}\\
+\midrule
+Exact rank and infinitude & \cref{thm:r5} & \cref{thm:r6} & \cref{thm:r7}\\
+\bottomrule
+\end{tabular}
+\end{table}

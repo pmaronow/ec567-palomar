@@ -1,0 +1,32 @@
+--- a/LeanCert/Tactic/Verification.lean
++++ b/LeanCert/Tactic/Verification.lean
+@@ -329,14 +329,13 @@
+     (certGoal : MVarId) : TacticM VerificationAttempt := do
+   try
+     let proof ← mkDecideProof certificate.type
+-    let decidableInst := proof.appFn!.appArg!
+     let reduced ← withOptions (fun opts => opts.set `maxRecDepth 100000) do
+-      withAtLeastTransparency .all <| whnf decidableInst
+-    if reduced.isAppOf ``isFalse then
++      withAtLeastTransparency .all <| whnf certificate.decision
++    if reduced.isAppOf ``Bool.false then
+       return .rejected
+-    unless reduced.isAppOf ``isTrue do
++    unless reduced.isAppOf ``Bool.true do
+       return .failed s!"certificate decision procedure did not reduce to \
+-        `isTrue` or `isFalse`: {reduced}"
++        `true` or `false`: {reduced}"
+     let levelsInType := (collectLevelParams {} certificate.type).params
+     let lemmaLevels := (← Term.getLevelNames).reverse.filter levelsInType.contains
+     let lemmaName ← withOptions (Elab.async.set · false) do
+@@ -615,8 +614,8 @@
+ def classifyAxiom (n : Name) : TrustClass :=
+   if n == ``propext || n == ``Classical.choice || n == ``Quot.sound then
+     .foundational
+-  else if n == ``Lean.ofReduceBool || n == ``Lean.ofReduceNat
+-      || n == ``Lean.trustCompiler then
++  else if n == `Lean.ofReduceBool || n == `Lean.ofReduceNat
++      || n == `Lean.trustCompiler then
+     .nativeCompiler
+   else if n == ``sorryAx then
+     .sorryAx

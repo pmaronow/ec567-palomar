@@ -1,0 +1,9 @@
+{
+  "source": "RankCertificates/AdmissibleWResidue.lean",
+  "sha256": "3e4ce290fae28f7a4f20802969854b2523eac73380a5223286ee4b1e3363fc81",
+  "changes": "Byte-identical mathematical source and namespace; owning file path only. Aggregate/audit imports extended.",
+  "original_owned_private_generated_declarations": 42,
+  "independent_review": "Root reviewed complete frozen source against actual CRT representatives, affine residues, integer W-shift coprimality, empty-prime-set case W=1, and all three genuine positive sectors.",
+  "scope": "Finite CRT and unit residues only; no prime density or weighted counting claim.",
+  "utc": "2026-10-11T22:30:27.179911+00:00"
+}

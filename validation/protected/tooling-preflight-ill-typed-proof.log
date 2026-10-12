@@ -1,0 +1,16 @@
+Running con-ron kernel on solution
+con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-ron: rejected: type mismatch in declaration [at thm palomar_preflight, fold position 9] (--verified) t=6.320s
+con-ron kernel rejected the solution
+Running nanoda kernel on solution
+
+thread 'thread_0' (3) panicked at src/tc.rs:955:71:
+assertion failed: self.def_eq(u, v)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' (2) panicked at src/tc.rs:173:26:
+A thread in `check_all_declars` panicked while being joined: Any { .. }
+nanoda kernel rejected the solution
+Running Lean default kernel on solution
+error: con-ron exited with 1
+Lean default kernel rejected the solution

@@ -1,0 +1,254 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/v0.4.schema.json
+version: v0.4
+project:
+  name: 'Elliptic curves of exact ranks five, six, and seven: conditional formalization'
+  description: Lean proves that the finite-complexity affine-linear prime asymptotic implies infinitely
+    many geometric isomorphism classes of rational elliptic curves of each exact Mordell–Weil rank five,
+    six, and seven. The generic analytic theorem is an explicit hypothesis. The specialization checks,
+    two-isogeny descent, exact rank calculations, and passage to infinitely many j-invariants are formalized;
+    the prime asymptotic is not proved in Lean here.
+  authors:
+  - P. M. Aronow
+  - Patrick Lopatto
+  responsible_maintainers:
+  - P. M. Aronow
+  license: Apache-2.0
+classification:
+  arxiv:
+  - math.NT
+  msc2020:
+  - 11G05
+  - 11N32
+sources:
+- title: Infinitely Many Elliptic Curves of Exact Ranks Five, Six, and Seven
+  authors:
+  - P. M. Aronow
+  - Patrick Lopatto
+  id: sha256:5d3f85d7f6a07c8e8382f2629a49449689746655b0c4d2edb319b0197523e75a
+  type: paper
+  location: User-supplied EC_ranks_5_7_manuscript.zip; ec_ranks_5_7.pdf and its source/main.tex, source/abstract.tex,
+    source/sections/01-intro.tex, source/refs.bib; main theorem and sections on descent, primes, the three
+    families, and proof of the main theorem. The edited publication copy is manuscript/ec_ranks_5_7.pdf,
+    with all sources under manuscript/source/.
+  relationship: adapts
+  note: The manuscript states unconditional infinitude using published analytic results. Lean proves the
+    explicitly conditional variant with the generic finite-complexity prime asymptotic supplied as a hypothesis.
+    Its authors' note says all text except that note is machine-written under their supervision; this
+    is a provenance statement, not certification of the mathematics or a claim that they reviewed this
+    Lean development. The ZIP contains 29 files and 1,075,087 bytes. Its PDF has SHA-256 c62ebc9cb0e299ecf5f1e56c028c4017209cc97ad65175de4ddd1eaaf8bf75e9;
+    source/main.tex has SHA-256 d3b44a5ce1c882b626bf38420c9e3fb1a2718af8550d28156143336985a689e9. These
+    digests identify the supplied version. No public manuscript identifier or source-licence declaration
+    was supplied with this version. Novelty and priority of the formalized conditional result have not
+    been established. The repository includes a rebuilt publication copy whose only source change is Appendix
+    A referring readers to the planned repository https://github.com/pmaronow/ec567-palomar and its certificate-file
+    paths. All other 27 source files are byte-identical to the uploaded version. The rebuilt PDF SHA-256
+    is 1f8156b92b65cb1b0c12e8e61569e5cc4af136c72235c8b5403c6512402523f9.
+- title: Linear equations in primes
+  authors:
+  - Ben Green
+  - Terence Tao
+  id: https://doi.org/10.4007/annals.2010.171.1753
+  type: paper
+  location: Annals of Mathematics 171 (2010), 1753–1850; Main Theorem, Corollary 1.9, Lemma 1.6
+  relationship: other
+  note: Source of the unformalized analytic hypothesis. The Lean hypothesis is a restricted positive weighted
+    asymptotic for twelve fixed integer affine forms in two variables on dilates of fixed unit rectangles,
+    with actual local residue densities. Pairwise nonparallel gradients give finite complexity. The 2010
+    theorem's Möbius–nilsequence and inverse-Gowers assumptions were subsequently established by the next
+    two sources.
+- title: The Möbius function is strongly orthogonal to nilsequences
+  authors:
+  - Ben Green
+  - Terence Tao
+  id: https://doi.org/10.4007/annals.2012.175.2.3
+  type: paper
+  location: Annals of Mathematics 175 (2012), 541–566; Theorem 1.1
+  relationship: other
+  note: Established mathematical prerequisite for the external prime asymptotic. This project does not
+    formalize or assert its proof as a custom axiom.
+- title: An inverse theorem for the Gowers U^{s+1}[N]-norm
+  authors:
+  - Ben Green
+  - Terence Tao
+  - Tamar Ziegler
+  id: https://doi.org/10.4007/annals.2012.176.2.11
+  type: paper
+  location: Annals of Mathematics 176 (2012), 1231–1372; Theorem 1.3
+  relationship: other
+  note: Established mathematical prerequisite for the external prime asymptotic. The updated manuscript
+    bibliography also cites the authors' 2024 erratum at https://terrytao.wordpress.com/wp-content/uploads/2024/04/erratum-4.pdf
+    and corrected preprint https://arxiv.org/abs/1009.3998v5. These analytic proofs are outside this conditional
+    formalization's proof scope.
+- title: On the infinitude of elliptic curves over a number field with prescribed small rank
+  authors:
+  - David Zywina
+  id: https://arxiv.org/abs/2602.10865v1
+  type: paper
+  location: Theorem 4.1, Lemma 3.1, Proposition 5.9; background to the supplied manuscript
+  relationship: background
+  note: The supplied manuscript attributes its strategy to this small-rank work. The present recorded
+    conclusion concerns rational curves of exact ranks five, six, and seven; it does not claim to formalize
+    Zywina's theorem over arbitrary number fields or Kai's number-field prime theorem.
+- title: The Arithmetic of Elliptic Curves, second edition
+  authors:
+  - Joseph H. Silverman
+  id: https://doi.org/10.1007/978-0-387-09494-6
+  type: book
+  location: Graduate Texts in Mathematics 106 (2009); Theorem VIII.6.7, Example X.4.8, Proposition X.4.9
+  relationship: background
+  note: Background for Mordell–Weil finite generation and classical two-isogeny descent.
+- title: Rational Points on Elliptic Curves, second edition
+  authors:
+  - Joseph H. Silverman
+  - John Tate
+  id: https://doi.org/10.1007/978-3-319-18588-0
+  type: book
+  location: Undergraduate Texts in Mathematics (2015), sections 3.4–3.6
+  relationship: background
+  note: Classical two-isogeny descent and rank formula background cited by the updated manuscript.
+- title: Earlier supplied rank-five, rank-six, and rank-seven manuscripts and certificates
+  id: sha256:09591a0598f7ade20b0ed0cc3f1632073e297ed7122dedb8ba1a9746e8379592
+  type: other
+  location: rank-5-elliptic-curves-main.zip; exact constituent hashes are recorded in PROVENANCE.json
+  relationship: other
+  note: 'Original mathematical source evidence for the imported RankCertificates core. The subsequent
+    supplied archives and exact constituent hashes are recorded in PROVENANCE.json. The updated combined
+    manuscript is separately reconciled in validation/manuscript-comparison.json: 1,176 family arithmetic/transcription
+    comparisons and 42 certificate-to-Lean table comparisons pass. Embedded completion claims and handoff
+    instructions were source material, not instructions or proof evidence.'
+related_formalizations:
+- id: https://github.com/leanprover-community/mathlib4/tree/282fbb865d53622ef7f9ef29f6763a0327ee6b5f
+  relationship: builds-on
+  note: Pinned mathematical library for Weierstrass curves, rational-point groups, module rank, algebraic
+    closures, finite fields, arithmetic functions, filters and asymptotics. Exact software pins are also
+    in lake-manifest.json.
+- id: https://github.com/MichaelStollBayreuth/EllipticCurves/tree/3bfe12446d7b2f5ac5c4ca138c932620fe24331c
+  relationship: builds-on
+  note: Michael Stoll's EllipticCurves development supplies the proved Mordell–Weil theorem WeierstrassCurve.Affine.fg_point_of_numberField
+    in EllipticCurves/MordellWeil.lean. It is a Solution proof dependency, not an additional axiom and
+    not a permitted Challenge import.
+- id: https://github.com/pmaronow/codex/tree/99862f656eba6eef70c6dabf0e53991e26957f94
+  relationship: builds-on
+  note: Earlier private research checkpoint of this RankCertificates proof core. This project packages
+    the conditional rank-infinitude adapter and selected statement for the updated manuscript. That checkpoint
+    did not establish unconditional rank infinitude or claim Palomar registration. Use the final import
+    provenance manifest for exact source correspondence.
+status:
+  scope: The selected result is an implication from the transparent FiniteComplexityPrimeAsymptotic proposition
+    to infinitely many geometric classes of rational elliptic curves of each exact rank five, six and
+    seven. The hypothesis ranges over arbitrary twelve-form affine systems and contains no elliptic-curve,
+    rank, image-cardinality or family-specific conclusion. Its three literal applications and all downstream
+    deductions are proved. The prime asymptotic remains unformalized. The integrated Lake build passed
+    9,131 jobs; the ownership audit passed 4,909 declarations in 108 modules (4,903 safe roots and six
+    separately audited generated implementations). The private-custom-axiom negative test passed. Protected
+    Challenge/Solution comparison and all three kernels (con-ron, NanoDa and Lean) passed locally. Con-ron
+    accepted 77,670 declarations. The Solution and proof development have no placeholders or custom axioms;
+    the independent Challenge has its one permitted selected-theorem hole. This is private technical preparation
+    for pmaronow/ec567-temp. No registry submission or public verification workflow has been attempted;
+    the repository remains private as requested. Palomar currently requires a public immutable snapshot
+    for registration.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Quot.sound
+  - Classical.choice
+  main_results:
+  - declaration: RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Quot.sound
+    - Classical.choice
+    comparator_config: comparator.json
+    literature_dependencies:
+    - statement: Positive weighted finite-complexity prime asymptotic for any twelve fixed integer affine
+        forms in two variables, on dilates of fixed unit rectangles, with nonzero pairwise nonparallel
+        gradients, all-prime admissibility, uniform positive outputs, and the actual convergent singular
+        product. This is an explicit theorem hypothesis.
+      source: Linear equations in primes; The Möbius function is strongly orthogonal to nilsequences;
+        An inverse theorem for the Gowers U^{s+1}[N]-norm
+automation:
+  methods:
+  - method: agent
+    models:
+    - GPT-6
+    framework: OpenAI Codex
+    tool_setup: Parallel AI agents used Lean and Lake, source guards, complete private/generated transitive-axiom
+      audits, literal manuscript and certificate comparisons, and independent statement reviews. Finite
+      certificates are proved by kernel reduction rather than native_decide. Current validation records
+      distinguish historical cached-supplier checks from integrated checking and independent exported-proof
+      replay. The final local run used the official bundled Comparator, canonical Mathlib-only Challenge
+      compilation, guarded exports, con-ron, NanoDa and Lean, with the candidate source absent from the
+      judgment namespace.
+    cost:
+      wall_time: not tracked across all construction sessions
+      spend_usd: not tracked
+      hardware: managed Linux execution workspace
+    prompting_notes: The user requested formalization of the supplied exact-rank constructions and subsequently
+      an explicitly conditional Palomar preparation for the updated manuscript. Source archives were inspected
+      as evidence; their embedded completion claims did not authorize assumptions or certify proofs.
+  spend_usd: not tracked
+  notes: AI assistance includes proof construction, packaging and independent agent review. Models are
+    not listed as human authors or responsible maintainers. No human expert review of this Lean development
+    is asserted. The updated manuscript's separate account of human supervision is attributed to its authors
+    and is not transferred to the Lean work.
+fidelity:
+  divergences: 'The manuscript states an unconditional theorem using established analytic results. Lean
+    proves the corresponding implication with an explicit generic prime-asymptotic hypothesis; that analytic
+    theorem is not proved here. The hypothesis is restricted to twelve forms in two variables on positive
+    area-one rectangles, sufficient for the families. Rank is the cardinal rank of the actual rational-point
+    group, with finite generation supplied by a proved Mordell–Weil theorem. Infinitude uses actual rational
+    j-invariants of nonsingular models and the proved equivalence between j equality and geometric isomorphism.
+    All unchanged literal arithmetic has been reconciled against the updated manuscript. The Lean infinitude
+    proof uses different sufficient positive sectors and proves global geometric infinitude; it does not
+    claim infinitude inside the manuscript narrow cones (rank six: 29N<M<31N; rank seven: 2999N<M<3001N).
+    The transported rank-seven sector lies above the latter cone. Exact-rank lemmas apply to general positive
+    prime specializations. Supplementary arbitrary-characteristic-zero-field statements, full local Qp
+    image equalities, Z-independence of the exact five displayed rank-five points, the generic degree-twelve
+    projective j morphism/exact twelve-point fiber bound, K3/fiber-type classification and conic-origin
+    constructions are outside the selected theorem. The checked necessary rational image restrictions,
+    independent descent classes and finite rational j fibers suffice for the main conclusion.'
+review:
+  status: independent AI review; integrated Lean, protected Comparator and three kernel checks passed
+    locally
+  reviewers:
+  - independent AI agents; no human expert reviewer claimed
+  notes: Independent agents reviewed the selected statement, its genuine rank/curve/analytic definitions
+    and all 51 manuscript theorem/lemma/proposition/corollary statements. All 23 Challenge definitions
+    match core definitions. The full private/generated ownership audit and negative private-axiom test
+    passed. These are AI review and local checks, not human peer review or a Palomar editorial decision.
+    No human expert review, submission or registration is claimed. The requested private visibility prevents
+    satisfying the current public-snapshot registration prerequisite. Protected exported-proof comparison
+    and checks by con-ron, NanoDa and Lean passed. This used the pinned official bundled tools in network-disabled
+    bubblewrap namespaces; it was not the full registry workflow or cgroup supervision.
+alignment:
+  namespace: RankCertificates
+  statements:
+  - source: Updated manuscript main theorem, and sections on primes and the proof of the main theorem
+    lean: RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven
+    module: Solution
+    status: proved adapted conditional implication; protected comparison and all three kernel checks passed
+    note: The external prime theorem is an explicit hypothesis. Exact rank and geometric infinitude are
+      conclusions.
+  - source: The generic prime-asymptotic specialization and all subsequent deductions
+    lean: RankCertificates.ConditionalPrimePatterns.ranksFiveThroughSeven_of_finiteComplexityPrimeAsymptotic
+    module: RankCertificates.ConditionalPrimePatterns
+    status: proved conditional core endpoint
+    note: The selected Solution theorem directly wraps this endpoint with an identical result type.
+  - source: Updated manuscript exact-rank specialization theorems for the three literal families
+    lean: RankCertificates.Rank5ExactRank.hasExactRank; RankCertificates.Rank6ExactRank.hasExactRank;
+      RankCertificates.Rank7ExactRank.hasExactRank
+    module: RankCertificates.Rank5ExactRank; RankCertificates.Rank6ExactRank; RankCertificates.Rank7ExactRank
+    status: proved; unchanged literal families reconciled against updated manuscript
+    note: The lemmas assume prime specializations, not ranks or image cardinalities. Global infinitude
+      uses different sufficient sectors; infinitude inside the manuscript narrow cones is not asserted.
+  - source: Green–Tao finite-complexity prime theorem, with subsequently established analytic prerequisites
+    lean: RankCertificates.ConditionalPrimePatterns.FiniteComplexityPrimeAsymptotic
+    module: RankCertificates.ConditionalPrimePatterns
+    status: literature-dependency
+    note: Transparent proposition supplied as a theorem parameter; no proof is asserted.
+acknowledgements: Lean, mathlib contributors, Michael Stoll's EllipticCurves development, the supplied
+  manuscript authors and the mathematical sources cited above. Bibliographic credit does not assert endorsement
+  of this formalization.

@@ -1,0 +1,74 @@
+{
+  "status": "PASS local conditional theorem verification",
+  "recorded_utc": "2026-10-12T04:10:58.014348+00:00",
+  "repository": "https://github.com/pmaronow/ec567-temp",
+  "requested_visibility": "private",
+  "selected_theorem": "RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven",
+  "conclusion": "Infinitely many geometric classes over Qbar of rational elliptic curves of each exact rational Mordell-Weil rank 5,6,7",
+  "explicit_unformalized_input": "ConditionalPrimePatterns.FiniteComplexityPrimeAsymptotic",
+  "solution_and_owned_proof_placeholders": 0,
+  "challenge_selected_theorem_deliberate_holes": 1,
+  "custom_axioms": 0,
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "lean_source_files": 110,
+  "proof_and_audit_source_files": 109,
+  "lake_build": {
+    "status": "PASS",
+    "jobs": 9131,
+    "only_warning": "Deliberate selected-theorem Challenge hole",
+    "cached_dependencies_and_exact_source_matched_core_artifacts_reused": true,
+    "log": "lake-build.log"
+  },
+  "axiom_audit": {
+    "status": "PASS",
+    "owning_modules": 108,
+    "declarations": 4909,
+    "safe_roots": 4903,
+    "generated_implementation_roots_separately_audited": 6,
+    "negative_private_custom_axiom_test": "PASS",
+    "receipt": "axiom-audit-counts.json"
+  },
+  "challenge_fidelity": {
+    "status": "PASS",
+    "exact_copied_definitions_and_structures": 23,
+    "fully_elaborated_types_and_bodies_identical": true,
+    "receipt": "pair/pair-build-review.json"
+  },
+  "manuscript_reconciliation": {
+    "status": "PASS",
+    "archive_payloads": 29,
+    "literal_checks": 1176,
+    "certificate_table_checks": 42,
+    "mapped_manuscript_statements": 51,
+    "portable_replay_regression_checks": 26,
+    "zip_and_directory_replays": "PASS"
+  },
+  "protected_judgment": {
+    "status": "PASS",
+    "comparator": "PASS",
+    "con_ron": "PASS (77670 declarations)",
+    "nanoda": "PASS",
+    "lean_default": "PASS",
+    "bubblewrap": true,
+    "network_enabled": false,
+    "candidate_source_in_judge": false,
+    "receipt": "protected/LOCAL_VERIFICATION_STATUS.json",
+    "transcript": "protected/comparator.log",
+    "portable_reproduction": "../PROTECTED_REPLAY.md"
+  },
+  "source_snapshot": "source-snapshot.json",
+  "full_registry_workflow_run": false,
+  "registry_cgroup_supervision_run": false,
+  "human_expert_review_claimed": false,
+  "registry_submission_or_registration": false,
+  "scope_limits": [
+    "Prime asymptotic is an explicit hypothesis, not proved here.",
+    "Global infinitude uses sufficient sectors; infinitude within the manuscript narrow cones is not claimed.",
+    "The manuscript supplementary local-field/projective-j/K3/conic-origin and exact displayed five-point Z-independence statements are outside the selected theorem."
+  ],
+  "proof_exports_or_binaries_committed": false
+}

@@ -1,0 +1,40 @@
+{
+  "toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "lean_version": "Lean (version 4.35.0-rc3, x86_64-unknown-linux-gnu, commit 470d5ce1400764999581fd26d5d72b00d990b0f4, Release)",
+  "bubblewrap": "bubblewrap 0.12.0",
+  "tool_digests": {
+    "lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "leanexport": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "leanchecker": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+    "nanoda_bin": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8",
+    "con-ron": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+    "bwrap": "573236e5328ac2ebb08f59ae3a9805b4f8d12bdef14be8af4450d5463294985f"
+  },
+  "dependency_pins": {
+    "mathlib": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+    "EllipticCurves": "3bfe12446d7b2f5ac5c4ca138c932620fe24331c",
+    "plausible": "b7fb2b866d25bd937a2069931f9733197521cb27",
+    "LeanSearchClient": "c35806f43135ab3f254429d0c00bd13fc0123f77",
+    "importGraph": "103cd9a46972ee39d9defb2f54ae49823b1228eb",
+    "proofwidgets": "87dfe779d5dfd03142ee4fe158911b8eb553ec98",
+    "aesop": "a92ed98e694702934d40d12f24a1a449144db43e",
+    "Qq": "37b0ba0b26109cf9f9c541f0f9557e50cfa1a3b9",
+    "batteries": "679a93b2dc7563f54cc0a851c2574e2647e47ba0",
+    "Cli": "843844fa601dd56767b1eb22b7ada5b64d5e567a"
+  },
+  "release_source_hashes": {
+    "src/lean/LeanExport.lean": "ec95c53d108c5b014e7a53d6b88a4dbe41dc75c2e55102b2f8211268fcb94cf5",
+    "src/lean/lake/Lake/CLI/Check.lean": "55daf430e5adea38453b21798cbdf4cd099f66ec969494022a566a8ae098c00b"
+  },
+  "submission_revision": "d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44",
+  "kernels": {
+    "nanoda": [
+      "/workspace/work/tooling/elan/toolchains/leanprover--lean4---v4.35.0-rc3/bin/nanoda_bin"
+    ],
+    "con-ron": [
+      "/workspace/work/tooling/elan/toolchains/leanprover--lean4---v4.35.0-rc3/bin/con-ron",
+      "--jobs=2"
+    ]
+  }
+}

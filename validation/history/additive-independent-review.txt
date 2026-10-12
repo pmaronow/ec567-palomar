@@ -1,0 +1,39 @@
+Independent semantic review: AdditiveVanDerCorput.lean
+
+Source: /workspace/work/analytic/katai-criterion/AdditiveVanDerCorput.lean
+SHA-256: a68a95eb2f3e252bce201b964ebd353cf08977e638d8b7c2dfc011fd303b869c
+Review result: mathematical statements and finite error structure pass.
+
+The sequence is sampled on the literal positive interval Ioc 0 N. The
+correlation is a(n+h)*conjugate(a(n)); it is genuinely an additive shift,
+with every fixed positive h required in the qualitative premise.
+
+The exact interval reindexing changes a shift-h sum by two boundary pieces,
+each of length h, so the 2h bound is valid under one-boundedness. An ordered
+pair of shifts h>=k is compared with the actual h-k correlation with a 2k
+boundary error. Reversed pairs are handled by actual complex conjugation,
+not an assertion that complex-valued correlations are ordered.
+
+The finite H smoothing sum has a legitimate coarse 2H^2 boundary error.
+Its Gram expansion retains the actual off-diagonal correlation norms. Each
+diagonal is bounded by N, giving H*N. Cauchy-Schwarz in the n variable then
+gives the displayed square-root Gram bound; no cancellation premise occurs
+in the finite inequality. Empty H,N windows cause no invalid division there.
+
+The normalized theorem requires H,N>0 and retains the error 2H/N and
+sqrt(H+offDiagonalMass/N)/H. The qualitative proof chooses a fixed finite H
+first, lets N tend to infinity so its finite collection of off-diagonal
+terms vanishes, and then makes sqrt(H)/H small by choosing H large. Its
+order of quantifiers is correct. Scaling by 1/C and back gives the arbitrary
+fixed positive bound endpoint with the actual correlation scaling factor.
+
+The criterion itself does not assert additive cancellation for an arbitrary
+sequence. Its explicit analytic premise must be proved by an application,
+as in binomial differencing of polynomial phases. It is a qualitative fixed
+sequence result and supplies no uniform logarithmic arithmetic saving.
+
+This independent read-only review does not replace the owning agent's kernel
+build or exhaustive transitive axiom audit. At review time the original
+source had compiled cleanly and its separate ownership audit was running.
+Main promotion changes import and namespace qualifications; the main source
+hash and audit must be recorded separately from this frozen original receipt.

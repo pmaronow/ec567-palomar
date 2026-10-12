@@ -1,0 +1,109 @@
+\section{The rank-five family}\label{sec:origin-r5}
+
+The datum $\datum_5$ of \cref{sec:rank5} arises from a pair of curves of Zywina by a base change along a conic. Every identity below is an identity between polynomials or rational functions, which can be checked by expansion; we keep the notation of \cref{sec:rank5}.
+
+\paragraph{Zywina's pair.} In~\cite[\S6.5]{Zywina2026}, Zywina considers the curves
+\begin{equation}\label{r5o:zywina}
+\begin{aligned}
+E_Z&:\ y^2=x^3-70(t^2-25^2)\,x^2+2^4\cdot7^2(t^2-11^2)(t^2-25^2)\,x,\\
+E'_Z&:\ y^2=x^3+140(t^2-25^2)\,x^2+2^2\cdot3^2\cdot7^2(t^2-25^2)(t^2-39^2)\,x
+\end{aligned}
+\end{equation}
+over $\Q(t)$, where we write $t$ for his parameter $T$, and he uses them to obtain infinitely many elliptic curves of rank four over every number field. The coefficients of $E'_Z$ are $-2\alpha$ and $\alpha^2-4\beta$ for the coefficients $\alpha,\beta$ of $E_Z$, since $70^2(t^2-625)^2-4\cdot784(t^2-121)(t^2-625)=1764(t^2-625)(t^2-1521)$. The discriminants of both models vanish exactly at the six parameters $t=\pm11,\pm25,\pm39$. Zywina lists the points
+\[
+\begin{aligned}
+P^Z_1&=\big(14(t^2-11^2),\ 1176(t^2-11^2)\big),\\
+P^Z_2&=\big(2(t-11)(t-25),\ (36t+780)(t-11)(t-25)\big)
+\end{aligned}
+\]
+of $E_Z$, and the points
+\[
+\begin{aligned}
+Q^Z_1&=\big(2(t-25)(t-39),\ (64t+1760)(t-25)(t-39)\big),\\
+Q^Z_2&=\big(-14(t^2-25^2),\ 4704(t^2-25^2)\big)
+\end{aligned}
+\]
+of $E'_Z$. %
+
+\paragraph{A quadratic condition.} For $k\in\Q^\times$, we consider the abscissa $x=k(t-25)(t-39)$ on $E'_Z$; for $k=2$, it is the abscissa of $Q^Z_1$. Since $(t^2-25^2)(t^2-39^2)$ is divisible by $(t-25)(t-39)$, the right side of the equation of $E'_Z$ at this abscissa equals $x^2q_k(t)$, where
+\begin{equation}\label{r5o:qk}
+\begin{aligned}
+q_k(t)&=k(t-25)(t-39)+140(t^2-625)+\frac{1764}k(t+25)(t+39)\\
+&=\Big(k+140+\frac{1764}k\Big)t^2+64\Big(\frac{1764}k-k\Big)t+975\Big(k+\frac{1764}k\Big)-87500.
+\end{aligned}
+\end{equation}
+The point $\big(x,\,x\sqrt{q_k(t)}\big)$ is then defined over the extension $\Q(t)\big(\sqrt{q_k(t)}\big)$, which is $\Q(t)$ itself when $q_k(t)$ is a square in $\Q(t)$ (as for $k=2$, where $q_2(t)=256(2t+55)^2$). For the value of $k$ chosen below, $q_k$ is not a square, and this extension is the function field of the conic $z^2=q_k(t)$. Above a parameter $t_0$, this conic has two rational points if and only if $q_k(t_0)$ is a nonzero square. For $k=2s^2$ with $s\in\Q^\times$, the values of $q_k$ at the six bad parameters are given in \cref{tab:r5o-values}.
+
+\begin{table}[htbp]
+\centering
+\caption{The values $q_{2s^2}(t_0)$ at the bad parameters $t_0$.}\label{tab:r5o-values}
+\begin{tabular}{cl@{\qquad}cl@{\qquad}cl}
+\toprule
+$t_0$ & $q_{2s^2}(t_0)$ & $t_0$ & $q_{2s^2}(t_0)$ & $t_0$ & $q_{2s^2}(t_0)$\\
+\midrule
+$-25$ & $(80s)^2$ & $-11$ & $\big(12(5s^2-49)/s\big)^2$ & $-39$ & $16^2(39s^2+490)$\\
+$25$ & $(1680/s)^2$ & $11$ & $\big(28(s^2-45)/s\big)^2$ & $39$ & $(112/s)^2(10s^2+351)$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Four of these values are nonzero squares for every $s\in\Q^\times$, since $49/5$ and $45$ are not squares in $\Q$. The other two are squares if and only if $10s^2+351$ and $39s^2+490$ are squares. For $s=41$, we have
+\[
+10\cdot41^2+351=17161=131^2,\qquad 39\cdot41^2+490=66049=257^2,
+\]
+and all six values are nonzero. With $k=2\cdot41^2=3362$, comparing coefficients in \eqref{r5o:qk}, we find
+\[
+q_{3362}(t)=\Big(\frac{16}{41}\Big)^2\mathcal C(t),\qquad \mathcal C(t)=22999t^2-1412660t+20953150.
+\]
+
+\paragraph{The conic.} The conic $z^2=\mathcal C(t)$ has the rational point $(t,z)=(25,105)$. Since $\mathcal C(25+h)=105^2-262710h+22999h^2$, the line $z=105+m(t-25)$ meets the conic again at
+\[
+t=\frac{25m^2-210m-837685}{m^2-22999},\qquad z=-\frac{105(m^2+2502m+22999)}{m^2-22999}.
+\]
+We use the coordinate $m=113-62N/M$ on the line of slopes. Substituting it and multiplying the numerators and denominators by $M^2$, we obtain
+\begin{equation}\label{r5o:param}
+t=\frac{D_1}D,\qquad z=\frac ZD,\qquad Z=-105(5137M^2-2728MN+62N^2),
+\end{equation}
+where $D$ and $D_1$ are the quadratic forms \eqref{r5:quadratics}; indeed, the numerator and denominator of $t$ become $62D_1$ and $62D$. The form $D$ has no rational zero other than $(0,0)$, because its discriminant $4\cdot22999=4\cdot109\cdot211$ is not a square. The six parameters $\pm11,\pm25,\pm39$ pull back to products of the linear forms of \cref{tab:r5-data}:
+\begin{equation}\label{r5o:pullbacks}
+\begin{aligned}
+D_1-25D&=-210L_0L_1, & D_1+25D&=-10L_2L_3,\\
+D_1-39D&=14L_4L_5, & D_1+39D&=-2L_6L_7,\\
+D_1-11D&=-14L_8L_9, & D_1+11D&=-6L_{10}L_{11}.
+\end{aligned}
+\end{equation}
+Each line of \eqref{r5o:pullbacks} is an identity between binary quadratic forms. Multiplying the two identities in each line, we obtain
+\begin{equation}\label{r5o:quartics}
+t^2-25^2=\frac{2100F}{D^2},\qquad t^2-39^2=-\frac{28H}{D^2},\qquad t^2-11^2=\frac{84J}{D^2}.
+\end{equation}
+The identity \eqref{r5:identity} is the pullback of the linear relation $25(t^2-25^2)-9(t^2-39^2)=16(t^2-11^2)$: inserting \eqref{r5o:quartics} and dividing by $84$, we find $625F+3H=16J$.
+
+\paragraph{The scaling.} We substitute $t=D_1/D$ in \eqref{r5o:zywina}. For $E'_Z$, the change of coordinates $x=(14/D)^2x_1$, $y=(14/D)^3y_1$ gives
+\[
+y_1^2=x_1^3+\frac{140\cdot2100F}{14^2}\,x_1^2+\frac{1764\cdot2100F\cdot(-28H)}{14^4}\,x_1=x_1^3+1500F\,x_1^2-2700FH\,x_1,
+\]
+which is the curve $E$ of \eqref{r5:curves}. For $E_Z$, the same change of coordinates gives $y_1^2=x_1^3-750F\,x_1^2+3600FJ\,x_1$, which is not the curve $E'$ but is isomorphic to it by $(x_1,y_1)\mapsto(4x_1,8y_1)$. Equivalently, the change of coordinates $x=(7/D)^2x_1$, $y=(7/D)^3y_1$ takes $E_Z$ to
+\[
+y_1^2=x_1^3-\frac{70\cdot2100F}{7^2}\,x_1^2+\frac{784\cdot2100F\cdot84J}{7^4}\,x_1=x_1^3-3000F\,x_1^2+57600FJ\,x_1,
+\]
+which is $E'$. In other words, the scale $14/D$ takes $E'_Z$ to $E$, and it takes the curve $y^2=x^3-280(t^2-25^2)x^2+12544(t^2-25^2)(t^2-11^2)x$, which is $2$-isogenous to $E'_Z$ in the normalization of \cref{sec:descent} and isomorphic to $E_Z$ by $(x,y)\mapsto(x/4,y/8)$, to $E'$. Zywina's model $E_Z$ itself requires the scale $7/D$.
+
+\paragraph{The points.} Under these changes of coordinates, three of the five points of \cref{tab:r5-points} are images of Zywina's points. The point $Q^Z_2$ of $E'_Z$ goes to $P_1$; the points $P^Z_1$ and $P^Z_2$ of $E_Z$ (with the scale $7/D$) go to $Q_1$ and $Q_2$. The point $P_2$ is the image of $\big(2(t+25)(t+39),\,(64t-1760)(t+25)(t+39)\big)$, which is the point of $E'_Z$ obtained from $Q^Z_1$ by replacing $t$ with $-t$ and changing the sign of the ordinate; it lies on $E'_Z$ because the coefficients of $E'_Z$ are even in $t$. Finally, the point of $E'_Z$ over the conic with abscissa $3362(t-25)(t-39)$ becomes the point of $E$ with
+\[
+x=-50430\,L_0L_1L_4L_5,\qquad \frac yx=\frac8{287}Z.
+\]
+At a prime specialization, its class is $\sq{-10\,p_0p_1p_4p_5}=\mathbf v_1+\mathbf v_3$ in the notation of \eqref{r5:class-vectors}, and it does not increase the lower bound of \cref{lem:r5-lower}.
+
+\paragraph{The point $Q_3$.} Let $C$ be the point of $E$ over the conic that we have just described. The point $Q_3$ of \cref{tab:r5-points} comes from $C$ through the dual isogeny. We set
+\[
+\Xi=-627M^2+719MN+20N^2,\qquad R=\bigl(2400\,L_1L_2L_9L_{11},\ 28800\,\Xi\,L_1L_2L_9L_{11}\bigr).
+\]
+Then $R$ lies on $E'$, and the group laws of $E$ and $E'$ and the formula \eqref{eq:isogenies} for $\dual$ give the identities
+\begin{equation}\label{r5o:Q3}
+\dual(R)=C-P_2-T,\qquad R=Q_1+Q_3,
+\end{equation}
+which hold at every $(M,N)$ with $FHJ\ne0$, with the ordinates of \cref{tab:r5-points}. For the first identity, one computes that
+\[
+C-P_2-T=\bigl(36\,\Xi^2,\ 36\,\Xi\,(100L_1L_2L_9L_{11}-L_0L_3L_8L_{10})\bigr),
+\]
+whose abscissa is a square, as it must be, since $\delta_E(C)=\delta_E(P_2)\delta_E(T)$ and $\ker\delta_E=\dual(E'(\Q))$. In words, $Q_3=R-Q_1$, where $R$ is a preimage of $C-P_2-T$ under $\dual$. Equivalently, $C=T+P_2+\dual(Q_1+Q_3)$.

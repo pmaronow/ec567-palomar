@@ -1,0 +1,1104 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-12T03:26:30.309200+00:00",
+  "scope": "Read-only updated manuscript comparison; main-only conditional formalization profile, not a full formalization of every paper lemma or a new kernel build.",
+  "no_archive_scripts_or_compilers_executed": true,
+  "only_PDF_text_reader_executed": true,
+  "no_core_Challenge_Solution_or_remote_changes": true,
+  "new_archive": {
+    "path": "/workspace/attachments/3b6ee220-5050-4930-ba03-330b3f34da31/EC_ranks_5_7_manuscript.zip",
+    "file_name": "EC_ranks_5_7_manuscript.zip",
+    "bytes": 1075087,
+    "sha256": "5d3f85d7f6a07c8e8382f2629a49449689746655b0c4d2edb319b0197523e75a",
+    "file_count": 29,
+    "all_extracted_zip_payloads_byte_identical": true,
+    "unsafe_zip_paths": []
+  },
+  "new_files": [
+    {
+      "path": "source/abstract.tex",
+      "bytes": 1296,
+      "sha256": "6021aee479a1f89622ed8777bdcdc3073af81f8d9d21902bd88b847b74887f56",
+      "zip_payload_sha256": "6021aee479a1f89622ed8777bdcdc3073af81f8d9d21902bd88b847b74887f56",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/build.py",
+      "bytes": 1759,
+      "sha256": "ce0dcb1ceafa1f84c09d3270f5d528b1b19b4a5517a5077649c769c9795023a2",
+      "zip_payload_sha256": "ce0dcb1ceafa1f84c09d3270f5d528b1b19b4a5517a5077649c769c9795023a2",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/certificates/rank5/final155_certificate.json",
+      "bytes": 12983,
+      "sha256": "daa3a196c1e7bfad19be03b7d5ffe3bfb1672a5041149ba33ca650205fa610f8",
+      "zip_payload_sha256": "daa3a196c1e7bfad19be03b7d5ffe3bfb1672a5041149ba33ca650205fa610f8",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/certificates/rank5/verify_final155_certificate.py",
+      "bytes": 17380,
+      "sha256": "b08c7e9c01267f172a2e583b0c7bcbfc99918f81baa01ea7204c5c5d753d6d24",
+      "zip_payload_sha256": "b08c7e9c01267f172a2e583b0c7bcbfc99918f81baa01ea7204c5c5d753d6d24",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/certificates/rank6/rank6_certificate.json",
+      "bytes": 12706,
+      "sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b",
+      "zip_payload_sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/certificates/rank6/verify_rank6_certificate.py",
+      "bytes": 11054,
+      "sha256": "98aabc43874bec1fad6bd23c60157949b846bc8e8ed33e71e7a8396b04a39d9d",
+      "zip_payload_sha256": "98aabc43874bec1fad6bd23c60157949b846bc8e8ed33e71e7a8396b04a39d9d",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/certificates/rank7/rank7_certificate.json",
+      "bytes": 4316,
+      "sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d",
+      "zip_payload_sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/certificates/rank7/verify_rank7_certificate.py",
+      "bytes": 14016,
+      "sha256": "80beabbe2040aa2aa4699848fafbad0c37289025a6855a7920db34e7b7aedd1f",
+      "zip_payload_sha256": "80beabbe2040aa2aa4699848fafbad0c37289025a6855a7920db34e7b7aedd1f",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/macros.tex",
+      "bytes": 628,
+      "sha256": "a3fd855124d47cf36cbf1b204283e91de1962c7c5eb78fed4cdab8adf1f32e2d",
+      "zip_payload_sha256": "a3fd855124d47cf36cbf1b204283e91de1962c7c5eb78fed4cdab8adf1f32e2d",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/main.bbl",
+      "bytes": 17739,
+      "sha256": "9356a6fd48b5bc42868e65946a5dcbd3fa47fad366df0ea615aa6561c3c81202",
+      "zip_payload_sha256": "9356a6fd48b5bc42868e65946a5dcbd3fa47fad366df0ea615aa6561c3c81202",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/main.tex",
+      "bytes": 5177,
+      "sha256": "d3b44a5ce1c882b626bf38420c9e3fb1a2718af8550d28156143336985a689e9",
+      "zip_payload_sha256": "d3b44a5ce1c882b626bf38420c9e3fb1a2718af8550d28156143336985a689e9",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/refs.bib",
+      "bytes": 20701,
+      "sha256": "b1a903d86f75694551d68a1c6c1016326e97953f66946d5b9325d57b35107092",
+      "zip_payload_sha256": "b1a903d86f75694551d68a1c6c1016326e97953f66946d5b9325d57b35107092",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/01-intro.tex",
+      "bytes": 28724,
+      "sha256": "cfa1b5904d73033501912989376e002678cb96fbbe38e2932e0a066b3eb3a132",
+      "zip_payload_sha256": "cfa1b5904d73033501912989376e002678cb96fbbe38e2932e0a066b3eb3a132",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/02-overview.tex",
+      "bytes": 29479,
+      "sha256": "0280fa2a3bd26bf98bc65b0f4f2e73bf25e84c403f6e0669a6110b62ea6d1595",
+      "zip_payload_sha256": "0280fa2a3bd26bf98bc65b0f4f2e73bf25e84c403f6e0669a6110b62ea6d1595",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/03-descent.tex",
+      "bytes": 35390,
+      "sha256": "934c3c6976b581c6c810b8f9a6fe751be082871fefb8401f2ce92a72f61f8173",
+      "zip_payload_sha256": "934c3c6976b581c6c810b8f9a6fe751be082871fefb8401f2ce92a72f61f8173",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/04-families.tex",
+      "bytes": 39427,
+      "sha256": "5118bfebdda0f4e16e0757c0e6fcd740a2effdb9bd1d64ee0a272a28c0dae119",
+      "zip_payload_sha256": "5118bfebdda0f4e16e0757c0e6fcd740a2effdb9bd1d64ee0a272a28c0dae119",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/05-primes.tex",
+      "bytes": 28294,
+      "sha256": "5aafcde0735aa0cb29548b945cfa2c24c88508d0a86b8894b968e85dcaed4ca6",
+      "zip_payload_sha256": "5aafcde0735aa0cb29548b945cfa2c24c88508d0a86b8894b968e85dcaed4ca6",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/06-rank5.tex",
+      "bytes": 65222,
+      "sha256": "e4bd7545b3083d044498a5dd57ccf56dcc7db34f5b4f1b5805f1e632626ef95f",
+      "zip_payload_sha256": "e4bd7545b3083d044498a5dd57ccf56dcc7db34f5b4f1b5805f1e632626ef95f",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/07-rank6.tex",
+      "bytes": 58779,
+      "sha256": "3f99dff971a994081eb2ae6c4958ecb26cd67fdc66d0cf0ada7451b1a74d37f9",
+      "zip_payload_sha256": "3f99dff971a994081eb2ae6c4958ecb26cd67fdc66d0cf0ada7451b1a74d37f9",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/08-rank7.tex",
+      "bytes": 67766,
+      "sha256": "34b98b31bfa017821e0b788efc383d8dac0d2a122ca41cce92a960038cee71d6",
+      "zip_payload_sha256": "34b98b31bfa017821e0b788efc383d8dac0d2a122ca41cce92a960038cee71d6",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/09-proof.tex",
+      "bytes": 4296,
+      "sha256": "ad3332e2a00212697f7bb24f058dd0ae3b1e38de96ca2dbd04369ebd4e8c22c3",
+      "zip_payload_sha256": "ad3332e2a00212697f7bb24f058dd0ae3b1e38de96ca2dbd04369ebd4e8c22c3",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/A-verification.tex",
+      "bytes": 23816,
+      "sha256": "9836674feddab8f93ceb571b28a191a7ba9814b005201040c1d68ed164b86507",
+      "zip_payload_sha256": "9836674feddab8f93ceb571b28a191a7ba9814b005201040c1d68ed164b86507",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/B-origin-r5.tex",
+      "bytes": 7994,
+      "sha256": "80608e813ca6aafb885a58438756d81afbc0005847e3403e86d93a454fd7fe39",
+      "zip_payload_sha256": "80608e813ca6aafb885a58438756d81afbc0005847e3403e86d93a454fd7fe39",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/B-origin-r6.tex",
+      "bytes": 5795,
+      "sha256": "232578d8ecf47cd54b052bfe9aa3f616b2507864938abb633d3411390d578a6c",
+      "zip_payload_sha256": "232578d8ecf47cd54b052bfe9aa3f616b2507864938abb633d3411390d578a6c",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/B-origin-r7.tex",
+      "bytes": 9924,
+      "sha256": "c02fbe53ef76eba92bf319b0325054513f35b859d54b6e32283b30e0bf6e95a8",
+      "zip_payload_sha256": "c02fbe53ef76eba92bf319b0325054513f35b859d54b6e32283b30e0bf6e95a8",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/sections/B-origins.tex",
+      "bytes": 1011,
+      "sha256": "33f97b7fd40f3d728a8253d9650a5a1b564423ee65bbd3fb37332bf802c37e1d",
+      "zip_payload_sha256": "33f97b7fd40f3d728a8253d9650a5a1b564423ee65bbd3fb37332bf802c37e1d",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/shared/trilogy-style.tex",
+      "bytes": 9079,
+      "sha256": "098b738415780d11d4d77e3eaa19aca8475ff05609199c3cc0ca913950c8d86e",
+      "zip_payload_sha256": "098b738415780d11d4d77e3eaa19aca8475ff05609199c3cc0ca913950c8d86e",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "source/shortheads.tex",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "zip_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_byte_match": true
+    },
+    {
+      "path": "ec_ranks_5_7.pdf",
+      "bytes": 921999,
+      "sha256": "c62ebc9cb0e299ecf5f1e56c028c4017209cc97ad65175de4ddd1eaaf8bf75e9",
+      "zip_payload_sha256": "c62ebc9cb0e299ecf5f1e56c028c4017209cc97ad65175de4ddd1eaaf8bf75e9",
+      "extracted_byte_match": true
+    }
+  ],
+  "original_archive_provenance": {
+    "archive_name": "rank-5-elliptic-curves-main.zip",
+    "archive_sha256": "09591a0598f7ade20b0ed0cc3f1632073e297ed7122dedb8ba1a9746e8379592",
+    "sources": [
+      {
+        "path": "research/paper/final_rank5.tex",
+        "sha256": "85c0ffb166b9604b2d7a779ac64819ee0d06c3f2b6890849b2303bcb2a88f885"
+      },
+      {
+        "path": "research/paper/final155_certificate.json",
+        "sha256": "ed596d8253b230962840411a49c6625fc8a45d4c8588f0dedf08375fe0056730"
+      },
+      {
+        "path": "research/paper/prime_pattern_certificate.json",
+        "sha256": "c316304822129845dc768e959e3405d5e17fec1bbcdfa9732c9581055ea957e6"
+      },
+      {
+        "path": "research/rank6/paper/rank6_infinitude.tex",
+        "sha256": "d8695c3d9c6946eebfb7fbdcab0bab394ae86309f1bc65b7454913607335e6d1"
+      },
+      {
+        "path": "research/rank6/paper/rank6_certificate.json",
+        "sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b"
+      },
+      {
+        "path": "research/rank7/paper/rank7_infinitude.tex",
+        "sha256": "b4f90f1655ebd5df23cc482bb28bf1c20480c73eb1bc7647e37751353c4450e2"
+      },
+      {
+        "path": "research/rank7/paper/rank7_certificate.json",
+        "sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d"
+      }
+    ],
+    "additional_uploaded_sources": [
+      {
+        "archive_name": "elliptic_curves_ranks_5_7_source-0038f160972b4a4f998d867a76e5ea58.zip",
+        "archive_sha256": "a510f3af0b73170a1f10a73f077337e6d4310efbe31ca252e2fe2bc6056bf4f6",
+        "manuscript_path": "elliptic_curves_ranks_5_7.tex",
+        "manuscript_sha256": "9b16e87a47a4818ea496a65afec48f160ffc8a820304bf34936dde24e39c4368",
+        "all_seven_certificate_assets_byte_identical_to_original": true,
+        "literal_lean_comparison": "validation/new-archive-literal-comparison.json",
+        "audit": "validation/new-archive-comparison.md",
+        "contains_new_lean_prime_pattern_proof": false
+      }
+    ]
+  },
+  "original_source_hash_checks": [
+    {
+      "path": "research/paper/final_rank5.tex",
+      "expected_original_sha256": "85c0ffb166b9604b2d7a779ac64819ee0d06c3f2b6890849b2303bcb2a88f885",
+      "actual_sha256": "85c0ffb166b9604b2d7a779ac64819ee0d06c3f2b6890849b2303bcb2a88f885",
+      "match": true
+    },
+    {
+      "path": "research/paper/final155_certificate.json",
+      "expected_original_sha256": "ed596d8253b230962840411a49c6625fc8a45d4c8588f0dedf08375fe0056730",
+      "actual_sha256": "ed596d8253b230962840411a49c6625fc8a45d4c8588f0dedf08375fe0056730",
+      "match": true
+    },
+    {
+      "path": "research/paper/prime_pattern_certificate.json",
+      "expected_original_sha256": "c316304822129845dc768e959e3405d5e17fec1bbcdfa9732c9581055ea957e6",
+      "actual_sha256": "c316304822129845dc768e959e3405d5e17fec1bbcdfa9732c9581055ea957e6",
+      "match": true
+    },
+    {
+      "path": "research/rank6/paper/rank6_infinitude.tex",
+      "expected_original_sha256": "d8695c3d9c6946eebfb7fbdcab0bab394ae86309f1bc65b7454913607335e6d1",
+      "actual_sha256": "d8695c3d9c6946eebfb7fbdcab0bab394ae86309f1bc65b7454913607335e6d1",
+      "match": true
+    },
+    {
+      "path": "research/rank6/paper/rank6_certificate.json",
+      "expected_original_sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b",
+      "actual_sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b",
+      "match": true
+    },
+    {
+      "path": "research/rank7/paper/rank7_infinitude.tex",
+      "expected_original_sha256": "b4f90f1655ebd5df23cc482bb28bf1c20480c73eb1bc7647e37751353c4450e2",
+      "actual_sha256": "b4f90f1655ebd5df23cc482bb28bf1c20480c73eb1bc7647e37751353c4450e2",
+      "match": true
+    },
+    {
+      "path": "research/rank7/paper/rank7_certificate.json",
+      "expected_original_sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d",
+      "actual_sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d",
+      "match": true
+    }
+  ],
+  "certificate_comparison_receipt": {
+    "path": "/workspace/work/ec567-certificate-comparison.json",
+    "sha256": "78b73cb020bff4cba065f717f72aa68b2513d41417c4a71f43ea6ff187b33859",
+    "summary": {
+      "asset_count": 6,
+      "byte_identical_to_original_count": 2,
+      "byte_different_count": 4,
+      "mathematical_json_data_unchanged": true,
+      "verifier_executable_ast_unchanged": true,
+      "exact_lean_table_checks": 42,
+      "all_exact_lean_table_checks_passed": true
+    }
+  },
+  "family_literal_receipt": {
+    "path": "/workspace/work/ec567-family-literal-comparison.json",
+    "sha256": "4ef282816faff2e34bfb44e4752f3f7b8f9eb7a0529a3e35c5c4ff0a0facd6f9",
+    "check_count": 1176,
+    "failed_checks": []
+  },
+  "statement_count": 51,
+  "statement_mapping": [
+    {
+      "source": "source/sections/01-intro.tex",
+      "line": 9,
+      "environment": "theorem",
+      "label": "thm:main",
+      "statement_tex": "\\label{thm:main}\nFor each $r\\in\\{5,6,7\\}$, there exist infinitely many elliptic curves $E$ over $\\Q$, pairwise nonisomorphic over $\\Qbar$, such that $\\rk E(\\Q)=r$.",
+      "statement_sha256": "190096d1bd4d7670eaece4a4d9afc71e163fbbe11f1fd6bb1a212a88b06cc3ce",
+      "coverage_status": "exact_main_target_conditional_on_standard_prime_theorem",
+      "checked_lean_references": [
+        "Specification.lean: InfinitelyManyExactRank, RanksFiveThroughSeven, geometricallyIsomorphic_iff_j_eq",
+        "InfinitudeReduction.lean: ranksFiveThroughSeven_of_prime_values",
+        "LiteralPrimeBridge.lean: ranksFiveThroughSeven_of_quadraticMangoldtMass",
+        "../conditional-prime-patterns/RankCertificates/ConditionalPrimePatterns.lean: ranksFiveThroughSeven_of_finiteComplexityPrimeAsymptotic"
+      ],
+      "scope_note": "Exact rational Mordell–Weil ranks5,6,7 and infinitely many distinct actual j-invariants/geometric classes agree. The manuscript invokes established GTZ as mathematics; Lean keeps its generic asymptotic as an explicit theorem parameter. No unconditional formal prime theorem is asserted."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 17,
+      "environment": "lemma",
+      "label": "lem:dominant",
+      "statement_tex": "[Dominant terms]\\label{lem:dominant}\nLet $p$ be a prime, and let $z_1,\\dots,z_m\\in\\Q_p$ with $z_1\\ne0$.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:dominant-val} If $v_p(z_1)<v_p(z_k)$ for $2\\le k\\le m$, then $v_p(z_1+\\dots+z_m)=v_p(z_1)$.\n\\item\\label{item:dominant-unit} If $h\\ge1$ is an integer and $v_p(z_k)\\ge v_p(z_1)+h$ for $2\\le k\\le m$, then there exists $t\\in\\Z_p$ such that $z_1+\\dots+z_m=z_1(1+p^ht)$.\n\\end{enumerate}",
+      "statement_sha256": "17dff1c9d3b88fc81d00becda555e3003a8134d6ffd8f03c924757263dc0cde8",
+      "coverage_status": "rational_restrictions_sufficient_for_main_not_full_Qp_statement",
+      "checked_lean_references": [
+        "LocalDescent.lean: valuation comparisons and square approximations",
+        "PrimePowerResidues.lean; PrimePowerCharacters.lean; DyadicDominance.lean; SquareClassClassification.lean"
+      ],
+      "scope_note": "The paper states complete Qp valuation/squareclass classifications. Existing core proves the rational-coordinate consequences and normalized residue functionals needed by actual rational-point image restrictions, not all displayed Qp isomorphisms/Hensel-surjectivity statements."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 31,
+      "environment": "lemma",
+      "label": "lem:squares",
+      "statement_tex": "[Squareclasses of $\\Q_p$]\\label{lem:squares}\nLet $p$ be a prime, and write $u\\in\\Q_p^\\times$ as $u=p^ku_0$ with $k=v_p(u)$ and $u_0\\in\\Z_p^\\times$.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:squares-odd} Let $p$ be odd. Then $u$ is a square if and only if $k$ is even and $\\chi_p(u_0)=0$. The map $\\sq u\\mapsto(k\\bmod2,\\chi_p(u_0))$ is a well-defined isomorphism $\\sqgp{\\Q_p}\\to\\F_2^2$.\n\\item\\label{item:squares-two} Let $p=2$. Then $u$ is a square if and only if $k$ is even and $u_0\\equiv1\\pmod8$. Every class in $\\sqgp{\\Q_2}$ is equal to $\\sq{(-1)^{e_1}2^{e_2}5^{e_3}}$ for exactly one $(e_1,e_2,e_3)\\in\\F_2^3$. For the class of $u$, we have $e_2=k\\bmod2$, and\n\\begin{equation}\\label{eq:two-adic-coordinates}\n(e_1,e_3)=(0,0),\\ (1,1),\\ (0,1),\\ (1,0)\\quad\\text{according as}\\quad u_0\\equiv1,\\ 3,\\ 5,\\ 7\\pmod8.\n\\end{equation}\n\\item\\label{item:squares-one} If $p$ is odd and $h\\ge1$, or if $p=2$ and $h\\ge3$, then every element of $1+p^h\\Z_p$ is a square in $\\Q_p$.\n\\end{enumerate}",
+      "statement_sha256": "a3edcaabac2ef8981471afba02fa2b1831260d7d98d70d9a784188d03c683bd9",
+      "coverage_status": "rational_restrictions_sufficient_for_main_not_full_Qp_statement",
+      "checked_lean_references": [
+        "LocalDescent.lean: valuation comparisons and square approximations",
+        "PrimePowerResidues.lean; PrimePowerCharacters.lean; DyadicDominance.lean; SquareClassClassification.lean"
+      ],
+      "scope_note": "The paper states complete Qp valuation/squareclass classifications. Existing core proves the rational-coordinate consequences and normalized residue functionals needed by actual rational-point image restrictions, not all displayed Qp isomorphisms/Hensel-surjectivity statements."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 94,
+      "environment": "proposition",
+      "label": "prop:descent",
+      "statement_tex": "[Descent via a $2$-isogeny]\\label{prop:descent}\nLet $K$ be a field of characteristic $0$, let $\\alpha,\\beta\\in K$ with $\\beta(\\alpha^2-4\\beta)\\ne0$, and let $E=E_{\\alpha,\\beta}$ and $E'=E_{\\alpha',\\beta'}$.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:descent-isogeny} The maps $\\phi\\colon E(K)\\to E'(K)$ and $\\dual\\colon E'(K)\\to E(K)$ are homomorphisms with kernels $\\{O,T\\}$ and $\\{O',T'\\}$, and $\\dual\\circ\\phi=[2]$ on $E(K)$ and $\\phi\\circ\\dual=[2]$ on $E'(K)$.\n\\item\\label{item:descent-kernel} The map $\\delta^K_{\\alpha,\\beta}$ is a homomorphism with kernel $\\dual(E'(K))$, and $\\delta^K_{\\alpha',\\beta'}$ is a homomorphism with kernel $\\phi(E(K))$.\n\\item\\label{item:descent-local} Let $K=\\Q$. For every $P\\in E(\\Q)$ and every place $v$, we have $\\delta_v(P)=\\operatorname{loc}_v(\\delta(P))$.\n\\end{enumerate}",
+      "statement_sha256": "bb360440d0e9c10232f03b79a4d26ca04a3135b7182f5c89610ffebf749c134f",
+      "coverage_status": "Q_specialization_checked_generic_field_scope_broader",
+      "checked_lean_references": [
+        "Kummer.lean: ellipticTwoIsogenyClassHom",
+        "Isogeny.lean: twoIsogenyClassAddHom_kernel",
+        "IsogenyHom.lean; DualIsogenyHom.lean; DualComposition.lean"
+      ],
+      "scope_note": "Actual rational-point homomorphisms, kernels and compositions are checked. The paper quantifies over every characteristic-zero field and full localization maps, a broader interface than the Q-specific owned development."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 153,
+      "environment": "lemma",
+      "label": "lem:rank-formula",
+      "statement_tex": "[Rank from the images of the two descent maps]\\label{lem:rank-formula}\nLet $\\alpha,\\beta\\in\\Q$ with $\\beta(\\alpha^2-4\\beta)\\ne0$, let $E=E_{\\alpha,\\beta}$ and $E'=E_{\\alpha',\\beta'}$, and let\n\\begin{equation}\\label{eq:d-dprime}\nd=\\dim_{\\F_2}\\delta(E(\\Q)),\\qquad d'=\\dim_{\\F_2}\\delta'(E'(\\Q)).\n\\end{equation}\nThen $\\rk E(\\Q)=d+d'-2$.",
+      "statement_sha256": "d7d999cdb8164509cc8a4ef2f5432c36a7e7003683f6f8d2a2913790e0d8c568",
+      "coverage_status": "Q_rank_identity_checked",
+      "checked_lean_references": [
+        "TwoIsogenyRank.lean: twoIsogenyRankIdentity, hasExactRank_of_twoIsogeny_image_cardinalities"
+      ],
+      "scope_note": "Genuine rational point group/cardinal Mordell–Weil rank and actual two-isogeny image cardinalities give the rank; finite generation is imported/proved through established dependencies. Cardinal powers2^d encode the finite F2 dimensions."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 183,
+      "environment": "lemma",
+      "label": "lem:support",
+      "statement_tex": "[Support of the global image]\\label{lem:support}\nLet $\\alpha,\\beta\\in\\Z$ with $\\beta(\\alpha^2-4\\beta)\\ne0$. Then every class in $\\delta(E_{\\alpha,\\beta}(\\Q))$ is represented by a signed squarefree divisor of $\\beta$. Equivalently, $\\delta(E_{\\alpha,\\beta}(\\Q))$ lies in the subgroup of $\\sqgp\\Q$ spanned by $\\sq{-1}$ and the classes of the primes dividing $\\beta$.",
+      "statement_sha256": "295cedd1f58a9591870f633e520bdd206ed592f146d836887afc8387b7b959cf",
+      "coverage_status": "global_Q_support_checked",
+      "checked_lean_references": [
+        "LocalDescent.lean: twoIsogenyImage_even_valuation",
+        "SquareClassClassification.lean: integral_twoIsogenyImage_mem_signedPrime_range",
+        "AmbientDescent.lean: actualImageE_mem_signedPrime_range and partner variants"
+      ],
+      "scope_note": "Actual rational squareclasses have even valuations outside integral beta and lie in signed-prime span. This is the global support statement needed by the main proof."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 197,
+      "environment": "lemma",
+      "label": "lem:two-torsion",
+      "statement_tex": "[Points of order two]\\label{lem:two-torsion}\nLet $K$ be a field of characteristic $0$, and let $\\alpha,\\beta\\in K$ with $\\beta(\\alpha^2-4\\beta)\\ne0$. The points of order two of $E_{\\alpha,\\beta}(K)$ are $T$ and the points $(x_0,0)$ with $x_0\\in K$ a root of $x^2+\\alpha x+\\beta$. Points $(x_0,0)$ with $x_0\\ne0$ exist if and only if $\\alpha^2-4\\beta$ is a square in $K$. In that case there are exactly two of them, $(x_0,0)$ and $(x_1,0)$, with $x_0\\ne x_1$ and $x_0x_1=\\beta$, and their classes are $\\delta^K_{\\alpha,\\beta}((x_k,0))=\\sq{x_k}$; in particular $\\sq{x_0}\\sq{x_1}=\\sq\\beta$.",
+      "statement_sha256": "a99eb50d52e20d306a7c36bdeb26c51e6a8f902f2cad4d7112cee72249b81e67",
+      "coverage_status": "Q_cases_checked_generic_field_statement_broader",
+      "checked_lean_references": [
+        "Isogeny.lean: torsion_preimage_iff, torsion_coordinate_preimage_iff",
+        "IsogenyKernel.lean"
+      ],
+      "scope_note": "Rational torsion/exceptional-coordinate cases needed by Kummer and local restrictions are handled. No claim that this exact arbitrary-K lemma is an exported theorem."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 211,
+      "environment": "lemma",
+      "label": "lem:odd-local",
+      "statement_tex": "[Local images at odd primes]\\label{lem:odd-local}\nLet $p$ be an odd prime, and let $\\alpha,\\beta\\in\\Z_p$.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label[oddlocal]{item:odd-local-F} If $v_p(\\alpha)\\ge1$ and $v_p(\\beta)=1$, then $\\beta(\\alpha^2-4\\beta)\\ne0$ and $\\delta_p(E_{\\alpha,\\beta}(\\Q_p))=\\{\\sq1,\\sq\\beta\\}$.\n\\item\\label[oddlocal]{item:odd-local-J} If $\\alpha,\\beta\\in\\Z_p^\\times$ and $v_p(\\alpha^2-4\\beta)=1$, then $\\delta_p(E_{\\alpha,\\beta}(\\Q_p))=\\{\\sq1\\}$.\n\\end{enumerate}\nHere $\\delta_p=\\delta^{\\Q_p}_{\\alpha,\\beta}$.",
+      "statement_sha256": "1b6026cfa7c784ddd46bbe03dd861c096885861bafe6ae04ac0e695635063c8b",
+      "coverage_status": "actual_Q_image_restrictions_checked_full_Qp_equalities_not_exported",
+      "checked_lean_references": [
+        "LocalDescent.lean: twoIsogenyImage_discriminant_prime_square_approximation, twoIsogenyImage_moving_prime_square_approximation",
+        "LocalValuations.lean: actual-image character restrictions",
+        "Rank5PrimeValuations.lean; Rank6PrimeValuations.lean; Rank7PrimeValuations.lean"
+      ],
+      "scope_note": "The core checks necessary restrictions for every actual rational point/class. The book additionally states equalities of full local Qp images, including local class realization; these stronger standalone assertions are not what the main Lean interface claims."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 262,
+      "environment": "lemma",
+      "label": "lem:upper-bound",
+      "statement_tex": "[Local conditions give upper bounds]\\label{lem:upper-bound}\nIn the setting of \\cref{def:rows}, let $r$ be the row defined by $(v,U_v,f)$. Then $r\\cdot\\mathbf w=0$ for every $\\mathbf w\\in\\F_2^n$ such that $\\sq{\\mathbf w}_{\\cB}\\in\\delta(E(\\Q))$. If, moreover, $\\cB$ is an ambient basis for $E$ and $\\mathbf M$ is a matrix over $\\F_2$ with $n$ columns whose rows are rows in the sense of \\cref{def:rows}, possibly at different places, then the coordinate vectors of the classes in $\\delta(E(\\Q))$ form a subspace of $\\ker\\mathbf M$, and\n\\begin{equation}\\label{eq:upper-bound}\n\\dim_{\\F_2}\\delta(E(\\Q))\\le n-\\rk\\mathbf M.\n\\end{equation}",
+      "statement_sha256": "9ac033b7b5c1c1e4a20e3629eb5e9b0f4859957b408b7a22d488e71c842754e7",
+      "coverage_status": "actual_image_binary_kernel_upper_bounds_checked",
+      "checked_lean_references": [
+        "AmbientDescent.lean: twoIsogenyImage_card_le_binaryKernel, twoIsogenyImage_card_le_verifiedCharacterKernel"
+      ],
+      "scope_note": "Actual image annihilation, support, finite signed-prime coordinate independence and binary-kernel cardinalities are connected, not merely matrix-only calculations. No claim that the abstract place-indexed row formalism is reproduced verbatim."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 279,
+      "environment": "lemma",
+      "label": "lem:independence",
+      "statement_tex": "[A triangular criterion for independence]\\label{lem:independence}\nLet $\\mathbf w_1,\\dots,\\mathbf w_k\\in\\F_2^n$. Suppose that there exist distinct indices $j_1,\\dots,j_k\\in\\{1,\\dots,n\\}$ such that, for each $s$, the $j_s$-th entry of $\\mathbf w_s$ is $1$ and the $j_s$-th entry of $\\mathbf w_t$ is $0$ for every $t>s$. Then $\\mathbf w_1,\\dots,\\mathbf w_k$ are linearly independent. In particular, if $\\cB$ is an ambient basis for $E$, the classes $\\sq{\\mathbf w_1}_{\\cB},\\dots,\\sq{\\mathbf w_k}_{\\cB}$ are linearly independent.",
+      "statement_sha256": "6d97238ba38b18099c04da0f92a4d514d32a8fc9df5f7ccaa029d1c581976846",
+      "coverage_status": "concrete_generators_and_sharp_image_cards_checked",
+      "checked_lean_references": [
+        "Binary.lean; MatrixCertificates.lean: generator independence, kernel=span, kernel dimensions",
+        "SquareClassIndependence.lean: signedPrime_squareclasses_linearIndependent, mask_classes_linearIndependent",
+        "Rank5ExactRank.lean; Rank6ExactRank.lean; Rank7ExactRank.lean: actualImageCardinalities"
+      ],
+      "scope_note": "The literal independent generators, actual points, upper bounds and matching cardinalities are checked. The paper packages these in a generic ambient-basis lemma; no arbitrary triangular-criterion or generic full image=kernel theorem is separately advertised here."
+    },
+    {
+      "source": "source/sections/03-descent.tex",
+      "line": 289,
+      "environment": "corollary",
+      "label": "cor:exact-dimension",
+      "statement_tex": "[Exact dimension]\\label{cor:exact-dimension}\nLet $\\cB$ be an ambient basis for $E=E_{\\alpha,\\beta}$ with $n$ entries, and let $\\mathbf M$ be a matrix whose rows are rows in the sense of \\cref{def:rows}. Suppose that $\\mathbf w_1,\\dots,\\mathbf w_k\\in\\F_2^n$ are linearly independent, that $\\sq{\\mathbf w_s}_{\\cB}\\in\\delta(E(\\Q))$ for every $s$, and that $\\rk\\mathbf M=n-k$. Then $\\dim_{\\F_2}\\delta(E(\\Q))=k$, and $\\delta(E(\\Q))$ is the span of $\\sq{\\mathbf w_1}_{\\cB},\\dots,\\sq{\\mathbf w_k}_{\\cB}$. It consists of the classes $\\sq{\\mathbf w}_{\\cB}$ with $\\mathbf w\\in\\ker\\mathbf M$.",
+      "statement_sha256": "de642a494bdf434839f300ba94e7eaa626145ce08fb394544d9e5167e385fc39",
+      "coverage_status": "concrete_generators_and_sharp_image_cards_checked",
+      "checked_lean_references": [
+        "Binary.lean; MatrixCertificates.lean: generator independence, kernel=span, kernel dimensions",
+        "SquareClassIndependence.lean: signedPrime_squareclasses_linearIndependent, mask_classes_linearIndependent",
+        "Rank5ExactRank.lean; Rank6ExactRank.lean; Rank7ExactRank.lean: actualImageCardinalities"
+      ],
+      "scope_note": "The literal independent generators, actual points, upper bounds and matching cardinalities are checked. The paper packages these in a generic ambient-basis lemma; no arbitrary triangular-criterion or generic full image=kernel theorem is separately advertised here."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 49,
+      "environment": "lemma",
+      "label": "lem:datum-basic",
+      "statement_tex": "[Basic properties of the curves]\\label{lem:datum-basic}\nLet $(M,N)\\in\\Z^2$ with $FHJ\\ne0$.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:datum-basic-dual} We have $\\alpha^2-4\\beta=CFJ=\\beta'$ and $\\alpha'^2-4\\beta'=16\\beta$. In particular, $E'_{M,N}$ is the curve $E_{\\alpha',\\beta'}$ of \\eqref{eq:isogenous-coefficients}, and the maps $\\phi$ and $\\dual$ of \\eqref{eq:isogenies} are the $2$-isogenies between $E_{M,N}$ and $E'_{M,N}$.\n\\item\\label{item:datum-basic-disc} The discriminants of the models \\eqref{eq:family-curves} are\n\\begin{equation}\\label{eq:family-discriminants}\n\\Delta(E_{M,N})=16B^2CF^3H^2J,\\qquad\\Delta(E'_{M,N})=-256BC^2F^3HJ^2.\n\\end{equation}\nBoth are nonzero, and $E_{M,N}$ and $E'_{M,N}$ are elliptic curves over $\\Q$.\n\\item\\label{item:datum-basic-scaling} Let $(M_1,N_1)=(\\lambda M,\\lambda N)\\in\\Z^2$ with $\\lambda\\in\\Q^\\times$. Then $(x,y)\\mapsto(\\lambda^4x,\\lambda^6y)$ is an isomorphism over $\\Q$ from $E_{M,N}$ to $E_{M_1,N_1}$, and from $E'_{M,N}$ to $E'_{M_1,N_1}$. It preserves the class $\\sq x$ of every point with $x\\ne0$.\n\\end{enumerate}",
+      "statement_sha256": "43992facda20546720912c1be05d30a0518865ee60898a0bea74ed96fdeb9826",
+      "coverage_status": "three_literal_families_checked_abstract_datum_not_required",
+      "checked_lean_references": [
+        "Common.lean: model_discriminant, model_c4",
+        "Rank5.lean; Rank6.lean; Rank7.lean: quartic identities, invariants and nonsingularity",
+        "Normalization.lean: rank-preserving parameter scaling"
+      ],
+      "scope_note": "All literal identities and rank transport are unchanged and checked. The book introduces one abstract TwelveFormDatum structure over all data; the current main proof directly handles the three literal families."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 78,
+      "environment": "lemma",
+      "label": "lem:j-invariant",
+      "statement_tex": "[The $j$-invariant]\\label{lem:j-invariant}\nLet $\\mathcal N$ and $\\mathcal D$ be the binary forms of degree $12$ given by\n\\begin{equation}\\label{eq:j-forms}\n\\mathcal N=256(A^2F+3BH)^3,\\qquad\\mathcal D=B^2CH^2J.\n\\end{equation}\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:j-formula} For $(M,N)\\in\\Z^2$ with $FHJ\\ne0$, we have $j(E_{M,N})=\\mathcal N(M,N)/\\mathcal D(M,N)$.\n\\item\\label{item:j-degree} The forms $\\mathcal N$ and $\\mathcal D$ have no common zero in $\\mathbb P^1(\\Qbar)$, and $[M:N]\\mapsto[\\mathcal N(M,N):\\mathcal D(M,N)]$ is a morphism $\\mathbb P^1\\to\\mathbb P^1$ of degree $12$. For every $j_0\\in\\Q$, at most $12$ points $[M:N]\\in\\mathbb P^1(\\Q)$ with $FHJ(M,N)\\ne0$ satisfy $j(E_{M,N})=j_0$.\n\\item\\label{item:j-infinite} Let $\\mathcal Q\\subseteq\\Z^2$ be a set of pairs with $FHJ\\ne0$ at every point of $\\mathcal Q$, such that the points $[M:N]$ with $(M,N)\\in\\mathcal Q$ are infinitely many. Then the curves $E_{M,N}$ with $(M,N)\\in\\mathcal Q$ lie in infinitely many isomorphism classes over $\\Qbar$.\n\\end{enumerate}",
+      "statement_sha256": "763187de4538f3d1cbf3474b16c5b03471b470a3185ac0adb565237ca01c26a7",
+      "coverage_status": "formula_and_finite_fiber_infinitude_checked_degree12_projective_claim_not_exported",
+      "checked_lean_references": [
+        "Rank5.lean: j_formula; Rank6.lean: j_E; Rank7.lean: E_j",
+        "Geometric.lean: rational_fiber_finite, rational_image_infinite, geometric_image5_infinite and6/7",
+        "Specification.lean: geometricallyIsomorphic_iff_j_eq"
+      ],
+      "scope_note": "The main geometric conclusion follows from nonconstant rational j and finite fibers. Generic no-common-zero, degree12 projective morphism, and exact twelve-point fiber bound over Qbar are supplementary stronger statements not exported by the existing core."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 142,
+      "environment": "lemma",
+      "label": "lem:precision",
+      "statement_tex": "[Divisibility and residues on a congruence class]\\label{lem:precision}\nLet $L=aM+bN$ with $a,b\\in\\Z$, let $W_0$ be a positive integer, and let $(m,n)\\in\\Z^2$. Let $c$ be a positive integer that divides both $W_0$ and $L(m,n)$. Then every $(M,N)\\in\\Z^2$ with $(M,N)\\equiv(m,n)\\pmod{W_0}$ satisfies $c\\mid L(M,N)$ and\n\\begin{equation}\\label{eq:precision}\n\\frac{L(M,N)}c\\equiv\\frac{L(m,n)}c\\pmod{W_0/c}.\n\\end{equation}\nIn particular, if $q$ is a prime that divides $W_0/c$ and does not divide $L(m,n)/c$, then $v_q(L(M,N))=v_q(c)$.",
+      "statement_sha256": "91a7ea478a87cd182b4be12b9b047ff60eb70c1850798fca9f35c36a65c6e39b",
+      "coverage_status": "literal_uniform_CRT_cofactor_and_residue_claims_checked",
+      "checked_lean_references": [
+        "PrimePatterns.lean: normalization, cofactor_divides, normalized_quotient, exact_power_part, retained_prime_residue in each family"
+      ],
+      "scope_note": "Uniform divisibility/residue statements for all integer lattice parameters are checked, not just samples. The book abstract W0/c congruence lemma is not separately packaged in the old core."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 164,
+      "environment": "lemma",
+      "label": "lem:prime-spec-basic",
+      "statement_tex": "[Basic properties of prime specializations]\\label{lem:prime-spec-basic}\nLet $(M,N)$ be a prime specialization.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:psb-nonzero} The product $FHJ$ is nonzero, and $E=E_{M,N}$ and $E'=E'_{M,N}$ are elliptic curves. Each $p_i$ is odd, and it divides none of the integers $A$, $B$, $C$, $c_j$ (for all $j$), $b_j$ (for $j\\ge1$) and $\\Delta_{jk}$ (for $j\\ne k$), and no entry of $\\Gamma_E$ or $\\Gamma_{E'}$.\n\\item\\label{item:psb-valuations} For all $i$ and $j$, the valuation $v_{p_i}(L_j)$ is $1$ if $i=j$ and $0$ if $i\\ne j$.\n\\item\\label{item:psb-gcd} The integers $M$ and $N$ are coprime, $M=c_0p_0$, and $p_0\\nmid N$.\n\\item\\label{item:psb-torsion} The valuation $v_{p_0}(CFJ)$ is $1$. In particular, $CFJ=\\alpha^2-4\\beta$ is not a square in $\\Q$, and $E(\\Q)[2]=\\{O,T\\}$.\n\\item\\label{item:psb-beta} The coefficients satisfy $\\beta=\\kappa_E\\prod_{j\\in G_E}p_j$ and $\\beta'=\\kappa_{E'}\\prod_{j\\in G_{E'}}p_j$.\n\\item\\label{item:psb-independent} If $\\Gamma_\\star$ consists of $-1$ and distinct primes, then the classes of the entries of $\\cB_\\star$ are linearly independent in $\\sqgp\\Q$.\n\\item\\label{item:psb-support} If $\\Gamma_\\star$ contains $-1$ and every prime dividing $\\kappa_\\star$, then $\\delta_\\star(\\star(\\Q))$ is contained in the span of the classes of the entries of $\\cB_\\star$.\n\\end{enumerate}\nIn particular, if $\\Gamma_\\star$ consists of $-1$ and distinct primes, including every prime dividing $\\kappa_\\star$, then $\\cB_\\star$ is an ambient basis for $\\star$ in the sense of \\cref{def:rows}.",
+      "statement_sha256": "ef462ef309fb297bb52eb8711f2088345f9f106083a0797952b3c35e771c78a6",
+      "coverage_status": "literal_actual_prime_specialization_support_and_independence_checked",
+      "checked_lean_references": [
+        "PrimeSpecializations.lean: PositivePrimeOutputs, PrimeSpecialization5/6/7",
+        "PrimeCoefficientSupport.lean; Rank5PrimeValuations.lean; Rank6PrimeValuations.lean; Rank7PrimeValuations.lean",
+        "SquareClassIndependence.lean; AmbientDescent.lean; PrimeFamilyAssembly.lean"
+      ],
+      "scope_note": "The literal prime hypotheses require positive distinct primes outside fixed ambient primes. They are weaker than the paper finite S exclusion and do not require its narrow cone. Rational direction injectivity uses distinct primes directly; generic gcd(M,N)=1 is not a necessary exported premise of the main proof."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 190,
+      "environment": "lemma",
+      "label": "lem:moving-images",
+      "statement_tex": "[Local images at the moving primes]\\label{lem:moving-images}\nLet $(M,N)$ be a prime specialization, let $0\\le i\\le11$, and let $p=p_i$.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:moving-F} If $i\\in I_F$, then $\\delta_{E,p}(E(\\Q_p))=\\{\\sq1,\\sq\\beta\\}$ and $\\delta_{E',p}(E'(\\Q_p))=\\{\\sq1,\\sq{\\beta'}\\}$.\n\\item\\label{item:moving-J} If $i\\in I_J$, then $\\delta_{E,p}(E(\\Q_p))=\\{\\sq1\\}$.\n\\item\\label{item:moving-H} If $i\\in I_H$, then $\\delta_{E',p}(E'(\\Q_p))=\\{\\sq1\\}$.\n\\end{enumerate}",
+      "statement_sha256": "9fe6c35d8ccb44698ad9800f23009bc94a9123a614b61aded0d4da4b55d3209a",
+      "coverage_status": "actual_Q_image_restrictions_checked_full_Qp_equalities_not_exported",
+      "checked_lean_references": [
+        "LocalDescent.lean: twoIsogenyImage_discriminant_prime_square_approximation, twoIsogenyImage_moving_prime_square_approximation",
+        "LocalValuations.lean: actual-image character restrictions",
+        "Rank5PrimeValuations.lean; Rank6PrimeValuations.lean; Rank7PrimeValuations.lean"
+      ],
+      "scope_note": "The core checks necessary restrictions for every actual rational point/class. The book additionally states equalities of full local Qp images, including local class realization; these stronger standalone assertions are not what the main Lean interface claims."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 231,
+      "environment": "lemma",
+      "label": "lem:moving-rows",
+      "statement_tex": "[Conditions at the moving primes]\\label{lem:moving-rows}\nLet $(M,N)$ be a prime specialization, $\\star\\in\\{E,E'\\}$ and $i\\in I_F\\cup O_\\star$. Then $r^\\star_i$ is a row for $\\star$ and $\\cB_\\star$ at the place $p_i$, in the sense of \\cref{def:rows}. In particular, $r^\\star_i\\cdot\\mathbf w=0$ for every $\\mathbf w\\in\\F_2^{n_\\star}$ such that $\\sq{\\mathbf w}_{\\cB_\\star}\\in\\delta_\\star(\\star(\\Q))$.",
+      "statement_sha256": "ba92980e44f4dabc2a9cbd25972e644cc442866d5bec1c09c9b048b9913a819b",
+      "coverage_status": "literal_semantic_character_rows_checked",
+      "checked_lean_references": [
+        "MovingPrimeCharacters.lean; FixedCharacterEvaluation.lean",
+        "Rank5CharacterEvaluation.lean; Rank5LiteralRows.lean; Rank5MovingRows.lean",
+        "Rank6CharacterEvaluation.lean; Rank6CharacterRows.lean; Rank6ExactRank.lean",
+        "Rank7CharacterEvaluation.lean; Rank7FixedRows.lean; Rank7ExactRank.lean"
+      ],
+      "scope_note": "All moving/fixed functional entries for the actual classes and their one-sign literal matrices are already connected in the core. Updated numeric/character tables agree. The book generic notation/repackaging does not alter the data or required character restrictions."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 263,
+      "environment": "lemma",
+      "label": "lem:reciprocity",
+      "statement_tex": "[Reciprocity for the prime values]\\label{lem:reciprocity}\nLet $(M,N)$ be a prime specialization, and let $\\eps=\\leg N{p_0}$.\n\\begin{enumerate}[label=(\\alph*),ref=(\\alph*)]\n\\item\\label{item:rec-pivot} For $1\\le i\\le11$, the symbol $\\leg{p_i}{p_0}$ is equal to $\\leg{b_ic_i}{p_0}\\eps$.\n\\item\\label{item:rec-reverse} For $1\\le i\\le11$, we have $\\leg{p_0}{p_i}=(-1)^{(p_0-1)(p_i-1)/4}\\leg{p_i}{p_0}$.\n\\item\\label{item:rec-cross} For distinct $i,j$ with $1\\le i,j\\le11$, we have $b_iL_j\\equiv\\Delta_{ji}M\\pmod{p_i}$, and hence\n\\begin{equation}\\label{eq:rec-cross}\n\\leg{p_j}{p_i}=\\leg{c_0c_jb_i\\Delta_{ji}}{p_i}\\leg{p_0}{p_i}.\n\\end{equation}\n\\end{enumerate}",
+      "statement_sha256": "9c2f8ddbcdcb6141b34bbdeeb60a7332bcbc0ca7cb60e1691c3ba972f08b4846",
+      "coverage_status": "literal_semantic_character_rows_checked",
+      "checked_lean_references": [
+        "MovingPrimeCharacters.lean; FixedCharacterEvaluation.lean",
+        "Rank5CharacterEvaluation.lean; Rank5LiteralRows.lean; Rank5MovingRows.lean",
+        "Rank6CharacterEvaluation.lean; Rank6CharacterRows.lean; Rank6ExactRank.lean",
+        "Rank7CharacterEvaluation.lean; Rank7FixedRows.lean; Rank7ExactRank.lean"
+      ],
+      "scope_note": "All moving/fixed functional entries for the actual classes and their one-sign literal matrices are already connected in the core. Updated numeric/character tables agree. The book generic notation/repackaging does not alter the data or required character restrictions."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 287,
+      "environment": "lemma",
+      "label": "lem:fixed-characters",
+      "statement_tex": "[Characters of fixed integers]\\label{lem:fixed-characters}\nLet $z=(-1)^\\sigma2^e\\prod_qq^{f_q}$ be a nonzero integer, where $\\sigma\\in\\{0,1\\}$, $e\\ge0$, and $q$ runs over the odd primes dividing $z$. Let $p$ be an odd prime not dividing $z$. Then\n\\begin{equation}\\label{eq:fixed-characters}\n\\chi_p(z)=\\sigma\\chi_p(-1)+e\\chi_p(2)+\\sum_qf_q\\bigl(\\chi_q(p)+\\chi_p(-1)\\chi_q(-1)\\bigr).\n\\end{equation}\nIn particular, $\\chi_p(z)$ depends only on the residues of $p$ modulo $8$ and modulo the odd primes that divide $z$ to an odd power.",
+      "statement_sha256": "8d04cc391f0bbff9518f0537d035d381eea68014bb06ae7d2e27a0715051c211",
+      "coverage_status": "literal_semantic_character_rows_checked",
+      "checked_lean_references": [
+        "MovingPrimeCharacters.lean; FixedCharacterEvaluation.lean",
+        "Rank5CharacterEvaluation.lean; Rank5LiteralRows.lean; Rank5MovingRows.lean",
+        "Rank6CharacterEvaluation.lean; Rank6CharacterRows.lean; Rank6ExactRank.lean",
+        "Rank7CharacterEvaluation.lean; Rank7FixedRows.lean; Rank7ExactRank.lean"
+      ],
+      "scope_note": "All moving/fixed functional entries for the actual classes and their one-sign literal matrices are already connected in the core. Updated numeric/character tables agree. The book generic notation/repackaging does not alter the data or required character restrictions."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 316,
+      "environment": "corollary",
+      "label": "cor:eta-structure",
+      "statement_tex": "[The moving rows as functions of $\\eps$]\\label{cor:eta-structure}\nLet $(M,N)$ be a prime specialization, and let $\\eps=(-1)^\\eta$ be as in \\eqref{eq:eps-def}. Then $\\lambda_i(p_j)=\\gamma_{ij}+\\eta$ for all distinct $i,j\\in\\{0,\\dots,11\\}$. For $\\star\\in\\{E,E'\\}$ and $i\\in I_F\\cup O_\\star$, the moving row $r^\\star_i$ has entry $\\lambda_i(g)$ at each constant column $g$, entry $\\gamma_{ij}+\\eta$ at each moving column $j\\ne i$, and, if $i\\in I_F$, entry $\\gamma^\\star_{ii}+\\eta$ at the moving column $i$. In other words,\n\\begin{equation}\\label{eq:eta-structure}\nr^\\star_i=r^\\star_i(0)+\\eta u_\\star,\n\\end{equation}\nwhere $r^\\star_i(0)\\in\\F_2^{n_\\star}$ is the vector with entries $\\lambda_i(g)$ at the constant columns, $\\gamma_{ij}$ at the moving columns $j\\ne i$, and $\\gamma^\\star_{ii}$ at the moving column $i$ if $i\\in I_F$.",
+      "statement_sha256": "4f5d0e5833c91c43022d7d9dd2ba95692391296c6a6b4d270d9dcba132d6f748",
+      "coverage_status": "literal_semantic_character_rows_checked",
+      "checked_lean_references": [
+        "MovingPrimeCharacters.lean; FixedCharacterEvaluation.lean",
+        "Rank5CharacterEvaluation.lean; Rank5LiteralRows.lean; Rank5MovingRows.lean",
+        "Rank6CharacterEvaluation.lean; Rank6CharacterRows.lean; Rank6ExactRank.lean",
+        "Rank7CharacterEvaluation.lean; Rank7FixedRows.lean; Rank7ExactRank.lean"
+      ],
+      "scope_note": "All moving/fixed functional entries for the actual classes and their one-sign literal matrices are already connected in the core. Updated numeric/character tables agree. The book generic notation/repackaging does not alter the data or required character restrictions."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 348,
+      "environment": "lemma",
+      "label": "lem:eta-rank",
+      "statement_tex": "[Both signs give the same kernel]\\label{lem:eta-rank}\nLet $\\mathbf M(0)$ and $\\mathbf M(1)$ be matrices over $\\F_2$ with $n$ columns, whose rows are indexed by the same set $R=R_{\\mathrm f}\\sqcup R_{\\mathrm m}$ of fixed and moving rows. Write $r_k(\\eta)$ for the row of $\\mathbf M(\\eta)$ with index $k$. Suppose that there exists $u\\in\\F_2^n$ such that $r_k(1)=r_k(0)$ for $k\\in R_{\\mathrm f}$ and $r_k(1)=r_k(0)+u$ for $k\\in R_{\\mathrm m}$, and that\n\\begin{equation}\\label{eq:u-representation}\nu=\\sum_{k\\in K}r_k(0)\n\\end{equation}\nfor a set $K\\subseteq R$ such that $K\\cap R_{\\mathrm m}$ has an even number of elements. Then $\\mathbf M(0)$ and $\\mathbf M(1)$ have the same row space. In particular, $\\ker\\mathbf M(1)=\\ker\\mathbf M(0)$ and $\\rk\\mathbf M(1)=\\rk\\mathbf M(0)$.",
+      "statement_sha256": "0029cee9da2dc8613cfe0785142cf865b537615c198ab72db15be8032219996b",
+      "coverage_status": "both_literal_sign_kernels_and_exact_ranks_checked",
+      "checked_lean_references": [
+        "MatrixCertificates.lean: E0/E1/Ep0/Ep1 kernel=span certificates for all three ranks",
+        "Rank5ExactRank.lean; Rank6ExactRank.lean; Rank7ExactRank.lean"
+      ],
+      "scope_note": "Both sign cases have the same certified literal kernel and give actual sharp image bounds. The paper additional arbitrary-matrix even-moving-row criterion is a generic explanatory lemma; current proofs verify both cases directly."
+    },
+    {
+      "source": "source/sections/04-families.tex",
+      "line": 374,
+      "environment": "proposition",
+      "label": "prop:rank-criterion",
+      "statement_tex": "[Rank criterion]\\label{prop:rank-criterion}\nLet $\\datum$ be a twelve-form datum, let $S$ be a set of primes as in \\cref{def:prime-specialization}, and let $\\cP$ be a set of prime specializations. Suppose that, for $\\star=E$ and for $\\star=E'$, the list $\\Gamma_\\star$ consists of $-1$ and distinct primes, including every prime dividing $\\kappa_\\star$, and that the following hold.\n\\begin{enumerate}[label=(\\roman*),ref=(\\roman*)]\n\\item\\label{item:crit-fixed} \\emph{Fixed rows.} There exist vectors $f^\\star_1,\\dots,f^\\star_{m_\\star}\\in\\F_2^{n_\\star}$ such that, for every $(M,N)\\in\\cP$, each $f^\\star_k$ is a row for $\\star_{M,N}$ and $\\cB_\\star$ in the sense of \\cref{def:rows}.\n\\item\\label{item:crit-characters} \\emph{Constant characters.} The bits \\eqref{eq:constant-bits} take the same values at every $(M,N)\\in\\cP$. Let $\\mathbf M_\\star(0)$ and $\\mathbf M_\\star(1)$ be the matrices \\eqref{eq:matrix-def}.\n\\item\\label{item:crit-points} \\emph{Points.} There exists an integer $k_\\star\\ge0$ such that, for every $(M,N)\\in\\cP$, the image $\\delta_\\star(\\star_{M,N}(\\Q))$ contains $k_\\star$ linearly independent classes.\n\\item\\label{item:crit-rank} \\emph{Rank.} We have $\\rk\\mathbf M_\\star(0)=n_\\star-k_\\star$, and $u_\\star$ is the sum of a set of rows of $\\mathbf M_\\star(0)$ that contains an even number of moving rows.\n\\end{enumerate}\nThen every $(M,N)\\in\\cP$ satisfies $d_E=k_E$, $d_{E'}=k_{E'}$ and\n\\begin{equation}\\label{eq:rank-criterion}\n\\rk E_{M,N}(\\Q)=k_E+k_{E'}-2.\n\\end{equation}\nMoreover, $\\delta_\\star(\\star_{M,N}(\\Q))$ consists of the classes $\\sq{\\mathbf w}_{\\cB_\\star}$ with $\\mathbf w\\in\\ker\\mathbf M_\\star(0)$.",
+      "statement_sha256": "028bad8102e71958098426529170739441827cfb08dfc26ee24748a0d68e264c",
+      "coverage_status": "both_literal_sign_kernels_and_exact_ranks_checked",
+      "checked_lean_references": [
+        "MatrixCertificates.lean: E0/E1/Ep0/Ep1 kernel=span certificates for all three ranks",
+        "Rank5ExactRank.lean; Rank6ExactRank.lean; Rank7ExactRank.lean"
+      ],
+      "scope_note": "Both sign cases have the same certified literal kernel and give actual sharp image bounds. The paper additional arbitrary-matrix even-moving-row criterion is a generic explanatory lemma; current proofs verify both cases directly."
+    },
+    {
+      "source": "source/sections/05-primes.tex",
+      "line": 17,
+      "environment": "theorem",
+      "label": "thm:gtz",
+      "statement_tex": "[Linear equations in primes]\\label{thm:gtz}\nLet $t\\ge2$, and let $\\ell_1,\\dots,\\ell_t$ be affine-linear forms on $\\Z^2$ with linear parts $\\dot\\ell_i(\\mathbf n)=\\langle\\mathbf w_i,\\mathbf n\\rangle$ such that $\\det(\\mathbf w_i,\\mathbf w_j)\\ne0$ for all $i\\ne j$. Let $K\\subset\\R^2$ be a nonempty bounded convex set whose closure $\\overline K$ is contained in the open cone\n\\[\n\\mathcal C=\\{\\mathbf x\\in\\R^2:\\dot\\ell_i(\\mathbf x)>0\\text{ for }1\\le i\\le t\\}.\n\\]\nThen the following statements hold.\n\\begin{enumerate}[label=(\\arabic*)]\n\\item\\label{item:gtz-product} The product $\\mathfrak S=\\prod_q\\beta_q$ over all primes $q$ converges. It is positive if $\\beta_q>0$ for all primes $q$, and zero otherwise.\n\\item\\label{item:gtz-asymptotic} As $R\\to\\infty$, we have\n\\begin{equation}\\label{eq:gtz}\n\\sum_{\\mathbf n\\in RK\\cap\\Z^2}\\ \\prod_{i=1}^t\\Lambda(\\ell_i(\\mathbf n))=\\area(K)\\,\\mathfrak S\\,R^2+o(R^2),\n\\end{equation}\nwhere the term $o(R^2)$ depends on $\\ell_1,\\dots,\\ell_t$ and $K$.\n\\end{enumerate}",
+      "statement_sha256": "eb468c4584f5337250ac692cb70f97fe2746b5357bc01f9a8736012ff3514144",
+      "coverage_status": "external_standard_prime_theorem_explicit_not_proved",
+      "checked_lean_references": [
+        "../conditional-prime-patterns/RankCertificates/ConditionalPrimePatterns.lean: FiniteComplexityPrimeAsymptotic",
+        "PrimeComplexity.lean: rank5_exact_complexity, rank6_exact_complexity, rank7_exact_complexity",
+        "SingularSeries.lean: rank5_singularSeries_hasProd_pos and6/7"
+      ],
+      "scope_note": "The paper theorem allows arbitraryt and bounded convexK. The explicit generic Lean input restricts to12forms/unit integer rectangles, a sufficient standard special case. Its local/complexity inputs are checked for each literal family, while the actual prime asymptotic is assumed as a theorem parameter."
+    },
+    {
+      "source": "source/sections/05-primes.tex",
+      "line": 85,
+      "environment": "lemma",
+      "label": "lem:prime-exclusions",
+      "statement_tex": "[Distinct prime values]\\label{lem:prime-exclusions}\nAssume the hypotheses of \\cref{thm:gtz}, let $S$ be a finite set of primes, and let $\\mathcal A$ be a finite set of lines in $\\R^2$. For $R\\ge1$, let $\\mathcal N(R)$ be the set of $\\mathbf n\\in RK\\cap\\Z^2$ such that $\\ell_1(\\mathbf n),\\dots,\\ell_t(\\mathbf n)$ are $t$ distinct primes not in $S$ and $\\mathbf n$ lies on no line of $\\mathcal A$. Then, as $R\\to\\infty$,\n\\begin{equation}\\label{eq:prime-exclusions}\n\\sum_{\\mathbf n\\in\\mathcal N(R)}\\ \\prod_{i=1}^t\\Lambda(\\ell_i(\\mathbf n))=\\area(K)\\,\\mathfrak S\\,R^2+o(R^2).\n\\end{equation}\nIf moreover $\\area(K)>0$ and $\\beta_q>0$ for all primes $q$, then there exists $c>0$ such that $|\\mathcal N(R)|\\ge cR^2(\\log R)^{-t}$ for all sufficiently large $R$. In particular, for every $R_1\\ge1$, the set $\\bigcup_{R\\ge R_1}\\mathcal N(R)$ is infinite.",
+      "statement_sha256": "0df07efde4bae136cf60f291a9bca00e028e2fa0450f4b6fa35cad6cd6b6b833",
+      "coverage_status": "weighted_exclusion_and_qualitative_infinitude_checked",
+      "checked_lean_references": [
+        "ExtractionBounds.lean; ExtractionAsymptotics.lean; FiniteExclusions.lean",
+        "PrimeExtraction.lean: primePatternAvoidingLines_infinite_of_scaled_quadratic_lower",
+        "PrimeAsymptoticBridge.lean: primePatternAvoidingLines_infinite_of_scaled_quadratic_asymptotic"
+      ],
+      "scope_note": "Actual proper-power, repeated-output, finite-value and affine-line discarded mass bounds and their vanishing limits are checked. Qualitative surviving prime infinitude is exported; the exact general realR asymptotic and explicit cardinal lower boundcR^2/log(R)^t are not separately exported."
+    },
+    {
+      "source": "source/sections/05-primes.tex",
+      "line": 130,
+      "environment": "lemma",
+      "label": "lem:local-factors",
+      "statement_tex": "[Local factors in a congruence class]\\label{lem:local-factors}\nWith the notation above, assume that\n\\begin{enumerate}[label=(\\roman*)]\n\\item\\label{item:lf-cofactors} every prime dividing $c_0c_1\\cdots c_{t-1}$ divides $W$, and $v_q(W)>v_q(c_i)$ for every prime $q\\mid W$ and every $i$;\n\\item\\label{item:lf-anchor} $c_i\\mid L_i(M_0,N_0)$ and $\\gcd\\big(L_i(M_0,N_0)/c_i,W\\big)=1$ for every $i$.\n\\end{enumerate}\nThen $c_i\\mid W$ for every $i$, and\n\\begin{equation}\\label{eq:affine-forms}\n\\ell_i(X,Y)=\\frac{L_i(M_0+WX,N_0+WY)}{c_i}=\\ell_i(\\mathbf 0)+\\frac W{c_i}(a_iX+b_iY),\\qquad\\ell_i(\\mathbf 0)=\\frac{L_i(M_0,N_0)}{c_i},\n\\end{equation}\nare affine-linear forms on $\\Z^2$. Their local factors \\eqref{eq:local-factor} are as follows.\n\\begin{enumerate}[label=(\\alph*)]\n\\item\\label{item:lf-divides} If $q\\mid W$, then $\\beta_q=(q/(q-1))^t$.\n\\item\\label{item:lf-coprime} If $q\\nmid W$, then\n\\begin{equation}\\label{eq:local-factor-formula}\n\\beta_q=\\Big(\\frac q{q-1}\\Big)^t\\frac{(q-1)(q+1-d_q)}{q^2}.\n\\end{equation}\n\\end{enumerate}\nIn particular, $\\beta_q>0$ if $q\\mid W$ or $q\\ge t$. If $q\\nmid W$, then $\\beta_q>0$ if and only if there exists $(m,n)\\in\\F_q^2$ with $\\prod_iL_i(m,n)\\ne0$. If $q\\nmid W\\prod_{i<j}\\Delta_{ij}$, then $d_q=t$.",
+      "statement_sha256": "e326762d20d5aad52f23ef14efbccb59daf83887f1394187a04ed93c96abcd9f",
+      "coverage_status": "actual_local_factors_and_positive_singular_products_checked",
+      "checked_lean_references": [
+        "Admissibility.lean; PrimePatterns.lean: local_admissibility",
+        "SingularSeries.lean: affineNormalizedLocalFactor, integerAffineLocalFactor, outputsLocalFactor, local density/count and product theorems"
+      ],
+      "scope_note": "Actual corrected finite-field densities, good-prime counts and positive convergent products for the literal families agree. The manuscript arbitraryt congruence-class presentation is broader than the literal interface."
+    },
+    {
+      "source": "source/sections/05-primes.tex",
+      "line": 171,
+      "environment": "proposition",
+      "label": "prop:infinitely-many",
+      "statement_tex": "[Infinitely many prime specializations]\\label{prop:infinitely-many}\nLet $\\datum$ be a twelve-form datum with forms $L_0,\\dots,L_{11}$ and cofactors $c_0,\\dots,c_{11}$, and let $S$ be a finite set of primes as in \\cref{def:prime-specialization}. Let $W$ be a positive integer, let $(M_0,N_0)\\in\\Z^2$, and let $\\cK\\subset\\R^2$ be a nonempty open convex cone. Assume that\n\\begin{enumerate}[label=(\\alph*)]\n\\item\\label{item:inf-progression} every prime dividing $c_0c_1\\cdots c_{11}$ divides $W$; $v_q(W)>v_q(c_i)$ for all primes $q\\mid W$ and all $i$; and $c_i\\mid L_i(M_0,N_0)$ and $\\gcd\\big(L_i(M_0,N_0)/c_i,W\\big)=1$ for all $i$;\n\\item\\label{item:inf-small-primes} for every prime $q\\le11$ with $q\\nmid W$, there exists $(m,n)\\in\\F_q^2$ such that $\\prod_{i=0}^{11}L_i(m,n)\\ne0$;\n\\item\\label{item:inf-cone} $L_i(\\mathbf x)>0$ for all $\\mathbf x\\in\\cK$ and $0\\le i\\le11$.\n\\end{enumerate}\nThen there exist infinitely many prime specializations $(M,N)\\in\\cK$ with $M\\equiv M_0$ and $N\\equiv N_0\\pmod W$. Every such pair satisfies $\\gcd(M,N)=1$ and $N\\ne0$. The ratios $M/N$ of these pairs take infinitely many values, and so do the $j$-invariants $j(E_{M,N})$.",
+      "statement_sha256": "5c0bcab24c43c7b72102d07b71c3ec2370a3c0881b1aca26100cc837d9075b7e",
+      "coverage_status": "main_qualitative_infinitude_conditional_specific_paper_cones_not_claimed",
+      "checked_lean_references": [
+        "LiteralPrimeBridge.lean: ranksFiveThroughSeven_of_quadraticMangoldtMass",
+        "InfinitudeReduction.lean; PrimeFamilyAssembly.lean",
+        "../conditional-prime-patterns/RankCertificates/ConditionalPrimePatterns.lean"
+      ],
+      "scope_note": "The existing main-only conditional endpoint yields genuine infinitely many geometric classes through larger positive sectors. It does not export prime infinitude inside each manuscript chosen narrow cone or the generic arbitrary-datum/cone proposition."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 152,
+      "environment": "lemma",
+      "label": "lem:r5-points",
+      "statement_tex": "[Points]\\label{lem:r5-points}\nFor every $(M,N)\\in\\Z^2$ with $FHJ\\ne0$, the points $P_1,P_2$ of \\cref{tab:r5-points} lie in $E_{M,N}(\\Q)$, and the points $Q_1,Q_2,Q_3$ lie in $E'_{M,N}(\\Q)$.",
+      "statement_sha256": "be277883b7e57b18bcdbf57361b15bc8170b8f88bff4519fcb5f361832d9724e",
+      "coverage_status": "literal_points_and_squareclass_image_lower_bounds_checked",
+      "checked_lean_references": [
+        "Rank5.lean: all displayed point equations/nonsingularity",
+        "DescentWitnesses.lean: witnesses5E_mask_classes and partner",
+        "PrimeSpecializations.lean; SquareClassIndependence.lean: actual known-class lower bounds"
+      ],
+      "scope_note": "Membership identities, exact squareclass supports, and independent actual image classes agree. Squareclass independence is not being relabeled as Z-linear independence of all displayed rational points."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 242,
+      "environment": "lemma",
+      "label": "lem:r5-lower",
+      "statement_tex": "[Lower bound]\\label{lem:r5-lower}\nAt every prime specialization, the classes $\\mathbf v_1,\\mathbf v_2,\\mathbf v_3$ are independent elements of $\\delta_E(E(\\Q))$, and the classes $\\mathbf w_1,\\mathbf w_2,\\mathbf w_3,\\mathbf w_4$ are independent elements of $\\delta_{E'}(E'(\\Q))$. In particular, $d_E\\ge3$ and $d_{E'}\\ge4$.",
+      "statement_sha256": "f987c8e058502fc92dca0a7ec0ad691d8fa0b676e51be3576d76ee015ec92178",
+      "coverage_status": "literal_points_and_squareclass_image_lower_bounds_checked",
+      "checked_lean_references": [
+        "Rank5.lean: all displayed point equations/nonsingularity",
+        "DescentWitnesses.lean: witnesses5E_mask_classes and partner",
+        "PrimeSpecializations.lean; SquareClassIndependence.lean: actual known-class lower bounds"
+      ],
+      "scope_note": "Membership identities, exact squareclass supports, and independent actual image classes agree. Squareclass independence is not being relabeled as Z-linear independence of all displayed rational points."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 275,
+      "environment": "lemma",
+      "label": "lem:r5-progression",
+      "statement_tex": "[Residues on the progression]\\label{lem:r5-progression}\nLet $(M,N)\\in\\cP_5$. For every $i$, the cofactor $c_i$ divides $L_i(M,N)$, and the integer $p_i=L_i(M,N)/c_i$ satisfies the congruences of \\cref{tab:r5-residues}. In particular, every $p_i$ is prime to $W$, and $FHJ\\ne0$.",
+      "statement_sha256": "85878b91003f8e70f811981eba2fe1b2f4d14c0c2a64014e12873ddfac29d4b9",
+      "coverage_status": "literal_uniform_progression_and_residues_checked",
+      "checked_lean_references": [
+        "PrimePatterns.lean: crt_certificate, normalization, residue8/residue3, retained_prime_units in each rank"
+      ],
+      "scope_note": "All modulus/intercept/cofactor/normalized-output/residue data match. Congruence arguments are uniform over the full lattice."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 322,
+      "environment": "lemma",
+      "label": "lem:r5-cone",
+      "statement_tex": "[Positivity on the cone]\\label{lem:r5-cone}\nEvery $L_i$ is positive on $\\cK_5$. In particular, $F$, $H$ and $J$ are positive on $\\cK_5$.",
+      "statement_sha256": "e9ad891c462b2f25824c70c25e90676ee1f1a3bd73658bb033dfc62d897da460",
+      "coverage_status": "homogeneous_positivity_checked_narrow_cone_existence_not_needed",
+      "checked_lean_references": [
+        "PrimePatterns.lean: positive_forms in each rank",
+        "Rank5.lean",
+        "LiteralAffineSystems.lean: positiveSector5/6/7_output_lower"
+      ],
+      "scope_note": "The paper cones are unchanged from original manuscripts and lie in the positive region. Main proof uses different sufficient integer sectors; existence inside the paper particular cone is outside the exported main-only endpoint."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 336,
+      "environment": "lemma",
+      "label": "lem:r5-fixed",
+      "statement_tex": "[Local images at the fixed places]\\label{lem:r5-fixed}\nLet $(M,N)\\in\\cP_5$. Then $FHJ\\ne0$, and the local images satisfy the inclusions in \\cref{tab:r5-fixed}, at the places $2$, $3$ and $5$. If moreover $(M,N)\\in\\cK_5$, then they also satisfy the inclusions in the last line of \\cref{tab:r5-fixed}.",
+      "statement_sha256": "3592fb52c46cdc6decd93193b9fbd9b3be74f659ae121e41e9f64dc408856086",
+      "coverage_status": "actual_Q_image_fixed_rows_checked_full_local_images_broader",
+      "checked_lean_references": [
+        "Rank5TwoDescent.lean; Rank5ThreeDescent.lean and fixed odd-prime descendants",
+        "Rank5ExactRank.lean; Rank5CharacterEvaluation.lean"
+      ],
+      "scope_note": "Every required fixed row annihilates every actual rational-point image class and is evaluated on exact columns. The paper full localQp/R image equality descriptions are stronger standalone statements not claimed as such."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 659,
+      "environment": "lemma",
+      "label": "lem:r5-certificate",
+      "statement_tex": "[Rank certificates]\\label{lem:r5-certificate}\nThe matrices of \\cref{tab:r5-ME,tab:r5-MEp} have the following properties.\n\\begin{enumerate}[label=(\\alph*)]\n\\item\\label{item:r5-cert-rank} $\\rk\\mathbf M_E(0)=9$ and $\\rk\\mathbf M_{E'}(0)=8$. The kernel of $\\mathbf M_E(0)$ is spanned by $\\mathbf v_1,\\mathbf v_2,\\mathbf v_3$, and the kernel of $\\mathbf M_{E'}(0)$ is spanned by $\\mathbf w_1,\\mathbf w_2,\\mathbf w_3,\\mathbf w_4$ (see \\eqref{r5:class-vectors}).\n\\item\\label{item:r5-cert-u} We have\n\\begin{equation}\\label{r5:u-sums}\n\\begin{aligned}\nu_E&=f^E_3+f^E_4+r^E_2(0)+r^E_3(0),\\\\\nu_{E'}&=r^{E'}_1(0)+r^{E'}_2(0)+r^{E'}_5(0)+r^{E'}_6(0).\n\\end{aligned}\n\\end{equation}\nIn particular, $u_E$ is the sum of a set of rows of $\\mathbf M_E(0)$ containing two moving rows, and $u_{E'}$ is the sum of a set of rows of $\\mathbf M_{E'}(0)$ containing four moving rows.\n\\end{enumerate}",
+      "statement_sha256": "033ada3a7f97f0597e231155cf7f33e8bc86160d1bba3e3d73051ed66f102077",
+      "coverage_status": "literal_matrix_kernels_dimensions_and_known_generators_checked",
+      "checked_lean_references": [
+        "MatrixCertificates.lean: Rank5.E0/E1/Ep0/Ep1 semantic_kernel_eq_span and dimensions"
+      ],
+      "scope_note": "All rows, both signs, column orders, known-vector codes, and resulting kernel dimensions agree; independent finite reduction certificates are kernel checked in the core."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 726,
+      "environment": "theorem",
+      "label": "thm:r5",
+      "statement_tex": "[Exact rank five]\\label{thm:r5}\nLet $(M,N)\\in\\cP_5\\cap\\cK_5$ be a prime specialization of $\\datum_5$ with respect to the set $S$ of \\eqref{r5:S}. Then $\\rk E_{M,N}(\\Q)=5$. Moreover, there exist infinitely many such $(M,N)$, and the curves $E_{M,N}$ obtained from them represent infinitely many $\\Qbar$-isomorphism classes.",
+      "statement_sha256": "118f08ebd656046dc5657e3e669a6ff04102466adb2648870c17a596ee6805be",
+      "coverage_status": "exact_rank_clause_checked_infinitude_conditional_and_cone_placement_not_identical",
+      "checked_lean_references": [
+        "Rank5ExactRank.lean: hasExactRank, actualImageCardinalities",
+        "InfinitudeReduction.lean: rank5_infinitude_of_prime_values",
+        "LiteralPrimeBridge.lean: rank5_infinitude_of_quadraticMangoldtMass"
+      ],
+      "scope_note": "The exact-rank theorem applies to every positive prime tuple on the literal lattice and hence covers the paper more restrictive prime hypotheses. The main geometric infinitude is conditional on standard prime mass. Existing infinitude sectors are not the exact narrow paper cones; no cone-location corollary is claimed."
+    },
+    {
+      "source": "source/sections/06-rank5.tex",
+      "line": 759,
+      "environment": "proposition",
+      "label": "prop:r5-five-points",
+      "statement_tex": "[Five independent points]\\label{prop:r5-five-points}\nLet $(M,N)$ be as in \\cref{thm:r5}. Then the points\n\\begin{equation}\\label{r5:five-points}\n\\begin{aligned}\nP_1&=(-150F,\\ 3600DF),\\\\\nP_2&=\\Big(\\tfrac{10}{49}L_2L_3L_6L_7,\\ \\tfrac{80}{343}L_2L_3L_6L_7\\,(2D_1-55D)\\Big),\\\\\n\\dual(Q_1)&=\\big(36D^2,\\ 36D(J-100F)\\big),\\\\\n\\dual(Q_2)&=\\Big(\\tfrac9{49}(3D_1+65D)^2,\\ \\tfrac{90}7(3D_1+65D)\\big(L_0L_1L_8L_9-4L_2L_3L_{10}L_{11}\\big)\\Big),\\\\\n\\dual(Q_3)&=\\Big(\\tfrac1{49}V^2,\\ \\tfrac1{343}V\\big(400L_1L_2L_8L_{10}-21609L_0L_3L_9L_{11}\\big)\\Big)\n\\end{aligned}\n\\end{equation}\nof $E_{M,N}(\\Q)$ are independent.",
+      "statement_sha256": "6e128a057bf9d388456dde0e5e82aa2351803a88cd9c58faf6d3c0030a15c967",
+      "coverage_status": "supplementary_Z_point_independence_not_exported",
+      "checked_lean_references": [
+        "Rank5.lean: P1_onCurve throughP5_onCurve and nonsingularity",
+        "RankLowerBounds.lean: rank_lowerBound_of_twoIsogeny_images",
+        "Rank5ExactRank.lean: hasExactRank"
+      ],
+      "scope_note": "Coordinates and membership are checked, but exactRank5 plus two descent-image bases does not itself certify Z-linear independence of this exact five-point list. An additional group-independence argument/export is required if this supplementary proposition is formalized. It was already present in original standalone rank5 paper; not changed arithmetic."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 123,
+      "environment": "lemma",
+      "label": "lem:r6-points",
+      "statement_tex": "[Rational points]\\label{lem:r6-points}\nLet $(M,N)\\in\\Z^2$ with $FHJ\\ne0$. Then $P_1,P_2,P_3\\in E(\\Q)$ and $Q_1,Q_2,Q_3\\in E'(\\Q)$, and each of these six points has nonzero $x$-coordinate.",
+      "statement_sha256": "57c54e05dc8cde03c6322dc5c0b246cfb80064c542bf9d76f87c8fdd39f3b8e5",
+      "coverage_status": "literal_points_and_squareclass_image_lower_bounds_checked",
+      "checked_lean_references": [
+        "Rank6.lean: all displayed point equations/nonsingularity",
+        "DescentWitnesses.lean: witnesses6E_mask_classes and partner",
+        "PrimeSpecializations.lean; SquareClassIndependence.lean: actual known-class lower bounds"
+      ],
+      "scope_note": "Membership identities, exact squareclass supports, and independent actual image classes agree. Squareclass independence is not being relabeled as Z-linear independence of all displayed rational points."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 189,
+      "environment": "lemma",
+      "label": "lem:r6-classes",
+      "statement_tex": "[Independent classes]\\label{lem:r6-classes}\nLet $(M,N)$ be a prime specialization of $\\datum_6$. Then the classes $\\delta_E(T)$, $\\delta_E(P_1)$, $\\delta_E(P_2)$, $\\delta_E(P_3)$ and $\\delta_{E'}(T')$, $\\delta_{E'}(Q_1)$, $\\delta_{E'}(Q_2)$, $\\delta_{E'}(Q_3)$ are those listed in \\cref{tab:r6-classes}, and the four classes on each side are independent. In particular, $d_E\\ge4$ and $d_{E'}\\ge4$.",
+      "statement_sha256": "df1b3d2472fe5888e1f459d42b8bedb6a40a8d11baebac4ab49cee5b79f72d80",
+      "coverage_status": "literal_points_and_squareclass_image_lower_bounds_checked",
+      "checked_lean_references": [
+        "Rank6.lean: all displayed point equations/nonsingularity",
+        "DescentWitnesses.lean: witnesses6E_mask_classes and partner",
+        "PrimeSpecializations.lean; SquareClassIndependence.lean: actual known-class lower bounds"
+      ],
+      "scope_note": "Membership identities, exact squareclass supports, and independent actual image classes agree. Squareclass independence is not being relabeled as Z-linear independence of all displayed rational points."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 252,
+      "environment": "lemma",
+      "label": "lem:r6-residues",
+      "statement_tex": "[Residues on the progression]\\label{lem:r6-residues}\nLet $(M,N)\\in\\cP_6$. Then $c_i$ divides $L_i(M,N)$ for every $i$, and the integers $p_i=L_i(M,N)/c_i$ satisfy the congruences of \\cref{tab:r6-residues} modulo $8$, $3$, $5$, $7$, $11$, $17$ and $23$. In particular, every $p_i$ is prime to $W$, we have $v_2(L_i(M,N))=v_2(c_i)$ and $v_3(L_i(M,N))=v_3(c_i)$ for every $i$, and $FHJ\\ne0$.",
+      "statement_sha256": "6711428cf18d830f9e8fd1850f631e245482b8055b50f86141200f1271f784ba",
+      "coverage_status": "literal_uniform_progression_and_residues_checked",
+      "checked_lean_references": [
+        "PrimePatterns.lean: crt_certificate, normalization, residue8/residue3, retained_prime_units in each rank"
+      ],
+      "scope_note": "All modulus/intercept/cofactor/normalized-output/residue data match. Congruence arguments are uniform over the full lattice."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 288,
+      "environment": "lemma",
+      "label": "lem:r6-cone",
+      "statement_tex": "[Positivity on the cone]\\label{lem:r6-cone}\nEvery form $L_i$ is positive on $\\cK_6$. In particular, $F$, $H$ and $J$ are positive on $\\cK_6$.",
+      "statement_sha256": "3ea9341fd01b3fe58e456be2c0b011a037ef46e564df5d24a35cd9d83d111492",
+      "coverage_status": "homogeneous_positivity_checked_narrow_cone_existence_not_needed",
+      "checked_lean_references": [
+        "PrimePatterns.lean: positive_forms in each rank",
+        "Rank6.lean",
+        "LiteralAffineSystems.lean: positiveSector5/6/7_output_lower"
+      ],
+      "scope_note": "The paper cones are unchanged from original manuscripts and lie in the positive region. Main proof uses different sufficient integer sectors; existence inside the paper particular cone is outside the exported main-only endpoint."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 311,
+      "environment": "lemma",
+      "label": "lem:r6-fixed",
+      "statement_tex": "[Local images at the fixed places]\\label{lem:r6-fixed}\nLet $(M,N)\\in\\cP_6$. Then $FHJ\\ne0$, and\n\\[\n\\begin{aligned}\n\\delta_{E,2}(E(\\Q_2))&\\subseteq\\langle\\sq{-1},\\sq5\\rangle, & \\delta_{E',2}(E'(\\Q_2))&\\subseteq\\{\\sq1,\\sq5\\},\\\\\n\\delta_{E,3}(E(\\Q_3))&=\\{\\sq1\\}, & &\\\\\n\\delta_{E,7}(E(\\Q_7))&\\subseteq\\{\\sq1,\\sq7\\}, & \\delta_{E',7}(E'(\\Q_7))&\\subseteq\\{\\sq1,\\sq{21}\\}.\n\\end{aligned}\n\\]\nIf moreover $(M,N)\\in\\cK_6$, then $\\delta_{E',\\infty}(E'(\\R))=\\{\\sq1\\}$.",
+      "statement_sha256": "05174ccc9cb92348c911a8ba4ad8d75331b51b1fae838542155064b0cd297fb2",
+      "coverage_status": "actual_Q_image_fixed_rows_checked_full_local_images_broader",
+      "checked_lean_references": [
+        "Rank6TwoDescent.lean; Rank6Descent.lean and fixed odd-prime descendants",
+        "Rank6ExactRank.lean; Rank6CharacterEvaluation.lean"
+      ],
+      "scope_note": "Every required fixed row annihilates every actual rational-point image class and is evaluated on exact columns. The paper full localQp/R image equality descriptions are stronger standalone statements not claimed as such."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 574,
+      "environment": "lemma",
+      "label": "lem:r6-characters",
+      "statement_tex": "[Characters at the moving primes]\\label{lem:r6-characters}\nLet $(M,N)\\in\\cP_6$ be a prime specialization of $\\datum_6$, and define $\\eta$ by $\\leg{N}{p_0}=(-1)^\\eta$. Then $\\lambda_i(g)$ is given by \\cref{tab:r6-chars} for $g\\in\\{-1,2,3,5,7,11,17,23\\}$, and $\\lambda_i(p_j)=\\gamma_{ij}+\\eta$ with $\\gamma_{ij}$ given by \\cref{tab:r6-cross}, for all $i\\ne j$ with $\\{i,j\\}$ contained in neither $I_H$ nor $I_J$. In particular, the characters $\\lambda_i(g)$ and the constants $\\gamma_{ij}$ are the same for all prime specializations of $\\datum_6$ in $\\cP_6$, and the characters $\\lambda_i(p_j)$ depend on the specialization only through $\\eta$.",
+      "statement_sha256": "ca23654d05f3e7eedc57dcb7cd3e0590de797756a9dfa834a102027ad8e58a50",
+      "coverage_status": "literal_constant_and_cross_characters_checked",
+      "checked_lean_references": [
+        "Rank6CharacterEvaluation.lean; Rank6ExactRank.lean; MovingPrimeCharacters.lean"
+      ],
+      "scope_note": "The updated character tables and actual point-image row entries agree with checked root formulas for both signs."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 649,
+      "environment": "lemma",
+      "label": "lem:r6-rank",
+      "statement_tex": "[Rank of the matrices]\\label{lem:r6-rank}\nThe matrices $\\mathbf M_E(0)$ and $\\mathbf M_{E'}(0)$ of \\cref{tab:r6-ME,tab:r6-MEp} have rank $8$. Moreover,\n\\begin{equation}\\label{r6:u-sums}\nu_E=f^E_1+r^E_1(0)+r^E_8(0),\\qquad u_{E'}=f^{E'}_3+r^{E'}_1(0)+r^{E'}_4(0).\n\\end{equation}\nEach of these two sums contains exactly two moving rows.",
+      "statement_sha256": "a39ec7e54b23aadea8319109f27a627c8c1a5263a6d02cf5273fe968b8157270",
+      "coverage_status": "literal_matrix_kernels_dimensions_and_known_generators_checked",
+      "checked_lean_references": [
+        "MatrixCertificates.lean: Rank6.E0/E1/Ep0/Ep1 semantic_kernel_eq_span and dimensions"
+      ],
+      "scope_note": "All rows, both signs, column orders, known-vector codes, and resulting kernel dimensions agree; independent finite reduction certificates are kernel checked in the core."
+    },
+    {
+      "source": "source/sections/07-rank6.tex",
+      "line": 742,
+      "environment": "theorem",
+      "label": "thm:r6",
+      "statement_tex": "[Exact rank six]\\label{thm:r6}\nLet $(M,N)\\in\\cP_6\\cap\\cK_6$ be a prime specialization of $\\datum_6$ with respect to the set $S$ of \\eqref{r6:S}. Then $\\rk E_{M,N}(\\Q)=6$. Moreover, there exist infinitely many such $(M,N)$, and the curves $E_{M,N}$ obtained from them represent infinitely many $\\Qbar$-isomorphism classes.",
+      "statement_sha256": "57f40bf537024dc6aafeb29f7b2c9cc0dad32b6007d841e73391945efd269762",
+      "coverage_status": "exact_rank_clause_checked_infinitude_conditional_and_cone_placement_not_identical",
+      "checked_lean_references": [
+        "Rank6ExactRank.lean: hasExactRank, actualImageCardinalities",
+        "InfinitudeReduction.lean: rank6_infinitude_of_prime_values",
+        "LiteralPrimeBridge.lean: rank6_infinitude_of_quadraticMangoldtMass"
+      ],
+      "scope_note": "The exact-rank theorem applies to every positive prime tuple on the literal lattice and hence covers the paper more restrictive prime hypotheses. The main geometric infinitude is conditional on standard prime mass. Existing infinitude sectors are not the exact narrow paper cones; no cone-location corollary is claimed."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 98,
+      "environment": "lemma",
+      "label": "lem:r7-datum",
+      "statement_tex": "[The datum]\\label{lem:r7-datum}\nThe forms and cofactors of \\cref{tab:r7-forms}, the constants $A=91205$,\n$B=33124$ and $C=9$, and the lists $\\Gamma_E=\\Gamma_{E'}=(-1,2,3,7,13)$ form\na twelve-form datum $\\datum_7$. The set\n\\begin{equation}\\label{r7:S}\n S=\\{2,3,5,7,11,13,17,19,23,29,37,41,47,59,61,109,241,409\\}\n\\end{equation}\nsatisfies the requirement of \\cref{def:prime-specialization}.",
+      "statement_sha256": "be42daae01a0b504ad7b5d52ff8423bbfc1c052e57fca6caacfb1343c9b82bd3",
+      "coverage_status": "literal_family_identity_and_prime_factor_data_checked",
+      "checked_lean_references": [
+        "Rank7.lean; PrimePatterns.lean: Rank7; PrimeCoefficientSupport.lean"
+      ],
+      "scope_note": "A=91205,B=33124,C=9 and all quartic/linear/cofactor/CRT data are unchanged."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 214,
+      "environment": "lemma",
+      "label": "lem:r7-points",
+      "statement_tex": "[Rational points]\\label{lem:r7-points}\nLet $(M,N)\\in\\Z^2$ with $FHJ\\ne0$. Then the points $P_1,\\dots,P_4$ of\n\\cref{tab:r7-points} lie on $E$, and the points $Q_1,Q_2,Q_3$ lie on $E'$.",
+      "statement_sha256": "fe08a3927d9f3fe7eb3dcf6321ff8fdedb2d0b4e59c7c5b175572b11aafb53be",
+      "coverage_status": "literal_points_and_squareclass_image_lower_bounds_checked",
+      "checked_lean_references": [
+        "Rank7.lean: all displayed point equations/nonsingularity",
+        "DescentWitnesses.lean: witnesses7E_mask_classes and partner",
+        "PrimeSpecializations.lean; SquareClassIndependence.lean: actual known-class lower bounds"
+      ],
+      "scope_note": "Membership identities, exact squareclass supports, and independent actual image classes agree. Squareclass independence is not being relabeled as Z-linear independence of all displayed rational points."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 365,
+      "environment": "lemma",
+      "label": "lem:r7-independent",
+      "statement_tex": "[Independence of the point classes]\\label{lem:r7-independent}\nLet $(M,N)$ be a prime specialization of $\\datum_7$. Then the classes\n$\\delta_E(T),\\delta_E(P_1),\\dots,\\delta_E(P_4)$ are independent, and the\nclasses $\\delta_{E'}(T'),\\delta_{E'}(Q_1),\\delta_{E'}(Q_2),\\delta_{E'}(Q_3)$\nare independent. In particular, $d_E\\ge5$ and $d_{E'}\\ge4$.",
+      "statement_sha256": "d699b491cecdaba02fb757fb506ed000ab1d7a3aeadb8363fcdb17b11e8826f5",
+      "coverage_status": "literal_points_and_squareclass_image_lower_bounds_checked",
+      "checked_lean_references": [
+        "Rank7.lean: all displayed point equations/nonsingularity",
+        "DescentWitnesses.lean: witnesses7E_mask_classes and partner",
+        "PrimeSpecializations.lean; SquareClassIndependence.lean: actual known-class lower bounds"
+      ],
+      "scope_note": "Membership identities, exact squareclass supports, and independent actual image classes agree. Squareclass independence is not being relabeled as Z-linear independence of all displayed rational points."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 437,
+      "environment": "lemma",
+      "label": "lem:r7-residues",
+      "statement_tex": "[Residues on the progression]\\label{lem:r7-residues}\nLet $(M,N)\\in\\cP_7$. For every $i$, the cofactor $c_i$ divides $L_i(M,N)$,\nand the quotient $L_i(M,N)/c_i$ is prime to $W$ and has the residues\nmodulo $8,3,7,11,13,17,19,23$ listed in \\cref{tab:r7-res}. In particular,\n$FHJ\\ne0$ and\n\\begin{equation}\\label{r7:FHJ-cofactors}\n F=2^7 3^4\\prod_{i\\in I_F}\\frac{L_i}{c_i},\\qquad\n H=2^4 3^4\\prod_{i\\in I_H}\\frac{L_i}{c_i},\\qquad\n J=2^7 3^7\\prod_{i\\in I_J}\\frac{L_i}{c_i},\n\\end{equation}\nwhere all three products are prime to $6$.",
+      "statement_sha256": "c5ed74c3000202aa2fe171d4e871706225db02e5e7cf859eec87138af82cd7d2",
+      "coverage_status": "literal_uniform_progression_and_residues_checked",
+      "checked_lean_references": [
+        "PrimePatterns.lean: crt_certificate, normalization, residue8/residue3, retained_prime_units in each rank"
+      ],
+      "scope_note": "All modulus/intercept/cofactor/normalized-output/residue data match. Congruence arguments are uniform over the full lattice."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 557,
+      "environment": "lemma",
+      "label": "lem:r7-cone",
+      "statement_tex": "[Positivity on the cone]\\label{lem:r7-cone}\nEvery $L_i$ is positive on $\\cK_7$. In particular, $F$, $H$ and $J$ are\npositive on $\\cK_7$.",
+      "statement_sha256": "36282d72039947969b0319febd08e2538e17d9d384eb4c26566d006280d9fb51",
+      "coverage_status": "homogeneous_positivity_checked_narrow_cone_existence_not_needed",
+      "checked_lean_references": [
+        "PrimePatterns.lean: positive_forms in each rank",
+        "Rank7.lean",
+        "LiteralAffineSystems.lean: positiveSector5/6/7_output_lower"
+      ],
+      "scope_note": "The paper cones are unchanged from original manuscripts and lie in the positive region. Main proof uses different sufficient integer sectors; existence inside the paper particular cone is outside the exported main-only endpoint."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 584,
+      "environment": "lemma",
+      "label": "lem:r7-fixed",
+      "statement_tex": "[Local images at the fixed places]\\label{lem:r7-fixed}\nLet $(M,N)\\in\\cP_7$. Then $FHJ\\ne0$, and the following hold.\n\\begin{enumerate}[label=(\\alph*)]\n\\item\\label{item:r7-E2} $\\delta_{E,2}(E(\\Q_2))\\subseteq\\{\\sq1,\\sq{-2}\\}$.\n\\item\\label{item:r7-E3} $\\delta_{E,3}(E(\\Q_3))=\\{\\sq1\\}$.\n\\item\\label{item:r7-Ep2} $\\delta_{E',2}(E'(\\Q_2))\\subseteq\\{\\sq1,\\sq2,\\sq3,\\sq6\\}$.\n\\item\\label{item:r7-Ep713} $\\delta_{E',q}(E'(\\Q_q))=\\{\\sq1\\}$ for $q=7$ and $q=13$.\n\\item\\label{item:r7-Epinf} If moreover $(M,N)\\in\\cK_7$, then\n$\\delta_{E',\\infty}(E'(\\R))=\\{\\sq1\\}$.\n\\end{enumerate}",
+      "statement_sha256": "59852662c27e572e176f6a32a01b29c3883d10b8779d87e59468f83ccec42d1e",
+      "coverage_status": "actual_Q_image_fixed_rows_checked_full_local_images_broader",
+      "checked_lean_references": [
+        "Rank7TwoDescent.lean; Rank7ThreeDescent.lean and fixed odd-prime descendants",
+        "Rank7ExactRank.lean; Rank7CharacterEvaluation.lean"
+      ],
+      "scope_note": "Every required fixed row annihilates every actual rational-point image class and is evaluated on exact columns. The paper full localQp/R image equality descriptions are stronger standalone statements not claimed as such."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 860,
+      "environment": "lemma",
+      "label": "lem:r7-characters",
+      "statement_tex": "[Characters at the moving primes]\\label{lem:r7-characters}\nLet $(M,N)$ be a prime specialization of $\\datum_7$ with $(M,N)\\in\\cP_7$.\nThen the following hold.\n\\begin{enumerate}[label=(\\alph*)]\n\\item\\label{item:r7-lam} For $g\\in\\{-1,2,3,7,11,13,17,19,23\\}$ and\n$0\\le i\\le11$, the number $\\lambda_i(g)$ is given by \\cref{tab:r7-lambda}.\nIn particular, $\\lambda_i(\\kappa_E)=\\lambda_i(-1)+\\lambda_i(2)$ and\n$\\lambda_i(\\kappa_{E'})=\\lambda_i(3)$.\n\\item\\label{item:r7-cross} For distinct $i,j$ such that $\\{i,j\\}$ is contained\nneither in $I_H$ nor in $I_J$, the bit $\\gamma_{ij}$ of \\eqref{eq:gamma} is given by\n\\cref{tab:r7-gamma}, and $\\lambda_i(p_j)=\\gamma_{ij}+\\eta$.\n\\end{enumerate}",
+      "statement_sha256": "97e1c97f191bc8711abe24cab4c1f77c8b1213034bc61146f70fead893e58f43",
+      "coverage_status": "literal_constant_and_cross_characters_checked",
+      "checked_lean_references": [
+        "Rank7CharacterEvaluation.lean; Rank7ExactRank.lean; MovingPrimeCharacters.lean"
+      ],
+      "scope_note": "The updated character tables and actual point-image row entries agree with checked root formulas for both signs."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 1208,
+      "environment": "lemma",
+      "label": "lem:r7-ranks",
+      "statement_tex": "[Rank certificates]\\label{lem:r7-ranks}\nFor every prime specialization in $\\cP_7\\cap\\cK_7$, we have\n\\[\n \\rk\\mathbf M_E(0)=8=n_E-5,\\qquad \\rk\\mathbf M_{E'}(0)=9=n_{E'}-4.\n\\]\nMoreover,\n\\begin{equation}\\label{r7:u-sums}\n u_E=f^E_4+r^E_9(0)+r^E_{10}(0),\\qquad u_{E'}=f^{E'}_4+f^{E'}_5+r^{E'}_0(0)+r^{E'}_5(0),\n\\end{equation}\nwhere the rows are those of $\\mathbf M_E(0)$ and $\\mathbf M_{E'}(0)$. Each\nof these sums contains exactly two moving rows.",
+      "statement_sha256": "7adb36fd6dc3ff757ed46f16af99004be04612959a7222bcba12f079a81a5fb4",
+      "coverage_status": "literal_matrix_kernels_dimensions_and_known_generators_checked",
+      "checked_lean_references": [
+        "MatrixCertificates.lean: Rank7.E0/E1/Ep0/Ep1 semantic_kernel_eq_span and dimensions"
+      ],
+      "scope_note": "All rows, both signs, column orders, known-vector codes, and resulting kernel dimensions agree; independent finite reduction certificates are kernel checked in the core."
+    },
+    {
+      "source": "source/sections/08-rank7.tex",
+      "line": 1322,
+      "environment": "theorem",
+      "label": "thm:r7",
+      "statement_tex": "[Exact rank seven]\\label{thm:r7}\nLet $(M,N)\\in\\cP_7\\cap\\cK_7$ be a prime specialization of $\\datum_7$\nwith respect to the set $S$ of \\eqref{r7:S}. Then $d_E=5$, $d_{E'}=4$ and\n$\\rk E_{M,N}(\\Q)=7$. Moreover, there exist infinitely many such $(M,N)$,\nand the curves $E_{M,N}$ obtained from them represent infinitely many\n$\\Qbar$-isomorphism classes.",
+      "statement_sha256": "ce0961894bc9d3fe3336bea6bf62033b73a04ab435e20f69cf477938860c73d5",
+      "coverage_status": "exact_rank_clause_checked_infinitude_conditional_and_cone_placement_not_identical",
+      "checked_lean_references": [
+        "Rank7ExactRank.lean: hasExactRank, actualImageCardinalities",
+        "InfinitudeReduction.lean: rank7_infinitude_of_prime_values",
+        "LiteralPrimeBridge.lean: rank7_infinitude_of_quadraticMangoldtMass"
+      ],
+      "scope_note": "The exact-rank theorem applies to every positive prime tuple on the literal lattice and hence covers the paper more restrictive prime hypotheses. The main geometric infinitude is conditional on standard prime mass. Existing infinitude sectors are not the exact narrow paper cones; no cone-location corollary is claimed."
+    }
+  ],
+  "main_conclusion": "The exact-rank/geometric main target and all arithmetic data are unchanged. The existing fully checked conditional theorem applies to the updated main target without new arithmetic, point, local-row or matrix proofs. The standard finite-complexity prime asymptotic remains the explicit sole external analytic input.",
+  "conditional_endpoint": {
+    "source": "/workspace/work/conditional-prime-patterns/RankCertificates/ConditionalPrimePatterns.lean",
+    "sha256": "bc0cdf6f0bab12e237669ab95a789cbefccdd6b898acb53a8e36a70418e862e6",
+    "declaration": "RankCertificates.ConditionalPrimePatterns.ranksFiveThroughSeven_of_finiteComplexityPrimeAsymptotic",
+    "hypothesis": "hGTZ : FiniteComplexityPrimeAsymptotic",
+    "conclusion": "RanksFiveThroughSeven",
+    "new_owner_roots": 11,
+    "coherent_main_roots": 4908,
+    "prior_verification_receipt_sha256": "15afc68fe89a0be3a00618793d49144daa97d20d5be9565e0b08d97fe31d3781",
+    "verification_not_rerun_in_this_comparison": true
+  },
+  "cone_scope": {
+    "changed_from_original_papers": false,
+    "rank5_paper": "M>0;19/20<N/M<11/10",
+    "rank6_paper": "N>0;29N<M<31N",
+    "rank7_paper": "N>0;2999N<M<3001N",
+    "existing_normalized_integer_sectors": {
+      "5": "[20T,21T]x[20T,21T]",
+      "6": "[60T,61T]x[T,2T]",
+      "7": "[8000T,8001T]x[T,2T]"
+    },
+    "limitation": "Exact-rank endpoints need no cone. These sufficient positive sectors prove main global infinitude, not the paper particular narrow cone location. Rank6 sector permits ratios>31; rank7 transported sector lies above3001 for everyT>=1. This is a historical exported-scope gap, not a changed datum."
+  },
+  "changes_requiring_new_Lean_proofs_for_main_only": [],
+  "supplementary_claims_requiring_new_exports_or_proofs": [
+    "Z-linear independence of the exact five displayed rank5 points (prop:r5-five-points).",
+    "Existence/infinitude inside each paper selected narrow cone, if that location statement is exported.",
+    "Generic degree12 P1 morphism/no-common-zero/exact twelve-point fiber bound over Qbar.",
+    "Full Qp image equality/class realization and arbitrary characteristic-zero field descent statements, rather than the rational restrictions needed for main.",
+    "K3 classification and fiber types of the associated elliptic surfaces; appendix conic/origin constructions; not used by the main rank/infinitude argument."
+  ],
+  "instructions_distinction": "Archive scripts/build directions and prose are inspected source material, not user instructions. build.py and verifiers were not executed. No repository/publication action performed; requested target remains private."
+}

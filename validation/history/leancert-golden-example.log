@@ -1,0 +1,3 @@
+goldenKernelLogTwoUpper : Real.log 2 < 7 / 10
+'goldenKernelLogTwoUpper' depends on axioms: [propext, Classical.choice, Quot.sound]
+Independent axiom guard passed: foundational axioms only; no native compiler axiom or sorryAx.

@@ -1,0 +1,36 @@
+--- original/source/sections/A-verification.tex
++++ manuscript/source/sections/A-verification.tex
+@@ -1,19 +1,21 @@
+ \chapter{Computer verification}\label{app:verification}
+ 
+-The finite computations in \cref{sec:rank5,sec:rank6,sec:rank7} are stated there precisely enough to be checked by hand or with any computer algebra system. In this appendix, we describe three programs, one for each family, that check them. They are distributed with the source files of this paper.
++The finite computations in \cref{sec:rank5,sec:rank6,sec:rank7} are stated there precisely enough to be checked by hand or with any computer algebra system. In this appendix, we describe three programs, one for each family, that check them. The programs and their inputs are available in the GitHub repository
++\url{https://github.com/pmaronow/ec567-palomar}.
+ In \cref{sec:verification-running}, we explain how to run the programs. In \cref{sec:verification-conventions}, we describe how they encode squareclasses, matrix rows, and the free sign. In \cref{sec:verification-scope,sec:verification-limits}, we list what the programs check and what they do not check. Finally, in \cref{sec:verification-codes}, we give the integer codes under which the programs store the matrices of \cref{sec:rank5,sec:rank6,sec:rank7}, so that a reader can match the matrices of the text with the input files.
+ 
+ The programs check finite arithmetic only. The arguments that hold uniformly in the parameters are proved in the text, and the programs do not check them. These arguments are the results of \cref{sec:descent,sec:families}, the fixed-place lemmas \cref{lem:r5-fixed,lem:r6-fixed,lem:r7-fixed}, and the results of \cref{sec:primes} on prime values. They also include the fact that the residues used in the fixed-place lemmas are constant on the congruence class of each family (by \cref{lem:precision} and the congruences that define the class), and the computation of the $j$-invariant (\cref{lem:j-invariant}). In each family, we deduce the rank from \cref{prop:rank-criterion}. Its proof combines three facts: the image of the descent map lies in the span of the ambient basis, its elements satisfy the local conditions at the fixed places and at the moving primes, and it contains the classes of the rational points. The programs check the finite inputs to this argument, namely the identities satisfied by the points, the matrices and their ranks, and the classes of the points.
+ 
+ \section{Running the programs}\label{sec:verification-running}
+ 
+-The programs and their inputs are the following files, in the directory \path{certificates} of the source files of this paper:
++The programs and their inputs are the following files, relative to the repository
++directory \path{manuscript/source/certificates}:
+ \begin{itemize}
+ \item \path{rank5/verify_final155_certificate.py}, with input \path{rank5/final155_certificate.json}, for the rank-five family (\cref{sec:rank5});
+ \item \path{rank6/verify_rank6_certificate.py}, with input \path{rank6/rank6_certificate.json}, for the rank-six family (\cref{sec:rank6});
+ \item \path{rank7/verify_rank7_certificate.py}, with input \path{rank7/rank7_certificate.json}, for the rank-seven family (\cref{sec:rank7}).
+ \end{itemize}
+-Each program reads its input from its own directory and uses only the standard library of Python. The programs require Python~3.10 or later, because they use the method \texttt{int.bit\_count}, which was introduced in that version; under Python~3.9, the first call to this method raises an \texttt{AttributeError}. From the directory that contains \path{certificates}, the commands are
++Each program reads its input from its own directory and uses only the standard library of Python. The programs require Python~3.10 or later, because they use the method \texttt{int.bit\_count}, which was introduced in that version; under Python~3.9, the first call to this method raises an \texttt{AttributeError}. From the repository directory \path{manuscript/source}, the commands are
+ \begin{verbatim}
+ python3 -I certificates/rank5/verify_final155_certificate.py
+ python3 -I certificates/rank6/verify_rank6_certificate.py
+@@ -21,7 +23,7 @@
+ \end{verbatim}
+ where \texttt{python3} denotes an interpreter of version 3.10 or later. The option \texttt{-I} runs the interpreter in isolated mode: it ignores the environment variables of Python and does not add the directory of the script or the user's site-packages directory to the module search path.
+ 
+-Each program consists of assertions. If one of them fails, the program stops with an \texttt{AssertionError} and a nonzero exit status. If all of them hold, the program prints the ranks of its four matrices and their reduced row bases, followed by a line that begins with \texttt{PASS}. The rank-seven program also writes a report, \path{rank7_certificate_output.json}, into its own directory, replacing the file of that name, so this directory must be writable. The script \path{build.py}, in the directory that contains \path{certificates}, runs the three programs in turn, with the interpreter that runs \path{build.py}, stops at the first failure, and writes their combined output to the file \mbox{\path{verification_output.txt}}. It then compiles this paper with \texttt{pdflatex} and \texttt{bibtex}.
++Each program consists of assertions. If one of them fails, the program stops with an \texttt{AssertionError} and a nonzero exit status. If all of them hold, the program prints the ranks of its four matrices and their reduced row bases, followed by a line that begins with \texttt{PASS}. The rank-seven program also writes a report, \path{rank7_certificate_output.json}, into its own directory, replacing the file of that name, so this directory must be writable. The script \path{manuscript/source/build.py} in the repository runs the three programs in turn, with the interpreter that runs \path{build.py}, stops at the first failure, and writes their combined output to the file \path{manuscript/source/verification_output.txt}. It then compiles this paper with \texttt{pdflatex} and \texttt{bibtex}.
+ 
+ \section{Conventions}\label{sec:verification-conventions}
+ 

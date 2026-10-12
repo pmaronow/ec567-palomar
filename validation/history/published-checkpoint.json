@@ -1,0 +1,14 @@
+{
+  "repository": "pmaronow/codex",
+  "branch": "codex/elliptic-ranks-5-7-2026-10-11",
+  "commit": "99862f656eba6eef70c6dabf0e53991e26957f94",
+  "tree": "6c1602e44b40738d4bed386425ced3225f84edf7",
+  "verifiedFiles": 1281,
+  "coreLeanFiles": 107,
+  "auditedDeclarations": 4897,
+  "coherentMobiusSWModules": 232,
+  "coherentMobiusSWAuditedDeclarations": 7165,
+  "countingModules": 274,
+  "countingAuditedDeclarations": 8592,
+  "url": "https://github.com/pmaronow/codex/tree/codex/elliptic-ranks-5-7-2026-10-11"
+}

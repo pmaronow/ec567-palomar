@@ -1,0 +1,7 @@
+'kernelBool' does not depend on any axioms
+'kernelArithmetic' does not depend on any axioms
+'kernelTable' does not depend on any axioms
+'tableSemantic' depends on axioms: [propext, Quot.sound]
+'LeanCert.Engine.TableCert.verify' depends on axioms: [propext, Quot.sound]
+'kernelFalseRejected' does not depend on any axioms
+All 420 copied Verification/Table declarations have standard-only transitive axioms.

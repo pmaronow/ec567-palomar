@@ -1,0 +1,28 @@
+{
+  "project": "isolated mathlib-only additive van der Corput criterion",
+  "toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "mathlib_commit": "282fbb865d53622ef7f9ef29f6763a0327ee6b5f",
+  "build": "passed warning-free, 2539 jobs, leaf 5.7s",
+  "exhaustive_owned_module_axiom_audit": "passed",
+  "audited_owned_declarations": 21,
+  "audited_modules": [
+    "AdditiveVanDerCorput"
+  ],
+  "allowed_transitive_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "source_sha256": {
+    "AdditiveVanDerCorput.lean": "a68a95eb2f3e252bce201b964ebd353cf08977e638d8b7c2dfc011fd303b869c"
+  },
+  "independent_semantic_review": "passed by /root/nilsequence_review, same source SHA256",
+  "actual_additive_shift_correlations": true,
+  "finite_explicit_boundary_estimate_proved": true,
+  "qualitative_one_bounded_criterion_proved": true,
+  "qualitative_fixed_bounded_criterion_proved": true,
+  "sequence_specific_cancellation_proved_here": false,
+  "uniform_N_dependent_rate_proved": false,
+  "main_sources_modified": false,
+  "exact_scope": "For a fixed bounded complex sequence, actual positive-shift correlations normalized by N tending to zero imply its positive-interval normalized mean tends to zero. The finite inequality itself has no cancellation premise."
+}

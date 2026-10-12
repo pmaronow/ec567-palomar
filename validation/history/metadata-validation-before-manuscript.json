@@ -1,0 +1,68 @@
+{
+  "utc": "2026-10-12T04:12:10.690972+00:00",
+  "scope": "Final read-only metadata schema and Palomar mechanical-contract validation with inspection of recorded local protected comparison/kernel evidence; no compiler or verifier rerun, no remote mutation, no Palomar submission or registration",
+  "file": "/workspace/work/ec567-temp/formalization.yaml",
+  "file_sha256": "300cda9727b33ae937a9a5abbaf979fa8a25814dbda9b1fab925468c18a54f24",
+  "file_bytes": 16192,
+  "upstream_v0_4_schema_passed": true,
+  "schema_path": "/workspace/work/ec567-metadata-draft/v0.4.schema.json",
+  "schema_sha256": "25ff6b25ca4511635aff4443cf20480c15e59dddf19591c730950b442ea54fce",
+  "palomar_submission_contract_passed": true,
+  "palomar_submission_revision": "d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44",
+  "project_authors": [
+    "P. M. Aronow",
+    "Patrick Lopatto"
+  ],
+  "responsible_maintainers": [
+    "P. M. Aronow"
+  ],
+  "license_spdx": "Apache-2.0",
+  "counts": {
+    "source_entries": 8,
+    "related_formalizations": 3,
+    "automation_methods": 1,
+    "selected_main_results": 1,
+    "alignment_entries": 4,
+    "proof_development_sorries": 0,
+    "proof_definition_sorries": 0
+  },
+  "result_origin": "source-based",
+  "selected_statement": "RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven",
+  "allowed_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "readme_path": "/workspace/work/ec567-temp/README.md",
+  "readme_sha256": "61f7c4fecdb3dba844019ec1b884e1c47ae697e46c68b9a4775fdec7dcbb9765",
+  "local_verification_status_path": "/workspace/work/ec567-temp/validation/protected/LOCAL_VERIFICATION_STATUS.json",
+  "local_verification_status_sha256": "4c728db1e66e30bb3e089a73adf5bda7c1e810e57ade58b62c6ceb416c945a90",
+  "read_only_target": true,
+  "target_edits": false,
+  "remote_mutations": false,
+  "submission_or_registration": false,
+  "recorded_protected_comparator_log_inspected": true,
+  "comparator_log_sha256": "804f799332ce23bb953efd98ae421dd97a89a99cc29d16795b22ea692b97910f",
+  "recorded_local_kernel_results": {
+    "con-ron": "accepted 77670 declarations (--verified)",
+    "NanoDa": "accepted",
+    "Lean default": "accepted",
+    "Comparator": "Your solution is okay!"
+  },
+  "verified_frozen_snapshot_hash_counts": {
+    "source_snapshot": 6,
+    "selected_object_snapshot": 26
+  },
+  "reported_integrated_build_and_audit_counts": {
+    "lake_jobs": 9131,
+    "owners": 108,
+    "declarations": 4909,
+    "safe_roots": 4903,
+    "generated_implementations": 6,
+    "challenge_definitions": 23
+  },
+  "final_scope_and_privacy_review": "No additional accuracy issue found. Completed checks are described as local; the generic analytic input remains explicit and unformalized; cone/projective and supplementary scope limits are disclosed; no human expert review, Palomar editorial outcome, registry submission or registration is claimed; requested private visibility is preserved.",
+  "official_registry_workflow_run": false,
+  "official_cgroup_supervision_run": false,
+  "proof_verifiers_rerun_by_this_review": false
+}

@@ -1,0 +1,205 @@
+\section{The rank-seven family}\label{sec:origin-r7}
+
+We explain how the datum $\datum_7$ of \cref{sec:rank7}
+arises from a $2$-isogeny pair over $\Q(t)$ by a base change along a conic,
+and how the conic is related to the point $P_4$ of \cref{tab:r7-points}.
+Every identity below is an identity between polynomials
+or rational functions, which can be checked by expansion; we keep the
+notation of \cref{sec:rank7}. A base change along a conic, over which a
+multisection of degree two becomes a section, is a classical device for
+producing new sections \cite[\S2.2]{Mestre1991}, \cite[Lecture~III, p.~2003]{Elkies2007}; see also the general multisection argument in \cite[Corollary~4.3]{Salgado2012} and its conic-bundle application in \cite[\S1.2 and Theorem~2.4]{LoughranSalgado2022}. An explicit construction of the
+same kind is given in \cite[\S4]{DujellaPeral2024}.
+
+\paragraph{The starting pair.} For $\rho,v,w\in\Q$ with $\rho\ne0,\pm1$ and
+\begin{equation}\label{r7o:w}
+ (1-\rho^2)^2w^2=(1+\rho^2)^2-4\rho^2v^2,
+\end{equation}
+we consider the curves
+\begin{equation}\label{r7o:template}
+\begin{aligned}
+ \mathcal E&:\ y^2=x^3-(1+\rho^2)(t^2-1)\,x^2+\rho^2(t^2-1)(t^2-v^2)\,x,\\
+ \mathcal E'&:\ y^2=x^3+2(1+\rho^2)(t^2-1)\,x^2+(1-\rho^2)^2(t^2-1)(t^2-w^2)\,x
+\end{aligned}
+\end{equation}
+over $\Q(t)$. Writing $\alpha_t$ and $\beta_t$ for the coefficients of
+$\mathcal E$, we have
+\[
+ \alpha_t^2-4\beta_t=(t^2-1)\bigl((1-\rho^2)^2t^2-(1+\rho^2)^2+4\rho^2v^2\bigr)
+ =(1-\rho^2)^2(t^2-1)(t^2-w^2),
+\]
+where we used \eqref{r7o:w} in the last step. In other words, $\mathcal E'$ is the
+curve $2$-isogenous to $\mathcal E$ in the sense of \cref{sec:descent}. Both
+curves have a split form: their coefficients are products of the factors
+$t\mp1$, $t\mp v$ and $t\mp w$, and their finite bad fibers lie over
+the set $\{\pm1,\pm v,\pm w\}$. For the parameters used below, these are six
+distinct points.
+
+The rank-four pair of Zywina \cite[\S6.5]{Zywina2026} has this form.
+Indeed, if we substitute $25t$ for his parameter and write his coordinates
+as $(625x,15625y)$, his two curves become
+\[
+ y^2=x^3+14\,\alpha_t\,x^2+14^2\beta_t\,x
+\]
+and its companion, where $\alpha_t,\beta_t$ are the coefficients of
+$\mathcal E$ for $(\rho,v,w)=(2,11/25,39/25)$; that is, they are the
+quadratic twists by $14$ of the curves \eqref{r7o:template} with these
+parameters. %
+The rank-seven family starts instead from
+\begin{equation}\label{r7o:parameters}
+ \rho=\frac{182}{241},\qquad v=-\frac{209}{241},\qquad w=\frac{16769}{8319}.
+\end{equation}
+The starting pair is therefore not Zywina's pair of \cite[\S6.5]{Zywina2026}; it
+is a $2$-isogeny pair of the same split-factor form. For the values
+\eqref{r7o:parameters}, we have $\rho^2=33124/58081$,
+$v^2=43681/58081$, $1+\rho^2=91205/241^2$ and
+$1-\rho^2=24957/241^2=3\cdot8319/241^2$, and \eqref{r7o:w} reduces to the
+integer identity
+\[
+ 91205^2-4\cdot33124\cdot43681=2530794249=9\cdot16769^2.
+\]
+
+\paragraph{The conic.} We look for points of $\mathcal E$ with abscissa
+$x=\rho^2t^2$. At this abscissa, we have
+\[
+ x+\alpha_t+\frac{\beta_t}x
+ =\rho^2t^2-(1+\rho^2)(t^2-1)+\frac{(t^2-1)(t^2-v^2)}{t^2}
+ =\frac{v^2+(\rho^2-v^2)t^2}{t^2}.
+\]
+For the parameters \eqref{r7o:parameters}, this equals
+$(43681-10557t^2)/(241^2t^2)$. By \eqref{r7:reduced}, a point
+$(\rho^2t^2,\rho^2t^2r)$ lies on $\mathcal E$ exactly when
+$r^2=(43681-10557t^2)/(241t)^2$. The curve $\mathcal E$ therefore acquires the
+point
+\begin{equation}\label{r7o:conic-point}
+ \Bigl(\rho^2t^2,\ \frac{\rho^2tz}{241}\Bigr)
+\end{equation}
+over the function field of the conic
+\begin{equation}\label{r7o:conic}
+ z^2=43681-10557t^2.
+\end{equation}
+The conic has the rational point $(t,z)=(1,182)$, since
+$43681-10557=33124=182^2$. For $m=M/N$, the line $z=182+m(t-1)$ meets the
+conic in the points with
+$(t-1)\bigl((m^2+10557)t-m^2+364m+10557\bigr)=0$. The second intersection
+is $(t,z)=(\Theta/D_0,Z/D_0)$, where $D_0=M^2+10557N^2$ is the form of
+\eqref{r7:quadratics} and
+\begin{equation}\label{r7o:Theta}
+ \Theta=M^2-364MN-10557N^2,\qquad Z=-182M^2-21114MN+1921374N^2.
+\end{equation}
+These forms satisfy $Z^2+10557\Theta^2=43681D_0^2$. Since $D_0>0$ for
+$(M,N)\ne(0,0)$, every nonzero pair $(M,N)$ gives a rational point
+$(\Theta/D_0,Z/D_0)$ of the conic.
+
+\paragraph{Splitting of the bad fibers.} Above each of the six bad
+parameters $t_0\in\{\pm1,\pm v,\pm w\}$, the conic \eqref{r7o:conic} has
+rational points, because $43681-10557t_0^2$ is a nonzero square: it equals
+$182^2$, $(45562/241)^2$ and $(77714/2773)^2$ for $t_0=\pm1$, $\pm v$ and
+$\pm w$, respectively. Correspondingly, each quadratic form $\Theta-t_0D_0$,
+scaled to have integer coefficients, factors over $\Q$ into two of the
+linear forms $L_i$ of \cref{tab:r7-forms}:
+\begin{equation}\label{r7o:pullbacks}
+\begin{aligned}
+ \Theta-D_0&=-2L_1L_3, & \Theta+D_0&=2L_0L_2,\\
+ 241\Theta-209D_0&=2L_6L_7, & 241\Theta+209D_0&=2L_4L_5,\\
+ 8319\Theta-16769D_0&=-2L_8L_9, & 8319\Theta+16769D_0&=2L_{10}L_{11}.
+\end{aligned}
+\end{equation}
+Multiplying the identities in each row gives, at $t=\Theta/D_0$,
+\begin{equation}\label{r7o:UVW}
+ t^2-1=-\frac{4F}{D_0^2},\qquad t^2-v^2=\frac{4H}{241^2D_0^2},\qquad
+ t^2-w^2=-\frac{4J}{8319^2D_0^2}.
+\end{equation}
+This is where the parameters \eqref{r7o:parameters} matter: each of the six
+bad parameters pulls back to a product of two linear forms, so that the
+base change keeps twelve linear factors.
+
+\paragraph{The curves of the family.} Inserting \eqref{r7o:UVW} into
+\eqref{r7o:template}, we find that at $t=\Theta/D_0$ the coefficients of
+$x^2$ and $x$ are
+\[
+ \frac{4\cdot91205\,F}{241^2D_0^2}\quad\text{and}\quad
+ -\frac{16\cdot33124\,FH}{241^4D_0^4}\quad\text{for }\mathcal E,\qquad
+ -\frac{8\cdot91205\,F}{241^2D_0^2}\quad\text{and}\quad
+ \frac{144\,FJ}{241^4D_0^4}\quad\text{for }\mathcal E'.
+\]
+With $\mu=2/(241D_0)$, we write the coordinates of $\mathcal E$ and
+$\mathcal E'$ as $(\mu^2x,\mu^3y)$. This divides the coefficients of $x^2$
+and $x$ by $\mu^2$ and $\mu^4$. It transforms $\mathcal E$ into
+$y^2=x^3+91205Fx^2-33124FHx$ and $\mathcal E'$ into
+$y^2=x^3-182410Fx^2+9FJx$, which are the curves \eqref{r7:curves}. No
+quadratic twist occurs in this step.
+
+\paragraph{The conic point.} Under these substitutions, the point
+\eqref{r7o:conic-point} becomes the point
+\[
+ C=\Bigl(8281\,\Theta^2,\ \frac{8281}2\,D_0\,\Theta Z\Bigr)\in E_{M,N}(\Q),
+\]
+where $8281=91^2$. Its class in $\delta_E(E(\Q))$ is trivial. Indeed, if
+$\Theta\ne0$, the abscissa $(91\Theta)^2$ is a nonzero square. Since
+$\Theta=(M-391N)(M+27N)$, the case $\Theta=0$ occurs for $M/N=391$ and
+$M/N=-27$. Then $C=(0,0)=T$, whose class is $\sq\beta$, and $t=0$, so that
+the coefficient $\rho^2(t^2-1)(t^2-v^2)=(\rho v)^2$ of $\mathcal E$ is a
+square; after the change of coordinates, this gives
+$\beta=(19019\,D_0^2/2)^2$, and the class is trivial in this case as well. On
+the cone $\cK_7$, both factors of $\Theta$ are positive, and only the first
+case occurs. In either case, $C$ supplies no nontrivial class in $\delta_E(E(\Q))$.
+This does not mean that $C$ is a torsion point, and the conic base change
+may well raise the Mordell--Weil rank through $C$; but the class used in
+\cref{sec:rank7} is that of $P_4$, through the relation proved below.
+
+\paragraph{The point $P_4$.} At every prime specialization of $\datum_7$, the
+class of $P_4$ in \cref{tab:r7-classes} is not trivial, by
+\cref{lem:r7-independent}, and $P_4$ is related to $C$ as follows. The identities
+\begin{equation}\label{r7o:K}
+ L_0L_3L_8L_{10}=\alpha+16562\,\Theta^2-91\,D_0Z,\qquad
+ 9L_1L_2L_9L_{11}=\alpha+16562\,\Theta^2+91\,D_0Z,
+\end{equation}
+with $\alpha=91205F$ and $16562=2\cdot91^2$, can be checked by expansion.
+Their product is
+$(\alpha+16562\Theta^2)^2-8281D_0^2Z^2=9FJ=\alpha^2-4\beta$. We set
+\[
+ R=\bigl(L_0L_3L_8L_{10},\ -182\,\Theta\,L_0L_3L_8L_{10}\bigr).
+\]
+Writing $x_R=L_0L_3L_8L_{10}$, the equation of $E'$ at $R$ reads
+$(x_R-\alpha)^2-4\beta=182^2\Theta^2x_R$, after division by $x_R$. By
+\eqref{r7o:K}, we have $x_R-\alpha=16562\Theta^2-91D_0Z$. Inserting this and
+$-4\beta=2\cdot16562\,\alpha\Theta^2+16562^2\Theta^4-8281D_0^2Z^2$, which is
+the product identity above, we find that the left side equals
+$2\cdot16562^2\Theta^4-33124\cdot91\,\Theta^2D_0Z+33124\,\alpha\Theta^2
+=33124\,\Theta^2x_R=182^2\Theta^2x_R$. Hence $R\in E'_{M,N}(\Q)$. We use the isogenies
+$\phi\colon E\to E'$ and $\dual\colon E'\to E$ of \eqref{eq:isogenies},
+writing $(x',y')$ for the coordinates on $E'$:
+\[
+ \phi(x,y)=\Bigl(\frac{x^2+\alpha x+\beta}x,\ \frac{y(x^2-\beta)}{x^2}\Bigr),
+ \qquad
+ \dual(x',y')=\Bigl(\frac{y'^2}{4x'^2},\ \frac{y'(x'^2-\beta')}{8x'^2}\Bigr).
+\]
+At $R$, we have $y'^2/(4x'^2)=182^2\Theta^2/4=8281\Theta^2$ and
+\[
+ \frac{y'(x'^2-\beta')}{8x'^2}=-\frac{91\Theta}4\Bigl(x_R-\frac{\beta'}{x_R}\Bigr)
+ =-\frac{91\Theta}4\bigl(L_0L_3L_8L_{10}-9L_1L_2L_9L_{11}\bigr)
+ =\frac{8281}2\,D_0\,\Theta Z,
+\]
+where we used $\beta'=9FJ=L_0L_3L_8L_{10}\cdot9L_1L_2L_9L_{11}$ and
+\eqref{r7o:K}. We conclude that $\dual(R)=C$.
+
+The point $Q_3$ of \cref{tab:r7-points} has abscissa
+$(16/225)L_0L_3L_8L_{10}$, which differs from $x_R$ since $L_0L_3L_8L_{10}\ne0$.
+The chord through $R$ and $-Q_3$ therefore defines $R-Q_3$, and expanding
+the chord formulas, one finds
+\[
+ x(R-Q_3)=\frac{D_3^2}{361}=x(\phi(P_4)),\qquad y(R-Q_3)=-y(\phi(P_4)),
+\]
+where $x(\phi(P_4))=(y/x)^2=(D_3/19)^2$ by \cref{tab:r7-points}. This shows that
+$R-Q_3=-\phi(P_4)$. Applying $\dual$ and using $\dual\circ\phi=[2]$
+(\cref{prop:descent}\ref{item:descent-isogeny}), we obtain
+\[
+ C=\dual(Q_3)-[2]P_4.
+\]
+In words, $P_4$ is a half of $\dual(Q_3)-C$. The class of $C$ is trivial,
+as shown above, and so is the class of $\dual(Q_3)$, by
+\cref{prop:descent}\ref{item:descent-kernel}; at every prime
+specialization, the class of $P_4$ is not.
+This is how the conic produces the new class of $P_4$. Its
+independence from the other classes is proved directly in
+\cref{lem:r7-independent}.

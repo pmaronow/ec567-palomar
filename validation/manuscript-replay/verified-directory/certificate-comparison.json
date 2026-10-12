@@ -1,0 +1,1314 @@
+{
+  "schema_version": 2,
+  "generated_utc": "2026-10-12T03:50:12.309839+00:00",
+  "scope": "Read-only original/updated certificate data, verifier ASTs, and 42 exact Lean table comparisons.",
+  "safety_and_scope": {
+    "attached_python_scripts_executed": false,
+    "attached_python_scripts_imported": false,
+    "lean_compiler_invoked": false,
+    "target_core_challenge_solution_modified": false
+  },
+  "summary": {
+    "asset_count": 6,
+    "byte_identical_to_original_count": 2,
+    "mathematical_json_data_unchanged": true,
+    "verifier_executable_ast_unchanged": true,
+    "exact_lean_table_checks": 42,
+    "all_exact_lean_table_checks_passed": true,
+    "normalization_and_fixed_prefix_checks_passed": true,
+    "passed": true
+  },
+  "assets": [
+    {
+      "name": "rank5/final155_certificate.json",
+      "updated": {
+        "path": "/workspace/work/updated-ec567-manuscript/source/certificates/rank5/final155_certificate.json",
+        "bytes": 12983,
+        "sha256": "daa3a196c1e7bfad19be03b7d5ffe3bfb1672a5041149ba33ca650205fa610f8"
+      },
+      "original": {
+        "path": "/workspace/work/rank-5-elliptic-curves-main/research/paper/final155_certificate.json",
+        "bytes": 13109,
+        "sha256": "ed596d8253b230962840411a49c6625fc8a45d4c8588f0dedf08375fe0056730"
+      },
+      "byte_identical_to_original": false,
+      "json_differences": [
+        {
+          "path": "/coordinate",
+          "original": "u=M/N; final max155 positive-N model; N need not be prime",
+          "updated": "u=M/N; N>0; N need not be prime"
+        },
+        {
+          "path": "/review_status",
+          "change": "removed",
+          "original": "Internal draft; analytic prime-pattern theorem is a separate published input."
+        }
+      ],
+      "ignored_documentary_fields": [
+        "coordinate",
+        "review_status"
+      ],
+      "all_mathematical_fields_identical": true,
+      "mathematical_fields_canonical_json_sha256": "e971d83157b779859b9e463f96f6ce58569ee8eccbbc19f8a833c4d509bedd71"
+    },
+    {
+      "name": "rank5/verify_final155_certificate.py",
+      "updated": {
+        "path": "/workspace/work/updated-ec567-manuscript/source/certificates/rank5/verify_final155_certificate.py",
+        "bytes": 17380,
+        "sha256": "b08c7e9c01267f172a2e583b0c7bcbfc99918f81baa01ea7204c5c5d753d6d24"
+      },
+      "original": {
+        "path": "/workspace/work/rank-5-elliptic-curves-main/research/paper/verify_final155_certificate.py",
+        "bytes": 17394,
+        "sha256": "8e22d1b701f5207b882217374f0db185ac6bfb37312b8d553be7de026e624d66"
+      },
+      "byte_identical_to_original": false,
+      "executable_ast_identical_after_removing_module_docstring": true,
+      "executable_ast_sha256": "f8de0e46d0ac6f6f3fbec75b30d2b75b56ba80de49b2171a7a3faae2b787382c",
+      "unified_text_diff": "--- /workspace/work/rank-5-elliptic-curves-main/research/paper/verify_final155_certificate.py\n+++ /workspace/work/updated-ec567-manuscript/source/certificates/rank5/verify_final155_certificate.py\n@@ -1,5 +1,5 @@\n #!/usr/bin/env python3\n-\"\"\"Self-contained finite certificate for the final max155 positive-N manuscript.\n+\"\"\"Finite arithmetic certificate for the rank-five family.\n \n Only Python standard-library imports. The denominator N need not be prime.\n The finite-complexity prime theorem and local descent arguments remain\n@@ -270,7 +270,7 @@\n         for two in normalized[i+1:]:\n             assert int(one['X'])*int(two['Y']) != int(two['X'])*int(one['Y'])\n \n-    # The direct fixed-local proof uses only M54,N-1 mod25920.\n+    # Check the finite premises of the fixed-local proof modulo 25920.\n     # The coupled identity is essential in the 2-adic exceptional branch.\n     assert valuation(f, 2) == valuation(h, 2) == 4 and valuation(j, 2) == 3\n     alpha, beta, kappa = 375*(f//16), -675*(f//16)*(h//16), 225*(f//16)*(j//8)\n",
+      "execution_status": "Parsed with ast.parse only; never imported or executed."
+    },
+    {
+      "name": "rank6/rank6_certificate.json",
+      "updated": {
+        "path": "/workspace/work/updated-ec567-manuscript/source/certificates/rank6/rank6_certificate.json",
+        "bytes": 12706,
+        "sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b"
+      },
+      "original": {
+        "path": "/workspace/work/rank-5-elliptic-curves-main/research/rank6/paper/rank6_certificate.json",
+        "bytes": 12706,
+        "sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b"
+      },
+      "byte_identical_to_original": true,
+      "json_differences": [],
+      "ignored_documentary_fields": [],
+      "all_mathematical_fields_identical": true,
+      "mathematical_fields_canonical_json_sha256": "b25dc8204c1bf43d2399fc1c3d1b3f1b09191a2ef9d266adae2621d94568ea8f"
+    },
+    {
+      "name": "rank6/verify_rank6_certificate.py",
+      "updated": {
+        "path": "/workspace/work/updated-ec567-manuscript/source/certificates/rank6/verify_rank6_certificate.py",
+        "bytes": 11054,
+        "sha256": "98aabc43874bec1fad6bd23c60157949b846bc8e8ed33e71e7a8396b04a39d9d"
+      },
+      "original": {
+        "path": "/workspace/work/rank-5-elliptic-curves-main/research/rank6/paper/verify_rank6_certificate.py",
+        "bytes": 11134,
+        "sha256": "7c3303a083542b9d8d6da609bd8ae6d49c71b62e16ae036b5b76c5bc877102bf"
+      },
+      "byte_identical_to_original": false,
+      "executable_ast_identical_after_removing_module_docstring": true,
+      "executable_ast_sha256": "ecabbc4f2957d74b116dbf9677b2ee4c5b5336ce03cb3ffe342cd7694e0956a1",
+      "unified_text_diff": "--- /workspace/work/rank-5-elliptic-curves-main/research/rank6/paper/verify_rank6_certificate.py\n+++ /workspace/work/updated-ec567-manuscript/source/certificates/rank6/verify_rank6_certificate.py\n@@ -1,9 +1,9 @@\n #!/usr/bin/env python3\n-\"\"\"Independent standard-library arithmetic audit of the rank6 manuscript prime pattern.\n-\n-No imports from producer or other research implementations. Fixed-local\n-uniformity is a separate input audited by the descent agent; fresh\n-primitive quartic modular checks are cross-checks of those upper images.\n+\"\"\"Finite arithmetic certificate for the rank-six family.\n+\n+Uses only the Python standard library. Uniform local arguments and analytic\n+infinitude are proved in the manuscript; primitive quartic modular checks\n+verify finite local premises.\n \"\"\"\n from fractions import Fraction as Q\n from math import gcd,isqrt,prod\n@@ -131,7 +131,7 @@\n     for q in omitted:\n         directions={(1,b*pow(a,-1,q)%q)if a%q else(0,1)for a,b in FORMS}\n         assert len(directions)==data['omitted_direction_counts'][str(q)]<q+1\n-    # Direct local-premise assertions establish the uniform small boxes.\n+    # Check local premises at the representative pair.\n     a,b=curves[0];alpha=a//16;beta=b//256\n     assert vp(f,2)==3 and vp(h,2)==1 and vp(j,2)==3\n     assert alpha%4==1 and beta%8==3\n",
+      "execution_status": "Parsed with ast.parse only; never imported or executed."
+    },
+    {
+      "name": "rank7/rank7_certificate.json",
+      "updated": {
+        "path": "/workspace/work/updated-ec567-manuscript/source/certificates/rank7/rank7_certificate.json",
+        "bytes": 4316,
+        "sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d"
+      },
+      "original": {
+        "path": "/workspace/work/rank-5-elliptic-curves-main/research/rank7/paper/rank7_certificate.json",
+        "bytes": 4316,
+        "sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d"
+      },
+      "byte_identical_to_original": true,
+      "json_differences": [],
+      "ignored_documentary_fields": [],
+      "all_mathematical_fields_identical": true,
+      "mathematical_fields_canonical_json_sha256": "072500091fa2896c91958501a4146c1409132356b15c3e755ff364fc880d1f41"
+    },
+    {
+      "name": "rank7/verify_rank7_certificate.py",
+      "updated": {
+        "path": "/workspace/work/updated-ec567-manuscript/source/certificates/rank7/verify_rank7_certificate.py",
+        "bytes": 14016,
+        "sha256": "80beabbe2040aa2aa4699848fafbad0c37289025a6855a7920db34e7b7aedd1f"
+      },
+      "original": {
+        "path": "/workspace/work/rank-5-elliptic-curves-main/research/rank7/paper/verify_rank7_certificate.py",
+        "bytes": 14122,
+        "sha256": "edd989ef1dd7e2032ed5f2eda230edf0f15c92fdc9a7bcd5ef78e4945f0cdb6b"
+      },
+      "byte_identical_to_original": false,
+      "executable_ast_identical_after_removing_module_docstring": true,
+      "executable_ast_sha256": "8b99123973ace09ebf275aa686f581600c82e9cac42eb13b8fbf8f80cb98f046",
+      "unified_text_diff": "--- /workspace/work/rank-5-elliptic-curves-main/research/rank7/paper/verify_rank7_certificate.py\n+++ /workspace/work/updated-ec567-manuscript/source/certificates/rank7/verify_rank7_certificate.py\n@@ -1,10 +1,9 @@\n #!/usr/bin/env python3\n-\"\"\"Integrated standard-library finite certificate for the rank-seven paper.\n-\n-Run: python3 -I research/rank7/paper/verify_rank7_certificate.py\n-No discovery implementation, symbolic-algebra package, numerical rank tool,\n-or external data source is imported. Mathematical infinitude and the uniform\n-valuation arguments are proved in the manuscript, not asserted by this code.\n+\"\"\"Finite arithmetic certificate for the rank-seven family.\n+\n+Run from source/: python3 -I certificates/rank7/verify_rank7_certificate.py\n+Uses only the Python standard library. Mathematical infinitude and the uniform\n+valuation arguments are proved in the manuscript.\n \"\"\"\n from fractions import Fraction as Q\n from math import gcd, isqrt, prod\n",
+      "execution_status": "Parsed with ast.parse only; never imported or executed."
+    }
+  ],
+  "lean_table_checks": [
+    {
+      "rank": 5,
+      "json_field": "/matrices/E0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank5.E0",
+      "line": 28,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        1669,
+        3948,
+        267,
+        4,
+        3718,
+        1424,
+        642,
+        322,
+        4029,
+        3888,
+        37,
+        924,
+        2572
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/matrices/E1",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank5.E1",
+      "line": 30,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        1669,
+        3948,
+        267,
+        4,
+        3718,
+        2656,
+        3442,
+        3762,
+        77,
+        192,
+        4053,
+        3180,
+        1532
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/matrices/Ep0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank5.Ep0",
+      "line": 29,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        108,
+        3206,
+        1,
+        1424,
+        898,
+        66,
+        1597,
+        1494,
+        3887,
+        799,
+        2442
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/matrices/Ep1",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank5.Ep1",
+      "line": 31,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        108,
+        3206,
+        1,
+        2656,
+        3186,
+        4018,
+        2509,
+        2598,
+        223,
+        3311,
+        1658
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/known_vectors/E",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank5.Egenerators",
+      "line": 32,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        4081,
+        243,
+        3274
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/known_vectors/Ep",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank5.Epgenerators",
+      "line": 33,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        4082,
+        3840,
+        824,
+        1378
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/forms",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.forms",
+      "line": 59,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        [
+          1,
+          0
+        ],
+        [
+          22,
+          -1
+        ],
+        [
+          9,
+          -2
+        ],
+        [
+          143,
+          155
+        ],
+        [
+          -55,
+          62
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          138,
+          -31
+        ],
+        [
+          55,
+          64
+        ],
+        [
+          99,
+          62
+        ],
+        [
+          5,
+          -1
+        ],
+        [
+          32,
+          31
+        ],
+        [
+          55,
+          -12
+        ]
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/cofactors",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.cofactors",
+      "line": 61,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        54,
+        1,
+        8,
+        1,
+        8,
+        1,
+        1,
+        2,
+        4,
+        1,
+        1,
+        6
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/modulus",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.W",
+      "line": 62,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 19984345920
+    },
+    {
+      "rank": 5,
+      "json_field": "/M_residue",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.M0",
+      "line": 63,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 6555660534
+    },
+    {
+      "rank": 5,
+      "json_field": "/N_residue",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.N0",
+      "line": 64,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": -1
+    },
+    {
+      "rank": 5,
+      "json_field": "/prime_forms",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.outputs",
+      "line": 67,
+      "equal": true,
+      "method": "exact integer normalization from JSON forms, cofactors and lattice",
+      "value": [
+        [
+          370080480,
+          0,
+          121401121
+        ],
+        [
+          439655610240,
+          -19984345920,
+          144224531749
+        ],
+        [
+          22482389160,
+          -4996086480,
+          7375118101
+        ],
+        [
+          2857761466560,
+          3097573617600,
+          937459456207
+        ],
+        [
+          -137392378200,
+          154878680880,
+          -45070166179
+        ],
+        [
+          59953037760,
+          -19984345920,
+          19666981603
+        ],
+        [
+          2757839736960,
+          -619514723520,
+          904681153723
+        ],
+        [
+          549569512800,
+          639499069440,
+          180280664653
+        ],
+        [
+          494612561520,
+          309757361760,
+          162252598201
+        ],
+        [
+          99921729600,
+          -19984345920,
+          32778302671
+        ],
+        [
+          639499069440,
+          619514723520,
+          209781137057
+        ],
+        [
+          183189837600,
+          -39968691840,
+          60093554897
+        ]
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/congruences",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.crt",
+      "line": 73,
+      "equal": true,
+      "method": "CRT residues normalized modulo their listed modulus",
+      "value": [
+        [
+          64,
+          54,
+          63
+        ],
+        [
+          81,
+          54,
+          80
+        ],
+        [
+          5,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          6
+        ],
+        [
+          11,
+          5,
+          10
+        ],
+        [
+          17,
+          4,
+          16
+        ],
+        [
+          19,
+          18,
+          18
+        ],
+        [
+          31,
+          14,
+          30
+        ]
+      ]
+    },
+    {
+      "rank": 5,
+      "json_field": "/crt_primes",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank5.retainedPrimes",
+      "line": 75,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        17,
+        19,
+        31
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/matrices/E0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank6.E0",
+      "line": 426,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        2,
+        3875,
+        4,
+        1557,
+        839,
+        2139,
+        1586,
+        2879,
+        1961,
+        1765,
+        1409,
+        734
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/matrices/Ep0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank6.Ep0",
+      "line": 427,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        1981,
+        2,
+        3613,
+        1,
+        3927,
+        1147,
+        2610,
+        2239,
+        1430,
+        3036,
+        241,
+        164
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/matrices/E1",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank6.E1",
+      "line": 428,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        2,
+        3875,
+        4,
+        1557,
+        3255,
+        1963,
+        2498,
+        1231,
+        2137,
+        2325,
+        2673,
+        3374
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/matrices/Ep1",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank6.Ep1",
+      "line": 429,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        1981,
+        2,
+        3613,
+        1,
+        167,
+        2955,
+        1474,
+        1871,
+        2662,
+        1068,
+        3841,
+        3924
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/known_codes/E",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank6.Egenerators",
+      "line": 430,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        4081,
+        3848,
+        865,
+        1449
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/known_codes/Ep",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank6.Epgenerators",
+      "line": 431,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        4080,
+        248,
+        3220,
+        2384
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/forms",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.forms",
+      "line": 262,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          169,
+          750
+        ],
+        [
+          25,
+          -169
+        ],
+        [
+          1,
+          -27
+        ],
+        [
+          7,
+          20
+        ],
+        [
+          2,
+          -21
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          7,
+          64
+        ],
+        [
+          1,
+          -2
+        ],
+        [
+          32,
+          -105
+        ]
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/ci",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.cofactors",
+      "line": 264,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        1,
+        1,
+        1,
+        8,
+        2,
+        1,
+        1,
+        1,
+        8,
+        27,
+        3,
+        1
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/W",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.W",
+      "line": 265,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 780373440
+    },
+    {
+      "rank": 6,
+      "json_field": "/M0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.M0",
+      "line": 266,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 416513683
+    },
+    {
+      "rank": 6,
+      "json_field": "/N0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.N0",
+      "line": 267,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 91046603
+    },
+    {
+      "rank": 6,
+      "json_field": "/forms + cofactors + lattice",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.outputs",
+      "line": 270,
+      "equal": true,
+      "method": "exact integer normalization from JSON forms, cofactors and lattice",
+      "value": [
+        [
+          780373440,
+          0,
+          416513683
+        ],
+        [
+          0,
+          780373440,
+          91046603
+        ],
+        [
+          131883111360,
+          585280080000,
+          138675764677
+        ],
+        [
+          2438667000,
+          -16485388920,
+          -621754229
+        ],
+        [
+          390186720,
+          -10535041440,
+          -1020872299
+        ],
+        [
+          5462614080,
+          15607468800,
+          4736527841
+        ],
+        [
+          1560746880,
+          -16387842240,
+          -1078951297
+        ],
+        [
+          7023360960,
+          7803734400,
+          4659089177
+        ],
+        [
+          97546680,
+          1463200200,
+          222776591
+        ],
+        [
+          202319040,
+          1849774080,
+          323799199
+        ],
+        [
+          260124480,
+          -520248960,
+          78140159
+        ],
+        [
+          24971950080,
+          -81939211200,
+          3768544541
+        ]
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/moduli",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.crt",
+      "line": 276,
+      "equal": true,
+      "method": "CRT residues normalized modulo their listed modulus",
+      "value": [
+        [
+          64,
+          19,
+          11
+        ],
+        [
+          81,
+          19,
+          11
+        ],
+        [
+          7,
+          5,
+          4
+        ],
+        [
+          5,
+          3,
+          3
+        ],
+        [
+          11,
+          3,
+          10
+        ],
+        [
+          17,
+          15,
+          9
+        ],
+        [
+          23,
+          13,
+          22
+        ]
+      ]
+    },
+    {
+      "rank": 6,
+      "json_field": "/crt_primes",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank6.retainedPrimes",
+      "line": 278,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        17,
+        23
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/matrices/E0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank7.E0",
+      "line": 824,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        4943,
+        8020,
+        195,
+        4,
+        4896,
+        219,
+        340,
+        3583,
+        7945,
+        7734,
+        466,
+        3121
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/matrices/Ep0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank7.Ep0",
+      "line": 825,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        7705,
+        4117,
+        8,
+        7626,
+        16,
+        1,
+        5408,
+        6811,
+        2388,
+        6399,
+        5503,
+        5914,
+        5914,
+        5479
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/matrices/E1",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank7.E1",
+      "line": 826,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        4943,
+        8020,
+        195,
+        4,
+        3264,
+        7995,
+        7860,
+        4639,
+        233,
+        470,
+        7730,
+        5073
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/matrices/Ep1",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank7.Ep1",
+      "line": 827,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        7705,
+        4117,
+        8,
+        7626,
+        16,
+        1,
+        2752,
+        1403,
+        5812,
+        1823,
+        2719,
+        2298,
+        2298,
+        2695
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/known_codes/E",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank7.Egenerators",
+      "line": 828,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        8163,
+        483,
+        6306,
+        3291,
+        6554
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/known_codes/Ep",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "lean_declaration": "RankCertificates.MatrixCertificates.Rank7.Epgenerators",
+      "line": 829,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        8164,
+        482,
+        1696,
+        2848
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/forms",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.forms",
+      "line": 464,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          -182
+        ],
+        [
+          182,
+          10557
+        ],
+        [
+          9,
+          34
+        ],
+        [
+          25,
+          -4968
+        ],
+        [
+          2,
+          -5589
+        ],
+        [
+          8,
+          425
+        ],
+        [
+          13,
+          2688
+        ],
+        [
+          325,
+          49266
+        ],
+        [
+          14,
+          -975
+        ],
+        [
+          896,
+          -45747
+        ]
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/cofactors",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.cofactors",
+      "line": 466,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        18,
+        1,
+        64,
+        9,
+        8,
+        18,
+        9,
+        1,
+        6,
+        1728,
+        3,
+        9
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/lattice/W",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.W",
+      "line": 467,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 308403583488
+    },
+    {
+      "rank": 7,
+      "json_field": "/lattice/M0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.M0",
+      "line": 468,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 79151095314
+    },
+    {
+      "rank": 7,
+      "json_field": "/lattice/N0",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.N0",
+      "line": 469,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": 151444919819
+    },
+    {
+      "rank": 7,
+      "json_field": "/forms + cofactors + lattice",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.outputs",
+      "line": 472,
+      "equal": true,
+      "method": "exact integer normalization from JSON forms, cofactors and lattice",
+      "value": [
+        [
+          17133532416,
+          0,
+          4397283073
+        ],
+        [
+          0,
+          308403583488,
+          151444919819
+        ],
+        [
+          4818805992,
+          -877022690544,
+          -429434754871
+        ],
+        [
+          6236605799424,
+          361757403431424,
+          179245501986259
+        ],
+        [
+          346954031424,
+          1310715229824,
+          732685891459
+        ],
+        [
+          428338310400,
+          -85119389042688,
+          -41688865793219
+        ],
+        [
+          68534129664,
+          -191518625346048,
+          -94029706075307
+        ],
+        [
+          2467228667904,
+          131071522982400,
+          64997299685587
+        ],
+        [
+          668207764224,
+          138164805402624,
+          68018818118759
+        ],
+        [
+          58004146200,
+          8792714666736,
+          4332644401493
+        ],
+        [
+          1439216722944,
+          -100231164633600,
+          -48850227163043
+        ],
+        [
+          30703290089472,
+          -1567615414869504,
+          -761914596173161
+        ]
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/states",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.crt",
+      "line": 478,
+      "equal": true,
+      "method": "CRT residues normalized modulo their listed modulus",
+      "value": [
+        [
+          512,
+          18,
+          11
+        ],
+        [
+          81,
+          18,
+          11
+        ],
+        [
+          7,
+          4,
+          4
+        ],
+        [
+          13,
+          5,
+          11
+        ],
+        [
+          11,
+          5,
+          6
+        ],
+        [
+          17,
+          3,
+          4
+        ],
+        [
+          19,
+          15,
+          12
+        ],
+        [
+          23,
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "rank": 7,
+      "json_field": "/states (underlying prime moduli)",
+      "lean_file": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "lean_declaration": "RankCertificates.PrimePatterns.Rank7.retainedPrimes",
+      "line": 480,
+      "equal": true,
+      "method": "literal numeric transcription",
+      "value": [
+        2,
+        3,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23
+      ]
+    }
+  ],
+  "normalization_and_fixed_prefix_checks": [
+    {
+      "rank": 5,
+      "check": "JSON prime_forms equal exact normalized forms",
+      "passed": true
+    },
+    {
+      "rank": 6,
+      "check": "fixed_rows.E equals both matrix prefixes",
+      "passed": true
+    },
+    {
+      "rank": 6,
+      "check": "fixed_rows.Ep equals both matrix prefixes",
+      "passed": true
+    },
+    {
+      "rank": 7,
+      "check": "fixed_rows.E equals both matrix prefixes",
+      "passed": true
+    },
+    {
+      "rank": 7,
+      "check": "fixed_rows.Ep equals both matrix prefixes",
+      "passed": true
+    }
+  ],
+  "lean_source_inventory": [
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/MatrixCertificates.lean",
+      "bytes": 55819,
+      "sha256": "23bfd46777757599f62a41042ff06651a166c22e14eb5d5aee307f9aaa1d4c3c"
+    },
+    {
+      "path": "/workspace/work/ec567-temp/RankCertificates/PrimePatterns.lean",
+      "bytes": 30345,
+      "sha256": "3642bad0a1326ec38d8eb5eee325484a34541b157d4e904cff2df5c306a8f055"
+    }
+  ],
+  "limitations": [
+    "Text/data equality is not a fresh Lean kernel build or an execution of the manuscript verifiers.",
+    "The attached verifier scripts are inspected with ast.parse; no supplied Python code is evaluated.",
+    "Only the explicitly listed documentary rank-5 JSON fields and module docstrings are ignored when testing unchanged mathematics/code."
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "archive_name": "rank-5-elliptic-curves-main.zip",
+  "archive_sha256": "09591a0598f7ade20b0ed0cc3f1632073e297ed7122dedb8ba1a9746e8379592",
+  "sources": [
+    {
+      "path": "research/paper/final_rank5.tex",
+      "sha256": "85c0ffb166b9604b2d7a779ac64819ee0d06c3f2b6890849b2303bcb2a88f885"
+    },
+    {
+      "path": "research/paper/final155_certificate.json",
+      "sha256": "ed596d8253b230962840411a49c6625fc8a45d4c8588f0dedf08375fe0056730"
+    },
+    {
+      "path": "research/paper/prime_pattern_certificate.json",
+      "sha256": "c316304822129845dc768e959e3405d5e17fec1bbcdfa9732c9581055ea957e6"
+    },
+    {
+      "path": "research/rank6/paper/rank6_infinitude.tex",
+      "sha256": "d8695c3d9c6946eebfb7fbdcab0bab394ae86309f1bc65b7454913607335e6d1"
+    },
+    {
+      "path": "research/rank6/paper/rank6_certificate.json",
+      "sha256": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b"
+    },
+    {
+      "path": "research/rank7/paper/rank7_infinitude.tex",
+      "sha256": "b4f90f1655ebd5df23cc482bb28bf1c20480c73eb1bc7647e37751353c4450e2"
+    },
+    {
+      "path": "research/rank7/paper/rank7_certificate.json",
+      "sha256": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d"
+    }
+  ],
+  "additional_uploaded_sources": [
+    {
+      "archive_name": "elliptic_curves_ranks_5_7_source-0038f160972b4a4f998d867a76e5ea58.zip",
+      "archive_sha256": "a510f3af0b73170a1f10a73f077337e6d4310efbe31ca252e2fe2bc6056bf4f6",
+      "manuscript_path": "elliptic_curves_ranks_5_7.tex",
+      "manuscript_sha256": "9b16e87a47a4818ea496a65afec48f160ffc8a820304bf34936dde24e39c4368",
+      "all_seven_certificate_assets_byte_identical_to_original": true,
+      "literal_lean_comparison": "validation/history/new-archive-literal-comparison.json",
+      "audit": "validation/history/new-archive-comparison.md",
+      "contains_new_lean_prime_pattern_proof": false
+    }
+  ],
+  "updated_manuscript": {
+    "archive_name": "EC_ranks_5_7_manuscript.zip",
+    "archive_sha256": "5d3f85d7f6a07c8e8382f2629a49449689746655b0c4d2edb319b0197523e75a",
+    "archive_bytes": 1075087,
+    "payload_files": 29,
+    "pdf_sha256": "c62ebc9cb0e299ecf5f1e56c028c4017209cc97ad65175de4ddd1eaaf8bf75e9",
+    "main_tex_sha256": "d3b44a5ce1c882b626bf38420c9e3fb1a2718af8550d28156143336985a689e9",
+    "comparison": "validation/manuscript-comparison.json",
+    "comparison_sha256": "3f604ea23f117a3d2eccf4f0f625de03e8c2c32e3441dd6ed3b6344721283845",
+    "comparison_report": "validation/manuscript-comparison.md",
+    "family_literal_checks": 1176,
+    "certificate_table_checks": 42,
+    "all_29_payloads_match_zip": true,
+    "attached_scripts_executed": false,
+    "source_archive_payloads_redistributed": true,
+    "conditional_main_only": true,
+    "scope_notes": [
+      "Z-linear independence of the exact five displayed rank5 points (prop:r5-five-points).",
+      "Existence/infinitude inside each paper selected narrow cone, if that location statement is exported.",
+      "Generic degree12 P1 morphism/no-common-zero/exact twelve-point fiber bound over Qbar.",
+      "Full Qp image equality/class realization and arbitrary characteristic-zero field descent statements, rather than the rational restrictions needed for main.",
+      "K3 classification and fiber types of the associated elliptic surfaces; appendix conic/origin constructions; not used by the main rank/infinitude argument."
+    ],
+    "comparison_report_sha256": "a17734dd03448a5d0b85e7ebca6b9fa24793230dfd472a01777468d0f7912adc",
+    "comparison_report_original_sha256": "e4733adaec8903ed60d748bda99906684fc382e825da74a398a8d0fa2c29d2b9",
+    "comparison_report_integration_edit": "Corrected historical 4908 count label to declarations (4902 safe plus6 generated); mathematical comparison unchanged."
+  },
+  "import_provenance": "validation/import-provenance.json",
+  "repository_manuscript": {
+    "pdf": "manuscript/ec_ranks_5_7.pdf",
+    "pdf_sha256": "1f8156b92b65cb1b0c12e8e61569e5cc4af136c72235c8b5403c6512402523f9",
+    "pdf_bytes": 922280,
+    "source_directory": "manuscript/source",
+    "source_files": 28,
+    "source_files_changed_from_upload": [
+      "sections/A-verification.tex"
+    ],
+    "appendix_a_sha256": "16a3a5a0bcc432bbb651ba0dfb88870059b6280a14153d375e115a9ba3415a58",
+    "editorial_change": "Appendix A now directs readers to https://github.com/pmaronow/ec567-palomar and the repository paths of its certificate programs. All other manuscript source files and mathematical statements are unchanged.",
+    "planned_repository_url": "https://github.com/pmaronow/ec567-palomar",
+    "publication_validation": "validation/manuscript-publication/result.json"
+  }
+}

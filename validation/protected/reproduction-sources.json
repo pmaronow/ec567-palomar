@@ -1,0 +1,8 @@
+{
+  "verify_protected.py": "979c8be791ffcaa0a3fe8064d43161803a4fe08c4d0aea67cb6e1c41c7946661",
+  "PROTECTED_REPLAY.md": "4f452e97385e94bb530096d677429954a4442be710f0afbbedc91796ec9c89c1",
+  "portable_script_host_preflight": "PASS",
+  "actual_target_judgment_receipt": "LOCAL_VERIFICATION_STATUS.json",
+  "full_target_replayed_with_this_portable_script": false,
+  "scope": "Portable controller host preflight; the actual target was verified with the same pinned official comparison/export/kernel procedure in the recorded local run."
+}

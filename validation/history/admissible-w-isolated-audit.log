@@ -1,0 +1,40 @@
+Exhaustive admissible-W CRT audit passed: 42 private/generated kernel declarations, module counts [42], axioms [propext,
+ Classical.choice,
+ Quot.sound].
+RankCertificates.AnalyticExtraction.AdmissibleW.exists_bounded_admissible_residue : ∀
+  (ψ : Fin 12 → RankCertificates.AnalyticExtraction.IntegerAffine) (S : Finset ℕ),
+  (∀ p ∈ S, Nat.Prime p) →
+    (∀ p ∈ S, RankCertificates.AnalyticExtraction.AdmissibleW.LocalAvoidance ψ p) →
+      ∃ X Y,
+        X < RankCertificates.AnalyticExtraction.AdmissibleW.modulus S ∧
+          Y < RankCertificates.AnalyticExtraction.AdmissibleW.modulus S ∧
+            RankCertificates.AnalyticExtraction.AdmissibleW.AdmissibleClass ψ S (↑X, ↑Y)
+RankCertificates.AnalyticExtraction.AdmissibleW.exists_bounded_coprime_shift_class : ∀
+  (ψ : Fin 12 → RankCertificates.AnalyticExtraction.IntegerAffine) (S : Finset ℕ),
+  (∀ p ∈ S, Nat.Prime p) →
+    (∀ p ∈ S, RankCertificates.AnalyticExtraction.AdmissibleW.LocalAvoidance ψ p) →
+      ∃ X Y,
+        X < RankCertificates.AnalyticExtraction.AdmissibleW.modulus S ∧
+          Y < RankCertificates.AnalyticExtraction.AdmissibleW.modulus S ∧
+            ∀ (t : ℤ × ℤ) (i : Fin 12),
+              ((ψ i).eval
+                      (RankCertificates.AnalyticExtraction.AdmissibleW.wShift
+                        (RankCertificates.AnalyticExtraction.AdmissibleW.modulus S) (↑X, ↑Y) t)).natAbs.Coprime
+                (RankCertificates.AnalyticExtraction.AdmissibleW.modulus S)
+RankCertificates.AnalyticExtraction.AdmissibleW.system7_positive_admissible_offset : ∀ (S : Finset ℕ),
+  (∀ p ∈ S, Nat.Prime p) →
+    ∃ X Y,
+      X < RankCertificates.AnalyticExtraction.AdmissibleW.modulus S ∧
+        Y < RankCertificates.AnalyticExtraction.AdmissibleW.modulus S ∧
+          have z :=
+            RankCertificates.AnalyticExtraction.AdmissibleW.wShift
+              (RankCertificates.AnalyticExtraction.AdmissibleW.modulus S) (↑X, ↑Y) (8000, 1);
+          z ∈
+              RankCertificates.AnalyticExtraction.positiveSector7
+                (RankCertificates.AnalyticExtraction.AdmissibleW.modulus S) ∧
+            RankCertificates.AnalyticExtraction.AdmissibleW.AdmissibleClass RankCertificates.AnalyticExtraction.system7
+                S z ∧
+              ∀ (i : Fin 12),
+                0 < (RankCertificates.AnalyticExtraction.system7 i).eval z ∧
+                  ((RankCertificates.AnalyticExtraction.system7 i).eval z).natAbs.Coprime
+                    (RankCertificates.AnalyticExtraction.AdmissibleW.modulus S)

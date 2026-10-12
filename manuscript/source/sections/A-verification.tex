@@ -1,0 +1,201 @@
+\chapter{Computer verification}\label{app:verification}
+
+The finite computations in \cref{sec:rank5,sec:rank6,sec:rank7} are stated there precisely enough to be checked by hand or with any computer algebra system. In this appendix, we describe three programs, one for each family, that check them. The programs and their inputs are available in the GitHub repository
+\url{https://github.com/pmaronow/ec567-palomar}.
+In \cref{sec:verification-running}, we explain how to run the programs. In \cref{sec:verification-conventions}, we describe how they encode squareclasses, matrix rows, and the free sign. In \cref{sec:verification-scope,sec:verification-limits}, we list what the programs check and what they do not check. Finally, in \cref{sec:verification-codes}, we give the integer codes under which the programs store the matrices of \cref{sec:rank5,sec:rank6,sec:rank7}, so that a reader can match the matrices of the text with the input files.
+
+The programs check finite arithmetic only. The arguments that hold uniformly in the parameters are proved in the text, and the programs do not check them. These arguments are the results of \cref{sec:descent,sec:families}, the fixed-place lemmas \cref{lem:r5-fixed,lem:r6-fixed,lem:r7-fixed}, and the results of \cref{sec:primes} on prime values. They also include the fact that the residues used in the fixed-place lemmas are constant on the congruence class of each family (by \cref{lem:precision} and the congruences that define the class), and the computation of the $j$-invariant (\cref{lem:j-invariant}). In each family, we deduce the rank from \cref{prop:rank-criterion}. Its proof combines three facts: the image of the descent map lies in the span of the ambient basis, its elements satisfy the local conditions at the fixed places and at the moving primes, and it contains the classes of the rational points. The programs check the finite inputs to this argument, namely the identities satisfied by the points, the matrices and their ranks, and the classes of the points.
+
+\section{Running the programs}\label{sec:verification-running}
+
+The programs and their inputs are the following files, relative to the repository
+directory \path{manuscript/source/certificates}:
+\begin{itemize}
+\item \path{rank5/verify_final155_certificate.py}, with input \path{rank5/final155_certificate.json}, for the rank-five family (\cref{sec:rank5});
+\item \path{rank6/verify_rank6_certificate.py}, with input \path{rank6/rank6_certificate.json}, for the rank-six family (\cref{sec:rank6});
+\item \path{rank7/verify_rank7_certificate.py}, with input \path{rank7/rank7_certificate.json}, for the rank-seven family (\cref{sec:rank7}).
+\end{itemize}
+Each program reads its input from its own directory and uses only the standard library of Python. The programs require Python~3.10 or later, because they use the method \texttt{int.bit\_count}, which was introduced in that version; under Python~3.9, the first call to this method raises an \texttt{AttributeError}. From the repository directory \path{manuscript/source}, the commands are
+\begin{verbatim}
+python3 -I certificates/rank5/verify_final155_certificate.py
+python3 -I certificates/rank6/verify_rank6_certificate.py
+python3 -I certificates/rank7/verify_rank7_certificate.py
+\end{verbatim}
+where \texttt{python3} denotes an interpreter of version 3.10 or later. The option \texttt{-I} runs the interpreter in isolated mode: it ignores the environment variables of Python and does not add the directory of the script or the user's site-packages directory to the module search path.
+
+Each program consists of assertions. If one of them fails, the program stops with an \texttt{AssertionError} and a nonzero exit status. If all of them hold, the program prints the ranks of its four matrices and their reduced row bases, followed by a line that begins with \texttt{PASS}. The rank-seven program also writes a report, \path{rank7_certificate_output.json}, into its own directory, replacing the file of that name, so this directory must be writable. The script \path{manuscript/source/build.py} in the repository runs the three programs in turn, with the interpreter that runs \path{build.py}, stops at the first failure, and writes their combined output to the file \path{manuscript/source/verification_output.txt}. It then compiles this paper with \texttt{pdflatex} and \texttt{bibtex}.
+
+\section{Conventions}\label{sec:verification-conventions}
+
+\paragraph{Row codes.} The programs store a vector $r=(r_0,\dots,r_{n-1})\in\F_2^n$, either a row of a matrix or the vector of exponents of a squareclass in the ambient basis, as the integer $\sum_kr_k2^k$. Recall that the ambient basis is $\cB_\star=(\Gamma_\star;\,p_j\ (j\in G_\star))$. The programs number its elements from $0$, first the constants of $\Gamma_\star$ and then the $p_j$ in increasing order of $j$, and the columns are numbered in the same way. For example, in the rank-five family, the columns of $\mathbf M_E(\eta)$ are $-1,2,3,5,p_0,\dots,p_7$, and the code $267=2^0+2^1+2^3+2^8$ is the row with entries $1$ in the columns of $-1$, $2$, $5$, and $p_4$. This is the condition at $3$ on the unit part of a class, that is, the fixed row $f^E_3$ of \cref{tab:r5-ME}: the Legendre symbols modulo $3$ of $-1$, $2$, $5$, and $p_4\equiv2\pmod 3$ equal $-1$, those of $p_0,\dots,p_3,p_5,p_6,p_7\equiv1\pmod3$ equal $1$, and $3$ has unit part $1$. The vector $u_\star$ of moving columns has code $2^n-2^{n-8}$, that is, $4080$ in the rank-five and rank-six families and $8160$ in the rank-seven family.
+
+\paragraph{The free sign.} The programs encode the sign $\eps$ by a bit $e\in\{0,1\}$ with $\eps=(-1)^e$, so $e$ is the number $\eta$ of \cref{cor:eta-structure}. The matrices stored under keys ending in \texttt{0} (\texttt{E0} and \texttt{Ep0}) are $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$, for $\eps=1$; those under keys ending in \texttt{1} are $\mathbf M_E(1)$ and $\mathbf M_{E'}(1)$, for $\eps=-1$. The letters \texttt{E} and \texttt{Ep} refer to $E$ and $E'$. The program for the rank-five family prints \texttt{epsilon=0} and \texttt{epsilon=1} for these two cases.
+
+\paragraph{Local coordinates.} To build the rows at a fixed place $v$, the programs give coordinates to each element of the ambient basis in $\sqgp{\Q_v}$. For an odd prime $p$, the class of $z=p^ku_0$ with $u_0$ a unit has the code $\chi_p(z)+2\nu_p(z)=\chi_p(u_0)+2(k\bmod2)$, with the coordinates $\nu_p$ and $\chi_p$ of \eqref{eq:odd-coordinates}; these are the coordinates of \cref{lem:squares}, in the opposite order. For $p=2$, the class $\sq{(-1)^{e_1}2^{e_2}5^{e_3}}$ has the code $e_1+2e_2+4e_3$; in particular, odd units congruent to $1$, $3$, $5$, and $7$ modulo $8$ have the codes $0$, $5$, $4$, and $1$. A fixed row is the composition of the coordinate map with a linear map that vanishes on the local subgroup given by the fixed-place lemma of the family.
+
+\paragraph{Characters at the moving primes.} The programs compute the characters $\lambda_i(-1)$, $\lambda_i(2)$, and $\lambda_i(q)$ for the odd primes $q$ dividing $W$ from the residues of the $p_i$ on the congruence class, using quadratic reciprocity. The primes of $S$ that do not divide $W$ are not controlled by the congruence class. For these primes, the programs assign auxiliary values to the characters $\lambda_i(q)$, computed from a residue class chosen for this purpose. Note that these values are not congruence conditions on $(M,N)$, and that the programs check that no row depends on them (\cref{sec:verification-scope}). The input file of the rank-five family stores these residue classes under \texttt{reference\_character\_states}. The input file of the rank-six family stores them under \texttt{states}, and the congruences that define the progression under \texttt{moduli}. The program for the rank-seven family computes them itself.
+
+\section{What the programs check}\label{sec:verification-scope}
+
+We list the checks in \cref{tab:verification-scope}. The programs compute the local data at a representative pair. In the rank-five family, this pair is $(M_0,-1)$, which lies in the congruence class. In the rank-six family, it is $(19,11)$, which is congruent to $(M_0,N_0)$ modulo $64$, $81$, and $7$; the cofactors are also checked at $(M_0,N_0)$. In the rank-seven family, it is $(18,11)$, which is congruent to $(M_0,N_0)$ modulo $512$, $81$, $7$, and $13$.
+
+In terms of the subsections of \cref{sec:rank5,sec:rank6,sec:rank7}, the programs check the coefficients and the identity $A^2F+4BH=CJ$ of the datum; the rational points and their classes; the values $W$, $M_0$, and $N_0$, the cofactors, and the residues of the $p_i$ that enter the rows; the residues used in the fixed-place lemma, at the representative pair; the characters at the moving primes; and the matrices, their ranks, and their kernels. The arguments in these subsections that apply to every pair of the congruence class are not checked by the programs. We now comment on some of the entries of \cref{tab:verification-scope}.
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabular}{@{}p{0.5\textwidth}p{0.13\textwidth}p{0.13\textwidth}p{0.15\textwidth}@{}}
+\toprule
+Check & Rank five & Rank six & Rank seven\\
+\midrule
+$(a_i,b_i)$ primitive; all $66$ values $\Delta_{ij}$ nonzero and factored over $S$; $b_i$ ($i\ge1$) supported on $S$ & yes & yes & yes\\
+The identity $A^2F+4BH=CJ$ & yes & yes & yes\\
+The rational points on $E$ and $E'$ & $5$ & $6$ & $7$\\
+The images under $\dual$ of the points of $E'$ lie on $E$ & yes & yes & yes\\
+Class of each point equal to its stated class & table & table & yes\\
+The values $W$, $M_0$, $N_0$ from the stated congruences & yes & yes & yes\\
+Cofactors $c_i$ equal to the exact $\{2,3\}$-parts of $L_i$ at the representative & yes & yes & yes\\
+$q\mid W/c_i$ and $q\nmid L_i(M_0,N_0)/c_i$ for the primes $q\mid W$ & yes & yes & yes\\
+$d_q$ at the primes of $S$ not dividing $W$ & yes & yes & no\\
+Some point of $\F_q^2$ avoids all zero sets, for $q\le11$ & --- & --- & yes\\
+Positivity of the $L_i$ on the cone & endpoints & no & at one ratio\\
+Residues and valuations used in the fixed-place lemma, at the representative & yes & yes & yes\\
+Congruence tests for the local images at the fixed places & at $2$ & at $2,3,7$ & no\\
+Rows independent of the characters of the primes of $S$ not dividing $W$ & yes & yes & yes\\
+Reciprocity consistency for all $66$ pairs & yes & yes & yes\\
+The four matrices, rebuilt and compared with the stored codes & yes & yes & yes\\
+Ranks, reduced row bases, kernels spanned by the point classes & yes & yes & yes\\
+\bottomrule
+\end{tabular}
+\caption{The checks made by the three programs. ``Table'' means that the class codes are computed from a table of supports, not from the coordinates of the points. A dash means that the check is not needed, because every prime $q\le11$ divides $W$.}
+\label{tab:verification-scope}
+\end{table}
+
+\paragraph{Polynomial identities.} The coordinates of each rational point are homogeneous in $(M,N)$, of degree $4$ for $x$ and $6$ for $y$, and the coefficients of $x^2$ and $x$ in the equations have degrees $4$ and $8$. After we clear the constant denominators, the difference $y^2-x^3-\alpha x^2-\beta x$ is therefore a homogeneous polynomial $P(M,N)$ of degree $12$. The polynomial $P(M,1)$ has degree at most $12$. If it vanishes at the thirteen values $M=0,1,\dots,12$, then all its coefficients vanish, and we have $P=0$, including at $N=0$. The programs for the rank-five and rank-six families evaluate $P(M,1)$ at these thirteen values in exact rational arithmetic, and the program for the rank-seven family compares the exact rational coefficients of $P(M,1)$. For the identity $A^2F+4BH=CJ$, the rank-five program compares the coefficients of the two sides at $N=1$. The rank-six program checks it at the same thirteen values; five would suffice, since its degree is four. The rank-seven program compares the coefficients of $(AF)^2+4BFH$ and $CFJ$, which are $F$ times the two sides. For the images under $\dual$, the programs compute $\dual(x,y)=\big(y^2/(4x^2),\,y(x^2-\beta')/(8x^2)\big)$ at the points of $E'$ and check that the results lie on $E$. The rank-five and rank-six programs also compare them with explicit formulas, at the values of $M$ with $x\ne0$. In the rank-five family, these images are the points of \cref{sec:rank5} that give five independent points on $E$; in the other two families, the text does not use them.
+
+\paragraph{Local data.} The programs check the residues and valuations used in the fixed-place lemmas at the representative pair. That these residues and valuations are the same at every pair of the congruence class is proved in \cref{sec:rank5,sec:rank6,sec:rank7}, and the programs do not check it.
+
+\paragraph{Congruence tests for local images.} Several programs test which classes of $\sqgp{\Q_p}$ pass a necessary condition modulo a power of $p$ for containing the $x$-coordinate of a point. Let $y^2=x^3+\alpha x^2+\beta x$ with $\alpha,\beta\in\Z_p$, and let $d\in\Z_p\setminus\{0\}$ with $\beta/d\in\Z_p$. A point $(x,y)$ with $x\ne0$ in the class of $d$ can be written as $x=d(v/s)^2$ with $v,s\in\Z_p$ not both divisible by $p$. Then $w=ys^3/(dv)$ satisfies
+\[
+w^2=dv^4+\alpha v^2s^2+(\beta/d)s^4,
+\]
+and $w\in\Z_p$. Either $s$ is a unit, and we may take $s=1$, or $p\mid s$ and $v$ is a unit, and we may take $v=1$. If neither case has a solution modulo $p^k$, then no point with $x\ne0$ has $x$ in the class of $d$. When $\beta$ is a unit and $d$ has odd valuation, the class is excluded by valuations instead. A class that passes the test need not lie in the local image, so these tests confirm the upper bounds of the fixed-place lemmas but do not prove them. The rank-five program performs the test at $p=2$ modulo $2^6$. It does so at each of the sixteen pairs $(54+64r,-1+64s)$ with $0\le r,s\le3$, which represent the classes modulo $256$ of the pairs congruent to $(54,-1)$ modulo $64$. The passing classes are $\{1,2\}$ on $E$ and $\{1,-1,2,-2\}$ on $E'$, which are the subgroups of \cref{lem:r5-fixed}. The rank-six program performs the test modulo $2^9$, $3^5$, and $7^3$ at the single pair $(19,11)$, and it builds its fixed rows from the passing classes, which are the subgroups of \cref{lem:r6-fixed}. The rank-seven program does not perform this test. Instead, it checks the finite computations in the proof of \cref{lem:r7-fixed} at $2$: which odd residues modulo $8$ solve the two congruences of that proof, and which classes the integers $s^2+2r^2$ with $s$ or $r$ odd represent.
+
+\paragraph{Characters and reciprocity.} Each entry of a moving row is a sum in $\F_2$ of characters $\lambda_i(z)$ of fixed integers $z$, of cross symbols, and of $\eta$ (\cref{lem:moving-rows,lem:reciprocity}). It is therefore an affine function over $\F_2$ of the characters $\lambda_i(q)$ of the primes $q$ of $S$ that do not divide $W$. The rank-five and rank-six programs change one of these characters at a time and check that no row changes, on both sides and for both values of $\eta$. They do so for the $6\cdot12=72$ characters with $q\in\{13,41,131,257,409,2089\}$ in the rank-five family, and for the $3\cdot12=36$ characters with $q\in\{13,19,41\}$ in the rank-six family. Since each entry is affine in these characters, we conclude that the rows do not depend on any joint choice of them. The rank-seven program checks instead that every prime that occurs to an odd power in some $b_i$, in the products of cofactors, or in one of the $54$ determinants $\Delta_{ij}$ that enter the rows divides $W$. These are the pairs $\{i,j\}$ not contained in $I_H$ or in $I_J$. All three programs also check the relation $\lambda_i(p_j)+\lambda_j(p_i)=\lambda_i(-1)\lambda_j(-1)$ of quadratic reciprocity for all $66$ pairs, with the cross symbols given by the formulas of \cref{lem:reciprocity} and the characters chosen above. This checks the signs in these formulas for one choice of characters; it does not replace the proof of \cref{lem:reciprocity}.
+
+\paragraph{Matrices.} Each program builds the rows of $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$ for $\eta=0,1$ from the fixed rows and the formulas of \cref{lem:moving-rows}, and compares them with the codes stored in its input file, which are those of \cref{tab:codes-r5,tab:codes-r6,tab:codes-r7}. It then computes, by Gaussian elimination over $\F_2$, the rank, the reduced row basis, and the kernel of each matrix. It checks that the codes of the classes of the rational points lie in the kernel, are linearly independent, and span the kernel.
+
+\section{What the programs do not check}\label{sec:verification-limits}
+
+We now list the statements that the programs do not check. All of them are proved in the text.
+\begin{itemize}
+\item The results of \cref{sec:descent,sec:families}: the descent maps, the local images at the moving primes, the rows at the moving primes, the reciprocity formulas, and \cref{prop:rank-criterion}.
+\item The fixed-place lemmas for all valuations of $x$, and the constancy of the residues they use on the congruence class.
+\item The positivity of the twelve forms on the cones (the rank-five program checks it at the endpoints of the interval of slopes, and the rank-seven program at one interior ratio).
+\item The results of \cref{sec:primes}, and hence the infinitude of the prime specializations.
+\item The formula for the $j$-invariant and the degree of the $j$-map (\cref{lem:j-invariant}).
+\item The constructions of \cref{app:origins}, except that the rank-seven program checks the equation of the conic and the point of $E$ that it gives.
+\end{itemize}
+The programs do not read the \TeX{} source of this paper, and some fields of the input files are descriptive and are not used. For example, the rank-six program uses its own table of the $a_i$ and $b_i$, not the copy in its input file. A change in the text must therefore be compared with the programs by hand.
+
+\section{The row codes}\label{sec:verification-codes}
+
+\Cref{tab:codes-r5,tab:codes-r6,tab:codes-r7} list the rows of the matrices $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$ of \cref{sec:rank5,sec:rank6,sec:rank7} as row codes, in the column order of \cref{sec:verification-conventions}. The rows appear in the order of the text and carry the names used there: first the fixed rows $f^\star_k$, then the moving rows $r^\star_i$ at $p_0,\dots,p_3$, then the moving rows $r^\star_i$ at the primes $p_i$ with $i\in O_\star$. The column $\eta$ gives the code of the corresponding row of $\mathbf M_\star(\eta)$. The fixed rows do not depend on $\eta$, and every moving row at $\eta=1$ is the moving row at $\eta=0$ plus $u_\star$; in terms of codes, the two moving codes differ by a bitwise exclusive or with $4080$ or $8160$. \Cref{tab:codes-classes} lists the codes of the classes of the rational points, in the order of the text, and the reduced row bases printed by the programs. The reduced row bases are the same for $\eta=0$ and $\eta=1$. For row reduction, the programs use the highest nonzero bit of a code as its pivot and print the basis in decreasing order of pivots; thus they eliminate columns from right to left in the column order above. The pivots of each printed basis are distinct, which shows that the ranks are as stated.
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabular}{@{}lrr@{\qquad\qquad}lrr@{}}
+\toprule
+\multicolumn{3}{@{}c}{$E$} & \multicolumn{3}{c@{}}{$E'$}\\
+\cmidrule(r{2em}){1-3}\cmidrule{4-6}
+Row & $\eta=0$ & $\eta=1$ & Row & $\eta=0$ & $\eta=1$\\
+\midrule
+$f^E_1$ & 1669 & 1669 & $f^{E'}_1$ & 108 & 108\\
+$f^E_2$ & 3948 & 3948 & $f^{E'}_2$ & 3206 & 3206\\
+$f^E_3$ & 267 & 267 & $f^{E'}_3$ & 1 & 1\\
+$f^E_4$ & 4 & 4 & $r^{E'}_0$ & 1424 & 2656\\
+$f^E_5$ & 3718 & 3718 & $r^{E'}_1$ & 898 & 3186\\
+$r^E_0$ & 1424 & 2656 & $r^{E'}_2$ & 66 & 4018\\
+$r^E_1$ & 642 & 3442 & $r^{E'}_3$ & 1597 & 2509\\
+$r^E_2$ & 322 & 3762 & $r^{E'}_4$ & 1494 & 2598\\
+$r^E_3$ & 4029 & 77 & $r^{E'}_5$ & 3887 & 223\\
+$r^E_8$ & 3888 & 192 & $r^{E'}_6$ & 799 & 3311\\
+$r^E_9$ & 37 & 4053 & $r^{E'}_7$ & 2442 & 1658\\
+$r^E_{10}$ & 924 & 3180 &  &  & \\
+$r^E_{11}$ & 2572 & 1532 &  &  & \\
+\bottomrule
+\end{tabular}
+\caption{Row codes of $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$ for the rank-five family (\cref{sec:rank5}), with columns $-1,2,3,5,p_0,\dots,p_7$ for $E$ and $-1,2,3,5,p_0,\dots,p_3,p_8,\dots,p_{11}$ for $E'$; input keys \texttt{E0}, \texttt{E1}, \texttt{Ep0}, \texttt{Ep1}.}
+\label{tab:codes-r5}
+\end{table}
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabular}{@{}lrr@{\qquad\qquad}lrr@{}}
+\toprule
+\multicolumn{3}{@{}c}{$E$} & \multicolumn{3}{c@{}}{$E'$}\\
+\cmidrule(r{2em}){1-3}\cmidrule{4-6}
+Row & $\eta=0$ & $\eta=1$ & Row & $\eta=0$ & $\eta=1$\\
+\midrule
+$f^E_1$ & 2 & 2 & $f^{E'}_1$ & 1981 & 1981\\
+$f^E_2$ & 3875 & 3875 & $f^{E'}_2$ & 2 & 2\\
+$f^E_3$ & 4 & 4 & $f^{E'}_3$ & 3613 & 3613\\
+$f^E_4$ & 1557 & 1557 & $f^{E'}_4$ & 1 & 1\\
+$r^E_0$ & 839 & 3255 & $r^{E'}_0$ & 3927 & 167\\
+$r^E_1$ & 2139 & 1963 & $r^{E'}_1$ & 1147 & 2955\\
+$r^E_2$ & 1586 & 2498 & $r^{E'}_2$ & 2610 & 1474\\
+$r^E_3$ & 2879 & 1231 & $r^{E'}_3$ & 2239 & 1871\\
+$r^E_8$ & 1961 & 2137 & $r^{E'}_4$ & 1430 & 2662\\
+$r^E_9$ & 1765 & 2325 & $r^{E'}_5$ & 3036 & 1068\\
+$r^E_{10}$ & 1409 & 2673 & $r^{E'}_6$ & 241 & 3841\\
+$r^E_{11}$ & 734 & 3374 & $r^{E'}_7$ & 164 & 3924\\
+\bottomrule
+\end{tabular}
+\caption{Row codes of $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$ for the rank-six family (\cref{sec:rank6}), with columns $-1,2,3,7,p_0,\dots,p_7$ for $E$ and $-1,2,3,7,p_0,\dots,p_3,p_8,\dots,p_{11}$ for $E'$; input keys \texttt{E0}, \texttt{E1}, \texttt{Ep0}, \texttt{Ep1}.}
+\label{tab:codes-r6}
+\end{table}
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabular}{@{}lrr@{\qquad\qquad}lrr@{}}
+\toprule
+\multicolumn{3}{@{}c}{$E$} & \multicolumn{3}{c@{}}{$E'$}\\
+\cmidrule(r{2em}){1-3}\cmidrule{4-6}
+Row & $\eta=0$ & $\eta=1$ & Row & $\eta=0$ & $\eta=1$\\
+\midrule
+$f^E_1$ & 4943 & 4943 & $f^{E'}_1$ & 7705 & 7705\\
+$f^E_2$ & 8020 & 8020 & $f^{E'}_2$ & 4117 & 4117\\
+$f^E_3$ & 195 & 195 & $f^{E'}_3$ & 8 & 8\\
+$f^E_4$ & 4 & 4 & $f^{E'}_4$ & 7626 & 7626\\
+$r^E_0$ & 4896 & 3264 & $f^{E'}_5$ & 16 & 16\\
+$r^E_1$ & 219 & 7995 & $f^{E'}_6$ & 1 & 1\\
+$r^E_2$ & 340 & 7860 & $r^{E'}_0$ & 5408 & 2752\\
+$r^E_3$ & 3583 & 4639 & $r^{E'}_1$ & 6811 & 1403\\
+$r^E_8$ & 7945 & 233 & $r^{E'}_2$ & 2388 & 5812\\
+$r^E_9$ & 7734 & 470 & $r^{E'}_3$ & 6399 & 1823\\
+$r^E_{10}$ & 466 & 7730 & $r^{E'}_4$ & 5503 & 2719\\
+$r^E_{11}$ & 3121 & 5073 & $r^{E'}_5$ & 5914 & 2298\\
+ &  &  & $r^{E'}_6$ & 5914 & 2298\\
+ &  &  & $r^{E'}_7$ & 5479 & 2695\\
+\bottomrule
+\end{tabular}
+\caption{Row codes of $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$ for the rank-seven family (\cref{sec:rank7}), with columns $-1,2,3,7,13,p_0,\dots,p_7$ for $E$ and $-1,2,3,7,13,p_0,\dots,p_3,p_8,\dots,p_{11}$ for $E'$; input keys \texttt{E0}, \texttt{E1}, \texttt{Ep0}, \texttt{Ep1}.}
+\label{tab:codes-r7}
+\end{table}
+
+\begin{table}[!htbp]
+\centering\small
+\begin{tabular}{@{}lllc@{}}
+\toprule
+Family & Classes of the rational points & Reduced row basis & Rank\\
+\midrule
+Rank five, $E$ & 4081, 243, 3274 & 2051, 1027, 523, 267, 137, 73, 33, 17, 4 & 9\\
+Rank five, $E'$ & 4082, 3840, 824, 1378 & 2322, 1288, 794, 152, 66, 42, 4, 1 & 8\\
+Rank six, $E$ & 4081, 3848, 865, 1449 & 2137, 1048, 521, 328, 209, 33, 4, 2 & 8\\
+Rank six, $E'$ & 4080, 248, 3220, 2384 & 2072, 1068, 552, 284, 164, 84, 2, 1 & 8\\
+Rank seven, $E$ & 8163, 483, 6306, 3291, 6554 & 4611, 3075, 265, 130, 65, 42, 24, 4 & 8\\
+Rank seven, $E'$ & 8164, 482, 1696, 2848 & 4100, 2212, 1154, 546, 422, 70, 16, 8, 1 & 9\\
+\bottomrule
+\end{tabular}
+\caption{Codes of the classes of the rational points, including the class of $T$ first, and the reduced row bases of the matrices, for $\eta=0$ and $\eta=1$. The number of classes plus the rank equals the number of columns.}
+\label{tab:codes-classes}
+\end{table}

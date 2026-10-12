@@ -1,0 +1,601 @@
+@[expose] def RankCertificates.rationalRank : (E : WeierstrassCurve.{0} Rat) → Cardinal.{0} :=
+fun (E : WeierstrassCurve.{0} Rat) =>
+  @Module.rank.{0, 0} Int (@WeierstrassCurve.Affine.Point.{0} Rat Rat.commRing (@WeierstrassCurve.toAffine.{0} Rat E))
+    Int.instSemiring
+    (@AddCommGroup.toAddCommMonoid.{0}
+      (@WeierstrassCurve.Affine.Point.{0} Rat Rat.commRing (@WeierstrassCurve.toAffine.{0} Rat E))
+      (@WeierstrassCurve.Affine.Point.instAddCommGroup.{0} Rat Rat.instField (@WeierstrassCurve.toAffine.{0} Rat E)
+        instDecidableEqRat))
+    (@AddCommGroup.toIntModule.{0}
+      (@WeierstrassCurve.Affine.Point.{0} Rat Rat.commRing (@WeierstrassCurve.toAffine.{0} Rat E))
+      (@WeierstrassCurve.Affine.Point.instAddCommGroup.{0} Rat Rat.instField (@WeierstrassCurve.toAffine.{0} Rat E)
+        instDecidableEqRat))
+@[expose] def RankCertificates.HasExactRank : (E : WeierstrassCurve.{0} Rat) → (r : Nat) → Prop :=
+fun (E : WeierstrassCurve.{0} Rat) (r : Nat) =>
+  @Eq.{2} Cardinal.{0} (RankCertificates.rationalRank E) (@Nat.cast.{1} Cardinal.{0} Cardinal.instNatCast.{0} r)
+structure RankCertificates.RationalEllipticCurve : Type
+number of parameters: 0
+fields:
+  RankCertificates.RationalEllipticCurve.model : WeierstrassCurve.{0} Rat
+  RankCertificates.RationalEllipticCurve.elliptic : @WeierstrassCurve.IsElliptic.{0} Rat Rat.commRing
+      (RankCertificates.RationalEllipticCurve.model self)
+constructor:
+  RankCertificates.RationalEllipticCurve.mk (model : WeierstrassCurve.{0} Rat)
+    (elliptic : @WeierstrassCurve.IsElliptic.{0} Rat Rat.commRing model) : RankCertificates.RationalEllipticCurve
+@[expose] def RankCertificates.RationalEllipticCurve.j : (E : RankCertificates.RationalEllipticCurve) → Rat :=
+fun (E : RankCertificates.RationalEllipticCurve) =>
+  @WeierstrassCurve.j.{0} Rat Rat.commRing (RankCertificates.RationalEllipticCurve.model E)
+    (RankCertificates.instIsEllipticRatModel E)
+@[expose] def RankCertificates.GeometricallyIsomorphic : (E E' : RankCertificates.RationalEllipticCurve) → Prop :=
+fun (E E' : RankCertificates.RationalEllipticCurve) =>
+  @Exists.{1}
+    (@WeierstrassCurve.VariableChange.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+      (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField))
+    fun
+      (C :
+        @WeierstrassCurve.VariableChange.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+          (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField)) =>
+    @Eq.{1} (WeierstrassCurve.{0} (@AlgebraicClosure.{0} Rat Rat.instField))
+      (@HSMul.hSMul.{0, 0, 0}
+        (@WeierstrassCurve.VariableChange.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+          (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField))
+        (WeierstrassCurve.{0} (@AlgebraicClosure.{0} Rat Rat.instField))
+        (WeierstrassCurve.{0} (@AlgebraicClosure.{0} Rat Rat.instField))
+        (@instHSMul.{0, 0}
+          (@WeierstrassCurve.VariableChange.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+            (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField))
+          (WeierstrassCurve.{0} (@AlgebraicClosure.{0} Rat Rat.instField))
+          (@WeierstrassCurve.instSMulVariableChange.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+            (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField)))
+        C
+        (@WeierstrassCurve.baseChange.{0, 0} Rat Rat.commRing (RankCertificates.RationalEllipticCurve.model E)
+          (@AlgebraicClosure.{0} Rat Rat.instField) (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField)
+          (@DivisionRing.toRatAlgebra.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+            (@Field.toDivisionRing.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+              (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+            (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero))))
+      (@WeierstrassCurve.baseChange.{0, 0} Rat Rat.commRing (RankCertificates.RationalEllipticCurve.model E')
+        (@AlgebraicClosure.{0} Rat Rat.instField) (@AlgebraicClosure.instCommRing.{0} Rat Rat.instField)
+        (@DivisionRing.toRatAlgebra.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+          (@Field.toDivisionRing.{0} (@AlgebraicClosure.{0} Rat Rat.instField)
+            (@AlgebraicClosure.instField.{0} Rat Rat.instField))
+          (@AlgebraicClosure.instCharZero.{0} Rat Rat.instField Rat.instCharZero)))
+@[expose] def RankCertificates.InfinitelyManyExactRank : (r : Nat) → Prop :=
+fun (r : Nat) =>
+  @Set.Infinite.{0} Rat
+    (@Set.ofPred.{0} Rat fun (j : Rat) =>
+      @Exists.{1} RankCertificates.RationalEllipticCurve fun (E : RankCertificates.RationalEllipticCurve) =>
+        And (@Eq.{1} Rat (RankCertificates.RationalEllipticCurve.j E) j)
+          (RankCertificates.HasExactRank (RankCertificates.RationalEllipticCurve.model E) r))
+@[expose] def RankCertificates.RanksFiveThroughSeven : Prop :=
+And (RankCertificates.InfinitelyManyExactRank (@OfNat.ofNat.{0} Nat (nat_lit 5) (instOfNatNat (nat_lit 5))))
+  (And (RankCertificates.InfinitelyManyExactRank (@OfNat.ofNat.{0} Nat (nat_lit 6) (instOfNatNat (nat_lit 6))))
+    (RankCertificates.InfinitelyManyExactRank (@OfNat.ofNat.{0} Nat (nat_lit 7) (instOfNatNat (nat_lit 7)))))
+structure RankCertificates.PrimePatterns.AffineForm : Type
+number of parameters: 0
+fields:
+  RankCertificates.PrimePatterns.AffineForm.a : Int
+  RankCertificates.PrimePatterns.AffineForm.b : Int
+  RankCertificates.PrimePatterns.AffineForm.c : Int
+constructor:
+  RankCertificates.PrimePatterns.AffineForm.mk (a b c : Int) : RankCertificates.PrimePatterns.AffineForm
+@[expose] def RankCertificates.PrimePatterns.AffineForm.eval : (f : RankCertificates.PrimePatterns.AffineForm) →
+  (x y : Int) → Int :=
+fun (f : RankCertificates.PrimePatterns.AffineForm) (x y : Int) =>
+  @HAdd.hAdd.{0, 0, 0} Int Int Int (@instHAdd.{0} Int Int.instAdd)
+    (@HAdd.hAdd.{0, 0, 0} Int Int Int (@instHAdd.{0} Int Int.instAdd)
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul) (RankCertificates.PrimePatterns.AffineForm.a f)
+        x)
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul) (RankCertificates.PrimePatterns.AffineForm.b f)
+        y))
+    (RankCertificates.PrimePatterns.AffineForm.c f)
+@[expose] def RankCertificates.PrimePatterns.Avoids : (fs :
+    Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))) → RankCertificates.PrimePatterns.AffineForm) →
+  (p : Nat) → Prop :=
+fun
+    (fs :
+      Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))) → RankCertificates.PrimePatterns.AffineForm)
+    (p : Nat) =>
+  @Exists.{1} Int fun (x : Int) =>
+    @Exists.{1} Int fun (y : Int) =>
+      ∀ (i : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))),
+        @Ne.{1} Int
+          (@HMod.hMod.{0, 0, 0} Int Int Int (@instHMod.{0} Int Int.instMod)
+            (RankCertificates.PrimePatterns.AffineForm.eval (fs i) x y) (@Nat.cast.{0} Int instNatCastInt p))
+          (@OfNat.ofNat.{0} Int (nat_lit 0) (@instOfNat (nat_lit 0)))
+structure RankCertificates.AnalyticExtraction.IntegerAffine : Type
+number of parameters: 0
+fields:
+  RankCertificates.AnalyticExtraction.IntegerAffine.a : Int
+  RankCertificates.AnalyticExtraction.IntegerAffine.b : Int
+  RankCertificates.AnalyticExtraction.IntegerAffine.c : Int
+constructor:
+  RankCertificates.AnalyticExtraction.IntegerAffine.mk (a b c : Int) : RankCertificates.AnalyticExtraction.IntegerAffine
+@[expose] def RankCertificates.AnalyticExtraction.IntegerAffine.eval : (ψ :
+    RankCertificates.AnalyticExtraction.IntegerAffine) →
+  (z : Prod.{0, 0} Int Int) → Int :=
+fun (ψ : RankCertificates.AnalyticExtraction.IntegerAffine) (z : Prod.{0, 0} Int Int) =>
+  @HAdd.hAdd.{0, 0, 0} Int Int Int (@instHAdd.{0} Int Int.instAdd)
+    (@HAdd.hAdd.{0, 0, 0} Int Int Int (@instHAdd.{0} Int Int.instAdd)
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul)
+        (RankCertificates.AnalyticExtraction.IntegerAffine.a ψ) (@Prod.fst.{0, 0} Int Int z))
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul)
+        (RankCertificates.AnalyticExtraction.IntegerAffine.b ψ) (@Prod.snd.{0, 0} Int Int z)))
+    (RankCertificates.AnalyticExtraction.IntegerAffine.c ψ)
+@[expose] def RankCertificates.AnalyticExtraction.patternWeight : (ψ :
+    Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))) →
+      RankCertificates.AnalyticExtraction.IntegerAffine) →
+  (z : Prod.{0, 0} Int Int) → Real :=
+fun
+    (ψ :
+      Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))) →
+        RankCertificates.AnalyticExtraction.IntegerAffine)
+    (z : Prod.{0, 0} Int Int) =>
+  @Finset.prod.{0, 0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))) Real Real.instCommMonoid
+    (@Finset.univ.{0} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+      (Fin.fintype (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))))
+    fun (i : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))) =>
+    @DFunLike.coe.{1, 1, 1} (@ArithmeticFunction.{0} Real Real.instZero) Nat (fun (x : Nat) => Real)
+      (@ArithmeticFunction.instFunLikeNat.{0} Real Real.instZero) ArithmeticFunction.vonMangoldt
+      (Int.toNat (RankCertificates.AnalyticExtraction.IntegerAffine.eval (ψ i) z))
+@[expose] def RankCertificates.AnalyticExtraction.fromAffine : (f : RankCertificates.PrimePatterns.AffineForm) →
+  RankCertificates.AnalyticExtraction.IntegerAffine :=
+fun (f : RankCertificates.PrimePatterns.AffineForm) =>
+  RankCertificates.AnalyticExtraction.IntegerAffine.mk (RankCertificates.PrimePatterns.AffineForm.a f)
+    (RankCertificates.PrimePatterns.AffineForm.b f) (RankCertificates.PrimePatterns.AffineForm.c f)
+@[expose] def RankCertificates.SingularSeries.affineAllowedResidues.{u_1} : {K : Type u_1} →
+  [Field.{u_1} K] → [Fintype.{u_1} K] → {n : Nat} → (a b c : Fin n → K) → Finset.{u_1} (Prod.{u_1, u_1} K K) :=
+fun {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] {n : Nat} (a b c : Fin n → K) =>
+  @Finset.filter.{u_1} (Prod.{u_1, u_1} K K)
+    (fun (z : Prod.{u_1, u_1} K K) =>
+      ∀ (i : Fin n),
+        @Ne.{u_1 + 1} K
+          (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+            (@instHAdd.{u_1} K
+              (@Distrib.toAdd.{u_1} K
+                (@instDistribOfSemiring.{u_1} K
+                  (@CommSemiring.toSemiring.{u_1} K
+                    (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+            (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+              (@instHAdd.{u_1} K
+                (@Distrib.toAdd.{u_1} K
+                  (@instDistribOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+              (@HMul.hMul.{u_1, u_1, u_1} K K K
+                (@instHMul.{u_1} K
+                  (@Distrib.toMul.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (a i) (@Prod.fst.{u_1, u_1} K K z))
+              (@HMul.hMul.{u_1, u_1, u_1} K K K
+                (@instHMul.{u_1} K
+                  (@Distrib.toMul.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (b i) (@Prod.snd.{u_1, u_1} K K z)))
+            (c i))
+          (@OfNat.ofNat.{u_1} K (nat_lit 0)
+            (@Zero.toOfNat0.{u_1} K
+              (@MulZeroClass.toZero.{u_1} K
+                (@instMulZeroClassOfSemiring.{u_1} K
+                  (@CommSemiring.toSemiring.{u_1} K
+                    (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))
+    (fun (a_1 : Prod.{u_1, u_1} K K) =>
+      @Nat.decidableForallFin n
+        (fun (i : Fin n) =>
+          @Ne.{u_1 + 1} K
+            (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+              (@instHAdd.{u_1} K
+                (@Distrib.toAdd.{u_1} K
+                  (@instDistribOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+              (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+                (@instHAdd.{u_1} K
+                  (@Distrib.toAdd.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (@HMul.hMul.{u_1, u_1, u_1} K K K
+                  (@instHMul.{u_1} K
+                    (@Distrib.toMul.{u_1} K
+                      (@instDistribOfSemiring.{u_1} K
+                        (@CommSemiring.toSemiring.{u_1} K
+                          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                  (a i) (@Prod.fst.{u_1, u_1} K K a_1))
+                (@HMul.hMul.{u_1, u_1, u_1} K K K
+                  (@instHMul.{u_1} K
+                    (@Distrib.toMul.{u_1} K
+                      (@instDistribOfSemiring.{u_1} K
+                        (@CommSemiring.toSemiring.{u_1} K
+                          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                  (b i) (@Prod.snd.{u_1, u_1} K K a_1)))
+              (c i))
+            (@OfNat.ofNat.{u_1} K (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} K
+                (@MulZeroClass.toZero.{u_1} K
+                  (@instMulZeroClassOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))
+        fun (a_2 : Fin n) =>
+        @instDecidableNot
+          (@Eq.{u_1 + 1} K
+            (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+              (@instHAdd.{u_1} K
+                (@Distrib.toAdd.{u_1} K
+                  (@instDistribOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+              (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+                (@instHAdd.{u_1} K
+                  (@Distrib.toAdd.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (@HMul.hMul.{u_1, u_1, u_1} K K K
+                  (@instHMul.{u_1} K
+                    (@Distrib.toMul.{u_1} K
+                      (@instDistribOfSemiring.{u_1} K
+                        (@CommSemiring.toSemiring.{u_1} K
+                          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                  (a a_2) (@Prod.fst.{u_1, u_1} K K a_1))
+                (@HMul.hMul.{u_1, u_1, u_1} K K K
+                  (@instHMul.{u_1} K
+                    (@Distrib.toMul.{u_1} K
+                      (@instDistribOfSemiring.{u_1} K
+                        (@CommSemiring.toSemiring.{u_1} K
+                          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                  (b a_2) (@Prod.snd.{u_1, u_1} K K a_1)))
+              (c a_2))
+            (@OfNat.ofNat.{u_1} K (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} K
+                (@MulZeroClass.toZero.{u_1} K
+                  (@instMulZeroClassOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))
+          (Classical.propDecidable
+            (@Eq.{u_1 + 1} K
+              (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+                (@instHAdd.{u_1} K
+                  (@Distrib.toAdd.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+                  (@instHAdd.{u_1} K
+                    (@Distrib.toAdd.{u_1} K
+                      (@instDistribOfSemiring.{u_1} K
+                        (@CommSemiring.toSemiring.{u_1} K
+                          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                  (@HMul.hMul.{u_1, u_1, u_1} K K K
+                    (@instHMul.{u_1} K
+                      (@Distrib.toMul.{u_1} K
+                        (@instDistribOfSemiring.{u_1} K
+                          (@CommSemiring.toSemiring.{u_1} K
+                            (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                    (a a_2) (@Prod.fst.{u_1, u_1} K K a_1))
+                  (@HMul.hMul.{u_1, u_1, u_1} K K K
+                    (@instHMul.{u_1} K
+                      (@Distrib.toMul.{u_1} K
+                        (@instDistribOfSemiring.{u_1} K
+                          (@CommSemiring.toSemiring.{u_1} K
+                            (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                    (b a_2) (@Prod.snd.{u_1, u_1} K K a_1)))
+                (c a_2))
+              (@OfNat.ofNat.{u_1} K (nat_lit 0)
+                (@Zero.toOfNat0.{u_1} K
+                  (@MulZeroClass.toZero.{u_1} K
+                    (@instMulZeroClassOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))))
+    (@Finset.univ.{u_1} (Prod.{u_1, u_1} K K) (@instFintypeProd.{u_1, u_1} K K inst_1 inst_1))
+@[expose] def RankCertificates.SingularSeries.affineNormalizedLocalFactor.{u_1} : {K : Type u_1} →
+  [Field.{u_1} K] → [Fintype.{u_1} K] → {n : Nat} → (a b c : Fin n → K) → Real :=
+fun {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] {n : Nat} (a b c : Fin n → K) =>
+  @HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+    (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+      (@Nat.cast.{0} Real Real.instNatCast
+        (@Finset.card.{u_1} (Prod.{u_1, u_1} K K)
+          (@RankCertificates.SingularSeries.affineAllowedResidues.{u_1} K inst inst_1 n a b c)))
+      (@HPow.hPow.{0, 0, 0} Real Nat Real
+        (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+        (@Nat.cast.{0} Real Real.instNatCast (@Fintype.card.{u_1} K inst_1))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+    (@HPow.hPow.{0, 0, 0} Real Nat Real
+      (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+      (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+        (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+        (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+          (@Nat.cast.{0} Real Real.instNatCast (@Fintype.card.{u_1} K inst_1))))
+      n)
+@[expose] def RankCertificates.SingularSeries.integerAffineLocalFactor : {n : Nat} →
+  (a b c : Fin n → Int) → (q : Nat) → Real :=
+fun {n : Nat} (a b c : Fin n → Int) (q : Nat) =>
+  @dite.{1} Real (Nat.Prime q) (Nat.decidablePrime q)
+    (fun (h : Nat.Prime q) =>
+      @RankCertificates.SingularSeries.affineNormalizedLocalFactor.{0} (ZMod q)
+        (@ZMod.instField q (RankCertificates.SingularSeries.integerLocalFactor._proof_1 q h))
+        (@ZMod.fintype q (RankCertificates.SingularSeries.integerLocalFactor._proof_2 q h)) n
+        (fun (i : Fin n) =>
+          @Int.cast.{0} (ZMod q)
+            (@AddGroupWithOne.toIntCast.{0} (ZMod q)
+              (@Ring.toAddGroupWithOne.{0} (ZMod q)
+                (@DivisionRing.toRing.{0} (ZMod q)
+                  (@Field.toDivisionRing.{0} (ZMod q)
+                    (@ZMod.instField q (RankCertificates.SingularSeries.integerLocalFactor._proof_1 q h))))))
+            (a i))
+        (fun (i : Fin n) =>
+          @Int.cast.{0} (ZMod q)
+            (@AddGroupWithOne.toIntCast.{0} (ZMod q)
+              (@Ring.toAddGroupWithOne.{0} (ZMod q)
+                (@DivisionRing.toRing.{0} (ZMod q)
+                  (@Field.toDivisionRing.{0} (ZMod q)
+                    (@ZMod.instField q (RankCertificates.SingularSeries.integerLocalFactor._proof_1 q h))))))
+            (b i))
+        fun (i : Fin n) =>
+        @Int.cast.{0} (ZMod q)
+          (@AddGroupWithOne.toIntCast.{0} (ZMod q)
+            (@Ring.toAddGroupWithOne.{0} (ZMod q)
+              (@DivisionRing.toRing.{0} (ZMod q)
+                (@Field.toDivisionRing.{0} (ZMod q)
+                  (@ZMod.instField q (RankCertificates.SingularSeries.integerLocalFactor._proof_1 q h))))))
+          (c i))
+    fun (h : Not (Nat.Prime q)) => @OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)
+@[expose] def RankCertificates.SingularSeries.outputsLocalFactor : (fs :
+    Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))) → RankCertificates.PrimePatterns.AffineForm) →
+  Nat → Real :=
+fun
+    (fs :
+      Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))) →
+        RankCertificates.PrimePatterns.AffineForm) =>
+  @RankCertificates.SingularSeries.integerAffineLocalFactor
+    (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))
+    (fun (i : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))) =>
+      RankCertificates.PrimePatterns.AffineForm.a (fs i))
+    (fun (i : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))) =>
+      RankCertificates.PrimePatterns.AffineForm.b (fs i))
+    fun (i : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))) =>
+    RankCertificates.PrimePatterns.AffineForm.c (fs i)
+@[expose] def RankCertificates.ConditionalPrimePatterns.unitRectangle : (u v : Int) →
+  (T : Nat) → Finset.{0} (Prod.{0, 0} Int Int) :=
+fun (u v : Int) (T : Nat) =>
+  @SProd.sprod.{0, 0, 0} (Finset.{0} Int) (Finset.{0} Int) (Finset.{0} (Prod.{0, 0} Int Int))
+    (@Finset.instSProd.{0, 0} Int Int)
+    (@Finset.Icc.{0} Int Int.instPreorder Int.instLocallyFiniteOrder
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul) u (@Nat.cast.{0} Int instNatCastInt T))
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul)
+        (@HAdd.hAdd.{0, 0, 0} Int Int Int (@instHAdd.{0} Int Int.instAdd) u
+          (@OfNat.ofNat.{0} Int (nat_lit 1) (@instOfNat (nat_lit 1))))
+        (@Nat.cast.{0} Int instNatCastInt T)))
+    (@Finset.Icc.{0} Int Int.instPreorder Int.instLocallyFiniteOrder
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul) v (@Nat.cast.{0} Int instNatCastInt T))
+      (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul)
+        (@HAdd.hAdd.{0, 0, 0} Int Int Int (@instHAdd.{0} Int Int.instAdd) v
+          (@OfNat.ofNat.{0} Int (nat_lit 1) (@instOfNat (nat_lit 1))))
+        (@Nat.cast.{0} Int instNatCastInt T)))
+@[expose] def RankCertificates.ConditionalPrimePatterns.FiniteComplexityPrimeAsymptotic : Prop :=
+∀ (fs : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))) → RankCertificates.PrimePatterns.AffineForm)
+  (u v : Int),
+  (∀ (i : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))),
+      Or
+        (@Ne.{1} Int (RankCertificates.PrimePatterns.AffineForm.a (fs i))
+          (@OfNat.ofNat.{0} Int (nat_lit 0) (@instOfNat (nat_lit 0))))
+        (@Ne.{1} Int (RankCertificates.PrimePatterns.AffineForm.b (fs i))
+          (@OfNat.ofNat.{0} Int (nat_lit 0) (@instOfNat (nat_lit 0))))) →
+    (∀ (i j : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))),
+        @Ne.{1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))) i j →
+          @Ne.{1} Int
+            (@HSub.hSub.{0, 0, 0} Int Int Int (@instHSub.{0} Int Int.instSub)
+              (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul)
+                (RankCertificates.PrimePatterns.AffineForm.a (fs i))
+                (RankCertificates.PrimePatterns.AffineForm.b (fs j)))
+              (@HMul.hMul.{0, 0, 0} Int Int Int (@instHMul.{0} Int Int.instMul)
+                (RankCertificates.PrimePatterns.AffineForm.b (fs i))
+                (RankCertificates.PrimePatterns.AffineForm.a (fs j))))
+            (@OfNat.ofNat.{0} Int (nat_lit 0) (@instOfNat (nat_lit 0)))) →
+      (∀ (p : Nat), Nat.Prime p → RankCertificates.PrimePatterns.Avoids fs p) →
+        (∀ (T : Nat),
+            @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) T →
+              ∀ (z : Prod.{0, 0} Int Int),
+                @Membership.mem.{0, 0} (Prod.{0, 0} Int Int) (Finset.{0} (Prod.{0, 0} Int Int))
+                    (@SetLike.instMembership.{0, 0} (Finset.{0} (Prod.{0, 0} Int Int)) (Prod.{0, 0} Int Int)
+                      (@Finset.instSetLike.{0} (Prod.{0, 0} Int Int)))
+                    (RankCertificates.ConditionalPrimePatterns.unitRectangle u v T) z →
+                  ∀ (i : Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12)))),
+                    @LE.le.{0} Int Int.instLEInt (@Nat.cast.{0} Int instNatCastInt T)
+                      (RankCertificates.PrimePatterns.AffineForm.eval (fs i) (@Prod.fst.{0, 0} Int Int z)
+                        (@Prod.snd.{0, 0} Int Int z))) →
+          ∀ (σ : Real),
+            @HasProd.{0, 0} Real Nat Real.instCommMonoid
+                (@UniformSpace.toTopologicalSpace.{0} Real
+                  (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+                (RankCertificates.SingularSeries.outputsLocalFactor fs) σ (SummationFilter.unconditional.{0} Nat) →
+              @Asymptotics.IsLittleO.{0, 0, 0} Nat Real Real Real.norm Real.norm
+                (@Filter.atTop.{0} Nat Nat.instPreorder)
+                (fun (T : Nat) =>
+                  @HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                    (@Finset.sum.{0, 0} (Prod.{0, 0} Int Int) Real Real.instAddCommMonoid
+                      (RankCertificates.ConditionalPrimePatterns.unitRectangle u v T) fun (z : Prod.{0, 0} Int Int) =>
+                      RankCertificates.AnalyticExtraction.patternWeight
+                        (@Function.comp.{1, 1, 1} (Fin (@OfNat.ofNat.{0} Nat (nat_lit 12) (instOfNatNat (nat_lit 12))))
+                          RankCertificates.PrimePatterns.AffineForm RankCertificates.AnalyticExtraction.IntegerAffine
+                          RankCertificates.AnalyticExtraction.fromAffine fs)
+                        z)
+                    (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) σ
+                      (@HPow.hPow.{0, 0, 0} Real Nat Real
+                        (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+                        (@Nat.cast.{0} Real Real.instNatCast T)
+                        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))))
+                fun (T : Nat) =>
+                @HPow.hPow.{0, 0, 0} Real Nat Real
+                  (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+                  (@Nat.cast.{0} Real Real.instNatCast T) (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+@[expose] def RankCertificates.SingularSeries.allowedResidues.{u_1} : {K : Type u_1} →
+  [Field.{u_1} K] → [Fintype.{u_1} K] → {n : Nat} → (a b : Fin n → K) → Finset.{u_1} (Prod.{u_1, u_1} K K) :=
+fun {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] {n : Nat} (a b : Fin n → K) =>
+  @Finset.filter.{u_1} (Prod.{u_1, u_1} K K)
+    (fun (z : Prod.{u_1, u_1} K K) =>
+      ∀ (i : Fin n),
+        @Ne.{u_1 + 1} K
+          (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+            (@instHAdd.{u_1} K
+              (@Distrib.toAdd.{u_1} K
+                (@instDistribOfSemiring.{u_1} K
+                  (@CommSemiring.toSemiring.{u_1} K
+                    (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+            (@HMul.hMul.{u_1, u_1, u_1} K K K
+              (@instHMul.{u_1} K
+                (@Distrib.toMul.{u_1} K
+                  (@instDistribOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+              (a i) (@Prod.fst.{u_1, u_1} K K z))
+            (@HMul.hMul.{u_1, u_1, u_1} K K K
+              (@instHMul.{u_1} K
+                (@Distrib.toMul.{u_1} K
+                  (@instDistribOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+              (b i) (@Prod.snd.{u_1, u_1} K K z)))
+          (@OfNat.ofNat.{u_1} K (nat_lit 0)
+            (@Zero.toOfNat0.{u_1} K
+              (@MulZeroClass.toZero.{u_1} K
+                (@instMulZeroClassOfSemiring.{u_1} K
+                  (@CommSemiring.toSemiring.{u_1} K
+                    (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))
+    (fun (a_1 : Prod.{u_1, u_1} K K) =>
+      @Nat.decidableForallFin n
+        (fun (i : Fin n) =>
+          @Ne.{u_1 + 1} K
+            (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+              (@instHAdd.{u_1} K
+                (@Distrib.toAdd.{u_1} K
+                  (@instDistribOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+              (@HMul.hMul.{u_1, u_1, u_1} K K K
+                (@instHMul.{u_1} K
+                  (@Distrib.toMul.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (a i) (@Prod.fst.{u_1, u_1} K K a_1))
+              (@HMul.hMul.{u_1, u_1, u_1} K K K
+                (@instHMul.{u_1} K
+                  (@Distrib.toMul.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (b i) (@Prod.snd.{u_1, u_1} K K a_1)))
+            (@OfNat.ofNat.{u_1} K (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} K
+                (@MulZeroClass.toZero.{u_1} K
+                  (@instMulZeroClassOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))
+        fun (a_2 : Fin n) =>
+        @instDecidableNot
+          (@Eq.{u_1 + 1} K
+            (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+              (@instHAdd.{u_1} K
+                (@Distrib.toAdd.{u_1} K
+                  (@instDistribOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+              (@HMul.hMul.{u_1, u_1, u_1} K K K
+                (@instHMul.{u_1} K
+                  (@Distrib.toMul.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (a a_2) (@Prod.fst.{u_1, u_1} K K a_1))
+              (@HMul.hMul.{u_1, u_1, u_1} K K K
+                (@instHMul.{u_1} K
+                  (@Distrib.toMul.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (b a_2) (@Prod.snd.{u_1, u_1} K K a_1)))
+            (@OfNat.ofNat.{u_1} K (nat_lit 0)
+              (@Zero.toOfNat0.{u_1} K
+                (@MulZeroClass.toZero.{u_1} K
+                  (@instMulZeroClassOfSemiring.{u_1} K
+                    (@CommSemiring.toSemiring.{u_1} K
+                      (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))
+          (Classical.propDecidable
+            (@Eq.{u_1 + 1} K
+              (@HAdd.hAdd.{u_1, u_1, u_1} K K K
+                (@instHAdd.{u_1} K
+                  (@Distrib.toAdd.{u_1} K
+                    (@instDistribOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                (@HMul.hMul.{u_1, u_1, u_1} K K K
+                  (@instHMul.{u_1} K
+                    (@Distrib.toMul.{u_1} K
+                      (@instDistribOfSemiring.{u_1} K
+                        (@CommSemiring.toSemiring.{u_1} K
+                          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                  (a a_2) (@Prod.fst.{u_1, u_1} K K a_1))
+                (@HMul.hMul.{u_1, u_1, u_1} K K K
+                  (@instHMul.{u_1} K
+                    (@Distrib.toMul.{u_1} K
+                      (@instDistribOfSemiring.{u_1} K
+                        (@CommSemiring.toSemiring.{u_1} K
+                          (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))
+                  (b a_2) (@Prod.snd.{u_1, u_1} K K a_1)))
+              (@OfNat.ofNat.{u_1} K (nat_lit 0)
+                (@Zero.toOfNat0.{u_1} K
+                  (@MulZeroClass.toZero.{u_1} K
+                    (@instMulZeroClassOfSemiring.{u_1} K
+                      (@CommSemiring.toSemiring.{u_1} K
+                        (@Semifield.toCommSemiring.{u_1} K (@Field.toSemifield.{u_1} K inst))))))))))
+    (@Finset.univ.{u_1} (Prod.{u_1, u_1} K K) (@instFintypeProd.{u_1, u_1} K K inst_1 inst_1))
+@[expose] def RankCertificates.SingularSeries.normalizedLocalFactor.{u_1} : {K : Type u_1} →
+  [Field.{u_1} K] → [Fintype.{u_1} K] → {n : Nat} → (a b : Fin n → K) → Real :=
+fun {K : Type u_1} [inst : Field.{u_1} K] [inst_1 : Fintype.{u_1} K] {n : Nat} (a b : Fin n → K) =>
+  @HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+    (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+      (@Nat.cast.{0} Real Real.instNatCast
+        (@Finset.card.{u_1} (Prod.{u_1, u_1} K K)
+          (@RankCertificates.SingularSeries.allowedResidues.{u_1} K inst inst_1 n a b)))
+      (@HPow.hPow.{0, 0, 0} Real Nat Real
+        (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+        (@Nat.cast.{0} Real Real.instNatCast (@Fintype.card.{u_1} K inst_1))
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+    (@HPow.hPow.{0, 0, 0} Real Nat Real
+      (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+      (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+        (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+        (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+          (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+          (@Nat.cast.{0} Real Real.instNatCast (@Fintype.card.{u_1} K inst_1))))
+      n)
+@[expose] def RankCertificates.SingularSeries.integerLocalFactor : {n : Nat} → (a b : Fin n → Int) → (q : Nat) → Real :=
+fun {n : Nat} (a b : Fin n → Int) (q : Nat) =>
+  @dite.{1} Real (Nat.Prime q) (Nat.decidablePrime q)
+    (fun (h : Nat.Prime q) =>
+      @RankCertificates.SingularSeries.normalizedLocalFactor.{0} (ZMod q)
+        (@ZMod.instField q (RankCertificates.SingularSeries.integerLocalFactor._proof_1 q h))
+        (@ZMod.fintype q (RankCertificates.SingularSeries.integerLocalFactor._proof_2 q h)) n
+        (fun (i : Fin n) =>
+          @Int.cast.{0} (ZMod q)
+            (@AddGroupWithOne.toIntCast.{0} (ZMod q)
+              (@Ring.toAddGroupWithOne.{0} (ZMod q)
+                (@DivisionRing.toRing.{0} (ZMod q)
+                  (@Field.toDivisionRing.{0} (ZMod q)
+                    (@ZMod.instField q (RankCertificates.SingularSeries.integerLocalFactor._proof_1 q h))))))
+            (a i))
+        fun (i : Fin n) =>
+        @Int.cast.{0} (ZMod q)
+          (@AddGroupWithOne.toIntCast.{0} (ZMod q)
+            (@Ring.toAddGroupWithOne.{0} (ZMod q)
+              (@DivisionRing.toRing.{0} (ZMod q)
+                (@Field.toDivisionRing.{0} (ZMod q)
+                  (@ZMod.instField q (RankCertificates.SingularSeries.integerLocalFactor._proof_1 q h))))))
+          (b i))
+    fun (h : Not (Nat.Prime q)) => @OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)

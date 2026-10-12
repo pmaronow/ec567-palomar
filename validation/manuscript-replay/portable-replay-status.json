@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "test_count": 26,
+  "tests": [
+    {
+      "name": "replay0: exact counts and pass",
+      "passed": true
+    },
+    {
+      "name": "replay0: current script hashes",
+      "passed": true
+    },
+    {
+      "name": "replay1: exact counts and pass",
+      "passed": true
+    },
+    {
+      "name": "replay1: current script hashes",
+      "passed": true
+    },
+    {
+      "name": "directory/ZIP literal results identical modulo input paths",
+      "passed": true
+    },
+    {
+      "name": "directory/ZIP 42 table results identical",
+      "passed": true
+    },
+    {
+      "name": "all 1176 ordered checks equal frozen audit modulo input paths",
+      "passed": true
+    },
+    {
+      "name": "all 42 ordered checks equal frozen audit",
+      "passed": true
+    },
+    {
+      "name": "unsafe ZIP path rejected: ../escape.txt",
+      "passed": true
+    },
+    {
+      "name": "unsafe ZIP path rejected: /absolute.txt",
+      "passed": true
+    },
+    {
+      "name": "unsafe ZIP path rejected: C:drive.txt",
+      "passed": true
+    },
+    {
+      "name": "unsafe ZIP path rejected: back\\slash.txt",
+      "passed": true
+    },
+    {
+      "name": "ZIP symlink rejected",
+      "passed": true
+    },
+    {
+      "name": "archive Python retained strictly as text",
+      "passed": true
+    },
+    {
+      "name": "nonliteral Lean expression rejected: __import__('os')",
+      "passed": true
+    },
+    {
+      "name": "nonliteral Lean expression rejected: [1, 2]; print(1)",
+      "passed": true
+    },
+    {
+      "name": "AST comparator ignores documentary docstring/comments",
+      "passed": true
+    },
+    {
+      "name": "AST comparator detects executable changes",
+      "passed": true
+    },
+    {
+      "name": "non-arithmetic expression rejected: __import__(\"os\")",
+      "passed": true
+    },
+    {
+      "name": "non-arithmetic expression rejected: M.__class__",
+      "passed": true
+    },
+    {
+      "name": "non-arithmetic expression rejected: [M]",
+      "passed": true
+    },
+    {
+      "name": "non-arithmetic expression rejected: M[0]",
+      "passed": true
+    },
+    {
+      "name": "non-arithmetic expression rejected: 1;2",
+      "passed": true
+    },
+    {
+      "name": "non-arithmetic expression rejected: lambda:1",
+      "passed": true
+    },
+    {
+      "name": "non-arithmetic expression rejected: x=1",
+      "passed": true
+    },
+    {
+      "name": "no workspace hardcoding in replay sources",
+      "passed": true
+    }
+  ],
+  "literal_checks": 1176,
+  "certificate_table_checks": 42,
+  "literal_checks_per_rank": {
+    "5": 461,
+    "6": 358,
+    "7": 357
+  },
+  "source_hashes": [
+    {
+      "path": "replay.py",
+      "sha256": "d258e6369a86bba141ecf86a2c3fad50b72471f39eb0f34d2c8405a128828d5d",
+      "bytes": 10240
+    },
+    {
+      "path": "literal_compare.py",
+      "sha256": "d8b2514a984ec15d296d9872927c439795366a20b6ee081a13a5050a497b852c",
+      "bytes": 32876
+    },
+    {
+      "path": "certificate_compare.py",
+      "sha256": "308669cb0a99a88bbfae60e720755d9fde52c40bb89b9488244981eeaf65b33a",
+      "bytes": 13755
+    },
+    {
+      "path": "verify_packet.py",
+      "sha256": "ca87d7408a6971461f1db6f494846f27d0bff66fbc0a831f165943f4ffb24e1e",
+      "bytes": 8300
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc",
+      "bytes": 14
+    },
+    {
+      "path": "README.md",
+      "sha256": "b3ef793b6d845b9a62ccc6b2fc469a7204f248fb382a812465ddc8236288bea0",
+      "bytes": 4103
+    }
+  ],
+  "input_scope": "Directory and actual ZIP replays against the supplied clean Lean source repository; no compiler run.",
+  "archive_scripts_executed_or_imported": false,
+  "validation_receipts": [
+    {
+      "path": "/workspace/work/ec567-manuscript-replay/verified-directory/replay-receipt.json",
+      "sha256": "ed0450ce51b8abfdbf3cf6e3ae9fb9f19f04ad2607eaf178d603cffef99732b4"
+    },
+    {
+      "path": "/workspace/work/ec567-manuscript-replay/verified-zip/replay-receipt.json",
+      "sha256": "a52105f5773f9be75da4d757066a0e890aa697cb0928abee170c25d8583665a2"
+    }
+  ]
+}

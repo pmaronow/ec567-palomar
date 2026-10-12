@@ -1,0 +1,6 @@
+✔ [2541/2585] Built RankCertificates.AdditiveVanDerCorput (4.4s)
+✔ [9124/9125] Built RankCertificates (3.0s)
+Build completed successfully (9125 jobs).
+Axiom audit passed for 3199 project declarations. Allowed: propext, Quot.sound, Classical.choice.
+Source audit passed for 106 Lean files: complete aggregate imports, no source symlinks, proof placeholders, custom axioms, or native_decide.
+Negative audit test passed: an exported theorem using a private custom axiom was rejected.

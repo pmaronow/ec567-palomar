@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "original_source_files": 28,
+  "source_files_changed": [
+    "sections/A-verification.tex"
+  ],
+  "new_appendix_repository_url": "https://github.com/pmaronow/ec567-palomar",
+  "pdf_pages": 152,
+  "pdf_github_text_pages": [
+    130
+  ],
+  "pdf_github_links": [
+    {
+      "page": 130,
+      "uri": "https://github.com/pmaronow/ec567-palomar"
+    }
+  ],
+  "pdf_sha256": "1f8156b92b65cb1b0c12e8e61569e5cc4af136c72235c8b5403c6512402523f9",
+  "pdf_bytes": 922280,
+  "appendix_sha256": "16a3a5a0bcc432bbb651ba0dfb88870059b6280a14153d375e115a9ba3415a58",
+  "source_file_sha256": {
+    "abstract.tex": "6021aee479a1f89622ed8777bdcdc3073af81f8d9d21902bd88b847b74887f56",
+    "build.py": "ce0dcb1ceafa1f84c09d3270f5d528b1b19b4a5517a5077649c769c9795023a2",
+    "certificates/rank5/final155_certificate.json": "daa3a196c1e7bfad19be03b7d5ffe3bfb1672a5041149ba33ca650205fa610f8",
+    "certificates/rank5/verify_final155_certificate.py": "b08c7e9c01267f172a2e583b0c7bcbfc99918f81baa01ea7204c5c5d753d6d24",
+    "certificates/rank6/rank6_certificate.json": "6d69d2ac85633cb18e57dbfe949bfd3bcff2a6f407324838f10c9b1c14cd6e3b",
+    "certificates/rank6/verify_rank6_certificate.py": "98aabc43874bec1fad6bd23c60157949b846bc8e8ed33e71e7a8396b04a39d9d",
+    "certificates/rank7/rank7_certificate.json": "65694a179e7cf75e75539e9b656bbdcf342e98d38a3c16ab8853191c22dfbf6d",
+    "certificates/rank7/verify_rank7_certificate.py": "80beabbe2040aa2aa4699848fafbad0c37289025a6855a7920db34e7b7aedd1f",
+    "macros.tex": "a3fd855124d47cf36cbf1b204283e91de1962c7c5eb78fed4cdab8adf1f32e2d",
+    "main.bbl": "9356a6fd48b5bc42868e65946a5dcbd3fa47fad366df0ea615aa6561c3c81202",
+    "main.tex": "d3b44a5ce1c882b626bf38420c9e3fb1a2718af8550d28156143336985a689e9",
+    "refs.bib": "b1a903d86f75694551d68a1c6c1016326e97953f66946d5b9325d57b35107092",
+    "sections/01-intro.tex": "cfa1b5904d73033501912989376e002678cb96fbbe38e2932e0a066b3eb3a132",
+    "sections/02-overview.tex": "0280fa2a3bd26bf98bc65b0f4f2e73bf25e84c403f6e0669a6110b62ea6d1595",
+    "sections/03-descent.tex": "934c3c6976b581c6c810b8f9a6fe751be082871fefb8401f2ce92a72f61f8173",
+    "sections/04-families.tex": "5118bfebdda0f4e16e0757c0e6fcd740a2effdb9bd1d64ee0a272a28c0dae119",
+    "sections/05-primes.tex": "5aafcde0735aa0cb29548b945cfa2c24c88508d0a86b8894b968e85dcaed4ca6",
+    "sections/06-rank5.tex": "e4bd7545b3083d044498a5dd57ccf56dcc7db34f5b4f1b5805f1e632626ef95f",
+    "sections/07-rank6.tex": "3f99dff971a994081eb2ae6c4958ecb26cd67fdc66d0cf0ada7451b1a74d37f9",
+    "sections/08-rank7.tex": "34b98b31bfa017821e0b788efc383d8dac0d2a122ca41cce92a960038cee71d6",
+    "sections/09-proof.tex": "ad3332e2a00212697f7bb24f058dd0ae3b1e38de96ca2dbd04369ebd4e8c22c3",
+    "sections/A-verification.tex": "16a3a5a0bcc432bbb651ba0dfb88870059b6280a14153d375e115a9ba3415a58",
+    "sections/B-origin-r5.tex": "80608e813ca6aafb885a58438756d81afbc0005847e3403e86d93a454fd7fe39",
+    "sections/B-origin-r6.tex": "232578d8ecf47cd54b052bfe9aa3f616b2507864938abb633d3411390d578a6c",
+    "sections/B-origin-r7.tex": "c02fbe53ef76eba92bf319b0325054513f35b859d54b6e32283b30e0bf6e95a8",
+    "sections/B-origins.tex": "33f97b7fd40f3d728a8253d9650a5a1b564423ee65bbd3fb37332bf802c37e1d",
+    "shared/trilogy-style.tex": "098b738415780d11d4d77e3eaa19aca8475ff05609199c3cc0ca913950c8d86e",
+    "shortheads.tex": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "latex_exit_code": 0,
+  "undefined_references_in_final_log": false,
+  "uploaded_python_build_or_verifier_scripts_executed": false,
+  "lean_sources_or_configuration_changed": false,
+  "independent_editorial_review": "PASS: only Appendix A URL/path edits; all referenced program/input paths exist; mathematical text and tables unchanged."
+}

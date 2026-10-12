@@ -1,0 +1,56 @@
+[
+  {
+    "rank_family": 5,
+    "all_four_matrices_match": true,
+    "known_codes_match": true,
+    "forms_match": true,
+    "cofactors_match": true,
+    "Lean_lattice": {
+      "W": 19984345920,
+      "M0": 6555660534,
+      "N0": -1
+    },
+    "JSON_lattice": {
+      "W": 19984345920,
+      "M0": 6555660534,
+      "N0": -1
+    },
+    "lattice_matches": true
+  },
+  {
+    "rank_family": 6,
+    "all_four_matrices_match": true,
+    "known_codes_match": true,
+    "forms_match": true,
+    "cofactors_match": true,
+    "Lean_lattice": {
+      "W": 780373440,
+      "M0": 416513683,
+      "N0": 91046603
+    },
+    "JSON_lattice": {
+      "W": 780373440,
+      "M0": 416513683,
+      "N0": 91046603
+    },
+    "lattice_matches": true
+  },
+  {
+    "rank_family": 7,
+    "all_four_matrices_match": true,
+    "known_codes_match": true,
+    "forms_match": true,
+    "cofactors_match": true,
+    "Lean_lattice": {
+      "W": 308403583488,
+      "M0": 79151095314,
+      "N0": 151444919819
+    },
+    "JSON_lattice": {
+      "W": 308403583488,
+      "M0": 79151095314,
+      "N0": 151444919819
+    },
+    "lattice_matches": true
+  }
+]

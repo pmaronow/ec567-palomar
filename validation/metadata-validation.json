@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "file": "formalization.yaml",
+  "file_sha256": "8c9b6c88af80108bab7ad70888b9a1c12ff8fd9c5b57abf1d553151c05a2ca28",
+  "file_bytes": 16682,
+  "upstream_v0_4_schema_passed": true,
+  "schema_sha256": "25ff6b25ca4511635aff4443cf20480c15e59dddf19591c730950b442ea54fce",
+  "palomar_submission_contract_passed": true,
+  "palomar_submission_revision": "d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44",
+  "scope": "Revalidate metadata after adding the manuscript and recording the Appendix A editorial change; prior proof and kernel checks are unchanged."
+}

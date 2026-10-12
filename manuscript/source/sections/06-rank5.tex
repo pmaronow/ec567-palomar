@@ -1,0 +1,793 @@
+\chapter{The rank-five family}\label{sec:rank5}
+
+In this section, we prove \cref{thm:r5}. It states that the twelve-form datum $\datum_5$ defined below has infinitely many prime specializations in a fixed congruence class and a fixed cone, that the curve $E_{M,N}$ has rank exactly five at each of them, and that these curves represent infinitely many isomorphism classes over $\Qbar$. The proof consists of checking the hypotheses of \cref{prop:rank-criterion} and \cref{prop:infinitely-many} for $\datum_5$. We do not repeat the general arguments of \cref{sec:descent,sec:families,sec:primes}; instead, we give the data of the family together with the tables needed to recompute every entry of the matrices by hand. \Cref{thm:r5} is used in \cref{sec:proof} to prove \cref{thm:main} for $r=5$.
+
+The family is a base change, along a conic, of a rank-four family of Zywina~\cite[\S6.5]{Zywina2026}. We explain this origin in \cref{sec:origin-r5}.
+
+The section is organized as follows. In \cref{sec:r5-datum}, we define $\datum_5$, the set $S$, and the bases $\cB_E$ and $\cB_{E'}$. In \cref{sec:r5-points}, we exhibit three points on $E$ and four points on $E'$ whose classes are independent at every prime specialization (\cref{lem:r5-points,lem:r5-lower}). In \cref{sec:r5-progression}, we fix the congruence class and the cone, and we compute the residues of the primes $p_i$ (\cref{lem:r5-progression,lem:r5-cone}). \Cref{sec:r5-fixed} bounds the local images at $2$, $3$, $5$ and the real place (\cref{lem:r5-fixed}), and \cref{sec:r5-characters} computes the quadratic characters that enter the rows at the twelve primes $p_i$. In \cref{sec:r5-matrices}, we display the matrices $\mathbf M_E(0)$ and $\mathbf M_{E'}(0)$ and certify their ranks (\cref{lem:r5-certificate}). \Cref{sec:r5-theorem} proves \cref{thm:r5}. Finally, in \cref{sec:r5-five-points}, we use the dual isogeny to write down five independent points of $E_{M,N}(\Q)$ (\cref{prop:r5-five-points}); this is not needed for \cref{thm:r5}.
+
+\section{The datum}\label{sec:r5-datum}
+
+Let $L_i=a_iM+b_iN$ for $0\le i\le 11$, with the coefficients $a_i,b_i$ and the cofactors $c_i$ given in \cref{tab:r5-data}. As in \cref{sec:families}, we set $I_F=\{0,1,2,3\}$, $I_H=\{4,5,6,7\}$, $I_J=\{8,9,10,11\}$, and
+\[
+F=L_0L_1L_2L_3,\qquad H=L_4L_5L_6L_7,\qquad J=L_8L_9L_{10}L_{11}.
+\]
+
+\begin{table}[htbp]
+\centering
+\caption{The linear forms $L_i=a_iM+b_iN$ of the rank-five family, the quartic to which each belongs, and the cofactors $c_i$.}\label{tab:r5-data}
+\begin{tabular}{c*{12}{r}}
+\toprule
+$i$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+group & $F$ & $F$ & $F$ & $F$ & $H$ & $H$ & $H$ & $H$ & $J$ & $J$ & $J$ & $J$\\
+$a_i$ & $1$ & $22$ & $9$ & $143$ & $-55$ & $3$ & $138$ & $55$ & $99$ & $5$ & $32$ & $55$\\
+$b_i$ & $0$ & $-1$ & $-2$ & $155$ & $62$ & $-1$ & $-31$ & $64$ & $62$ & $-1$ & $31$ & $-12$\\
+$c_i$ & $54$ & $1$ & $8$ & $1$ & $8$ & $1$ & $1$ & $2$ & $4$ & $1$ & $1$ & $6$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Expanding the products, we find the coefficients of $F$, $H$ and $J$ listed in the first three rows of \cref{tab:r5-quartics} below. Comparing the five coefficients, we obtain the identity
+\begin{equation}\label{r5:identity}
+625F+3H=16J.
+\end{equation}
+For example, the coefficients of $M^4$ give $625\cdot28314-3\cdot1252350=13939200=16\cdot871200$. We set
+\begin{equation}\label{r5:ABC}
+A=1500,\qquad B=2700,\qquad C=57600.
+\end{equation}
+Since $A^2=3600\cdot625$, $4B=3600\cdot3$ and $C=3600\cdot16$, multiplying \eqref{r5:identity} by $3600$ gives $A^2F+4BH=CJ$. The curves of \cref{def:datum} are
+\begin{equation}\label{r5:curves}
+\begin{aligned}
+E=E_{M,N}&:\ y^2=x^3+1500F\,x^2-2700FH\,x,\\
+E'=E'_{M,N}&:\ y^2=x^3-3000F\,x^2+57600FJ\,x.
+\end{aligned}
+\end{equation}
+In the notation of \cref{sec:descent}, we have $\alpha=1500F$, $\beta=-2700FH$, $\alpha'=-3000F$ and $\beta'=\alpha^2-4\beta=57600FJ$. We write $T=(0,0)\in E$ and $T'=(0,0)\in E'$.
+
+The coefficient vectors $(a_i,b_i)$ in \cref{tab:r5-data} are primitive, $(a_0,b_0)=(1,0)$, and $b_i\ne0$ for $i\ge1$. The sixty-six determinants $\Delta_{ij}=a_ib_j-a_jb_i$ are factored in \cref{tab:r5-det}; none of them vanishes. The cofactors are positive and $c_1=1$. The forms $L_i$, the constants \eqref{r5:ABC}, the cofactors $c_i$ and the constant lists
+\begin{equation}\label{r5:Gamma}
+\Gamma_E=\Gamma_{E'}=(-1,2,3,5)
+\end{equation}
+therefore form a twelve-form datum in the sense of \cref{def:datum}, which we denote by $\datum_5$.
+
+\begin{table}[htbp]
+\centering
+\caption{The determinants $\Delta_{ij}=a_ib_j-a_jb_i$ for $0\le i<j\le 11$, factored.}\label{tab:r5-det}
+\small
+\begin{tabular}{rl@{\qquad}rl@{\qquad}rl}
+\toprule
+$(i,j)$ & $\Delta_{ij}$ & $(i,j)$ & $\Delta_{ij}$ & $(i,j)$ & $\Delta_{ij}$\\
+\midrule
+$(0,1)$ & $-1$ & $(2,4)$ & $2^{6}\cdot 7$ & $(4,11)$ & $-2\cdot 5^{3}\cdot 11$ \\
+$(0,2)$ & $-2$ & $(2,5)$ & $-3$ & $(5,6)$ & $3^{2}\cdot 5$ \\
+$(0,3)$ & $5\cdot 31$ & $(2,6)$ & $-3$ & $(5,7)$ & $13\cdot 19$ \\
+$(0,4)$ & $2\cdot 31$ & $(2,7)$ & $2\cdot 7^{3}$ & $(5,8)$ & $3\cdot 5\cdot 19$ \\
+$(0,5)$ & $-1$ & $(2,8)$ & $2^{2}\cdot 3^{3}\cdot 7$ & $(5,9)$ & $2$ \\
+$(0,6)$ & $-31$ & $(2,9)$ & $1$ & $(5,10)$ & $5^{3}$ \\
+$(0,7)$ & $2^{6}$ & $(2,10)$ & $7^{3}$ & $(5,11)$ & $19$ \\
+$(0,8)$ & $2\cdot 31$ & $(2,11)$ & $2$ & $(6,7)$ & $41\cdot 257$ \\
+$(0,9)$ & $-1$ & $(3,4)$ & $3\cdot 11\cdot 17\cdot 31$ & $(6,8)$ & $3\cdot 5^{3}\cdot 31$ \\
+$(0,10)$ & $31$ & $(3,5)$ & $-2^{5}\cdot 19$ & $(6,9)$ & $17$ \\
+$(0,11)$ & $-2^{2}\cdot 3$ & $(3,6)$ & $-7^{2}\cdot 17\cdot 31$ & $(6,10)$ & $2\cdot 5\cdot 17\cdot 31$ \\
+$(1,2)$ & $-5\cdot 7$ & $(3,7)$ & $3\cdot 11\cdot 19$ & $(6,11)$ & $7^{2}$ \\
+$(1,3)$ & $11\cdot 17\cdot 19$ & $(3,8)$ & $-11\cdot 19\cdot 31$ & $(7,8)$ & $-2\cdot 7\cdot 11\cdot 19$ \\
+$(1,4)$ & $7\cdot 11\cdot 17$ & $(3,9)$ & $-2\cdot 3^{3}\cdot 17$ & $(7,9)$ & $-3\cdot 5^{3}$ \\
+$(1,5)$ & $-19$ & $(3,10)$ & $-17\cdot 31$ & $(7,10)$ & $-7^{3}$ \\
+$(1,6)$ & $-2^{5}\cdot 17$ & $(3,11)$ & $-7^{2}\cdot 11\cdot 19$ & $(7,11)$ & $-2^{2}\cdot 5\cdot 11\cdot 19$ \\
+$(1,7)$ & $7\cdot 11\cdot 19$ & $(4,5)$ & $-131$ & $(8,9)$ & $-409$ \\
+$(1,8)$ & $7\cdot 11\cdot 19$ & $(4,6)$ & $-13\cdot 17\cdot 31$ & $(8,10)$ & $5\cdot 7\cdot 31$ \\
+$(1,9)$ & $-17$ & $(4,7)$ & $-2\cdot 3^{2}\cdot 5\cdot 7\cdot 11$ & $(8,11)$ & $-2\cdot 11^{2}\cdot 19$ \\
+$(1,10)$ & $2\cdot 3\cdot 7\cdot 17$ & $(4,8)$ & $-2^{2}\cdot 7\cdot 11\cdot 31$ & $(9,10)$ & $11\cdot 17$ \\
+$(1,11)$ & $-11\cdot 19$ & $(4,9)$ & $-3\cdot 5\cdot 17$ & $(9,11)$ & $-5$ \\
+$(2,3)$ & $41^{2}$ & $(4,10)$ & $-7\cdot 17\cdot 31$ & $(10,11)$ & $-2089$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We define
+\begin{equation}\label{r5:S}
+S=\{2,3,5,7,11,13,17,19,31,41,131,257,409,2089\}.
+\end{equation}
+By \cref{tab:r5-det}, $S$ is exactly the set of primes dividing some $\Delta_{ij}$. The other integers in \cref{def:prime-specialization}, and the entries of the lists \eqref{r5:Gamma}, have prime factors in $\{2,3,5,31\}$: we have $A=2^2\cdot3\cdot5^3$, $B=2^2\cdot3^3\cdot5^2$, $C=2^8\cdot3^2\cdot5^2$, every $c_i$ divides $2^3\cdot3^3$, and
+\[
+(b_1,\dots,b_{11})=(-1,\,-2,\,5\cdot31,\,2\cdot31,\,-1,\,-31,\,2^6,\,2\cdot31,\,-1,\,31,\,-2^2\cdot3).
+\]
+We conclude that $S$ satisfies the conditions of \cref{def:prime-specialization}. Throughout this section, a prime specialization is a prime specialization of $\datum_5$ with respect to this set $S$. At a prime specialization we write $p_i=L_i(M,N)/c_i$ and
+\begin{equation}\label{r5:PFHJ}
+\pi_F=p_0p_1p_2p_3,\qquad \pi_H=p_4p_5p_6p_7,\qquad \pi_J=p_8p_9p_{10}p_{11},
+\end{equation}
+so that $F=432\pi_F$, $H=16\pi_H$ and $J=24\pi_J$, since $c_0c_1c_2c_3=432$, $c_4c_5c_6c_7=16$ and $c_8c_9c_{10}c_{11}=24$.
+
+The moving index sets are $G_E=I_F\cup I_H=\{0,\dots,7\}$ and $G_{E'}=I_F\cup I_J$, and the ordered bases are
+\begin{equation}\label{r5:bases}
+\begin{aligned}
+\cB_E&=(-1,\,2,\,3,\,5,\,p_0,\,p_1,\,p_2,\,p_3,\,p_4,\,p_5,\,p_6,\,p_7),\\
+\cB_{E'}&=(-1,\,2,\,3,\,5,\,p_0,\,p_1,\,p_2,\,p_3,\,p_8,\,p_9,\,p_{10},\,p_{11}).
+\end{aligned}
+\end{equation}
+We have $n_E=n_{E'}=12$. The constants of \cref{def:moving-rows} are
+\begin{equation}\label{r5:kappa}
+\begin{aligned}
+\kappa_E&=-B\prod_{j\in G_E}c_j=-2700\cdot6912=-4320^2,\\
+\kappa_{E'}&=C\prod_{j\in G_{E'}}c_j=57600\cdot10368=2\cdot17280^2,
+\end{aligned}
+\end{equation}
+so that $\sq{\kappa_E}=\sq{-1}$ and $\sq{\kappa_{E'}}=\sq{2}$. Since $\kappa_E$ and $\kappa_{E'}$ have no prime factors other than $2$, $3$ and $5$, each of the lists \eqref{r5:Gamma} consists of $-1$ and distinct primes, including every prime dividing $\kappa_E$ and $\kappa_{E'}$. By \cref{lem:prime-spec-basic}, at every prime specialization, $\cB_E$ and $\cB_{E'}$ are ambient bases for $E$ and $E'$ in the sense of \cref{def:rows}, and $E(\Q)[2]=\{O,T\}$.
+
+\section{Rational points and the lower bound}\label{sec:r5-points}
+
+We use the binary quadratic forms
+\begin{equation}\label{r5:quadratics}
+\begin{aligned}
+D&=-165M^2-226MN+62N^2, & D_1&=-8745M^2-5440MN+1550N^2,\\
+V&=-7755M^2-3187MN+1240N^2, &&
+\end{aligned}
+\end{equation}
+and the two combinations
+\[
+\begin{aligned}
+2D_1-55D&=-8415M^2+1550MN-310N^2,\\
+3D_1+65D&=-36960M^2-31010MN+8680N^2.
+\end{aligned}
+\]
+The forms $D$ and $D_1$ come from the parametrization of a conic (see \cref{sec:origin-r5}). \Cref{tab:r5-points} lists five points; for each, the table gives the abscissa $x$ and the ratio $y/x$.
+
+\begin{table}[htbp]
+\centering
+\caption{Points on $E$ and $E'$. The ordinate is $y=x\cdot(y/x)$.}\label{tab:r5-points}
+\begin{tabular}{cll}
+\toprule
+point & $x$ & $y/x$\\
+\midrule
+$P_1\in E$ & $-150F$ & $-24D$\\
+$P_2\in E$ & $\tfrac{10}{49}L_2L_3L_6L_7$ & $\tfrac87(2D_1-55D)$\\
+$Q_1\in E'$ & $24J$ & $12D$\\
+$Q_2\in E'$ & $120L_0L_1L_8L_9$ & $\tfrac67(3D_1+65D)$\\
+$Q_3\in E'$ & $\tfrac{1600}{49}L_1L_2L_8L_{10}$ & $\tfrac27V$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Points]\label{lem:r5-points}
+For every $(M,N)\in\Z^2$ with $FHJ\ne0$, the points $P_1,P_2$ of \cref{tab:r5-points} lie in $E_{M,N}(\Q)$, and the points $Q_1,Q_2,Q_3$ lie in $E'_{M,N}(\Q)$.
+\end{lemma}
+
+\begin{proof}
+Consider a curve $y^2=x^3+\alpha x^2+\beta x$ and a pair $(x,y)$ with $y=\rho x$. Then
+\[
+y^2-x^3-\alpha x^2-\beta x=x^2\Big(\rho^2-x-\alpha-\frac\beta x\Big).
+\]
+In each of the five cases, $\beta/x$ is a polynomial in $M$ and $N$, and it suffices to check that $\rho^2=x+\alpha+\beta/x$ as polynomials. For $P_1$, we have $\rho=-24D$, $x=-150F$ and $\beta/x=18H$, and the condition reads $576D^2=1350F+18H$. For $P_2$, we have $\beta/x=-13230\,L_0L_1L_4L_5$, and after multiplication by $49$ the condition becomes the second identity in \eqref{r5:quartic-identities} below. For the points on $E'$, we have $\beta'/x=2400F$, $480L_2L_3L_{10}L_{11}$ and $1764L_0L_3L_9L_{11}$, respectively. After dividing by $18$, $1$, $24$, $1$ and $1$, and multiplying by $1$, $49$, $1$, $49$ and $49$, respectively, the five conditions become
+\begin{equation}\label{r5:quartic-identities}
+\begin{aligned}
+32D^2&=75F+H,\\
+64(2D_1-55D)^2&=10L_2L_3L_6L_7+73500F-648270L_0L_1L_4L_5,\\
+6D^2&=J-25F,\\
+36(3D_1+65D)^2&=5880L_0L_1L_8L_9-147000F+23520L_2L_3L_{10}L_{11},\\
+4V^2&=1600L_1L_2L_8L_{10}-147000F+86436L_0L_3L_9L_{11}.
+\end{aligned}
+\end{equation}
+Both sides of each line are binary quartic forms, and each line amounts to five equalities between integers, which follow from \cref{tab:r5-quartics}. For instance, the coefficients of $M^4$ in the first line are $32\cdot27225=871200$ and $75\cdot28314-1252350=871200$.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{Coefficients of the binary quartic forms in \eqref{r5:identity} and \eqref{r5:quartic-identities}, in the monomials $M^4$, $M^3N$, $M^2N^2$, $MN^3$, $N^4$.}\label{tab:r5-quartics}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+form & $M^4$ & $M^3N$ & $M^2N^2$ & $MN^3$ & $N^4$\\
+\midrule
+$F$ & $28314$ & $23111$ & $-7929$ & $310$ & $0$\\
+$H$ & $-1252350$ & $653235$ & $1574387$ & $-920018$ & $123008$\\
+$J$ & $871200$ & $1025255$ & $-14529$ & $-160394$ & $23064$\\
+\midrule
+$D^2$ & $27225$ & $74580$ & $30616$ & $-28024$ & $3844$\\
+$(2D_1-55D)^2$ & $70812225$ & $-26086500$ & $7619800$ & $-961000$ & $96100$\\
+$(3D_1+65D)^2$ & $1366041600$ & $2292259200$ & $319994500$ & $-538333600$ & $75342400$\\
+$V^2$ & $60140025$ & $49430370$ & $-9075431$ & $-7903760$ & $1537600$\\
+\midrule
+$L_0L_1L_4L_5$ & $-3630$ & $5467$ & $-1605$ & $62$ & $0$\\
+$L_2L_3L_6L_7$ & $9768330$ & $17589759$ & $2997535$ & $-4409626$ & $615040$\\
+$L_0L_1L_8L_9$ & $10890$ & $4147$ & $-1575$ & $62$ & $0$\\
+$L_2L_3L_{10}L_{11}$ & $2265120$ & $3651967$ & $440625$ & $-822058$ & $115320$\\
+$L_1L_2L_8L_{10}$ & $627264$ & $832590$ & $119083$ & $-91760$ & $3844$\\
+$L_0L_3L_9L_{11}$ & $39325$ & $26180$ & $-16109$ & $1860$ & $0$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Next, we compute the classes of these points and of the $2$-torsion points $T$ and $T'$ at a prime specialization. By \cref{def:descent-map}, we have $\delta_E(T)=\sq{\beta}$, $\delta_{E'}(T')=\sq{\beta'}$, and $\delta_E(P)=\sq{x(P)}$ for the other points. We substitute $L_i=c_ip_i$ and remove square factors from the constants. For example,
+\[
+\begin{aligned}
+\beta=-2700FH&=-2700\cdot432\cdot16\,\pi_F\pi_H=-4320^2\,\pi_F\pi_H,\\
+\tfrac{10}{49}L_2L_3L_6L_7&=\tfrac{10}{49}\cdot16\,p_2p_3p_6p_7=10\big(\tfrac47\big)^2p_2p_3p_6p_7.
+\end{aligned}
+\]
+\Cref{tab:r5-classes} lists all seven classes, and \eqref{r5:class-vectors} gives their coordinate vectors in the bases \eqref{r5:bases}.
+
+\begin{table}[htbp]
+\centering
+\caption{Classes of the points at a prime specialization. The class is $\sq{g\prod_{j}p_j}$, where $g$ is the constant and $j$ runs over the moving support.}\label{tab:r5-classes}
+\begin{tabular}{clllc}
+\toprule
+point & class & constant after $L_i=c_ip_i$ & $g$ & moving support\\
+\midrule
+$T\in E$ & $\sq{-2700FH}$ & $-2700\cdot6912=-4320^2$ & $-1$ & $0,1,2,3,4,5,6,7$\\
+$P_1\in E$ & $\sq{-150F}$ & $-150\cdot432=-2\cdot180^2$ & $-2$ & $0,1,2,3$\\
+$P_2\in E$ & $\sq{10L_2L_3L_6L_7}$ & $10\cdot16=10\cdot4^2$ & $10$ & $2,3,6,7$\\
+\midrule
+$T'\in E'$ & $\sq{57600FJ}$ & $57600\cdot10368=2\cdot17280^2$ & $2$ & $0,1,2,3,8,9,10,11$\\
+$Q_1\in E'$ & $\sq{24J}$ & $24\cdot24=24^2$ & $1$ & $8,9,10,11$\\
+$Q_2\in E'$ & $\sq{120L_0L_1L_8L_9}$ & $120\cdot216=5\cdot72^2$ & $5$ & $0,1,8,9$\\
+$Q_3\in E'$ & $\sq{L_1L_2L_8L_{10}}$ & $32=2\cdot4^2$ & $2$ & $1,2,8,10$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In coordinates, the classes are
+\begin{equation}\label{r5:class-vectors}
+\begin{array}{r@{\;}c@{\;}l}
+\mathbf v_1=\delta_E(T)&=&(1,0,0,0,\,1,1,1,1,\,1,1,1,1),\\
+\mathbf v_2=\delta_E(P_1)&=&(1,1,0,0,\,1,1,1,1,\,0,0,0,0),\\
+\mathbf v_3=\delta_E(P_2)&=&(0,1,0,1,\,0,0,1,1,\,0,0,1,1),\\[3pt]
+\mathbf w_1=\delta_{E'}(T')&=&(0,1,0,0,\,1,1,1,1,\,1,1,1,1),\\
+\mathbf w_2=\delta_{E'}(Q_1)&=&(0,0,0,0,\,0,0,0,0,\,1,1,1,1),\\
+\mathbf w_3=\delta_{E'}(Q_2)&=&(0,0,0,1,\,1,1,0,0,\,1,1,0,0),\\
+\mathbf w_4=\delta_{E'}(Q_3)&=&(0,1,0,0,\,0,1,1,0,\,1,0,1,0).
+\end{array}
+\end{equation}
+
+\begin{lemma}[Lower bound]\label{lem:r5-lower}
+At every prime specialization, the classes $\mathbf v_1,\mathbf v_2,\mathbf v_3$ are independent elements of $\delta_E(E(\Q))$, and the classes $\mathbf w_1,\mathbf w_2,\mathbf w_3,\mathbf w_4$ are independent elements of $\delta_{E'}(E'(\Q))$. In particular, $d_E\ge3$ and $d_{E'}\ge4$.
+\end{lemma}
+
+\begin{proof}
+At a prime specialization, we have $FHJ\ne0$ by \cref{lem:prime-spec-basic}, and \cref{lem:r5-points} implies that the points of \cref{tab:r5-points} are rational points. Their classes, and those of $T$ and $T'$, lie in $\delta_E(E(\Q))$ and $\delta_{E'}(E'(\Q))$, and they are given by \eqref{r5:class-vectors}. By \cref{lem:independence}, it suffices to find suitable columns. On $E$, we take the columns $p_4,p_0,p_6$ for $\mathbf v_1,\mathbf v_2,\mathbf v_3$: the vector $\mathbf v_1$ has entry $1$ at $p_4$, where $\mathbf v_2$ and $\mathbf v_3$ vanish; $\mathbf v_2$ has entry $1$ at $p_0$, where $\mathbf v_3$ vanishes; and $\mathbf v_3$ has entry $1$ at $p_6$. On $E'$, the columns $p_3,p_{11},p_0,p_2$ for $\mathbf w_1,\mathbf w_2,\mathbf w_3,\mathbf w_4$ have the same property, as one reads off from \eqref{r5:class-vectors}.
+\end{proof}
+
+\section{The congruence class and the real cone}\label{sec:r5-progression}
+
+We impose the congruences in \cref{tab:r5-crt}. The moduli are pairwise coprime, and their product is
+\[
+W=2^6\cdot3^4\cdot5\cdot7\cdot11\cdot17\cdot19\cdot31=19984345920.
+\]
+By the Chinese remainder theorem, the congruences are equivalent to
+\begin{equation}\label{r5:crt}
+M\equiv M_0,\qquad N\equiv N_0\pmod W,\qquad M_0=6555660534,\quad N_0=-1.
+\end{equation}
+One checks directly that $M_0\equiv54\pmod{2^6\cdot3^4\cdot5}$ (note $2^6\cdot3^4\cdot5=25920$ and $54\equiv4\pmod5$), and that $M_0\equiv3,5,4,18,14$ modulo $7,11,17,19,31$, respectively. We write $\cP_5$ for the set of $(M,N)\in\Z^2$ satisfying \eqref{r5:crt}.
+
+\begin{table}[htbp]
+\centering
+\caption{The congruences defining $\cP_5$.}\label{tab:r5-crt}
+\begin{tabular}{l*{8}{r}}
+\toprule
+modulus & $2^6$ & $3^4$ & $5$ & $7$ & $11$ & $17$ & $19$ & $31$\\
+\midrule
+$M\bmod{}$ & $54$ & $54$ & $4$ & $3$ & $5$ & $4$ & $18$ & $14$\\
+$N\bmod{}$ & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & $-1$ & $-1$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Residues on the progression]\label{lem:r5-progression}
+Let $(M,N)\in\cP_5$. For every $i$, the cofactor $c_i$ divides $L_i(M,N)$, and the integer $p_i=L_i(M,N)/c_i$ satisfies the congruences of \cref{tab:r5-residues}. In particular, every $p_i$ is prime to $W$, and $FHJ\ne0$.
+\end{lemma}
+
+\begin{table}[htbp]
+\centering
+\caption{Residues of $p_i=L_i(M,N)/c_i$ modulo $q$, for $(M,N)\in\cP_5$.}\label{tab:r5-residues}
+\begin{tabular}{c*{12}{r}}
+\toprule
+$q\backslash i$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$8$ & $1$ & $5$ & $5$ & $7$ & $5$ & $3$ & $3$ & $5$ & $1$ & $7$ & $1$ & $1$\\
+$3$ & $1$ & $1$ & $1$ & $1$ & $2$ & $1$ & $1$ & $1$ & $1$ & $1$ & $2$ & $2$\\
+$5$ & $1$ & $4$ & $1$ & $2$ & $1$ & $3$ & $3$ & $3$ & $1$ & $1$ & $2$ & $2$\\
+$7$ & $2$ & $4$ & $1$ & $1$ & $4$ & $3$ & $4$ & $5$ & $1$ & $2$ & $2$ & $5$\\
+$11$ & $6$ & $1$ & $10$ & $10$ & $6$ & $5$ & $6$ & $1$ & $1$ & $4$ & $8$ & $2$\\
+$17$ & $7$ & $4$ & $9$ & $9$ & $3$ & $13$ & $5$ & $10$ & $7$ & $4$ & $12$ & $16$\\
+$19$ & $13$ & $17$ & $11$ & $6$ & $11$ & $17$ & $7$ & $7$ & $12$ & $15$ & $13$ & $15$\\
+$31$ & $6$ & $30$ & $16$ & $18$ & $20$ & $12$ & $10$ & $12$ & $21$ & $9$ & $14$ & $27$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proof}
+We begin with the moduli $8$, $3$ and $5$. Since $M_0\equiv54\pmod{25920}$, $N_0=-1$ and $25920=2^6\cdot3^4\cdot5$ divides $W$, every $(M,N)\in\cP_5$ satisfies $(M,N)\equiv(54,-1)\pmod{25920}$. The values $L_i(54,-1)=54a_i-b_i$ are
+\[
+54,\ 1189,\ 488,\ 7567,\ -3032,\ 163,\ 7483,\ 2906,\ 5284,\ 271,\ 1697,\ 2982,
+\]
+and their quotients by $c_i$ are the integers
+\begin{equation}\label{r5:anchor}
+1,\ 1189,\ 61,\ 7567,\ -379,\ 163,\ 7483,\ 1453,\ 1321,\ 271,\ 1697,\ 497.
+\end{equation}
+Each $c_i$ divides $2^3\cdot3^3$. Hence $c_i$ divides $25920$, and $25920/c_i$ is an integer divisible by $2^3\cdot3\cdot5=120$. By \cref{lem:precision} with $W_0=25920$ and $(m,n)=(54,-1)$, the cofactor $c_i$ divides $L_i(M,N)$, and $p_i$ is congruent modulo $25920/c_i$, and hence modulo $120$, to the $i$-th integer in \eqref{r5:anchor}. Reducing \eqref{r5:anchor} modulo $8$, $3$ and $5$ gives the first three rows of \cref{tab:r5-residues}. All entries in these rows are nonzero. We note that the integer of index $4$ in \eqref{r5:anchor} is negative: the residues of $p_4$ are those of $-379$, not those of $379$ (for instance, $-379\equiv5$ and $379\equiv3\pmod8$).
+
+Now let $q\in\{7,11,17,19,31\}$. Then $q\nmid c_i$, and by \eqref{r5:crt} we have $(M,N)\equiv(r_q,-1)\pmod q$, where $r_q=3,5,4,18,14$, respectively. We obtain
+\[
+p_i\equiv(a_ir_q-b_i)\,c_i^{-1}\pmod q,
+\]
+which gives the remaining rows of \cref{tab:r5-residues}. For example, for $q=7$ and $i=4$, we have $(-55\cdot3-62)\cdot8^{-1}\equiv(-227)\cdot1\equiv4\pmod7$. All entries are nonzero, which implies that every $p_i$ is prime to $W$. Then $L_i(M,N)\ne0$ for every $i$, and $FHJ\ne0$.
+\end{proof}
+
+The cone is
+\begin{equation}\label{r5:cone}
+\cK_5=\Big\{(M,N)\in\R^2:\ M>0,\ \ \tfrac{19}{20}M<N<\tfrac{11}{10}M\Big\}.
+\end{equation}
+It is an open convex cone.
+
+\begin{lemma}[Positivity on the cone]\label{lem:r5-cone}
+Every $L_i$ is positive on $\cK_5$. In particular, $F$, $H$ and $J$ are positive on $\cK_5$.
+\end{lemma}
+
+\begin{proof}
+Let $(M,N)\in\cK_5$ and $t=N/M$, so that $19/20<t<11/10$. Then $L_i=M(a_i+b_it)$, and $L_0=M>0$. If $b_i>0$, then $a_i+b_it>0$ if and only if $t>-a_i/b_i$; the largest of these thresholds is $-a_4/b_4=55/62<19/20$. If $b_i<0$, then $a_i+b_it>0$ if and only if $t<a_i/|b_i|$; the smallest of these thresholds is $a_5/|b_5|=3>11/10$. Hence $a_i+b_it>0$ for every $i$.
+\end{proof}
+
+The proof shows that the twelve forms are positive exactly when $M>0$ and $55/62<N/M<3$. We note that $(54,-1)$ and $(M_0,N_0)$ are not in $\cK_5$; this does not matter, because \cref{lem:r5-progression} concerns residues only.
+
+\section{Local conditions at the fixed places}\label{sec:r5-fixed}
+
+We now bound the local images at the places $2$, $3$, $5$ and $\infty$. Recall from \cref{def:descent-map} that $\delta_{E,v}$ denotes the local descent map on $E(\Q_v)$.
+
+\begin{lemma}[Local images at the fixed places]\label{lem:r5-fixed}
+Let $(M,N)\in\cP_5$. Then $FHJ\ne0$, and the local images satisfy the inclusions in \cref{tab:r5-fixed}, at the places $2$, $3$ and $5$. If moreover $(M,N)\in\cK_5$, then they also satisfy the inclusions in the last line of \cref{tab:r5-fixed}.
+\end{lemma}
+
+\begin{table}[htbp]
+\centering
+\caption{Upper bounds for the local images at the fixed places.}\label{tab:r5-fixed}
+\begin{tabular}{lll}
+\toprule
+$v$ & $\delta_{E,v}(E(\Q_v))$ & $\delta_{E',v}(E'(\Q_v))$\\
+\midrule
+$2$ & $\subseteq\{\sq1,\sq2\}$ & $\subseteq\{\sq1,\sq{-1},\sq2,\sq{-2}\}$\\
+$3$ & $\subseteq\{\sq1\}$ & $\subseteq\sqgp{\Q_3}$\\
+$5$ & $\subseteq\{\sq1,\sq5\}$ & $\subseteq\{\sq1,\sq5\}$\\
+$\infty$ & $\subseteq\sqgp{\R}$ & $\subseteq\{\sq1\}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The entries $\sqgp{\Q_3}$ and $\sqgp{\R}$ impose no condition; we list them for completeness. The proof below uses the parameters at the finite places only through the residues of the numbers $L_i(M,N)/c_i$ modulo $8$, $3$ and $5$. By \cref{lem:precision}, applied with $W_0=25920$ to the values at $(54,-1)$, these residues are already fixed when $M\equiv54$ and $N\equiv-1\pmod{25920}$, so the bounds at $2$, $3$ and $5$ hold for all such pairs. We use them only on $\cP_5$.
+
+\begin{proof}
+The proof has five parts: the prime $2$ for $E$ and for $E'$, the prime $3$ for $E$, the prime $5$ for both curves, and the real place for $E'$. In each part, we first rescale the curve. We then treat the points of the local curve in turn: the point at infinity $O$, the point $T$ (or $T'$), the other points with $y=0$, whose existence we decide with \cref{lem:two-torsion}, and the points with $y\ne0$, sorted by the valuation of $x$. The descent class of $O$ is always $\sq1$.
+
+\paragraph{Preliminaries.} By \cref{lem:r5-progression}, we have $FHJ\ne0$, and $F=432\pi_F$, $H=16\pi_H$, $J=24\pi_J$, where $\pi_F$, $\pi_H$, $\pi_J$ are the products \eqref{r5:PFHJ} of integers with the residues of \cref{tab:r5-residues}. Multiplying these residues, we find
+\begin{equation}\label{r5:P-residues}
+\begin{aligned}
+(\pi_F,\pi_H,\pi_J)&\equiv(7,1,7)\pmod8,\\
+(\pi_F,\pi_H,\pi_J)&\equiv(1,2,1)\pmod3,\\
+(\pi_F,\pi_H,\pi_J)&\equiv(3,2,4)\pmod5.
+\end{aligned}
+\end{equation}
+These residues are the same for all $(M,N)\in\cP_5$, and they are the only properties of $(M,N)$ that we use at $2$, $3$ and $5$. A change of coordinates $x=\lambda^2\tilde x$, $y=\lambda^3\tilde y$ with $\lambda\in\Q^\times$ divides the coefficients of $x^2$ and $x$ by $\lambda^2$ and $\lambda^4$, and it multiplies $x$ by a square. It therefore does not change the descent class of any point, including the class $\sq\beta$ of $T$. For a point with $\tilde y\ne0$, the right side of the rescaled equation is the square $\tilde y^2$, and we use \cref{lem:squares}: an element of $\Q_p^\times$ is a square only if its valuation is even and its unit part is congruent to $1\pmod8$ (if $p=2$) or to a square modulo $p$ (if $p$ is odd). We use \cref{lem:dominant}\ref{item:dominant-val} for valuations, and \cref{lem:dominant}\ref{item:dominant-unit} for unit parts: if the other terms have valuation at least $h$ more than the dominant term, then the unit part of the sum is congruent to that of the dominant term modulo $p^h$.
+
+\paragraph{The prime $2$, curve $E$.} Let $F=16F_2$, $H=16H_2$ and $J=8J_2$, where $F_2=27\pi_F$, $H_2=\pi_H$ and $J_2=3\pi_J$ are odd. By \eqref{r5:P-residues}, we have $F_2\equiv5$, $H_2\equiv1$ and $J_2\equiv5\pmod8$. We set
+\[
+\alpha_2=375F_2,\qquad\beta_2=-675F_2H_2,\qquad\beta'_2=225F_2J_2,
+\]
+so that $\alpha_2\equiv3$, $\beta_2\equiv1$ and $\beta'_2\equiv1\pmod8$. The identity \eqref{r5:identity} implies that $1875F+9H=3(625F+3H)=48J$, which gives
+\begin{equation}\label{r5:coupling}
+\alpha_2^2-\beta_2=75F_2(1875F_2+9H_2)=\frac{75F_2}{16}(1875F+9H)=225F_2J=8\beta'_2.
+\end{equation}
+The change of coordinates $x=16\tilde x$, $y=64\tilde y$ transforms $E$ into
+\[
+\tilde y^2=g(\tilde x),\qquad g(\tilde x)=\tilde x^3+4\alpha_2 \tilde x^2+4\beta_2 \tilde x,
+\]
+since $1500F/16=1500F_2=4\alpha_2$ and $-2700FH/16^2=-2700F_2H_2=4\beta_2$.
+
+The point $T$ has class $\sq{4\beta_2}=\sq{\beta_2}=\sq1$, since $\beta_2\equiv1\pmod8$. By \cref{lem:two-torsion}, points $(\tilde x_0,0)$ with $\tilde x_0\ne0$ exist only if $(4\alpha_2)^2-16\beta_2=16(\alpha_2^2-\beta_2)=128\beta'_2$ is a square in $\Q_2$. By \eqref{r5:coupling}, this number has odd valuation $7$, and there are no such points.
+
+Now let $(\tilde x,\tilde y)$ be a point with $\tilde y\ne0$, and let $\tilde x=2^ru$ with $r=v_2(\tilde x)$ and $u\in\Z_2^\times$. The three terms of $g(\tilde x)$ have valuations $3r$, $2r+2$ and $r+2$.
+\begin{itemize}
+\item If $r<0$, then $\tilde x^3$ is the only term of least valuation, and $v_2(g(\tilde x))=3r$. Since this valuation is even, we have $r\le-2$. The other two terms then have valuation at least $3r+4$, and the unit part of $g(\tilde x)$ is congruent to $u^3\equiv u\pmod 8$. Since $g(\tilde x)$ is a square, we have $u\equiv1\pmod8$ and $\sq{\tilde x}=\sq1$.
+\item If $r=0$, then $g(\tilde x)=u\big(u^2+4(\alpha_2 u+\beta_2)\big)$, where $\alpha_2 u+\beta_2$ is even. Then $g(\tilde x)\equiv u^3\equiv u\pmod8$, which implies that $u\equiv1\pmod8$ and $\sq{\tilde x}=\sq1$.
+\item If $r\ge2$, then $4\beta_2 \tilde x$ is the only term of least valuation, and $r$ is even. For $r=2$, we have $g(4u)=16u\big(\beta_2+4u(\alpha_2+u)\big)$, where $\alpha_2+u$ is even. For even $r\ge4$, the other two terms have valuation at least $(r+2)+4$. In both cases the unit part of $g(\tilde x)$ is congruent to $\beta_2 u\equiv u\pmod8$, and we find $u\equiv1\pmod8$ and $\sq{\tilde x}=\sq1$.
+\item If $r=1$, then \eqref{r5:coupling} implies that
+\[
+g(2u)=8u\big(u^2+2\alpha_2 u+\beta_2\big)=8u\big((u+\alpha_2)^2-8\beta'_2\big).
+\]
+If $u\equiv3$ or $7\pmod8$, then $u+\alpha_2\equiv2\pmod4$, and $(u+\alpha_2)^2$ has valuation $2$. By \cref{lem:dominant}, the bracket also has valuation $2$, and $v_2(g(\tilde x))=5$ is odd, a contradiction. If $u\equiv5\pmod8$, then $8\mid u+\alpha_2$ and $(u+\alpha_2)^2\in2^6\Z_2$. The bracket is then $-8\beta'_2$ times an element of $1+8\Z_2$, and the unit part of $g(\tilde x)$ is congruent to $-u\beta'_2\equiv3\pmod8$, which is not a square. The remaining case $u\equiv1\pmod8$ gives $\sq{\tilde x}=\sq{2u}=\sq2$.
+\end{itemize}
+This shows that $\delta_{E,2}(E(\Q_2))\subseteq\{\sq1,\sq2\}$.
+
+\paragraph{The prime $2$, curve $E'$.} The change of coordinates $x=64\tilde x$, $y=512\tilde y$ transforms $E'$ into
+\[
+\tilde y^2=g'(\tilde x),\qquad g'(\tilde x)=\tilde x^3-2\alpha_2 \tilde x^2+8\beta'_2 \tilde x,
+\]
+since $-3000F/64=-750F_2=-2\alpha_2$ and $57600FJ/64^2=1800F_2J_2=8\beta'_2$.
+
+The point $T'$ has class $\sq{8\beta'_2}=\sq2$, since $\beta'_2\equiv1\pmod8$. By \eqref{r5:coupling}, the discriminant of $\tilde x^2-2\alpha_2 \tilde x+8\beta'_2$ is $4\alpha_2^2-32\beta'_2=4\beta_2$, and $\beta_2\equiv1\pmod8$ is a square in $\Q_2$. By \cref{lem:two-torsion}, there are two points $(\tilde x_1,0)$ and $(\tilde x_2,0)$ with $\tilde x_1\tilde x_2\ne0$. Their abscissas are $\alpha_2\pm s$, where $s^2=\beta_2$ and we choose the sign of $s$ with $s\equiv1\pmod4$. Then $\alpha_2-s\equiv2\pmod4$, and $(\alpha_2-s)(\alpha_2+s)=8\beta'_2$ has valuation $3$. We obtain $\alpha_2-s=2u_1$ and $\alpha_2+s=4u_2$ with $u_1,u_2\in\Z_2^\times$, and these satisfy $u_1u_2=\beta'_2\equiv1$ and $u_1+2u_2=\alpha_2\equiv3\pmod8$. Since $u_1^2\equiv1\pmod8$, the first congruence implies that $u_2\equiv u_1\pmod8$, and the second then reads $3u_1\equiv3\pmod 8$, that is, $u_1\equiv u_2\equiv1\pmod8$. The two points have the classes $\sq{2u_1}=\sq2$ and $\sq{4u_2}=\sq1$.
+
+Now let $(\tilde x,\tilde y)$ be a point with $\tilde y\ne0$, and let $\tilde x=2^ru$ with $r=v_2(\tilde x)$ and $u\in\Z_2^\times$. The three terms of $g'(\tilde x)$ have valuations $3r$, $2r+1$ and $r+3$.
+\begin{itemize}
+\item If $r<0$, then $\tilde x^3$ is the only term of least valuation, and as before $r\le-2$. The other two terms have valuation at least $3r+3$, and the unit part of $g'(\tilde x)$ is congruent to $u\pmod8$. We find $u\equiv1\pmod8$ and $\sq{\tilde x}=\sq1$.
+\item If $r=0$, then $g'(u)=u^3-2\alpha_2 u^2+8\beta'_2 u\equiv u-6\pmod 8$, where we used $u^2\equiv1$ and $2\alpha_2\equiv6\pmod8$. This is a square only if $u\equiv7\pmod8$, which gives $\sq{\tilde x}=\sq{-1}$.
+\item If $r\ge3$, then $8\beta'_2 \tilde x$ is the only term of least valuation, and $r$ is odd. For $r=3$, we have $g'(8u)=64u\big(\beta'_2-2\alpha_2 u+8u^2\big)$, whose unit part is congruent to $u(1-6u)\equiv u-6\pmod8$; this implies that $u\equiv7\pmod8$ and $\sq{\tilde x}=\sq{8\cdot7}=\sq{-2}$. For odd $r\ge5$, the other two terms have valuation at least $(r+3)+3$, the unit part of $g'(\tilde x)$ is congruent to $\beta'_2 u\equiv u\pmod8$, and we find $u\equiv1\pmod8$ and $\sq{\tilde x}=\sq2$.
+\item If $r=1$ or $r=2$, then
+\[
+\begin{aligned}
+g'(2u)&=2^3u\,g_1(u),& g_1(u)&=u^2-\alpha_2 u+2\beta'_2,\\
+g'(4u)&=2^5u\,g_2(u),& g_2(u)&=2u^2-\alpha_2 u+\beta'_2.
+\end{aligned}
+\]
+Since $u^2\equiv1$, $\alpha_2\equiv3$ and $\beta'_2\equiv1\pmod8$, we have $g_1(u)\equiv g_2(u)\equiv3-3u\pmod8$. If $u\equiv5\pmod8$, then $g_1(u)\equiv g_2(u)\equiv4\pmod8$ have valuation $2$, and $v_2(g'(\tilde x))$ is $5$ or $7$, which is odd. If $u\equiv3\pmod8$, then $g_i(u)\equiv2\pmod8$. In that case $g_i(u)=2w$ with $w\equiv1\pmod4$, and the unit part $uw$ of $g'(\tilde x)$ is congruent to $3\pmod4$; it is not a square. Only the residues of $u$, $\alpha_2$ and $\beta'_2$ modulo $8$ enter this argument, and it applies to every $u$ in the residue class and every parameter in $\cP_5$. The remaining residues $u\equiv1,7\pmod8$ give $\sq{\tilde x}\in\{\sq{\pm2},\sq{\pm1}\}$.
+\end{itemize}
+Altogether, every point of $E'(\Q_2)$ has one of the classes $\sq1,\sq{-1},\sq2,\sq{-2}$, which proves the inclusion for $E'$ at $2$.
+
+\paragraph{The prime $3$, curve $E$.} We have $F=27F_3$ with $F_3=16\pi_F\equiv1\pmod3$, and $H=16\pi_H\equiv2\pmod3$ by \eqref{r5:P-residues}. The change of coordinates $x=9\tilde x$, $y=27\tilde y$ transforms $E$ into
+\[
+\tilde y^2=h(\tilde x),\qquad h(\tilde x)=\tilde x^3+9\alpha_3\tilde x^2+9\beta_3\tilde x,\qquad \alpha_3=500F_3,\quad \beta_3=-100F_3H,
+\]
+where $\alpha_3\equiv2$ and $\beta_3\equiv1\pmod3$. The point $T$ has class $\sq{9\beta_3}=\sq1$, since $\beta_3$ is a unit congruent to a square modulo $3$. The discriminant of $\tilde x^2+9\alpha_3\tilde x+9\beta_3$ is $9(9\alpha_3^2-4\beta_3)$, and $9\alpha_3^2-4\beta_3\equiv2\pmod3$ is not a square modulo $3$. By \cref{lem:two-torsion}, there are no points $(\tilde x_0,0)$ with $\tilde x_0\ne0$.
+
+Let $(\tilde x,\tilde y)$ be a point with $\tilde y\ne0$, and let $\tilde x=3^ru$ with $r=v_3(\tilde x)$ and $u\in\Z_3^\times$. The three terms of $h(\tilde x)$ have valuations $3r$, $2r+2$ and $r+2$.
+\begin{itemize}
+\item If $r\le0$, then $\tilde x^3$ is the only term of least valuation, and the other two terms have valuation at least $3r+2$. We find that $r$ is even and that the unit part of $h(\tilde x)$ is congruent to $u^3\equiv u\pmod3$. This implies that $u\equiv1\pmod 3$ and $\sq{\tilde x}=\sq1$.
+\item If $r\ge2$, then $9\beta_3\tilde x$ is the only term of least valuation, and the other two terms have valuation at least $(r+2)+2$. As before, $r$ is even and the unit part of $h(\tilde x)$ is congruent to $\beta_3u\equiv u\pmod3$, which gives $\sq{\tilde x}=\sq1$.
+\item If $r=1$, then $h(3u)=27u\big(u^2+3\alpha_3u+\beta_3\big)$, and the bracket is congruent to $1+1=2\pmod3$. Then $v_3(h(\tilde x))=3$ is odd, a contradiction.
+\end{itemize}
+Every point of $E(\Q_3)$ has class $\sq1$, and $\delta_{E,3}(E(\Q_3))=\{\sq1\}$.
+
+\paragraph{The prime $5$.} By \eqref{r5:P-residues}, $F$, $H$ and $J$ are units at $5$, with $F\equiv432\cdot3\equiv1$, $H\equiv16\cdot2\equiv2$ and $J\equiv24\cdot4\equiv1\pmod5$. For either curve, we denote its coefficients by $125\alpha_5$ and $25\beta_5$: for $E$, we have $\alpha_5=12F$ and $\beta_5=-108FH\equiv4\pmod5$, and for $E'$, we have $\alpha_5=-24F$ and $\beta_5=2304FJ\equiv4\pmod5$. Both curves have the form
+\[
+y^2=k(x),\qquad k(x)=x^3+125\alpha_5x^2+25\beta_5x,\qquad \alpha_5\in\Z_5,\quad\beta_5\equiv4\pmod5.
+\]
+The point $(0,0)$ has class $\sq{25\beta_5}=\sq1$, since $4$ is a square modulo $5$. The discriminant $25(625\alpha_5^2-4\beta_5)$ is $25$ times a unit congruent to $4\pmod5$, and it is a square. By \cref{lem:two-torsion}, there are two points $(x_0,0)$ with $x_0\ne0$. Let $(x_0,0)$ be one of them, and let $r=v_5(x_0)$. If $r\le0$, the term $x_0^2$ is the only term of least valuation in $x_0^2+125\alpha_5x_0+25\beta_5$, and if $r\ge2$, the term $25\beta_5$ is; in both cases \cref{lem:dominant} shows that the sum is not zero. The only possibility is $r=1$, that is, $x_0=5u$ with $u\in\Z_5^\times$ and $u^2+25\alpha_5u+\beta_5=0$, which gives $u^2\equiv-\beta_5\equiv1\pmod5$. Then $u\equiv\pm1$ is a square modulo $5$, and $\sq{x_0}=\sq5$.
+
+Let $(x,y)$ be a point with $y\ne0$, and let $x=5^ru$ with $r=v_5(x)$ and $u\in\Z_5^\times$. The three terms of $k(x)$ have valuations $3r$, at least $2r+3$, and $r+2$.
+\begin{itemize}
+\item If $r\le0$, then $x^3$ is the only term of least valuation, and the unit part of $k(x)$ is congruent to $u^3\pmod5$. We find that $r$ is even and that $u$ is a square modulo $5$, and $\sq x=\sq1$.
+\item If $r\ge2$, then $25\beta_5x$ is the only term of least valuation, and the unit part of $k(x)$ is congruent to $4u\pmod5$. Again $r$ is even and $u$ is a square modulo $5$, and $\sq x=\sq1$.
+\item If $r=1$, then $k(5u)=125u\big(u^2+\beta_5+25\alpha_5u\big)$. If $u\not\equiv\pm1\pmod5$, then $u^2\equiv4$, the bracket is congruent to $3\pmod5$, and $v_5(k(x))=3$ is odd, a contradiction. If $u\equiv\pm1\pmod5$, then $u$ is a square and $\sq x=\sq5$.
+\end{itemize}
+We conclude that $\delta_{E,5}(E(\Q_5))$ and $\delta_{E',5}(E'(\Q_5))$ are contained in $\{\sq1,\sq5\}$.
+
+\paragraph{The real place, curve $E'$.} Let $(M,N)\in\cK_5$. By \cref{lem:r5-cone}, we have $F,H,J>0$. The point $T'$ has class $\sq{57600FJ}=\sq1$. The discriminant of $x^2-3000Fx+57600FJ$ is $16\beta=-43200FH<0$, and there are no other real points with $y=0$. If $(x,y)$ is a real point with $y\ne0$ and $x<0$, then $x^2-3000Fx+57600FJ>0$ and $y^2=x(x^2-3000Fx+57600FJ)<0$, which is impossible. Every point with $y\ne0$ therefore has $x>0$, and $\delta_{E',\infty}(E'(\R))=\{\sq1\}$. This completes the proof.
+\end{proof}
+
+We now turn the inclusions of \cref{lem:r5-fixed} into rows in the sense of \cref{def:rows}. We use the coordinates of \cref{sec:descent-conventions}: a class in $\sqgp{\Q_2}$ has coordinates $(e_1,e_2,e_3)$ with respect to $\sq{-1},\sq2,\sq5$, a class in $\sqgp{\Q_q}$ for odd $q$ has the valuation coordinate $\nu_q$ and the character coordinate $\chi_q$ of \eqref{eq:odd-coordinates}, and in $\sqgp\R$ we use the sign coordinate $\mathrm{sgn}$. Let $U_v$ be the subgroup in the row of \cref{tab:r5-fixed} for the place $v$. The linear maps vanishing on $U_2=\{\sq1,\sq2\}$ (for $E$) are spanned by $e_1$ and $e_3$; on $U_2=\{\sq{\pm1},\sq{\pm2}\}$ (for $E'$), by $e_3$; on $U_3=\{\sq1\}$, by $\chi_3$ and $\nu_3$; on $U_5=\{\sq1,\sq5\}$, by $\chi_5$; and on $U_\infty=\{\sq1\}$, by $\mathrm{sgn}$. The rows defined by these triples $(v,U_v,f)$ are the five fixed rows $f^E_1,\dots,f^E_5$ for $E$ and the three fixed rows $f^{E'}_1,f^{E'}_2,f^{E'}_3$ for $E'$ in \cref{tab:r5-fixed-rows}, in the notation of \cref{prop:rank-criterion}. By \eqref{eq:row-entries}, their entries are the values of these coordinates at the entries of $\cB_E$ and $\cB_{E'}$. At the constants $-1,2,3,5$, the values follow from $3\equiv3\pmod8$, $5\equiv5\pmod8$ and the Legendre symbols modulo $3$ and $5$. At $p_j$, the entries of the rows at the finite places depend only on the residues of $p_j$ modulo $8$, $3$ and $5$ in \cref{tab:r5-residues}, and the entries of the real row $f^{E'}_3$ are zero at every prime specialization, since the $p_j$ are positive. The fixed rows are therefore the same at every prime specialization in $\cP_5$.
+
+\begin{table}[htbp]
+\centering
+\caption{The fixed rows, as functions of the basis elements. The last column gives the entry at $p_j$ in terms of the residues of $p_j$.}\label{tab:r5-fixed-rows}
+\begin{tabular}{lllccccl}
+\toprule
+row & place & coordinate & $-1$ & $2$ & $3$ & $5$ & entry at $p_j$\\
+\midrule
+$f^E_1$ & $2$ & $e_1$ & $1$ & $0$ & $1$ & $0$ & $1$ if $p_j\equiv3,7\pmod8$\\
+$f^E_2$ & $2$ & $e_3$ & $0$ & $0$ & $1$ & $1$ & $1$ if $p_j\equiv3,5\pmod8$\\
+$f^E_3$ & $3$ & $\chi_3$ & $1$ & $1$ & $0$ & $1$ & $1$ if $p_j\equiv2\pmod3$\\
+$f^E_4$ & $3$ & $\nu_3$ & $0$ & $0$ & $1$ & $0$ & $0$\\
+$f^E_5$ & $5$ & $\chi_5$ & $0$ & $1$ & $1$ & $0$ & $1$ if $p_j\equiv2,3\pmod5$\\
+\midrule
+$f^{E'}_1$ & $2$ & $e_3$ & $0$ & $0$ & $1$ & $1$ & $1$ if $p_j\equiv3,5\pmod8$\\
+$f^{E'}_2$ & $5$ & $\chi_5$ & $0$ & $1$ & $1$ & $0$ & $1$ if $p_j\equiv2,3\pmod5$\\
+$f^{E'}_3$ & $\infty$ & $\mathrm{sgn}$ & $1$ & $0$ & $0$ & $0$ & $0$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Characters at the moving primes}\label{sec:r5-characters}
+
+The moving rows are given by \cref{def:moving-rows}: they are the rows $r^E_i$ with $i\in I_F\cup I_J$ for $E$, and the rows $r^{E'}_i$ with $i\in I_F\cup I_H$ for $E'$. By \cref{cor:eta-structure}, the entries of these rows are the constant characters $\lambda_i(g)$ with $g\in\Gamma_E=\Gamma_{E'}$, the bits $\gamma_{ij}+\eta$ at the moving columns $j\ne i$, and, for $i\in I_F$, the diagonal entries $\gamma^\star_{ii}+\eta$, where $\theta_i$, $\gamma_{ij}$ and $\gamma^\star_{ii}$ are defined in \eqref{eq:theta}, \eqref{eq:gamma} and \eqref{eq:gamma-diagonal}, and $\eps=\leg N{p_0}=(-1)^\eta$. We now compute these bits from the residues in \cref{tab:r5-residues} and check that they are the same at all prime specializations in $\cP_5$.
+
+\paragraph{Constant characters.} We write $\sigma_i=\lambda_i(-1)$. By \eqref{eq:reciprocity}, $\sigma_i=1$ if and only if $p_i\equiv3\pmod4$, and $\lambda_i(2)=1$ if and only if $p_i\equiv3,5\pmod8$. For an odd prime $q\ne p_i$, we have $\lambda_i(q)=\chi_q(p_i)+\sigma_i\chi_q(-1)$ by \cref{lem:fixed-characters}. We see that $\lambda_i(q)$ is determined by the residue of $p_i$ modulo $q$ and by $\sigma_i$, and that the correction $\sigma_i$ enters only when $q\equiv3\pmod4$. The nonzero squares modulo $7$, $11$, $17$, $19$ and $31$ are $\{1,2,4\}$, $\{1,3,4,5,9\}$, $\{1,2,4,8,9,13,15,16\}$, $\{1,4,5,6,7,9,11,16,17\}$ and $\{1,2,4,5,7,8,9,10,14,16,18,19,20,25,28\}$. Applying these rules to \cref{tab:r5-residues}, we find the entries of \cref{tab:r5-const-char}. The rows for $-1,2,3,5$ give the entries of the moving rows in the constant columns; the other rows are used for the bits $\gamma_{ij}$ below.
+
+\begin{table}[htbp]
+\centering
+\caption{The constant characters $\lambda_i(g)$, where $\leg g{p_i}=(-1)^{\lambda_i(g)}$.}\label{tab:r5-const-char}
+\begin{tabular}{c*{12}{c}}
+\toprule
+$g\backslash i$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$-1$ & $0$ & $0$ & $0$ & $1$ & $0$ & $1$ & $1$ & $0$ & $0$ & $1$ & $0$ & $0$\\
+$2$ & $0$ & $1$ & $1$ & $0$ & $1$ & $1$ & $1$ & $1$ & $0$ & $0$ & $0$ & $0$\\
+$3$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ & $1$\\
+$5$ & $0$ & $0$ & $0$ & $1$ & $0$ & $1$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$\\
+\midrule
+$7$ & $0$ & $0$ & $0$ & $1$ & $0$ & $0$ & $1$ & $1$ & $0$ & $1$ & $0$ & $1$\\
+$11$ & $1$ & $0$ & $1$ & $0$ & $1$ & $1$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$\\
+$17$ & $1$ & $0$ & $0$ & $0$ & $1$ & $0$ & $1$ & $1$ & $1$ & $0$ & $1$ & $0$\\
+$19$ & $1$ & $0$ & $0$ & $1$ & $0$ & $1$ & $1$ & $0$ & $1$ & $0$ & $1$ & $1$\\
+$31$ & $1$ & $1$ & $0$ & $1$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ & $0$ & $1$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Cross symbols.} By \cref{tab:r5-residues}, we have $p_0\equiv1\pmod8$ on $\cP_5$, and $\lambda_0(-1)=0$. Then \eqref{eq:theta} and \eqref{eq:gamma} read
+\begin{equation}\label{r5:gamma}
+\theta_i=\lambda_0(b_ic_i),\qquad \gamma_{0j}=\theta_j,\qquad \gamma_{i0}=\theta_i,\qquad \gamma_{ij}=\lambda_i(K_{ij})+\theta_i\quad(i,j\ge1),
+\end{equation}
+where $K_{ij}=c_0c_jb_i\Delta_{ji}=54\,c_jb_i(a_jb_i-a_ib_j)$. The numbers $b_ic_i$ have the square-free parts
+\[
+-1,\ -1,\ 5\cdot31,\ 31,\ -1,\ -31,\ 2,\ 2\cdot31,\ -1,\ 31,\ -2\qquad(i=1,\dots,11),
+\]
+and since $\lambda_0(-1)=\lambda_0(2)=\lambda_0(5)=0$ and $\lambda_0(31)=1$ by \cref{tab:r5-const-char}, we find
+\begin{equation}\label{r5:theta-values}
+(\theta_1,\dots,\theta_{11})=(0,0,1,1,0,1,0,1,0,1,0).
+\end{equation}
+By \cref{rem:constant-characters}, the bits $\gamma_{ij}$ are needed for $i\in I_F$ and every $j\ne i$, and for the pairs with one index in $I_H$ and the other in $I_J$. In \cref{tab:r5-K}, we list the square-free part $s_{ij}$ of $K_{ij}$ for every needed pair with $1\le i<j$, together with $\lambda_i(K_{ij})$, which is the sum of the entries of \cref{tab:r5-const-char} in column $i$ over the prime factors of $s_{ij}$ (and over $-1$ if $s_{ij}<0$). For example, for $(i,j)=(1,3)$, we have $\lambda_1(2)+\lambda_1(3)+\lambda_1(11)+\lambda_1(17)+\lambda_1(19)=1+0+0+0+0=1$. For $1\le i<j$, the bit $\gamma_{ji}$ can be computed in the same way from $K_{ji}$, but it is quicker to use reciprocity. At a prime specialization, \cref{cor:eta-structure} and \eqref{eq:reciprocity} show that $\gamma_{ji}+\eta=\lambda_j(p_i)=\lambda_i(p_j)+\sigma_i\sigma_j=\gamma_{ij}+\eta+\sigma_i\sigma_j$, and we obtain
+\begin{equation}\label{r5:reverse}
+\gamma_{ji}=\gamma_{ij}+\sigma_i\sigma_j,
+\end{equation}
+and $\sigma_i\sigma_j=1$ only when $i,j\in\{3,5,6,9\}$. Combining \eqref{r5:gamma}, \eqref{r5:theta-values}, \cref{tab:r5-K} and \eqref{r5:reverse}, we obtain the bits $\gamma_{ij}$ of \cref{tab:r5-cross}.
+
+\begin{table}[htbp]
+\centering
+\caption{The square-free parts $s_{ij}$ of $K_{ij}=54\,c_jb_i(a_jb_i-a_ib_j)$ for the needed pairs $1\le i<j$, and the characters $\lambda_i(K_{ij})=\lambda_i(s_{ij})$.}\label{tab:r5-K}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlc@{\quad}rlc@{\quad}rlc}
+\toprule
+$(i,j)$ & $s_{ij}$ & $\lambda_i$ & $(i,j)$ & $s_{ij}$ & $\lambda_i$ & $(i,j)$ & $s_{ij}$ & $\lambda_i$\\
+\midrule
+$(1,2)$ & $-3\cdot 5\cdot 7$ & $0$ & $(2,8)$ & $7$ & $0$ & $(4,11)$ & $5\cdot 11\cdot 31$ & $1$ \\
+$(1,3)$ & $2\cdot 3\cdot 11\cdot 17\cdot 19$ & $1$ & $(2,9)$ & $3$ & $0$ & $(5,8)$ & $2\cdot 5\cdot 19$ & $1$ \\
+$(1,4)$ & $3\cdot 7\cdot 11\cdot 17$ & $0$ & $(2,10)$ & $3\cdot 7$ & $0$ & $(5,9)$ & $3$ & $1$ \\
+$(1,5)$ & $-2\cdot 3\cdot 19$ & $1$ & $(2,11)$ & $1$ & $0$ & $(5,10)$ & $2\cdot 3\cdot 5$ & $1$ \\
+$(1,6)$ & $-3\cdot 17$ & $0$ & $(3,4)$ & $-5\cdot 11\cdot 17$ & $0$ & $(5,11)$ & $19$ & $1$ \\
+$(1,7)$ & $3\cdot 7\cdot 11\cdot 19$ & $0$ & $(3,5)$ & $3\cdot 5\cdot 19\cdot 31$ & $0$ & $(6,8)$ & $2\cdot 5$ & $0$ \\
+$(1,8)$ & $2\cdot 3\cdot 7\cdot 11\cdot 19$ & $1$ & $(3,6)$ & $2\cdot 3\cdot 5\cdot 17$ & $0$ & $(6,9)$ & $2\cdot 3\cdot 17\cdot 31$ & $0$ \\
+$(1,9)$ & $-2\cdot 3\cdot 17$ & $1$ & $(3,7)$ & $-5\cdot 11\cdot 19\cdot 31$ & $0$ & $(6,10)$ & $3\cdot 5\cdot 17$ & $1$ \\
+$(1,10)$ & $7\cdot 17$ & $0$ & $(3,8)$ & $2\cdot 3\cdot 5\cdot 11\cdot 19$ & $1$ & $(6,11)$ & $31$ & $1$ \\
+$(1,11)$ & $-11\cdot 19$ & $0$ & $(3,9)$ & $5\cdot 17\cdot 31$ & $0$ & $(7,8)$ & $3\cdot 7\cdot 11\cdot 19$ & $1$ \\
+$(2,3)$ & $3$ & $0$ & $(3,10)$ & $2\cdot 3\cdot 5\cdot 17$ & $0$ & $(7,9)$ & $2\cdot 5$ & $0$ \\
+$(2,4)$ & $2\cdot 3\cdot 7$ & $1$ & $(3,11)$ & $5\cdot 11\cdot 19\cdot 31$ & $1$ & $(7,10)$ & $2\cdot 3\cdot 7$ & $0$ \\
+$(2,5)$ & $-1$ & $0$ & $(4,8)$ & $3\cdot 7\cdot 11$ & $0$ & $(7,11)$ & $5\cdot 11\cdot 19$ & $1$ \\
+$(2,6)$ & $-1$ & $0$ & $(4,9)$ & $5\cdot 17\cdot 31$ & $1$ & & & \\
+$(2,7)$ & $3\cdot 7$ & $0$ & $(4,10)$ & $3\cdot 7\cdot 17$ & $0$ & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The constants $\gamma_{ij}$ with $\lambda_i(p_j)=\gamma_{ij}+\eta$. Row $i$, column $j$. A dash marks a pair that enters no row.}\label{tab:r5-cross}
+\begin{tabular}{c*{12}{c}}
+\toprule
+$i\backslash j$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ & $11$\\
+\midrule
+$0$ & $\cdot$ & $0$ & $0$ & $1$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ & $1$ & $0$ \\
+$1$ & $0$ & $\cdot$ & $0$ & $1$ & $0$ & $1$ & $0$ & $0$ & $1$ & $1$ & $0$ & $0$ \\
+$2$ & $0$ & $0$ & $\cdot$ & $0$ & $1$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+$3$ & $1$ & $1$ & $0$ & $\cdot$ & $1$ & $1$ & $1$ & $1$ & $0$ & $1$ & $1$ & $0$ \\
+\midrule
+$4$ & $1$ & $0$ & $1$ & $1$ & $\cdot$ & -- & -- & -- & $1$ & $0$ & $1$ & $0$ \\
+$5$ & $0$ & $1$ & $0$ & $0$ & -- & $\cdot$ & -- & -- & $1$ & $1$ & $1$ & $1$ \\
+$6$ & $1$ & $0$ & $0$ & $0$ & -- & -- & $\cdot$ & -- & $1$ & $1$ & $0$ & $0$ \\
+$7$ & $0$ & $0$ & $0$ & $1$ & -- & -- & -- & $\cdot$ & $1$ & $0$ & $0$ & $1$ \\
+\midrule
+$8$ & $1$ & $1$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ & $\cdot$ & -- & -- & -- \\
+$9$ & $0$ & $1$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & -- & $\cdot$ & -- & -- \\
+$10$ & $1$ & $0$ & $0$ & $1$ & $1$ & $1$ & $0$ & $0$ & -- & -- & $\cdot$ & -- \\
+$11$ & $0$ & $0$ & $0$ & $0$ & $0$ & $1$ & $0$ & $1$ & -- & -- & -- & $\cdot$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For example, $\gamma_{13}=\lambda_1(K_{13})+\theta_1=1+0=1$, and $\gamma_{31}=\gamma_{13}+\sigma_1\sigma_3=1$.
+
+\paragraph{Primes outside the modulus.} By \cref{lem:fixed-characters}, the characters in \cref{tab:r5-const-char,tab:r5-K} depend only on the residues of the $p_i$ modulo $8$ and modulo the odd primes $3,5,7,11,17,19,31$, which are fixed on $\cP_5$. Six primes of $S$ do not divide $W$: $13$, $41$, $131$, $257$, $409$ and $2089$. By \cref{tab:r5-det}, they divide only $\Delta_{46}$, $\Delta_{57}$, $\Delta_{23}=41^2$, $\Delta_{67}$, $\Delta_{45}$, $\Delta_{89}$ and $\Delta_{10,11}$. Except for $\Delta_{23}$, these belong to pairs of two indices in $I_H$ or two in $I_J$, which enter no row by \cref{rem:constant-characters}, and $\Delta_{23}$ is a square. The square-free parts in \cref{tab:r5-K} have prime factors in $\{2,3,5,7,11,17,19,31\}$ only, as the table shows. Every character in this section is therefore the same for all prime specializations in $\cP_5$. The only quantity that is not determined by the congruence class is $\eta$.
+
+\section{The matrices and the upper bound}\label{sec:r5-matrices}
+
+We now assemble the rows. The matrix $\mathbf M_E(\eta)$ has the fixed rows $f^E_1,\dots,f^E_5$ of \cref{tab:r5-fixed-rows}, followed by the moving rows $r^E_0,r^E_1,r^E_2,r^E_3$ (at $p_i$, $i\in I_F$) and $r^E_8,r^E_9,r^E_{10},r^E_{11}$ (at $p_i$, $i\in I_J$). The matrix $\mathbf M_{E'}(\eta)$ has the fixed rows $f^{E'}_1,f^{E'}_2,f^{E'}_3$, followed by the moving rows $r^{E'}_0,\dots,r^{E'}_3$ and $r^{E'}_4,\dots,r^{E'}_7$. The columns are indexed by the bases \eqref{r5:bases}.
+
+By \cref{cor:eta-structure} and \cref{sec:r5-characters}, the entries of a moving row $r^\star_i$ are as follows. In the constant columns $-1,2,3,5$, they are the entries of \cref{tab:r5-const-char} in column $i$. In a moving column $p_j$ with $j\ne i$, the entry is $\gamma_{ij}+\eta$, with $\gamma_{ij}$ from \cref{tab:r5-cross}. For $i\in I_F$, the entry in the column $p_i$ is $\gamma^\star_{ii}+\eta$, where
+\[
+\gamma^\star_{ii}=\lambda_i(\kappa_\star)+\sum_{j\in G_\star\setminus\{i\}}\gamma_{ij},\qquad \lambda_i(\kappa_E)=\lambda_i(-1),\quad\lambda_i(\kappa_{E'})=\lambda_i(2),
+\]
+by \eqref{eq:gamma-diagonal} and \eqref{r5:kappa}. \Cref{tab:r5-diagonal} evaluates these sums.
+
+\begin{table}[htbp]
+\centering
+\caption{The diagonal bits $\gamma^E_{ii}$ and $\gamma^{E'}_{ii}$ of the moving rows.}\label{tab:r5-diagonal}
+\begin{tabular}{crrrrrr}
+\toprule
+& \multicolumn{3}{c}{curve $E$} & \multicolumn{3}{c}{curve $E'$}\\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+$i$ & $\lambda_i(-1)$ & $\sum_{j\in G_E\setminus\{i\}}\gamma_{ij}$ & $\gamma^E_{ii}$ & $\lambda_i(2)$ & $\sum_{j\in G_{E'}\setminus\{i\}}\gamma_{ij}$ & $\gamma^{E'}_{ii}$\\
+\midrule
+$0$ & $0$ & $3$ & $1$ & $0$ & $3$ & $1$\\
+$1$ & $0$ & $2$ & $0$ & $1$ & $3$ & $0$\\
+$2$ & $0$ & $1$ & $1$ & $1$ & $0$ & $1$\\
+$3$ & $1$ & $6$ & $1$ & $0$ & $4$ & $0$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The resulting matrices at $\eta=0$ are displayed in \cref{tab:r5-ME,tab:r5-MEp}. A vertical and a horizontal rule separate the block of moving rows and moving columns. When $\eta=1$, that is, when $\eps=-1$, every entry of this block changes, and no other entry changes: the fixed rows do not depend on $\eta$, and neither do the entries of the moving rows in the columns $-1,2,3,5$. In accordance with \cref{cor:eta-structure}, we have
+\begin{equation}\label{r5:eta}
+\begin{gathered}
+r^E_i(\eta)=r^E_i(0)+\eta u_E,\qquad r^{E'}_i(\eta)=r^{E'}_i(0)+\eta u_{E'},\\
+u_E=u_{E'}=(0,0,0,0,1,1,1,1,1,1,1,1),
+\end{gathered}
+\end{equation}
+where $r^\star_i(\eta)$ denotes the moving row of $\mathbf M_\star(\eta)$ at $p_i$, and $u_E=u_{E'}$ is the indicator vector of the eight moving columns. The row codes that the verification scripts use for these matrices are listed in \cref{app:verification}.
+
+\begin{table}[htbp]
+\centering
+\caption{The matrix $\mathbf M_E(0)$.}\label{tab:r5-ME}
+\begin{tabular}{cc|cccc|cccccccc}
+& & $-1$ & $2$ & $3$ & $5$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_4$ & $p_5$ & $p_6$ & $p_7$\\
+\hline
+$f^{E}_1$ & $(2,e_1)$ & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 \\
+$f^{E}_2$ & $(2,e_3)$ & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 1 \\
+$f^{E}_3$ & $(3,\chi_3)$ & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+$f^{E}_4$ & $(3,\nu_3)$ & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+$f^{E}_5$ & $(5,\chi_5)$ & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 1 \\
+\hline
+$r^{E}_0(0)$ & $p_0$ & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+$r^{E}_1(0)$ & $p_1$ & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 \\
+$r^{E}_2(0)$ & $p_2$ & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
+$r^{E}_3(0)$ & $p_3$ & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 \\
+$r^{E}_8(0)$ & $p_8$ & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+$r^{E}_9(0)$ & $p_9$ & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+$r^{E}_{10}(0)$ & $p_{10}$ & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 \\
+$r^{E}_{11}(0)$ & $p_{11}$ & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 \\
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The matrix $\mathbf M_{E'}(0)$.}\label{tab:r5-MEp}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{cc|cccc|cccccccc}
+& & $-1$ & $2$ & $3$ & $5$ & $p_0$ & $p_1$ & $p_2$ & $p_3$ & $p_8$ & $p_9$ & $p_{10}$ & $p_{11}$\\
+\hline
+$f^{E'}_1$ & $(2,e_3)$ & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+$f^{E'}_2$ & $(5,\chi_5)$ & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 \\
+$f^{E'}_3$ & $(\infty,\mathrm{sgn})$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+$r^{E'}_0(0)$ & $p_0$ & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+$r^{E'}_1(0)$ & $p_1$ & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 \\
+$r^{E'}_2(0)$ & $p_2$ & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+$r^{E'}_3(0)$ & $p_3$ & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 \\
+$r^{E'}_4(0)$ & $p_4$ & 0 & 1 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 0 & 1 & 0 \\
+$r^{E'}_5(0)$ & $p_5$ & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+$r^{E'}_6(0)$ & $p_6$ & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+$r^{E'}_7(0)$ & $p_7$ & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 \\
+\end{tabular}
+\end{table}
+
+\begin{lemma}[Rank certificates]\label{lem:r5-certificate}
+The matrices of \cref{tab:r5-ME,tab:r5-MEp} have the following properties.
+\begin{enumerate}[label=(\alph*)]
+\item\label{item:r5-cert-rank} $\rk\mathbf M_E(0)=9$ and $\rk\mathbf M_{E'}(0)=8$. The kernel of $\mathbf M_E(0)$ is spanned by $\mathbf v_1,\mathbf v_2,\mathbf v_3$, and the kernel of $\mathbf M_{E'}(0)$ is spanned by $\mathbf w_1,\mathbf w_2,\mathbf w_3,\mathbf w_4$ (see \eqref{r5:class-vectors}).
+\item\label{item:r5-cert-u} We have
+\begin{equation}\label{r5:u-sums}
+\begin{aligned}
+u_E&=f^E_3+f^E_4+r^E_2(0)+r^E_3(0),\\
+u_{E'}&=r^{E'}_1(0)+r^{E'}_2(0)+r^{E'}_5(0)+r^{E'}_6(0).
+\end{aligned}
+\end{equation}
+In particular, $u_E$ is the sum of a set of rows of $\mathbf M_E(0)$ containing two moving rows, and $u_{E'}$ is the sum of a set of rows of $\mathbf M_{E'}(0)$ containing four moving rows.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For \ref{item:r5-cert-rank}, we exhibit minors that are lower triangular with ones on the diagonal. In \cref{tab:r5-minors}, we display the submatrix of $\mathbf M_E(0)$ formed by the rows $f^E_4$, $f^E_1$, $r^E_1(0)$, $f^E_5$, $r^E_{11}(0)$, $f^E_3$, $r^E_0(0)$, $r^E_3(0)$, $r^E_2(0)$ and the columns $3$, $-1$, $2$, $p_7$, $5$, $p_4$, $p_0$, $p_1$, $p_2$, in these orders, and the submatrix of $\mathbf M_{E'}(0)$ formed by the rows $f^{E'}_3$, $r^{E'}_0(0)$, $r^{E'}_1(0)$, $r^{E'}_2(0)$, $r^{E'}_4(0)$, $r^{E'}_6(0)$, $r^{E'}_3(0)$, $r^{E'}_7(0)$ and the columns $-1$, $p_0$, $2$, $p_2$, $3$, $5$, $p_1$, $p_{11}$. Each entry can be read off from \cref{tab:r5-ME,tab:r5-MEp}. Both submatrices have ones on the diagonal and zeros above it, and their determinants are $1$. This implies that $\rk\mathbf M_E(0)\ge9$ and $\rk\mathbf M_{E'}(0)\ge8$.
+
+Next, the vectors $\mathbf v_1,\mathbf v_2,\mathbf v_3$ are orthogonal to every row of $\mathbf M_E(0)$, and $\mathbf w_1,\dots,\mathbf w_4$ are orthogonal to every row of $\mathbf M_{E'}(0)$; this is a direct check of $13\cdot3+11\cdot4=83$ scalar products over $\F_2$. For example, $r^E_3(0)$ and $\mathbf v_2$ both have the entry $1$ exactly in the columns $-1,p_0,p_1,p_3$, so $r^E_3(0)\cdot \mathbf v_2=1+1+1+1=0$. These vectors are independent by the proof of \cref{lem:r5-lower}, and the kernels have dimensions at least $3$ and $4$. We find that $\rk\mathbf M_E(0)\le9$ and $\rk\mathbf M_{E'}(0)\le8$, which together with the previous paragraph proves \ref{item:r5-cert-rank}.
+
+For \ref{item:r5-cert-u}, we add the rows column by column. On $E$, the four rows $f^E_3$, $f^E_4$, $r^E_2(0)$, $r^E_3(0)$ have the entries $(1,1,0,1)$, $(0,0,1,0)$, $(0,1,0,0)$ and $(1,0,1,1)$ in the columns $-1,2,3,5$, which add to zero. In the columns $p_0,\dots,p_7$, the entries of $f^E_3$ and $f^E_4$ are zero except for $f^E_3$ at $p_4$, and the entries of $r^E_2(0)+r^E_3(0)$ are $(1,1,1,1,0,1,1,1)$; adding $f^E_3$ gives all ones. On $E'$, the rows $r^{E'}_1(0)$, $r^{E'}_2(0)$, $r^{E'}_5(0)$, $r^{E'}_6(0)$ have the entries $(0,1,0,0)$, $(0,1,0,0)$, $(1,1,1,1)$ and $(1,1,1,1)$ in the columns $-1,2,3,5$, which add to zero, and their sum in the moving columns is
+\[
+\begin{aligned}
+&(0,0,0,1,1,1,0,0)+(0,0,1,0,0,0,0,0)\\
+&\qquad+(0,1,0,0,1,1,1,1)+(1,0,0,0,1,1,0,0)=(1,1,1,1,1,1,1,1).
+\end{aligned}
+\]
+This proves \eqref{r5:u-sums}.
+\end{proof}
+
+\begin{table}[htbp]
+\centering
+\caption{Lower-triangular minors with unit diagonal of $\mathbf M_E(0)$ (top) and $\mathbf M_{E'}(0)$ (bottom).}\label{tab:r5-minors}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{c|ccccccccc}
+& $3$ & $-1$ & $2$ & $p_7$ & $5$ & $p_4$ & $p_0$ & $p_1$ & $p_2$\\
+\hline
+$f^{E}_4$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+$f^{E}_1$ & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+$r^{E}_1(0)$ & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+$f^{E}_5$ & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0\\
+$r^{E}_{11}(0)$ & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+$f^{E}_3$ & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 0 & 0\\
+$r^{E}_0(0)$ & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0\\
+$r^{E}_3(0)$ & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 0\\
+$r^{E}_2(0)$ & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1\\
+\end{tabular}
+
+\medskip
+\begin{tabular}{c|cccccccc}
+& $-1$ & $p_0$ & $2$ & $p_2$ & $3$ & $5$ & $p_1$ & $p_{11}$\\
+\hline
+$f^{E'}_3$ & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+$r^{E'}_0(0)$ & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+$r^{E'}_1(0)$ & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+$r^{E'}_2(0)$ & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0\\
+$r^{E'}_4(0)$ & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0\\
+$r^{E'}_6(0)$ & 1 & 1 & 1 & 0 & 1 & 1 & 0 & 0\\
+$r^{E'}_3(0)$ & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 0\\
+$r^{E'}_7(0)$ & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1\\
+\end{tabular}
+\end{table}
+
+\section{Exact rank and infinitude}\label{sec:r5-theorem}
+
+We can now prove the main result of this section.
+
+\begin{theorem}[Exact rank five]\label{thm:r5}
+Let $(M,N)\in\cP_5\cap\cK_5$ be a prime specialization of $\datum_5$ with respect to the set $S$ of \eqref{r5:S}. Then $\rk E_{M,N}(\Q)=5$. Moreover, there exist infinitely many such $(M,N)$, and the curves $E_{M,N}$ obtained from them represent infinitely many $\Qbar$-isomorphism classes.
+\end{theorem}
+
+\begin{proof}
+We first prove the rank statement with \cref{prop:rank-criterion}, and then the infinitude statements with \cref{prop:infinitely-many}.
+
+\paragraph{The rank.} Let $\cP$ be the set of prime specializations in $\cP_5\cap\cK_5$. We apply \cref{prop:rank-criterion} to the datum $\datum_5$, the set $S$ of \eqref{r5:S} and the set $\cP$. As noted at the end of \cref{sec:r5-datum}, the lists $\Gamma_E$ and $\Gamma_{E'}$ consist of $-1$ and distinct primes, including every prime dividing $\kappa_E$ and $\kappa_{E'}$. We check the four hypotheses.
+\begin{enumerate}[label=(\roman*)]
+\item By \cref{lem:r5-fixed}, the vectors $f^E_1,\dots,f^E_5$ and $f^{E'}_1,f^{E'}_2,f^{E'}_3$ of \cref{tab:r5-fixed-rows} are rows for $E_{M,N}$ and $E'_{M,N}$ at every $(M,N)\in\cP$, in the sense of \cref{def:rows}. They do not depend on $(M,N)$, because their entries depend only on the residues of the $p_j$ modulo $8$, $3$ and $5$, which are the same for all $(M,N)\in\cP$ by \cref{lem:r5-progression}.
+\item By \cref{sec:r5-characters}, the bits \eqref{eq:constant-bits}, namely $\lambda_i(g)$ for $g\in\Gamma_\star$, $\lambda_i(\kappa_\star)$ and $\gamma_{ij}$, are given by \cref{tab:r5-const-char,tab:r5-cross}, and they are the same for all $(M,N)\in\cP$. The matrices $\mathbf M_E(\eta)$ and $\mathbf M_{E'}(\eta)$ of \eqref{eq:matrix-def} are given by \cref{tab:r5-ME,tab:r5-MEp} and \eqref{r5:eta}.
+\item By \cref{lem:r5-lower}, the image $\delta_E(E(\Q))$ contains the three independent classes $\mathbf v_1,\mathbf v_2,\mathbf v_3$, and $\delta_{E'}(E'(\Q))$ contains the four independent classes $\mathbf w_1,\dots,\mathbf w_4$, at every $(M,N)\in\cP$. We take $k_E=3$ and $k_{E'}=4$.
+\item By \cref{lem:r5-certificate}, we have $\rk\mathbf M_E(0)=9=n_E-k_E$ and $\rk\mathbf M_{E'}(0)=8=n_{E'}-k_{E'}$, and $u_E$ and $u_{E'}$ are sums of rows of $\mathbf M_E(0)$ and of $\mathbf M_{E'}(0)$, respectively, each containing an even number of moving rows.
+\end{enumerate}
+\Cref{prop:rank-criterion} implies that every $(M,N)\in\cP$ has $d_E=3$, $d_{E'}=4$ and
+\[
+\rk E_{M,N}(\Q)=d_E+d_{E'}-2=5.
+\]
+
+\paragraph{Infinitude.} We check the hypotheses of \cref{prop:infinitely-many} for $W$, $(M_0,N_0)$ and $\cK_5$. For hypothesis \ref{item:inf-progression}, the primes dividing $c_0\cdots c_{11}$ are $2$ and $3$, which divide $W$. Every $c_i$ divides $2^3\cdot3^3$, and $v_2(W)=6$, $v_3(W)=4$, so $v_q(W)>v_q(c_i)$ for $q=2,3$; for the other primes $q\mid W$, we have $v_q(c_i)=0<1=v_q(W)$. Since $(M_0,N_0)\in\cP_5$, \cref{lem:r5-progression} shows that $c_i\mid L_i(M_0,N_0)$ and that $L_i(M_0,N_0)/c_i$ is prime to $W$. Hypothesis \ref{item:inf-small-primes} is empty, because every prime $q\le11$ divides $W$. Hypothesis \ref{item:inf-cone} is \cref{lem:r5-cone}. \Cref{prop:infinitely-many} now gives infinitely many prime specializations $(M,N)\in\cK_5$ with $M\equiv M_0$ and $N\equiv N_0\pmod W$, and it shows that the $j$-invariants $j(E_{M,N})$ of these curves take infinitely many values. Curves with distinct $j$-invariants are not isomorphic over $\Qbar$ (\cref{rem:geometric-classes}). This completes the proof.
+\end{proof}
+
+\begin{remark}\label{rem:r5-j}
+The $j$-invariant of $E_{M,N}$ is $\tfrac49(2500F+9H)^3/(H^2J)$, by \cref{rem:j-families}. In the proof of \cref{thm:r5}, we did not need to examine the primes $q\nmid W$ at which the zero lines of two of the forms $L_i$ coincide modulo $q$, because $d_q\le12<q+1$ for every such $q$ (see \cref{lem:local-factors}). For the record, by \cref{tab:r5-det}, these primes are $13$, $41$, $131$, $257$, $409$ and $2089$. The pairs of forms whose zero lines coincide modulo these primes are $\{L_4,L_6\}$ and $\{L_5,L_7\}$ modulo $13$; $\{L_2,L_3\}$ and $\{L_6,L_7\}$ modulo $41$; and $\{L_4,L_5\}$, $\{L_6,L_7\}$, $\{L_8,L_9\}$ and $\{L_{10},L_{11}\}$ modulo $131$, $257$, $409$ and $2089$, respectively. Hence $d_{13}=d_{41}=10$ and $d_q=11$ for the other four primes.
+\end{remark}
+
+\section{Five independent points on \texorpdfstring{$E$}{E}}\label{sec:r5-five-points}
+
+The proof of \cref{thm:r5} uses points on both curves. Using the dual isogeny $\dual\colon E'\to E$, we now write down five independent points on $E$ itself. By \eqref{eq:isogenies}, for a point $(x',y')$ of $E'$ with $x'\ne0$ and $\rho=y'/x'$, we have
+\begin{equation}\label{r5:dual-formula}
+\dual(x',y')=\Big(\frac{y'^2}{4x'^2},\ \frac{y'}8\Big(1-\frac{\beta'}{x'^2}\Big)\Big)=\Big(\frac{\rho^2}4,\ \frac\rho8\Big(x'-\frac{\beta'}{x'}\Big)\Big).
+\end{equation}
+
+\begin{proposition}[Five independent points]\label{prop:r5-five-points}
+Let $(M,N)$ be as in \cref{thm:r5}. Then the points
+\begin{equation}\label{r5:five-points}
+\begin{aligned}
+P_1&=(-150F,\ 3600DF),\\
+P_2&=\Big(\tfrac{10}{49}L_2L_3L_6L_7,\ \tfrac{80}{343}L_2L_3L_6L_7\,(2D_1-55D)\Big),\\
+\dual(Q_1)&=\big(36D^2,\ 36D(J-100F)\big),\\
+\dual(Q_2)&=\Big(\tfrac9{49}(3D_1+65D)^2,\ \tfrac{90}7(3D_1+65D)\big(L_0L_1L_8L_9-4L_2L_3L_{10}L_{11}\big)\Big),\\
+\dual(Q_3)&=\Big(\tfrac1{49}V^2,\ \tfrac1{343}V\big(400L_1L_2L_8L_{10}-21609L_0L_3L_9L_{11}\big)\Big)
+\end{aligned}
+\end{equation}
+of $E_{M,N}(\Q)$ are independent.
+\end{proposition}
+
+\begin{proof}
+We first check the formulas. For the three points $(x',y')=Q_1,Q_2,Q_3$, \cref{tab:r5-points} and $\beta'=57600FJ$ give
+\[
+\begin{aligned}
+Q_1:&\quad \rho=12D, && x'-\beta'/x'=24J-2400F,\\
+Q_2:&\quad \rho=\tfrac67(3D_1+65D), && x'-\beta'/x'=120L_0L_1L_8L_9-480L_2L_3L_{10}L_{11},\\
+Q_3:&\quad \rho=\tfrac27V, && x'-\beta'/x'=\tfrac{1600}{49}L_1L_2L_8L_{10}-1764L_0L_3L_9L_{11}.
+\end{aligned}
+\]
+Inserting these values into \eqref{r5:dual-formula} gives \eqref{r5:five-points}, where in the last line we used $1764\cdot49/4=21609$.
+
+By the proof of \cref{thm:r5}, we have $d_E=3$ and $d_{E'}=4$. The classes in \eqref{r5:class-vectors} are independent by \cref{lem:r5-lower}, and since there are three of them on $E$ and four on $E'$, they form bases of $\delta_E(E(\Q))$ and $\delta_{E'}(E'(\Q))$. By \cref{prop:descent}, the kernel of $\delta_E$ is $\dual(E'(\Q))$ and the kernel of $\delta_{E'}$ is $\phi(E(\Q))$, and we obtain
+\[
+E(\Q)=\dual(E'(\Q))+\langle T,P_1,P_2\rangle,\qquad
+E'(\Q)=\phi(E(\Q))+\langle T',Q_1,Q_2,Q_3\rangle.
+\]
+Applying $\dual$ to the second equality, and using $\dual\circ\phi=[2]$ and $\dual(T')=O$ (\cref{prop:descent}), we find $\dual(E'(\Q))=2E(\Q)+\langle\dual(Q_1),\dual(Q_2),\dual(Q_3)\rangle$. Inserting this into the first equality, we find $E(\Q)=\mathcal G+2E(\Q)$, where $\mathcal G$ is the subgroup generated by $T$ and the five points \eqref{r5:five-points}. By the Mordell--Weil theorem~\cite[Theorem~VIII.6.7]{SilvermanAEC}, the quotient $E(\Q)/\mathcal G$ is a finitely generated abelian group, and it equals twice itself.
+If $E(\Q)/\mathcal G\cong\Z^m\oplus\mathcal T$ with $\mathcal T$ finite, then $(\Z/2\Z)^m\oplus\mathcal T/2\mathcal T=0$, which implies that $m=0$. The group $E(\Q)/\mathcal G$ is therefore finite, and $\mathcal G$ has rank $\rk E(\Q)=5$. Since $T$ has finite order, the subgroup generated by the five points \eqref{r5:five-points} also has rank five, and the five points are independent.
+\end{proof}
+
+The abscissas of the three points $\dual(Q_k)$ are the squares $(6D)^2$, $(3(3D_1+65D)/7)^2$ and $(V/7)^2$, as they must be, since $\dual(E'(\Q))$ is the kernel of $\delta_E$.

@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/alerad/leancert",
+  "commit": "b772f2c376b1103f444a71fe910b146c0bc9b002",
+  "upstream_toolchain": "leanprover/lean4:v4.34.1",
+  "audit_toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "scope": [
+    "LeanCert.Tactic.Verification",
+    "LeanCert.Engine.Table"
+  ],
+  "changes": "Compatibility only: test reduced decide boolean in Lean4.35 new Decidable representation; historical native axiom names quoted unresolved. Strict kernel routing and eager mkAuxLemma validation retained.",
+  "files": {
+    "LeanCert/Tactic/Verification.lean": {
+      "upstream_sha256": "2c576708b528acdde17796b0b715b83079f9cad377182dbd87c248323ff0a58c",
+      "audit_sha256": "04e3917267dedb0fff5533fef74376df443e6557b956cabc6984e207e0ee019d"
+    },
+    "LeanCert/Engine/Table.lean": {
+      "upstream_sha256": "d6ec185760b793ed0296b32a6f45bfa722f850e2519c150d8f2242afcd2fe56d",
+      "audit_sha256": "d6ec185760b793ed0296b32a6f45bfa722f850e2519c150d8f2242afcd2fe56d"
+    }
+  },
+  "logs": [
+    "module-build-ported.log",
+    "route-audit-final.log"
+  ],
+  "status": "kernel true/natural arithmetic/table checker proofs and semantic lifting pass; false checker rejected transactionally; every copied-module declaration transitive axiom sweep passed",
+  "audited_declarations": 420,
+  "audited_module_count": 2
+}

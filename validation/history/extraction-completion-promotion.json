@@ -1,0 +1,47 @@
+{
+  "old_proof_modules_unchanged": 92,
+  "modules": [
+    {
+      "source": "/workspace/work/analytic/extraction-completion/FiniteExclusions.lean",
+      "source_sha256": "09428be09b73ff93f4f4c37593581f7369f649632e2c7d9fd857a7c76e36b7a1",
+      "module": "RankCertificates/FiniteExclusions.lean",
+      "promoted_sha256": "09428be09b73ff93f4f4c37593581f7369f649632e2c7d9fd857a7c76e36b7a1",
+      "only_change": "local import names qualified into RankCertificates"
+    },
+    {
+      "source": "/workspace/work/analytic/extraction-completion/ExtractionAsymptotics.lean",
+      "source_sha256": "e19073e0c79077dcea9937ba43e97cef4d9491647b66025ce26da25c1ca4d446",
+      "module": "RankCertificates/ExtractionAsymptotics.lean",
+      "promoted_sha256": "e19073e0c79077dcea9937ba43e97cef4d9491647b66025ce26da25c1ca4d446",
+      "only_change": "local import names qualified into RankCertificates"
+    },
+    {
+      "source": "/workspace/work/analytic/extraction-completion/PrimeExtraction.lean",
+      "source_sha256": "d320ee3279bdf1c9ee0500c137cbbb502b5dad0b4645fa5e786c067b6a41b27f",
+      "module": "RankCertificates/PrimeExtraction.lean",
+      "promoted_sha256": "f9235eea047fc9c651ca5c33e67e6e44ae55ee271733d404e0bedc0c2fb933d8",
+      "only_change": "local import names qualified into RankCertificates"
+    },
+    {
+      "source": "/workspace/work/analytic/extraction-completion/PrimeAsymptoticBridge.lean",
+      "source_sha256": "a34719e2f7a7f948008f002da4cb2d0d965f7bf9517c5f5fedae6fa142e68964",
+      "module": "RankCertificates/PrimeAsymptoticBridge.lean",
+      "promoted_sha256": "83ff0440ad7946e25aa037187ebd77d77c25b0420a42f6b224ba9412416dca53",
+      "only_change": "local import names qualified into RankCertificates"
+    },
+    {
+      "source": "/workspace/work/analytic/literal-system/LiteralAffineSystems.lean",
+      "source_sha256": "648992eec93101ccfc0e7ffd68c06ae569c839a6f4a4cede9ae5c2058cac5b7d",
+      "module": "RankCertificates/LiteralAffineSystems.lean",
+      "promoted_sha256": "648992eec93101ccfc0e7ffd68c06ae569c839a6f4a4cede9ae5c2058cac5b7d",
+      "only_change": "local import names qualified into RankCertificates"
+    },
+    {
+      "source": "/workspace/work/analytic/literal-system/LiteralPrimeBridge.lean",
+      "source_sha256": "42227ccc6cade64e905e97682d700ed5edcc43d47018d68ccdf23e06a6cc37d4",
+      "module": "RankCertificates/LiteralPrimeBridge.lean",
+      "promoted_sha256": "dd9a0ca62e481ecd744a2c35c7e1e424caadf47a80062cd45e5adec4c335e227",
+      "only_change": "local import names qualified into RankCertificates"
+    }
+  ]
+}

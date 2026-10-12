@@ -1,0 +1,126 @@
+{
+  "root_source": "src/GoldenKernelExample.lean",
+  "dependency_count": 20,
+  "dependencies": [
+    {
+      "module": "LeanCert.Core.DerivativeIntervals",
+      "sha256": "d50d7a368033ed7905a92445700ceb8e95ec41e31c08b7ed49bf585d68fcf0f9",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.Expr",
+      "sha256": "2cbe45500242ef521c414d7d4b4feac885cdcdae1f77c913eaa3597df87b83fb",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.Interval",
+      "sha256": "3b7e7c4200cbb10a35444d56bb6217ba17af1c1b5e565ecdb9fe87e683589565",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.Basic",
+      "sha256": "dec62f02adb351ec8aa3397294ddf914b01b0e6c1c2f8f9864562b1d3111552c",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.LogReduction",
+      "sha256": "5526e5fc0d5447cea71dbe1debf274c2cc1532a5c40b7deee871b53a4dff09c7",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.Taylor",
+      "sha256": "d7c3988d53312a5055998f2c9c3057daaabdaba07b933fa8635cd85a943838c2",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.Transcendental",
+      "sha256": "3968b194323b625283fae2c53900340ff13ec6eaf7d52e958e5c83246f580272",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.IntervalRat.TrigReduced",
+      "sha256": "a343aa5687ff3c390b50f5572372cc1db0a4aa10c233d0c10e4d0858d19756b4",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.IntervalReal",
+      "sha256": "336cc72b71249722ee1614a4a52b2002dbff9b0e8b3d36d6f85487726b3c54ec",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.IntervalRealEndpoints",
+      "sha256": "59023618cd1996de2938dd6c8236f9fca053bb36afa3b07ad6e436ab4edd0dd5",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.Support",
+      "sha256": "10d0f93238ec81ec8f4294ca9e563d2569e896d0dc2eb4e5c715e10fcfd29670",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.Taylor",
+      "sha256": "2c3d2aef304c46b10ca430c224d00abaa876daca6f8c94cce66b5fbc7cee354e",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Core.TrigReduction",
+      "sha256": "3d905fa503e7b5818b69c10e3a03109eb47f13946b2784e20bc277823eff5f04",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Engine.Bounds.Lemmas",
+      "sha256": "0adba9119737ab87d2119c38b2cfdc9212ddeb614aad1869d5a548df66cad6bf",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Engine.Eval.Core",
+      "sha256": "88601598a7189875ea28ed1c8bf066a1a73d294e31d570ac8a25f80a353afd17",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Engine.Eval.Extended",
+      "sha256": "56c0a96e6a5b598affeac78f59d6916c0284aff26f3be0b511df2738038d0909",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Engine.Eval.Result",
+      "sha256": "89ec32b03363226f089be80b8adc15d6d07db0f423fd87565d5b3e0950fa5dab",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Engine.IntervalEval",
+      "sha256": "37ae178e55e9f352eb161ce198e8dd559ae287bd1462e3f3f7f10423634eec19",
+      "matches_pristine": true,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Tactic.Verification",
+      "sha256": "04e3917267dedb0fff5533fef74376df443e6557b956cabc6984e207e0ee019d",
+      "matches_pristine": false,
+      "compiled": true
+    },
+    {
+      "module": "LeanCert.Validity.Bounds.Core",
+      "sha256": "538becf9996d17a1ab910d0f4b697b6fc1433530560cf450d028069b6dcc5227",
+      "matches_pristine": true,
+      "compiled": true
+    }
+  ]
+}

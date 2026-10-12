@@ -1,0 +1,14 @@
+{
+  "report": "/workspace/work/ec567-manuscript-replay/verified-zip/certificate-comparison.json",
+  "sha256": "169d99a324111e3d44e3eadb01a680444feb58e06b8a437a46396263464bd176",
+  "summary": {
+    "asset_count": 6,
+    "byte_identical_to_original_count": 2,
+    "mathematical_json_data_unchanged": true,
+    "verifier_executable_ast_unchanged": true,
+    "exact_lean_table_checks": 42,
+    "all_exact_lean_table_checks_passed": true,
+    "normalization_and_fixed_prefix_checks_passed": true,
+    "passed": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "archive_sha256": "a510f3af0b73170a1f10a73f077337e6d4310efbe31ca252e2fe2bc6056bf4f6",
+  "checksums": [
+    {
+      "member": "elliptic_curves_ranks_5_7.tex",
+      "matches": true
+    },
+    {
+      "member": "elliptic_curves_ranks_5_7.pdf",
+      "matches": true
+    },
+    {
+      "member": "README.txt",
+      "matches": true
+    },
+    {
+      "member": "build.py",
+      "matches": true
+    },
+    {
+      "member": "literature_receipts.json",
+      "matches": true
+    },
+    {
+      "member": "verification_output.txt",
+      "matches": true
+    },
+    {
+      "member": "certificates/rank5/final155_certificate.json",
+      "matches": true
+    },
+    {
+      "member": "certificates/rank5/verify_final155_certificate.py",
+      "matches": true
+    },
+    {
+      "member": "certificates/rank6/rank6_certificate.json",
+      "matches": true
+    },
+    {
+      "member": "certificates/rank6/verify_rank6_certificate.py",
+      "matches": true
+    },
+    {
+      "member": "certificates/rank7/rank7_certificate.json",
+      "matches": true
+    },
+    {
+      "member": "certificates/rank7/rank7_certificate_output.json",
+      "matches": true
+    },
+    {
+      "member": "certificates/rank7/verify_rank7_certificate.py",
+      "matches": true
+    }
+  ]
+}
