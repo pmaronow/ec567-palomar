@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "pages": 152,
+  "rendering_dpi": 144,
+  "all_pages_pixel_identical": true,
+  "all_text_and_word_positions_identical": true,
+  "all_links_and_bookmarks_identical": true,
+  "bibliography_byte_identical": true,
+  "source_files": [
+    "main.tex",
+    "refs.bib"
+  ],
+  "archive_files": [
+    "main.tex",
+    "refs.bib"
+  ],
+  "compile_uses_only_two_local_source_files_and_generated_auxiliaries": true,
+  "source_sha256": {
+    "main.tex": "19b80c99e02e99d7096b2b19bea4bee1439fe992627adcc26486d90fbc1bdafc",
+    "refs.bib": "b1a903d86f75694551d68a1c6c1016326e97953f66946d5b9325d57b35107092"
+  },
+  "pdf_bytes_identical": false,
+  "pdf_metadata_may_differ": true,
+  "archive_sha256": "0d3ebb42c3b74ab824553d829953adc9867fa80942916b6fcab737004ba9976b",
+  "archive_bytes": 126522
+}
