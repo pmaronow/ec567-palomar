@@ -1,7 +1,7 @@
 module
 
 import all RankCertificates
-import all Solution
+import all EC567Solution
 import all RankCertificates.ConditionalPrimePatterns
 import all RankCertificates.AdmissibleWResidue
 import all RankCertificates.AdditiveVanDerCorput
@@ -129,7 +129,7 @@ run_cmd do
   for idx in [:owners.size] do
     let owner := owners[idx]!
     let text := owner.toString
-    if text == "RankCertificates" || text.startsWith "RankCertificates." || text == "Solution" then
+    if text == "RankCertificates" || text.startsWith "RankCertificates." || text == "EC567Solution" then
       let infos := env.header.moduleData[idx]!.constants
       counts := counts.push (owner, infos.size)
       for info in infos do

@@ -209,7 +209,7 @@ def main() -> None:
         print("HOST PREFLIGHT PASS", work, flush=True)
         return
 
-    require((project / ".lake/build/lib/lean/Solution.olean").is_file(),
+    require((project / ".lake/build/lib/lean/EC567Solution.olean").is_file(),
             "Build the project before protected verification")
     trusted_paths = [*dependency_artifacts(mathlib),
                      mathlib / ".lake/build/lib/lean", prefix / "lib/lean"]
@@ -226,7 +226,7 @@ def main() -> None:
     alias = json.loads(protected.read_text())["challenge_module"]
     source = work / "canonical/src" / Path(*alias.split(".")).with_suffix(".lean")
     source.parent.mkdir(parents=True)
-    source.write_bytes((project / "Challenge.lean").read_bytes())
+    source.write_bytes((project / "EC567Challenge.lean").read_bytes())
     canonical_lib = work / "canonical/lib"
     canonical_object = canonical_lib / Path(*alias.split(".")).with_suffix(".olean")
     canonical_object.parent.mkdir(parents=True)

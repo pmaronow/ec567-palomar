@@ -26,7 +26,7 @@ Build and audit this project first with `scripts/verify.sh`, following its
 instructions for supplying the official verification-tool checkout. If
 invoking the protected script separately, first complete the project's build,
 source checks and owning-declaration axiom audit. The protected script requires
-the resulting `Solution.olean` and pinned dependency caches.
+the resulting `EC567Solution.olean` and pinned dependency caches.
 
 Prepare a clean checkout of the public official tooling at this exact revision:
 

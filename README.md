@@ -14,7 +14,7 @@ Challenge/Solution comparison and all three kernel checks passed locally.
 
 ## The selected theorem
 
-`Challenge.lean` and `Solution.lean` share this declaration:
+`EC567Challenge.lean` and `EC567Solution.lean` share this declaration:
 
 ```lean
 RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven
@@ -32,10 +32,14 @@ gives infinitude of geometric classes.
 The self-contained Challenge imports only Mathlib and exposes genuine curve,
 rank and analytic definitions. Its selected theorem has the sole deliberate
 Challenge proof hole. The Solution and its entire owned proof development
-contain no proof holes. `Solution.lean` proves the selected theorem by the
+contain no proof holes. `EC567Solution.lean` proves the selected theorem by the
 conditional endpoint in `RankCertificates/ConditionalPrimePatterns.lean`.
 `comparator.json` selects this theorem and permits only `propext`, `Quot.sound`
 and `Classical.choice`.
+
+The submission modules are named `EC567Challenge` and `EC567Solution` to
+avoid collisions with the pinned `EllipticCurves` dependency's own `Challenge`
+and `Solution` modules.
 
 The [proof guide](PROOF_GUIDE.md) traces the selected result through the actual
 descent, prime extraction and geometric arguments with source links.

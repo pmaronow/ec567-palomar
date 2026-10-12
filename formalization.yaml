@@ -155,7 +155,7 @@ status:
   - Classical.choice
   main_results:
   - declaration: RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven
-    file: Solution.lean
+    file: EC567Solution.lean
     sorry_count: 0
     axioms:
     - propext
@@ -228,7 +228,7 @@ alignment:
   statements:
   - source: Updated manuscript main theorem, and sections on primes and the proof of the main theorem
     lean: RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven
-    module: Solution
+    module: EC567Solution
     status: proved adapted conditional implication; protected comparison and all three kernel checks passed
     note: The external prime theorem is an explicit hypothesis. Exact rank and geometric infinitude are
       conclusions.

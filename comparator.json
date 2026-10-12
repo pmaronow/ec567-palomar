@@ -1,6 +1,6 @@
 {
-  "challenge_module": "Challenge",
-  "solution_module": "Solution",
+  "challenge_module": "EC567Challenge",
+  "solution_module": "EC567Solution",
   "theorem_names": [
     "RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven"
   ],

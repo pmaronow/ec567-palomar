@@ -10,7 +10,7 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 source = (root / "AxiomAudit.lean").read_text()
 source = re.sub(r"(?m)^import all RankCertificates(?:\.[A-Za-z0-9_']+)*\n", "", source)
-source = re.sub(r"(?m)^import all Solution\n", "", source)
+source = re.sub(r"(?m)^import all EC567Solution\n", "", source)
 source = source.replace("module\n", "module\nimport all RankCertificates.Common\n", 1)
 source = source.replace("open Lean Elab Command", """namespace RankCertificates
 private axiom audit_fixture : False

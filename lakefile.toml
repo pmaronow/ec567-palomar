@@ -1,6 +1,6 @@
 name = "rankCertificates"
 version = "0.1.0"
-defaultTargets = ["RankCertificates", "Challenge", "Solution"]
+defaultTargets = ["RankCertificates", "EC567Challenge", "EC567Solution"]
 
 [[require]]
 name = "mathlib"
@@ -17,7 +17,7 @@ name = "RankCertificates"
 globs = ["RankCertificates", "RankCertificates.+"]
 
 [[lean_lib]]
-name = "Challenge"
+name = "EC567Challenge"
 
 [[lean_lib]]
-name = "Solution"
+name = "EC567Solution"

@@ -48,7 +48,7 @@ def lean_code(text: str) -> str:
 
 
 root = Path(__file__).resolve().parents[1]
-files = [root / 'RankCertificates.lean', root / 'AxiomAudit.lean', root / 'Solution.lean']
+files = [root / 'RankCertificates.lean', root / 'AxiomAudit.lean', root / 'EC567Solution.lean']
 files += sorted((root / 'RankCertificates').rglob('*.lean'))
 errors = []
 aggregate = lean_code((root / 'RankCertificates.lean').read_text())
@@ -57,8 +57,8 @@ imports = set(re.findall(r"(?m)^public import (RankCertificates(?:\.[A-Za-z0-9_'
 audit_imports = set(re.findall(r"(?m)^import all (RankCertificates(?:\.[A-Za-z0-9_']+)*)\s*$", audit_source))
 if 'RankCertificates' not in audit_imports:
     errors.append('AxiomAudit.lean: missing direct import all of aggregate RankCertificates')
-if not re.search(r'(?m)^import all Solution\s*$', audit_source):
-    errors.append('AxiomAudit.lean: missing direct private import of final Solution')
+if not re.search(r'(?m)^import all EC567Solution\s*$', audit_source):
+    errors.append('AxiomAudit.lean: missing direct private import of final EC567Solution')
 for path in files:
     if path.is_symlink():
         errors.append(f'{path.relative_to(root)}: Lean source is a symbolic link')
@@ -79,29 +79,29 @@ for path in files:
                       r'debug\.skipKernelTC']:
         if re.search(forbidden, source):
             errors.append(f'{path.relative_to(root)}: forbidden pattern {forbidden}')
-challenge = root / 'Challenge.lean'
+challenge = root / 'EC567Challenge.lean'
 if challenge.is_symlink():
-    errors.append('Challenge.lean: source is a symbolic link')
+    errors.append('EC567Challenge.lean: source is a symbolic link')
 challenge_text = challenge.read_text()
 challenge_code = lean_code(challenge_text)
 if not challenge_code.lstrip().startswith('module'):
-    errors.append('Challenge.lean: missing module command')
+    errors.append('EC567Challenge.lean: missing module command')
 if len(challenge_text.splitlines()) > 1000 or len(challenge_text.encode()) > 100 * 1024:
-    errors.append('Challenge.lean: exceeds Palomar statement size limit')
+    errors.append('EC567Challenge.lean: exceeds Palomar statement size limit')
 challenge_imports = re.findall(r'(?m)^(?:public\s+)?import\s+(\S+)', challenge_code)
 if not challenge_imports or any(not name.startswith('Mathlib.') for name in challenge_imports):
-    errors.append('Challenge.lean: imports outside the Mathlib statement closure')
+    errors.append('EC567Challenge.lean: imports outside the Mathlib statement closure')
 if len(re.findall(r'\bsorry\b', challenge_code)) != 1:
-    errors.append('Challenge.lean: expected exactly one deliberate selected-theorem hole')
+    errors.append('EC567Challenge.lean: expected exactly one deliberate selected-theorem hole')
 selected = 'infiniteGeometricClasses_exactRanksFiveThroughSeven'
 signature = r'theorem\s+' + selected + r'\s*\n\s*\(hGTZ : ConditionalPrimePatterns\.FiniteComplexityPrimeAsymptotic\)\s*:\s*\n\s*RanksFiveThroughSeven'
-for path in [challenge, root / 'Solution.lean']:
+for path in [challenge, root / 'EC567Solution.lean']:
     if not re.search(signature, lean_code(path.read_text())):
         errors.append(f'{path.name}: selected conditional theorem signature is missing')
 for forbidden in [r'\badmit\b', r'\bnative_decide\b', r'Lean\.ofReduceBool',
                   r'(?m)^\s*(?:private\s+|public\s+)?axiom\s', r'debug\.skipKernelTC']:
     if re.search(forbidden, challenge_code):
-        errors.append(f'Challenge.lean: forbidden pattern {forbidden}')
+        errors.append(f'EC567Challenge.lean: forbidden pattern {forbidden}')
 known = {path.relative_to(root) for path in files + [challenge]}
 for path in root.rglob('*.lean'):
     relative = path.relative_to(root)
