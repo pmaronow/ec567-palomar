@@ -66,6 +66,7 @@ theorem lattice_partner_seven_conditions (x y : ℤ)
     (-2 * aInteger7 x y) (cInteger7 x y) 1
     (by decide) (by exact ⟨1, by decide⟩) _ _ _ hz hc
   · simp only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat, ha]
+    rfl
   · simpa only [one_pow] using hb
   · simpa only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat,
       aInteger7_cast, cInteger7_cast] using hq
@@ -84,6 +85,7 @@ theorem lattice_partner_thirteen_conditions (x y : ℤ)
     (-2 * aInteger7 x y) (cInteger7 x y) 12
     (by decide) (by exact ⟨5, by decide⟩) _ _ _ hz hc
   · simp only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat, ha]
+    rfl
   · simpa only [show (12 : ZMod 13) ^ 2 = 1 by decide] using hb
   · simpa only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat,
       aInteger7_cast, cInteger7_cast] using hq
@@ -101,6 +103,7 @@ theorem lattice_partner_seven_rows (x y : ℤ)
     (-2 * aInteger7 x y) (cInteger7 x y) 1
     (by decide) (by exact ⟨1, by decide⟩)
   · simp only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat, ha]
+    rfl
   · simpa only [one_pow] using hb
   · simpa only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat,
       aInteger7_cast, cInteger7_cast] using hq
@@ -118,6 +121,7 @@ theorem lattice_partner_thirteen_rows (x y : ℤ)
     (-2 * aInteger7 x y) (cInteger7 x y) 12
     (by decide) (by exact ⟨5, by decide⟩)
   · simp only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat, ha]
+    rfl
   · simpa only [show (12 : ZMod 13) ^ 2 = 1 by decide] using hb
   · simpa only [Int.cast_mul, Int.cast_neg, Int.cast_ofNat,
       aInteger7_cast, cInteger7_cast] using hq

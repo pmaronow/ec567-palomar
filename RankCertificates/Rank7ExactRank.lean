@@ -13,6 +13,10 @@ are positive distinct primes outside the four fixed prime columns. -/
 
 namespace RankCertificates.Rank7ExactRank
 
+-- The sign character's binary linear map uses the additive group underlying
+-- the ring `ZMod 2`.
+local instance : AddCommGroup (ZMod 2) := (ZMod.commRing 2).toAddCommGroup
+
 open Integration Rank7CharacterEvaluation Rank7FixedRows PrimePowerCharacters
 
 local instance : Fact (Nat.Prime 2) := ⟨by decide +kernel⟩

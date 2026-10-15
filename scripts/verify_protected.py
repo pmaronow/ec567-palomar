@@ -21,7 +21,7 @@ from pathlib import Path
 
 TOOLCHAIN = "leanprover/lean4:v4.35.0-rc3"
 SUBMISSION_REV = "d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44"
-MATHLIB_REV = "282fbb865d53622ef7f9ef29f6763a0327ee6b5f"
+MATHLIB_REV = "c55e6e786f49471c72fbddbec5415808896aec1e"
 LEAN_REV = "470d5ce1400764999581fd26d5d72b00d990b0f4"
 RELEASE_SOURCE_HASHES = {
     "src/lean/LeanExport.lean": "ec95c53d108c5b014e7a53d6b88a4dbe41dc75c2e55102b2f8211268fcb94cf5",
@@ -146,8 +146,14 @@ def main() -> None:
 
     def dependency_artifacts(owner: Path) -> list[Path]:
         metadata = json.loads((owner / "lake-manifest.json").read_text())
-        directories = [owner / metadata.get("packagesDir", ".lake/packages") /
-                       p["name"] / ".lake/build/lib/lean" for p in metadata["packages"]]
+        directories = []
+        for entry in metadata["packages"]:
+            name = entry["name"]
+            require(name in packages and package_pins[name] == entry["rev"],
+                    "Nested dependency pin disagrees with project lockfile: " + name)
+            # Lake shares transitive package checkouts in the root workspace;
+            # a dependency's own .lake/packages directory is usually absent.
+            directories.append(packages[name] / ".lake/build/lib/lean")
         # Some Lake-only dependencies have no Lean artifact directory.
         return [directory.resolve(strict=True) for directory in directories
                 if directory.is_dir()]

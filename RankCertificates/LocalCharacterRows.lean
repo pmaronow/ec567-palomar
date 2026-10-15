@@ -15,6 +15,10 @@ images become equations on the corresponding prime-column vectors.
 
 namespace RankCertificates
 
+-- Match the binary field's additive group to its ring structure when
+-- reinterpreting quadratic-character homomorphisms as linear maps.
+local instance : AddCommGroup (ZMod 2) := (ZMod.commRing 2).toAddCommGroup
+
 /-- Binary parity of a sign character: `1` maps to zero and `-1` to one. -/
 def quadraticCharacterBit (x : ℤ) : ZMod 2 := if x = 1 then 0 else 1
 

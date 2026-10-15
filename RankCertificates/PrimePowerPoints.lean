@@ -16,7 +16,7 @@ theorem residuePow_pow_integral (p : ℕ) [Fact p.Prime] (k : ℕ) {x : ℚ}
     residuePow p k (x ^ n) (by rw [padicValRat.pow]; positivity) = (residuePow p k x hx) ^ n := by
   have he : integralRat p (x ^ n) (by rw [padicValRat.pow]; positivity) =
       (integralRat p x hx) ^ n := by
-    apply PadicInt.coe_inj.mp
+    apply Subtype.coe_injective
     simp only [integralRat_coe, PadicInt.coe_pow, Rat.cast_pow]
   simp only [residuePow, he, map_pow]
 

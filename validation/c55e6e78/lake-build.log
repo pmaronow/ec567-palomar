@@ -1,0 +1,8 @@
+⚠ [8969/9078] Replayed EllipticCurves.Mathlib.Basic
+warning: EllipticCurves/Mathlib/Basic.lean:695:4: `MonoidHom.coe_coe` has been deprecated: Use `MonoidHom.coe_ofClass` instead
+
+Hint: Replace the deprecated name:
+  M̵o̵n̵o̵i̵d̵H̵o̵m̵.̵c̵o̵e̵_̵c̵o̵e̵M̲o̲n̲o̲i̲d̲H̲o̲m̲.̲c̲o̲e̲_̲o̲f̲C̲l̲a̲s̲s̲
+⚠ [9073/9078] Replayed EC567Challenge
+warning: EC567Challenge.lean:203:8: declaration uses `sorry`
+Build completed successfully (9078 jobs).

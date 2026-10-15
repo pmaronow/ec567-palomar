@@ -28,36 +28,36 @@ noncomputable def integralRat (q : ℚ) (hq : 0 ≤ padicValRat p q) : ℤ_[p] :
 
 @[simp] theorem integralRat_zero (hq : 0 ≤ padicValRat p 0) :
     integralRat p 0 hq = 0 := by
-  apply PadicInt.coe_inj.mp
+  apply Subtype.coe_injective
   simp
 
 @[simp] theorem integralRat_one (hq : 0 ≤ padicValRat p 1) :
     integralRat p 1 hq = 1 := by
-  apply PadicInt.coe_inj.mp
+  apply Subtype.coe_injective
   simp
 
 theorem integralRat_add {x y : ℚ} (hx : 0 ≤ padicValRat p x)
     (hy : 0 ≤ padicValRat p y) (hxy : 0 ≤ padicValRat p (x + y)) :
     integralRat p (x + y) hxy = integralRat p x hx + integralRat p y hy := by
-  apply PadicInt.coe_inj.mp
+  apply Subtype.coe_injective
   simp only [integralRat_coe, PadicInt.coe_add, Rat.cast_add]
 
 theorem integralRat_sub {x y : ℚ} (hx : 0 ≤ padicValRat p x)
     (hy : 0 ≤ padicValRat p y) (hxy : 0 ≤ padicValRat p (x - y)) :
     integralRat p (x - y) hxy = integralRat p x hx - integralRat p y hy := by
-  apply PadicInt.coe_inj.mp
+  apply Subtype.coe_injective
   simp only [integralRat_coe, PadicInt.coe_sub, Rat.cast_sub]
 
 theorem integralRat_mul {x y : ℚ} (hx : 0 ≤ padicValRat p x)
     (hy : 0 ≤ padicValRat p y) (hxy : 0 ≤ padicValRat p (x * y)) :
     integralRat p (x * y) hxy = integralRat p x hx * integralRat p y hy := by
-  apply PadicInt.coe_inj.mp
+  apply Subtype.coe_injective
   simp only [integralRat_coe, PadicInt.coe_mul, Rat.cast_mul]
 
 theorem integralRat_isUnit {q : ℚ} (hq : q ≠ 0) (hv : padicValRat p q = 0) :
     IsUnit (integralRat p q (by omega)) := by
   apply PadicInt.isUnit_iff.mpr
-  rw [← PadicInt.norm_coe, integralRat_coe, Padic.eq_padicNorm,
+  rw [PadicInt.norm_def, integralRat_coe, Padic.eq_padicNorm,
     padicNorm.eq_zpow_of_nonzero hq, hv]
   norm_num
 
@@ -239,7 +239,7 @@ theorem valuation_two_eq_one_of_residue_six {q : ℚ}
 theorem residuePow_int (k : ℕ) (z : ℤ) (hz : 0 ≤ padicValRat p (z : ℚ)) :
     residuePow p k (z : ℚ) hz = (z : ZMod (p ^ k)) := by
   have he : integralRat p (z : ℚ) hz = (z : ℤ_[p]) := by
-    apply PadicInt.coe_inj.mp
+    apply Subtype.coe_injective
     simp
   simp only [residuePow, he, map_intCast]
 

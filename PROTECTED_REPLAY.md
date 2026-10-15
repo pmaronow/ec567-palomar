@@ -1,4 +1,4 @@
-# Private local protected replay
+# Local protected replay
 
 This replay checks the selected Challenge/Solution theorem locally. It never
 changes repository visibility, writes to GitHub, submits to Palomar, registers
@@ -40,7 +40,7 @@ source "$palomar_tools/python/bin/activate"
 ```
 
 These commands only read a public tooling repository. They do not publish this
-private formalization. The script refuses a different revision or a modified
+formalization. The script refuses a different revision or a modified
 tool checkout.
 
 ## Run
@@ -118,7 +118,8 @@ unconditional proof of the external analytic hypothesis.
 | NanoDa source in that Lean release | `4c544ed4099c8227f07d5de77ad1e69fb0740a27` |
 | con-ron source in that Lean release | `cb54c9a4e5f604a678b0230f96b8358b9fd73c82` |
 | bubblewrap | `v0.12.0` |
-| Mathlib | `282fbb865d53622ef7f9ef29f6763a0327ee6b5f` |
+| Mathlib | `c55e6e786f49471c72fbddbec5415808896aec1e` |
+| EllipticCurves compatibility snapshot | `71939de02eaa519ca47edcfb6cec38b1bb51eb4e` |
 
 The final receipt records the actual local executable SHA-256 hashes. Exports
-and binaries are not part of the private GitHub publication.
+and binaries are not part of the GitHub publication.

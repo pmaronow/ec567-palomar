@@ -10,6 +10,10 @@ public import RankCertificates.PrimePowerCharacters
 
 namespace RankCertificates.Rank7FixedRows
 
+-- Select the binary field's canonical additive group so its character rows
+-- use the same module structure as the scalar ring.
+local instance : AddCommGroup (ZMod 2) := (ZMod.commRing 2).toAddCommGroup
+
 local instance : Fact (Nat.Prime 2) := ⟨by decide +kernel⟩
 local instance : Fact (Nat.Prime 3) := ⟨by decide +kernel⟩
 local instance : Fact (Nat.Prime 7) := ⟨by decide +kernel⟩

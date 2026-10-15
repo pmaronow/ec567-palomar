@@ -19,6 +19,12 @@ independence to genuine rational squareclasses.
 
 namespace RankCertificates
 
+-- `Mathlib.GroupTheory.Nilpotent` also derives an additive commutative group
+-- structure on `ZMod 2` via simplicity. Use the ring's canonical additive
+-- structure so its self-module and function-module instances agree with the
+-- linear maps below.
+local instance : AddCommGroup (ZMod 2) := (ZMod.commRing 2).toAddCommGroup
+
 /-- Every rational squareclass has exponent dividing two. -/
 theorem rationalSquareClasses_pow_two (x : RationalSquareClasses) : x ^ 2 = 1 := by
   refine QuotientGroup.induction_on x fun u => ?_

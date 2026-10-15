@@ -26,7 +26,7 @@ theorem norm_residue (k : ℕ) (B : ℤ) {s t : ℚ}
       (residuePow 2 k s hs)^2-((2*B:ℤ):ZMod (2^k))*(residuePow 2 k t ht)^2 := by
   have hp : integralRat 2 (s^2-((2*B:ℤ):ℚ)*t^2) (norm_nonnegative B hs ht)=
       (integralRat 2 s hs)^2-((2*B:ℤ):ℤ_[2])*(integralRat 2 t ht)^2 := by
-    apply PadicInt.coe_inj.mp
+    apply Subtype.coe_injective
     simp only [integralRat_coe,PadicInt.coe_sub,PadicInt.coe_pow,PadicInt.coe_mul,
       PadicInt.coe_intCast,Rat.cast_sub,Rat.cast_pow,Rat.cast_mul,Rat.cast_intCast]
   have hm := congrArg (PadicInt.toZModPow k) hp
@@ -53,7 +53,7 @@ theorem half_norm_residue (k : ℕ) (B : ℤ) {s t : ℚ}
       2*(residuePow 2 k (s/2) hs)^2-(B:ZMod (2^k))*(residuePow 2 k t ht)^2 := by
   have hp : integralRat 2 ((s^2-((2*B:ℤ):ℚ)*t^2)/2) (half_norm_nonnegative B hs ht)=
       (2:ℤ_[2])*(integralRat 2 (s/2) hs)^2-(B:ℤ_[2])*(integralRat 2 t ht)^2 := by
-    apply PadicInt.coe_inj.mp
+    apply Subtype.coe_injective
     simp only [integralRat_coe,PadicInt.coe_sub,PadicInt.coe_pow,PadicInt.coe_mul,
       PadicInt.coe_intCast,show ((2:ℤ_[2]):ℚ_[2])=2 by rfl]
     have hr : (s^2-((2*B:ℤ):ℚ)*t^2)/2=2*(s/2)^2-(B:ℚ)*t^2 := by push_cast; ring

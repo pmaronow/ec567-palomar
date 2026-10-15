@@ -181,7 +181,7 @@ theorem rational_original_five_obstruction {u a k t : ℚ}
   have hpadic : (8:ℤ_[2])*(integralRat 2 t ht)^2 =
       integralRat 2 u hu * ((integralRat 2 u hu+integralRat 2 a ha)^2-
         8*integralRat 2 k hk) := by
-    apply PadicInt.coe_inj.mp
+    apply Subtype.coe_injective
     simp only [PadicInt.coe_mul,PadicInt.coe_pow,PadicInt.coe_add,PadicInt.coe_sub,
       integralRat_coe, show ((8:ℤ_[2]):ℚ_[2])=8 by rfl]
     simpa only [Rat.cast_mul,Rat.cast_pow,Rat.cast_sub,Rat.cast_add,Rat.cast_ofNat]
@@ -211,13 +211,13 @@ theorem rational_partner_three_obstruction {u a k t : ℚ}
       (2:ℤ_[2])*T^2=U*(2*U^2-A*U+K) := by
     rcases heq with heq | heq
     · left
-      apply PadicInt.coe_inj.mp
+      apply Subtype.coe_injective
       simp only [U,A,K,T,PadicInt.coe_mul,PadicInt.coe_pow,PadicInt.coe_add,
         PadicInt.coe_sub,integralRat_coe, show ((2:ℤ_[2]):ℚ_[2])=2 by rfl]
       simpa only [Rat.cast_mul,Rat.cast_pow,Rat.cast_sub,Rat.cast_add,Rat.cast_ofNat]
         using congrArg (fun z : ℚ => (z : ℚ_[2])) heq
     · right
-      apply PadicInt.coe_inj.mp
+      apply Subtype.coe_injective
       simp only [U,A,K,T,PadicInt.coe_mul,PadicInt.coe_pow,PadicInt.coe_add,
         PadicInt.coe_sub,integralRat_coe, show ((2:ℤ_[2]):ℚ_[2])=2 by rfl]
       simpa only [Rat.cast_mul,Rat.cast_pow,Rat.cast_sub,Rat.cast_add,Rat.cast_ofNat]
@@ -257,7 +257,7 @@ theorem divided_square_residuePow (k : ℕ) (d c a b : ℤ) {u t : ℚ}
       (c:ℤ_[2])*(integralRat 2 u hu)^3+
       (a:ℤ_[2])*(integralRat 2 u hu)^2+
       (b:ℤ_[2])*integralRat 2 u hu := by
-    apply PadicInt.coe_inj.mp
+    apply Subtype.coe_injective
     simpa only [PadicInt.coe_mul,PadicInt.coe_pow,PadicInt.coe_add,
       PadicInt.coe_intCast,integralRat_coe,Rat.cast_mul,Rat.cast_pow,
       Rat.cast_add,Rat.cast_intCast] using
@@ -370,7 +370,7 @@ theorem quadratic_residuePow (k : ℕ) (c a b : ℤ) {u : ℚ}
         (a:ZMod (2^k))*residuePow 2 k u hu+(b:ZMod (2^k)) := by
   have hp : integralRat 2 ((c:ℚ)*u^2+(a:ℚ)*u+(b:ℚ)) (quadratic_integral c a b hu)=
       (c:ℤ_[2])*(integralRat 2 u hu)^2+(a:ℤ_[2])*integralRat 2 u hu+(b:ℤ_[2]) := by
-    apply PadicInt.coe_inj.mp
+    apply Subtype.coe_injective
     simp only [integralRat_coe,PadicInt.coe_add,PadicInt.coe_mul,
       PadicInt.coe_pow,PadicInt.coe_intCast,Rat.cast_add,Rat.cast_mul,
       Rat.cast_pow,Rat.cast_intCast]

@@ -28,7 +28,8 @@ theorem unit_coordinate_square (A B : ℤ) (t : ZMod p)
   rw [hA, hB] at he
   have hf : (rationalResidue p y) ^ 2 =
       rationalResidue p x * (rationalResidue p x - t) ^ 2 := by
-    linear_combination he
+    have hcoeff : (-2 : ZMod p) + 2 = 0 := neg_add_cancel 2
+    linear_combination he + (rationalResidue p x) ^ 2 * t * hcoeff
   have hunit : unitResidue p x = rationalResidue p x := by
     simp only [unitResidue, normalizedUnit, hvx, zpow_zero, div_one]
   rw [hunit]

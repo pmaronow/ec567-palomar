@@ -10,6 +10,10 @@ All characters belong to the actual rational squareclass group. -/
 
 namespace RankCertificates.Rank7CharacterEvaluation
 
+-- Keep the additive structure on `ZMod 2` coherent with its ring structure
+-- when valuation parities are used as binary linear functionals.
+local instance : AddCommGroup (ZMod 2) := (ZMod.commRing 2).toAddCommGroup
+
 open Integration MovingPrimeCharacters FixedCharacterEvaluation
 
 variable {x y : ℤ} (h : PrimeSpecialization7 x y)

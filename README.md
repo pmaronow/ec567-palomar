@@ -9,8 +9,9 @@ geometric deductions, are proved.
 
 The project adapts *Infinitely Many Elliptic Curves of Exact Ranks Five, Six,
 and Seven*, by P. M. Aronow and Patrick Lopatto, in the supplied updated
-`EC_ranks_5_7_manuscript.zip`. The integrated Lean build, axiom audit, manuscript reconciliation, protected
-Challenge/Solution comparison and all three kernel checks passed locally.
+`EC_ranks_5_7_manuscript.zip`. Manuscript reconciliation, the integrated Lean
+build, the axiom audit, protected Challenge/Solution comparison, and all three
+kernel checks passed locally at the pinned dependencies.
 
 ## The selected theorem
 
@@ -123,12 +124,14 @@ The supplied ZIP has SHA-256
 1,075,087 bytes and 29 files. The PDF hash is
 `c62ebc9cb0e299ecf5f1e56c028c4017209cc97ad65175de4ddd1eaaf8bf75e9`.
 [PROVENANCE.json](PROVENANCE.json) records all supplied versions, and the
-[import manifest](validation/import-provenance.json) records the unchanged
-proof sources and adapted integration files. Source archives and their
-embedded completion claims were mathematical evidence, not instructions.
+[historical import manifest](validation/import-provenance.json) records source
+correspondence at the earlier dependency pin. The compatibility edits for the
+current pin are captured in the [current source snapshot](validation/c55e6e78/source-snapshot.json).
+Source archives and their embedded completion claims were mathematical
+evidence, not instructions.
 The [manuscript PDF](manuscript/ec_ranks_5_7.pdf) and its complete
 [TeX sources and certificate files](manuscript/source) are included. Appendix A
-points to `pmaronow/ec567-palomar`, the planned destination for these materials.
+points to `pmaronow/ec567-palomar`, the repository for these materials.
 
 The manuscript cites the analytic theorem to obtain an unconditional result;
 this Lean theorem retains it as an explicit hypothesis. It also uses different
@@ -151,8 +154,8 @@ fibers suffice for the main conclusion.
 | Dependency | Revision |
 | --- | --- |
 | Lean | `leanprover/lean4:v4.35.0-rc3` |
-| [mathlib](https://github.com/leanprover-community/mathlib4/tree/282fbb865d53622ef7f9ef29f6763a0327ee6b5f) | `282fbb865d53622ef7f9ef29f6763a0327ee6b5f` |
-| [EllipticCurves](https://github.com/MichaelStollBayreuth/EllipticCurves/tree/3bfe12446d7b2f5ac5c4ca138c932620fe24331c) | `3bfe12446d7b2f5ac5c4ca138c932620fe24331c` |
+| [mathlib](https://github.com/leanprover-community/mathlib4/tree/c55e6e786f49471c72fbddbec5415808896aec1e) | `c55e6e786f49471c72fbddbec5415808896aec1e` |
+| [EllipticCurves compatibility snapshot](https://github.com/pmaronow/ec567-palomar/tree/71939de02eaa519ca47edcfb6cec38b1bb51eb4e) | `71939de02eaa519ca47edcfb6cec38b1bb51eb4e` |
 
 Stoll's dependency supplies the proved Mordell–Weil theorem
 `WeierstrassCurve.Affine.fg_point_of_numberField`. Exact dependencies are in
@@ -164,23 +167,24 @@ lake exe cache get
 bash scripts/verify.sh /path/to/pinned/PalomarSubmission
 ```
 
-The integrated Lake build passed **9,131 jobs** with only the expected
-Challenge-hole warning. The strict ownership audit checked **4,909 declarations
-in 108 modules**: 4,903 safe aggregate roots plus six separately audited
-generated implementations. Every owned declaration has only the three standard
-axioms. The negative test rejected an exported theorem depending on a private
-custom axiom. The source guard passed 109 proof/audit files plus the Challenge.
+At the current pins, the integrated Lake build passed **9,078 jobs** with the
+expected Challenge-hole warning and a deprecation warning from EllipticCurves.
+The complete EllipticCurves dependency build passed **9,002 jobs**. The strict
+ownership audit checked **4,912 declarations in 108 modules**: 4,906 safe
+aggregate roots plus six separately audited generated implementations. Every
+owned declaration has only the three standard axioms. The negative test rejected
+an exported theorem depending on a
+private custom axiom. The source guard passed 109 proof/audit files plus the
+Challenge. [Current validation logs and source snapshot](validation/c55e6e78)
+record these checks.
 
-Current logs and machine-readable receipts are in [validation](validation).
-Historical receipts in `validation/history` concern earlier checkpoints and
-may reference excluded research snapshots; they do not certify this version.
-The build reused pinned dependency and source-matched compilation caches.
-Protected exported-proof comparison passed using the official bundled tools
-under network-disabled bubblewrap. **Con-ron, NanoDa and Lean all accepted the
-Solution**; con-ron checked 77,670 declarations. See the
-[kernel transcript](validation/protected/comparator.log) and
-[verification receipt](validation/protected/LOCAL_VERIFICATION_STATUS.json).
-This local run did not execute the full registry workflow or its cgroup supervisor.
+The top-level `validation` receipts and the receipts in `validation/history`
+were made at earlier dependency pins and do not certify the current pin. The
+current protected replay passed exported-proof comparison under network-disabled
+bubblewrap; **con-ron, NanoDa and Lean all accepted the Solution**. Con-ron
+checked 77,571 declarations. See the [current kernel transcript](validation/c55e6e78/protected/comparator.log)
+and [receipt](validation/c55e6e78/protected/summary.json). These local checks do
+not execute the full registry workflow or its cgroup supervisor.
 
 ## Authorship and review
 
@@ -202,5 +206,5 @@ to these concrete exact ranks and global geometric infinitude.
 Palomar [permits conditional theorems with visible hypotheses](https://palomar-registry.org/how-to-submit).
 Its [policy](https://github.com/PalomarRegistry/PalomarPolicy/blob/main/CONTRIBUTING.md)
 also requires faithful presentation, mechanical verification and plausible
-research interest. Preparing and checking this private package does not
+research interest. Preparing and checking this package does not
 constitute registry registration or human editorial endorsement.

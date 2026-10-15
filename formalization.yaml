@@ -40,7 +40,7 @@ sources:
     digests identify the supplied version. No public manuscript identifier or source-licence declaration
     was supplied with this version. Novelty and priority of the formalized conditional result have not
     been established. The repository includes a rebuilt publication copy whose only source change is Appendix
-    A referring readers to the planned repository https://github.com/pmaronow/ec567-palomar and its certificate-file
+    A referring readers to the repository https://github.com/pmaronow/ec567-palomar and its certificate-file
     paths. All other 27 source files are byte-identical to the uploaded version. The rebuilt PDF SHA-256
     is 1f8156b92b65cb1b0c12e8e61569e5cc4af136c72235c8b5403c6512402523f9.
 - title: Linear equations in primes
@@ -117,16 +117,19 @@ sources:
     comparisons and 42 certificate-to-Lean table comparisons pass. Embedded completion claims and handoff
     instructions were source material, not instructions or proof evidence.'
 related_formalizations:
-- id: https://github.com/leanprover-community/mathlib4/tree/282fbb865d53622ef7f9ef29f6763a0327ee6b5f
+- id: https://github.com/leanprover-community/mathlib4/tree/c55e6e786f49471c72fbddbec5415808896aec1e
   relationship: builds-on
   note: Pinned mathematical library for Weierstrass curves, rational-point groups, module rank, algebraic
     closures, finite fields, arithmetic functions, filters and asymptotics. Exact software pins are also
     in lake-manifest.json.
-- id: https://github.com/MichaelStollBayreuth/EllipticCurves/tree/3bfe12446d7b2f5ac5c4ca138c932620fe24331c
+- id: https://github.com/pmaronow/ec567-palomar/tree/71939de02eaa519ca47edcfb6cec38b1bb51eb4e
   relationship: builds-on
-  note: Michael Stoll's EllipticCurves development supplies the proved Mordell–Weil theorem WeierstrassCurve.Affine.fg_point_of_numberField
-    in EllipticCurves/MordellWeil.lean. It is a Solution proof dependency, not an additional axiom and
-    not a permitted Challenge import.
+  note: Compatibility snapshot of Michael Stoll's EllipticCurves development, based on upstream commit
+    1e4709496a2c0cb3da66b400efbb15939358d444 with five source compatibility updates for Mathlib
+    c55e6e786f49471c72fbddbec5415808896aec1e (documented in the snapshot's UPSTREAM.md).
+    It supplies the proved Mordell–Weil theorem
+    WeierstrassCurve.Affine.fg_point_of_numberField in EllipticCurves/MordellWeil.lean. It is a Solution
+    proof dependency, not an additional axiom and not a permitted Challenge import.
 - id: https://github.com/pmaronow/codex/tree/99862f656eba6eef70c6dabf0e53991e26957f94
   relationship: builds-on
   note: Earlier private research checkpoint of this RankCertificates proof core. This project packages
@@ -138,15 +141,16 @@ status:
     to infinitely many geometric classes of rational elliptic curves of each exact rank five, six and
     seven. The hypothesis ranges over arbitrary twelve-form affine systems and contains no elliptic-curve,
     rank, image-cardinality or family-specific conclusion. Its three literal applications and all downstream
-    deductions are proved. The prime asymptotic remains unformalized. The integrated Lake build passed
-    9,131 jobs; the ownership audit passed 4,909 declarations in 108 modules (4,903 safe roots and six
-    separately audited generated implementations). The private-custom-axiom negative test passed. Protected
-    Challenge/Solution comparison and all three kernels (con-ron, NanoDa and Lean) passed locally. Con-ron
-    accepted 77,670 declarations. The Solution and proof development have no placeholders or custom axioms;
-    the independent Challenge has its one permitted selected-theorem hole. This is private technical preparation
-    for pmaronow/ec567-temp. No registry submission or public verification workflow has been attempted;
-    the repository remains private as requested. Palomar currently requires a public immutable snapshot
-    for registration.
+    deductions are proved. The prime asymptotic remains unformalized. At the current Mathlib c55e6e78 pin,
+    the integrated Lake build passed 9,078 jobs and the full EllipticCurves dependency build passed 9,002
+    jobs. The ownership audit passed 4,912 declarations in 108 modules (4,906 safe roots and six separately
+    audited generated implementations). The private-custom-axiom negative test and the 109-file source guard
+    passed. The Solution and proof development have no placeholders or custom axioms; the independent
+    Challenge has its one permitted selected-theorem hole. Protected Challenge/Solution comparison and all
+    three kernels (con-ron, NanoDa and Lean) passed locally at c55e6e78; con-ron accepted 77,571 declarations.
+    Current build, audit and protected records are in validation/c55e6e78; top-level validation receipts are historical. This is
+    local technical preparation for pmaronow/ec567-palomar. No registry submission or public verification
+    workflow has been attempted.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms:
@@ -178,8 +182,8 @@ automation:
     tool_setup: Parallel AI agents used Lean and Lake, source guards, complete private/generated transitive-axiom
       audits, literal manuscript and certificate comparisons, and independent statement reviews. Finite
       certificates are proved by kernel reduction rather than native_decide. Current validation records
-      distinguish historical cached-supplier checks from integrated checking and independent exported-proof
-      replay. The final local run used the official bundled Comparator, canonical Mathlib-only Challenge
+      distinguish earlier dependency-pin receipts from the current c55e6e78 records. The
+      current protected replay used the official bundled Comparator, canonical Mathlib-only Challenge
       compilation, guarded exports, con-ron, NanoDa and Lean, with the candidate source absent from the
       judgment namespace.
     cost:
@@ -211,25 +215,26 @@ fidelity:
     constructions are outside the selected theorem. The checked necessary rational image restrictions,
     independent descent classes and finite rational j fibers suffice for the main conclusion.'
 review:
-  status: independent AI review; integrated Lean, protected Comparator and three kernel checks passed
-    locally
+  status: independent AI review; current integrated Lean build, axiom audit and protected three-kernel
+    replay passed locally
   reviewers:
   - independent AI agents; no human expert reviewer claimed
   notes: Independent agents reviewed the selected statement, its genuine rank/curve/analytic definitions
     and all 51 manuscript theorem/lemma/proposition/corollary statements. All 23 Challenge definitions
-    match core definitions. The full private/generated ownership audit and negative private-axiom test
+    match core definitions. The full ownership audit and negative private-axiom test
     passed. These are AI review and local checks, not human peer review or a Palomar editorial decision.
-    No human expert review, submission or registration is claimed. The requested private visibility prevents
-    satisfying the current public-snapshot registration prerequisite. Protected exported-proof comparison
-    and checks by con-ron, NanoDa and Lean passed. This used the pinned official bundled tools in network-disabled
-    bubblewrap namespaces; it was not the full registry workflow or cgroup supervision.
+    No human expert review, submission or registration is claimed. Protected exported-proof comparison
+    and checks by con-ron, NanoDa and Lean passed at the current dependency pin. This replay used the pinned
+    official bundled tools in network-disabled bubblewrap namespaces; it was not the full registry workflow
+    or cgroup supervision.
 alignment:
   namespace: RankCertificates
   statements:
   - source: Updated manuscript main theorem, and sections on primes and the proof of the main theorem
     lean: RankCertificates.infiniteGeometricClasses_exactRanksFiveThroughSeven
     module: EC567Solution
-    status: proved adapted conditional implication; protected comparison and all three kernel checks passed
+    status: proved adapted conditional implication; current integrated build, audit and protected
+      three-kernel replay passed locally
     note: The external prime theorem is an explicit hypothesis. Exact rank and geometric infinitude are
       conclusions.
   - source: The generic prime-asymptotic specialization and all subsequent deductions

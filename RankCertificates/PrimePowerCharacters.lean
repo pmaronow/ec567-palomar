@@ -11,6 +11,10 @@ dyadic binary rows from the primitive characters modulo 4 and 8. -/
 
 namespace RankCertificates.PrimePowerCharacters
 
+-- Use the canonical additive structure of the binary field for the character
+-- linear maps; nilpotence also supplies a competing additive-group instance.
+local instance : AddCommGroup (ZMod 2) := (ZMod.commRing 2).toAddCommGroup
+
 open PrimePowerResidues
 
 variable (p k : ℕ) [Fact p.Prime]

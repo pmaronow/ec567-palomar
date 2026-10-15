@@ -13,6 +13,10 @@ squareclass. This is the global completeness step in prime-support descent.
 
 namespace RankCertificates
 
+-- Keep subtraction and scalar multiplication on `ZMod 2` aligned with its
+-- canonical ring structure, as in `SquareClassIndependence`.
+local instance : AddCommGroup (ZMod 2) := (ZMod.commRing 2).toAddCommGroup
+
 theorem rationalSquareClass_unit (u : ℚˣ) :
     rationalSquareClass (u : ℚ) = QuotientGroup.mk u := by
   rw [rationalSquareClass, dite_eq_right u.ne_zero]

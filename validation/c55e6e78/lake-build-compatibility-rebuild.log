@@ -1,0 +1,27 @@
+⚠ [8969/9078] Replayed EllipticCurves.Mathlib.Basic
+warning: EllipticCurves/Mathlib/Basic.lean:695:4: `MonoidHom.coe_coe` has been deprecated: Use `MonoidHom.coe_ofClass` instead
+
+Hint: Replace the deprecated name:
+  M̵o̵n̵o̵i̵d̵H̵o̵m̵.̵c̵o̵e̵_̵c̵o̵e̵M̲o̲n̲o̲i̲d̲H̲o̲m̲.̲c̲o̲e̲_̲o̲f̲C̲l̲a̲s̲s̲
+⚠ [9054/9078] Replayed EC567Challenge
+warning: EC567Challenge.lean:203:8: declaration uses `sorry`
+✔ [9056/9078] Built RankCertificates.Rank5DyadicRows (5.5s)
+✔ [9057/9078] Built RankCertificates.Rank6CharacterRows (4.6s)
+✔ [9058/9078] Built RankCertificates.Rank5CharacterRows (4.5s)
+✔ [9060/9078] Built RankCertificates.Rank6LiteralRows (10s)
+✔ [9061/9078] Built RankCertificates.Rank5LiteralRows (6.7s)
+✔ [9063/9078] Built RankCertificates.Rank6FixedRows (11s)
+✔ [9064/9078] Built RankCertificates.Rank5MovingRows (9.0s)
+✔ [9065/9078] Built RankCertificates.Rank6ExactRank (10s)
+✔ [9066/9078] Built RankCertificates.Rank5FixedCharacters (4.3s)
+✔ [9067/9078] Built RankCertificates.Rank5FixedRows (9.8s)
+✔ [9068/9078] Built RankCertificates.Rank5OddRows (6.3s)
+✔ [9069/9078] Built RankCertificates.Rank5ExactRank (8.7s)
+✔ [9070/9078] Built RankCertificates.InfinitudeReduction (3.5s)
+✔ [9071/9078] Built RankCertificates.LiteralPrimeBridge (5.7s)
+✔ [9072/9078] Built RankCertificates.LiteralFiniteField (7.8s)
+✔ [9073/9078] Built RankCertificates.ConditionalPrimePatterns (7.8s)
+✔ [9074/9078] Built RankCertificates.LiteralCyclicBridge (4.9s)
+✔ [9075/9078] Built EC567Solution (5.1s)
+✔ [9077/9078] Built RankCertificates (6.5s)
+Build completed successfully (9078 jobs).

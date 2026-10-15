@@ -1,0 +1,64 @@
+{
+  "status": "PASS local c55e6e78 migration verification",
+  "recorded_utc": "2026-10-15T11:53:34.955099+00:00",
+  "repository": "https://github.com/pmaronow/ec567-palomar",
+  "toolchain": "leanprover/lean4:v4.35.0-rc3",
+  "mathlib_revision": "c55e6e786f49471c72fbddbec5415808896aec1e",
+  "ellipticcurves_revision": "71939de02eaa519ca47edcfb6cec38b1bb51eb4e",
+  "lockfile": {
+    "status": "PASS",
+    "packages": 10,
+    "receipt": "lockfile-check.json"
+  },
+  "ellipticcurves_build": {
+    "status": "PASS",
+    "jobs": 9002,
+    "log": "ellipticcurves-build.log"
+  },
+  "integrated_lake_build": {
+    "status": "PASS",
+    "jobs": 9078,
+    "log": "lake-build.log"
+  },
+  "axiom_audit": {
+    "status": "PASS",
+    "owned_declarations": 4912,
+    "owning_modules": 108,
+    "safe_roots": 4906,
+    "separately_audited_generated_implementations": 6,
+    "allowed_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "log": "axiom-audit.log"
+  },
+  "source_guard": {
+    "status": "PASS",
+    "proof_and_audit_files": 109,
+    "log": "source-guard.log"
+  },
+  "negative_private_axiom_test": {
+    "status": "PASS",
+    "log": "negative-audit.log"
+  },
+  "protected_comparator": {
+    "status": "PASS",
+    "con_ron_declarations_accepted": 77571,
+    "con_ron": "PASS",
+    "nanoda": "PASS",
+    "lean_default": "PASS",
+    "receipt": "protected/summary.json",
+    "full_receipt_gzip": "protected/LOCAL_VERIFICATION_STATUS.json.gz",
+    "transcript": "protected/comparator.log",
+    "candidate_source_absent_from_judge": true,
+    "network_enabled": false
+  },
+  "source_snapshot": "source-snapshot.json",
+  "full_registry_workflow_run": false,
+  "registry_submission_or_registration": false,
+  "metadata_validation": {
+    "status": "PASS",
+    "receipt": "metadata-validation.json"
+  }
+}
