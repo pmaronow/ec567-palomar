@@ -75,7 +75,8 @@ def E3 : WeierstrassCurve (ZMod 3) := ⟨0, 0, 0, -1, 1⟩
 instance : E3.IsElliptic := by rw [WeierstrassCurve.isElliptic_iff]; decide
 
 /-- The point `(1, 1)` on `E : y² = x³ - x + 1` over `𝔽₃`. -/
-def P3 : E3.toAffine.Point := .some 1 1 (E3.toAffine.nonsingular_of_equation (by grind [E3]))
+def P3 : E3.toAffine.Point :=
+  .some 1 1 (E3.toAffine.nonsingular_of_equation (by norm_num [E3]; decide))
 
 /-- `P = (1, 1)` reduces modulo `3` to a point of order `7` (so `7 • P₃ = 0`); computed as
 `P₃ → 2P₃ = (2,1) → 3P₃ = (0,2) → 4P₃ = (0,1)` and `7 • P₃ = 4P₃ + 3P₃ = 0`. -/
@@ -90,7 +91,8 @@ def E5 : WeierstrassCurve (ZMod 5) := ⟨0, 0, 0, -1, 1⟩
 instance : E5.IsElliptic := by rw [WeierstrassCurve.isElliptic_iff]; decide
 
 /-- The point `(1, 1)` on `E : y² = x³ - x + 1` over `𝔽₅`. -/
-def P5 : E5.toAffine.Point := .some 1 1 (E5.toAffine.nonsingular_of_equation (by grind [E5]))
+def P5 : E5.toAffine.Point :=
+  .some 1 1 (E5.toAffine.nonsingular_of_equation (by norm_num [E5]; decide))
 
 /-- `P = (1, 1)` reduces modulo `5` to a point of order `8` (so `8 • P₅ = 0`); computed as
 `P₅ → 2P₅ = (4,1) → 3P₅ = (0,4) → 4P₅ = (3,0)`, where `4P₅` is `2`-torsion, so
@@ -136,6 +138,9 @@ instance (p : ℕ) [Fact p.Prime] : DecidableEq (ℤ ⧸ (intPrime p).asIdeal) :
   (Int.quotientSpanNatEquivZMod p).toEquiv.decidableEq
 
 variable {p : ℕ} [Fact p.Prime]
+
+local instance : IsScalarTower ℤ ℤ (ZMod p) :=
+  IsScalarTower.of_algebraMap_eq (by intro x; simp)
 
 /-- `W₀` has good reduction at any prime not dividing its discriminant. -/
 lemma isElliptic_redCurve (h : ¬ (p : ℤ) ∣ W₀.Δ) : (redCurve (intPrime p) W₀).IsElliptic := by

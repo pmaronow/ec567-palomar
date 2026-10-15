@@ -455,6 +455,7 @@ lemma valued_adicCompletionExtension (x : v.adicCompletion K) :
   intro a
   rw [UniformSpace.Completion.mapRingHom_coe, Valued.valuedCompletion_apply,
     Valued.valuedCompletion_apply]
+  rw [Ideal.ramificationIdx'_eq_ramificationIdx v.asIdeal w.asIdeal v.ne_bot]
   exact valuation_liesOver (K := K) L v w (WithVal.equiv (v.valuation K) a)
 
 lemma adicCompletionExtension_mem_adicCompletionIntegers (x : v.adicCompletionIntegers K) :
